@@ -1,6 +1,9 @@
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
@@ -15,65 +18,156 @@ import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.RDFNode;
+import com.hp.hpl.jena.rdf.model.ResIterator;
 import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.rdf.model.SimpleSelector;
+import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
+import com.hp.hpl.jena.util.FileManager;
 import com.hp.hpl.jena.vocabulary.RDF;
+
+import edu.uci.ics.jung.algorithms.shortestpath.DijkstraDistance;
+import edu.uci.ics.jung.algorithms.shortestpath.ShortestPathUtils;
+import edu.uci.ics.jung.algorithms.shortestpath.UnweightedShortestPath;
+import edu.uci.ics.jung.graph.Graph;
+import edu.uci.ics.jung.graph.UndirectedSparseGraph;
 
 public class Main {
 	// public static final String ENDPOINT = "http://sparql.freebase.com";
 	// public static final String ENDPOINT = "http://dbpedia.org/sparql";
-	public static final String	ENDPOINT	= "http://data.linkedmdb.org/sparql";
+	public static final String					ENDPOINT	= "http://data.linkedmdb.org/sparql";
 	// public static final String ENDPOINT = "http://live.dbpedia.org/sparql";
 	// public static final String DATASET = "en/wikipedia_links_en";
-	public static Logger			logger	= Logger.getLogger(Main.class);
-	public static Model			model;
-	public static PrintWriter	out;
-	public static PrintWriter	debug;
+	public static Logger							logger	= Logger.getLogger(Main.class);
+	public static Model							model;
+	public static ArrayList<Entita>			film;
+	public static ArrayList<Entita>			actor;
+	public static ArrayList<Entita>			movieactor;
+	// public static ArrayList<Resource> director;
+	public static PrintWriter					out;
+	public static PrintWriter					debug;
+	public static Graph<Entita, Predicato>	graph;
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) throws IOException {
 		BasicConfigurator.configure();
 		FileOutputStream fout = new FileOutputStream("/home/lusio/dev/lod-project/OUT");
 		FileOutputStream fdebug = new FileOutputStream("/home/lusio/dev/lod-project/DEBUG");
+
 		out = new PrintWriter(fout);
 		debug = new PrintWriter(fdebug);
 
-		model = ModelFactory.createDefaultModel();
-		// Graph<Entita, Predicato> graph = new DirectedSparseGraph<Entita,
-		// Predicato>();
+		// InputStream in =
+		// FileManager.get().open("/home/lusio/dev/lod-project/linkedmdb.rdf");
+		// InputStream in =
+		// FileManager.get().open("/home/lusio/dev/lod-project/linkedmdb.nt");
+		InputStream in = FileManager.get().open("/home/lusio/dev/lod-project/temp.nt");
+		if (in == null) {
+			throw new IllegalArgumentException("File: linkedmdb not found");
+		}
+
+		graph = new UndirectedSparseGraph<Entita, Predicato>();
+
+		Model model = ModelFactory.createDefaultModel();
+
+		System.out.println("Sto per fare il read");
+		// model.read(in, null, "RDF/XML");
+		model.read(in, null, "N-TRIPLE");
+
+		// film = new ArrayList<Entita>(85700);
+		// actor = new ArrayList<Entita>(55000);
+		// movieactor = new ArrayList<Entita, Entita>(60000);
+
+		ResIterator it;
+
+		it = model.listResourcesWithProperty(RDF.type, LIMDBMOVIE.filmRes);
+		while (it.hasNext()) {
+			Resource r = it.nextResource();
+			graph.addVertex(new Entita(r.getURI()));
+		}
+
+		it = model.listResourcesWithProperty(RDF.type, LIMDBMOVIE.actorRes);
+		while (it.hasNext()) {
+			Resource r = it.nextResource();
+			graph.addVertex(new Entita(r.getURI()));
+		}
+
+		StmtIterator iter = model.listStatements(new SimpleSelector(null, LIMDBMOVIE.actor, (Resource) null));
+		while (iter.hasNext()) {
+			Statement s = iter.nextStatement();
+			Entita e1 = new Entita(s.getSubject().getURI());
+			Entita e2 = new Entita(((Resource) s.getObject()).getURI());
+			Predicato p = new Predicato(LIMDBMOVIE.actor.getURI(), 0.5);
+			graph.addEdge(p, e1, e2);
+		}
+
+		// debug.println(graph);
+
+		Entita titanic = new Entita("http://data.linkedmdb.org/resource/film/2045");
+		Entita shutter = new Entita("http://data.linkedmdb.org/resource/film/51653");
+
+		System.out.println("Sto per avviare UnweightedShortestPath");
+		UnweightedShortestPath<Entita, Predicato> sp = new UnweightedShortestPath<Entita, Predicato>(graph);
+		System.out.println("Sto per avviare getPath");
+		List<Predicato> path = ShortestPathUtils.getPath(graph, sp, titanic, shutter);
+
+		for (int i = 0; i < path.size(); i++) {
+			out.println(path.get(i));
+		}
+		// out.println(distance(titanic, shutter));
+
+		// for (int i = 0; i < film.size(); i++) {
+		// out.println(film.get(i));
+		// }
+		//
+		// for (int i = 0; i < actor.size(); i++) {
+		// out.println(actor.get(i));
+		// }
+
+		// model.write(out);
 
 		// Main.loadMovies();
 		// Main.loadActors();
 		// Main.loadMovieActor();
-		Main.loadAll();
+		// Main.loadAll();
 
-		int i = 1;
-		StmtIterator it = model.listStatements();
-		while (it.hasNext()) {
-			Resource sub = it.next().getSubject();
-			Property pre = it.next().getPredicate();
-			RDFNode obj = it.next().getObject();
-			out.print(i + " ");
-			out.print("<" + sub + "> ");
-			out.print("<" + pre + "> ");
-			out.println("<" + obj + "> .");
-			i++;
-		}
+		// int i = 1;
+		// StmtIterator it = model.listStatements();
+		// while (it.hasNext()) {
+		// Resource sub = it.next().getSubject();
+		// Property pre = it.next().getPredicate();
+		// RDFNode obj = it.next().getObject();
+		// out.print(i + " ");
+		// out.print("<" + sub + "> ");
+		// out.print("<" + pre + "> ");
+		// out.println("<" + obj + "> .");
+		// i++;
+		// }
+
+		in.close();
+		out.close();
+		debug.close();
+	}
+
+	public static double distance(Entita e1, Entita e2) {
+		// double d = 0;
+		// LinkedHashMap<Entita, Number> map = new DijkstraDistance<Entita,
+		// Predicato>(graph).getDistanceMap(e1, 2);
+
+		System.out.println("Sto per creare Dijkstra");
+		DijkstraDistance<Entita, Predicato> dd = new DijkstraDistance<Entita, Predicato>(graph);
+
+		// out.println(map);
+		return dd.getDistance(e1, e2).doubleValue();
 	}
 
 	private static void loadMovies() {
 		String query = "";
 		query += "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ";
-		query += "PREFIX foaf: <http://xmlns.com/foaf/0.1/> ";
-		query += "PREFIX db: <http://data.linkedmdb.org/resource/> ";
-		query += "PREFIX dbpedia: <http://dbpedia.org/property/> ";
-		query += "PREFIX skos: <http://www.w3.org/2004/02/skos/core#> ";
-		query += "PREFIX dc: <http://purl.org/dc/terms/> ";
 		query += "PREFIX movie: <http://data.linkedmdb.org/resource/movie/> ";
-
 		query += "SELECT ?movie ";
 		query += "WHERE { ";
 		query += " ?movie rdf:type movie:film . ";
-		query += " } LIMIT 100";
+		query += " }";
 
 		System.out.println(query);
 		Query q = QueryFactory.create(query);
@@ -125,11 +219,6 @@ public class Main {
 	private static void loadMovieActor() {
 		String query = "";
 		query += "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ";
-		query += "PREFIX foaf: <http://xmlns.com/foaf/0.1/> ";
-		query += "PREFIX db: <http://data.linkedmdb.org/resource/> ";
-		query += "PREFIX dbpedia: <http://dbpedia.org/property/> ";
-		query += "PREFIX skos: <http://www.w3.org/2004/02/skos/core#> ";
-		query += "PREFIX dc: <http://purl.org/dc/terms/> ";
 		query += "PREFIX movie: <http://data.linkedmdb.org/resource/movie/> ";
 
 		query += "SELECT ?movie ?actor ";
@@ -137,7 +226,7 @@ public class Main {
 		query += " ?movie rdf:type movie:film . ";
 		query += " ?actor rdf:type movie:actor . ";
 		query += " ?movie movie:actor ?actor . ";
-		query += " } LIMIT 100";
+		query += " }";
 
 		System.out.println(query);
 		Query q = QueryFactory.create(query);
@@ -158,18 +247,13 @@ public class Main {
 	private static void loadAll() {
 		String query = "";
 		query += "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ";
-		query += "PREFIX foaf: <http://xmlns.com/foaf/0.1/> ";
-		query += "PREFIX db: <http://data.linkedmdb.org/resource/> ";
-		query += "PREFIX dbpedia: <http://dbpedia.org/property/> ";
-		query += "PREFIX skos: <http://www.w3.org/2004/02/skos/core#> ";
-		query += "PREFIX dc: <http://purl.org/dc/terms/> ";
 		query += "PREFIX movie: <http://data.linkedmdb.org/resource/movie/> ";
 
 		query += "SELECT ?a ?b ?c ";
 		query += "WHERE { ";
 		query += " ?a ?b ?c .";
 		query += " ?a rdf:type movie:film .";
-		query += " } LIMIT 100000";
+		query += " } LIMIT 50000";
 
 		System.out.println(query);
 		Query q = QueryFactory.create(query);

@@ -1,6 +1,11 @@
 *.class
 bin/*
 
+DEBUG
+OUT
+*.nt
+*.rdf
+
 # Package Files #
 #*.jar
 *.war
