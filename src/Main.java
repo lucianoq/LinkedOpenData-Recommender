@@ -71,7 +71,7 @@ public class Main {
 
         Model model = ModelFactory.createDefaultModel();
 
-        System.out.println("Sto per fare il read");
+        System.out.println("Sto per fare il read ");
         // model.read(in, null, "RDF/XML");
         model.read(in, null, "N-TRIPLE");
 
