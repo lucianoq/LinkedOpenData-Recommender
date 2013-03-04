@@ -1,3 +1,4 @@
+
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
@@ -19,7 +20,10 @@ import edu.uci.ics.jung.algorithms.shortestpath.DijkstraDistance;
 import edu.uci.ics.jung.algorithms.shortestpath.DijkstraShortestPath;
 import edu.uci.ics.jung.graph.Graph;
 import edu.uci.ics.jung.graph.UndirectedSparseGraph;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
@@ -57,6 +61,8 @@ public class Main {
       if (in == null) {
          throw new IllegalArgumentException("File: linkedmdb not found");
       }
+
+      allFile();
 
       graph = new UndirectedSparseGraph<Entita, Predicato>();
 
@@ -193,12 +199,29 @@ public class Main {
       qexec.close();
    }
 
+   private static ArrayList<String> loadbyFile() throws FileNotFoundException, IOException {
+      BufferedReader inp = new BufferedReader(new FileReader("./title_movielens.csv"));
+      ArrayList<String> titlefilm = new ArrayList<String>();
+      String tmp;
+      while ((tmp = inp.readLine()) != null) {
+         titlefilm.add(tmp);
+      }
+      return titlefilm;
+   }
+
+   private static void allFile() throws FileNotFoundException, IOException {
+      ArrayList<String> titlefilm = loadbyFile();
+      for (int i = 0; i < titlefilm.size(); i++) {
+         loadMoviesByTitle(titlefilm.get(i), model);
+      }
+   }
+
    private static void loadMoviesByTitle(String title, Model model) {
       String query = "";
       query += "PREFIX foaf: <http://xmlns.com/foaf/0.1/>";
       query += "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
       query += "SELECT ?film_resource ";
-   
+
       query += "WHERE { ";
       query += " ?film_resource rdf:type <http://dbpedia.org/ontology/Film> .";
       query += " ?film_resource foaf:name ?film_title .";
