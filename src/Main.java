@@ -1,14 +1,3 @@
-
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.Logger;
-
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
@@ -26,15 +15,19 @@ import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.util.FileManager;
 import com.hp.hpl.jena.vocabulary.RDF;
-
 import edu.uci.ics.jung.algorithms.shortestpath.DijkstraDistance;
 import edu.uci.ics.jung.algorithms.shortestpath.DijkstraShortestPath;
-import edu.uci.ics.jung.algorithms.shortestpath.ShortestPathUtils;
-import edu.uci.ics.jung.algorithms.shortestpath.UnweightedShortestPath;
 import edu.uci.ics.jung.graph.Graph;
 import edu.uci.ics.jung.graph.UndirectedSparseGraph;
-import edu.uci.ics.jung.graph.util.EdgeType;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
 
 public class Main {
    // public static final String ENDPOINT = "http://sparql.freebase.com";
@@ -60,11 +53,6 @@ public class Main {
 
       out = new PrintWriter(fout);
       debug = new PrintWriter(fdebug);
-
-      // InputStream in =
-      // FileManager.get().open("/home/lusio/dev/lod-project/linkedmdb.rdf");
-      // InputStream in =
-      // FileManager.get().open("/home/lusio/dev/lod-project/linkedmdb.nt");
       InputStream in = FileManager.get().open("./temp.nt");
       if (in == null) {
          throw new IllegalArgumentException("File: linkedmdb not found");
@@ -205,11 +193,12 @@ public class Main {
       qexec.close();
    }
 
-   private static void loadMoviesByTitle(String title) {
+   private static void loadMoviesByTitle(String title, Model model) {
       String query = "";
       query += "PREFIX foaf: <http://xmlns.com/foaf/0.1/>";
       query += "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
       query += "SELECT ?film_resource ";
+   
       query += "WHERE { ";
       query += " ?film_resource rdf:type <http://dbpedia.org/ontology/Film> .";
       query += " ?film_resource foaf:name ?film_title .";
