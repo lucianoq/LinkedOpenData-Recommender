@@ -23,7 +23,7 @@ public class Entita implements Comparable<Entita> {
 		// return true;
 		// if ((obj == null) || (obj.getClass() != this.getClass()))
 		// return false;
-		return this.uri.equals((Entita) obj);
+		return this.uri.equals(((Entita) obj).uri);
 	}
 
 	@Override
