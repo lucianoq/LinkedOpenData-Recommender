@@ -27,6 +27,7 @@ import com.hp.hpl.jena.util.FileManager;
 import com.hp.hpl.jena.vocabulary.RDF;
 
 import edu.uci.ics.jung.algorithms.shortestpath.DijkstraDistance;
+import edu.uci.ics.jung.algorithms.shortestpath.DijkstraShortestPath;
 import edu.uci.ics.jung.algorithms.shortestpath.ShortestPathUtils;
 import edu.uci.ics.jung.algorithms.shortestpath.UnweightedShortestPath;
 import edu.uci.ics.jung.graph.Graph;
@@ -106,8 +107,9 @@ public class Main {
 		Entita shutter = new Entita("http://data.linkedmdb.org/resource/film/51653");
 
 		System.out.println("Sto per avviare UnweightedShortestPath");
-		UnweightedShortestPath<Entita, Predicato> sp = new UnweightedShortestPath<Entita, Predicato>(graph);
+		DijkstraShortestPath<Entita, Predicato> sp = new DijkstraShortestPath<Entita, Predicato>(graph);
 		System.out.println("Sto per avviare getPath");
+		out.println(sp.getDistance(titanic, shutter));
 		List<Predicato> path = ShortestPathUtils.getPath(graph, sp, titanic, shutter);
 
 		for (int i = 0; i < path.size(); i++) {
