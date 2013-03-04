@@ -1,15 +1,21 @@
 public class Predicato implements Comparable<Predicato> {
 	private String	uri;
 	private double	weight;
+    private static int i=0;
+    private int id;
 
 	public Predicato(String s) {
 		uri = s;
 		weight = 1;
+        id=i;
+        i++;
 	}
 
 	public Predicato(String s, double d) {
 		uri = s;
 		weight = d;
+        id=i;
+        i++;
 	}
 
 	public String toString() {
@@ -35,7 +41,7 @@ public class Predicato implements Comparable<Predicato> {
 		// return true;
 		// if ((obj == null) || (obj.getClass() != this.getClass()))
 		// return false;
-		return this.uri.equals((Predicato) obj);
+		return this.id==(((Predicato) obj).id);
 	}
 
 	@Override
