@@ -52,8 +52,8 @@ public class Main {
 
    public static void main(String[] args) throws IOException {
       BasicConfigurator.configure();
-      FileOutputStream fout = new FileOutputStream("/home/lusio/dev/lod-project/OUT");
-      FileOutputStream fdebug = new FileOutputStream("/home/lusio/dev/lod-project/DEBUG");
+      FileOutputStream fout = new FileOutputStream("./OUT");
+      FileOutputStream fdebug = new FileOutputStream("./DEBUG");
 
       out = new PrintWriter(fout);
       debug = new PrintWriter(fdebug);
@@ -62,7 +62,7 @@ public class Main {
       // FileManager.get().open("/home/lusio/dev/lod-project/linkedmdb.rdf");
       // InputStream in =
       // FileManager.get().open("/home/lusio/dev/lod-project/linkedmdb.nt");
-      InputStream in = FileManager.get().open("/home/lusio/dev/lod-project/temp.nt");
+      InputStream in = FileManager.get().open("./temp.nt");
       if (in == null) {
          throw new IllegalArgumentException("File: linkedmdb not found");
       }
