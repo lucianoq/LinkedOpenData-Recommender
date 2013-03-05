@@ -14,6 +14,7 @@ import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.SimpleSelector;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
+import com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP;
 import com.hp.hpl.jena.util.FileManager;
 import com.hp.hpl.jena.vocabulary.RDF;
 import edu.uci.ics.jung.algorithms.shortestpath.DijkstraDistance;
@@ -35,9 +36,9 @@ import org.apache.log4j.Logger;
 
 public class Main {
    // public static final String ENDPOINT = "http://sparql.freebase.com";
-   // public static final String ENDPOINT = "http://dbpedia.org/sparql";
+    public static final String ENDPOINT = "http://dbpedia.org/sparql";
 
-   public static final String ENDPOINT = "http://data.linkedmdb.org/sparql";
+   //public static final String ENDPOINT = "http://data.linkedmdb.org/sparql";
    // public static final String ENDPOINT = "http://live.dbpedia.org/sparql";
    // public static final String DATASET = "en/wikipedia_links_en";
    public static Logger logger = Logger.getLogger(Main.class);
@@ -62,7 +63,7 @@ public class Main {
          throw new IllegalArgumentException("File: linkedmdb not found");
       }
 
-      allFile();
+      allbyFile();
 
       graph = new UndirectedSparseGraph<Entita, Predicato>();
 
@@ -200,7 +201,7 @@ public class Main {
    }
 
    private static ArrayList<String> loadbyFile() throws FileNotFoundException, IOException {
-      BufferedReader inp = new BufferedReader(new FileReader("./title_movielens.csv"));
+      BufferedReader inp = new BufferedReader(new FileReader("./title_movielens.txt"));
       ArrayList<String> titlefilm = new ArrayList<String>();
       String tmp;
       while ((tmp = inp.readLine()) != null) {
@@ -209,17 +210,21 @@ public class Main {
       return titlefilm;
    }
 
-   private static void allFile() throws FileNotFoundException, IOException {
+   private static void allbyFile() throws FileNotFoundException, IOException {
       ArrayList<String> titlefilm = loadbyFile();
-      for (int i = 0; i < titlefilm.size(); i++) {
-         loadMoviesByTitle(titlefilm.get(i), model);
+      FileOutputStream fresource = new FileOutputStream("./RESOURCES");
+      PrintWriter out1 = new PrintWriter(fresource);
+      for (int i = 0; i < 3; i++) {
+         loadMoviesByTitle(titlefilm.get(i), out1);
+         System.out.println(i + " " + new Date());
       }
+      out1.close();
    }
 
-   private static void loadMoviesByTitle(String title, Model model) {
+   private static void loadMoviesByTitle(String title, PrintWriter out) {
       String query = "";
-      query += "PREFIX foaf: <http://xmlns.com/foaf/0.1/>";
-      query += "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
+      query += "PREFIX foaf: <http://xmlns.com/foaf/0.1/> ";
+      query += "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ";
       query += "SELECT ?film_resource ";
 
       query += "WHERE { ";
@@ -228,20 +233,24 @@ public class Main {
       query += " FILTER contains(?film_title, \"" + title + "\")";
       query += " }";
 
-      System.out.println(query);
       Query q = QueryFactory.create(query);
 
       QueryExecution qexec = QueryExecutionFactory.sparqlService(ENDPOINT, q);
+      qexec.setTimeout(Long.MAX_VALUE);
+            System.out.println(qexec);
       ResultSet rs = qexec.execSelect();
 
+      out.print(title);
       while (rs.hasNext()) {
          QuerySolution qs = rs.next();
          Resource sub = qs.getResource("film_resource");
-         Property prop = RDF.type;
-         RDFNode obj = (Resource) LIMDBMOVIE.filmRes;
-         model.add(sub, prop, obj);
+         out.print("\t" + sub.getURI());
+         //Property prop = RDF.type;
+         //RDFNode obj = (Resource) LIMDBMOVIE.filmRes;
+         //model.add(sub, prop, obj);
       }
       qexec.close();
+      out.println();
    }
 
    private static void loadActors() {
