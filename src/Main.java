@@ -16,6 +16,7 @@ import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP;
 import com.hp.hpl.jena.util.FileManager;
+import com.hp.hpl.jena.vocabulary.OWL;
 import com.hp.hpl.jena.vocabulary.RDF;
 import edu.uci.ics.jung.algorithms.shortestpath.DijkstraDistance;
 import edu.uci.ics.jung.algorithms.shortestpath.DijkstraShortestPath;
@@ -36,8 +37,8 @@ import org.apache.log4j.Logger;
 
 public class Main {
    // public static final String ENDPOINT = "http://sparql.freebase.com";
-    public static final String ENDPOINT = "http://dbpedia.org/sparql";
 
+   public static final String ENDPOINT = "http://dbpedia.org/sparql";
    //public static final String ENDPOINT = "http://data.linkedmdb.org/sparql";
    // public static final String ENDPOINT = "http://live.dbpedia.org/sparql";
    // public static final String DATASET = "en/wikipedia_links_en";
@@ -63,8 +64,6 @@ public class Main {
          throw new IllegalArgumentException("File: linkedmdb not found");
       }
 
-      allbyFile();
-
       graph = new UndirectedSparseGraph<Entita, Predicato>();
 
       Model model = ModelFactory.createDefaultModel();
@@ -73,61 +72,77 @@ public class Main {
       // model.read(in, null, "RDF/XML");
       model.read(in, null, "N-TRIPLE");
 
-      // film = new ArrayList<Entita>(85700);
-      // actor = new ArrayList<Entita>(55000);
-      // movieactor = new ArrayList<Entita, Entita>(60000);
-
-      graph.addVertex(new Entita(LIMDBMOVIE.filmRes.getURI()));
-      graph.addVertex(new Entita(LIMDBMOVIE.actorRes.getURI()));
-      ResIterator it;
-
-      it = model.listResourcesWithProperty(RDF.type, LIMDBMOVIE.filmRes);
-      while (it.hasNext()) {
-         Resource r = it.nextResource();
-         graph.addVertex(new Entita(r.getURI()));
-         //System.out.println("graph.addVertex film " + r.getURI() + " "+ LIMDBMOVIE.filmRes.getURI());
+      ArrayList<String> uriresources = loadbyFile("./mapping.txt");
+      int i = 0;
+      for (String s : uriresources) {
+         ResIterator it = model.listResourcesWithProperty(OWL.sameAs, model.createResource(s));
+         i++;
+         while (it.hasNext()) {
+            Resource r = it.nextResource();
+            out.print(r.getURI());
+         }
+         out.println();
+         System.out.println(i + " " + new Date());
       }
-      System.out.println("filmRes " + new Date() + "\n");
-      it = model.listResourcesWithProperty(RDF.type, LIMDBMOVIE.actorRes);
-      while (it.hasNext()) {
-         Resource r = it.nextResource();
-         graph.addVertex(new Entita(r.getURI()));
-         //System.out.println("graph.addVertex actor " + r.getURI());
-      }
-      System.out.println("actorRes " + new Date() + "\n");
-      StmtIterator iter = model.listStatements(new SimpleSelector(null, LIMDBMOVIE.actor, (Resource) null));
-
-      while (iter.hasNext()) {
-         Statement s = iter.nextStatement();
-         Entita e1 = new Entita(s.getSubject().getURI());
-         Entita e2 = new Entita(((Resource) s.getObject()).getURI());
-         Predicato p = new Predicato(LIMDBMOVIE.actor.getURI(), 0.5);
-         graph.addEdge(p, e1, e2);
-         //System.out.println("graph.addEdge " + p + " "+ e1 + " "+ e2);
-      }
-      System.out.println("addEdge " + new Date() + "\n");
-      // debug.println(graph);
-
-      Entita titanic = new Entita("http://data.linkedmdb.org/resource/film/72");
-      Entita shutter = new Entita("http://data.linkedmdb.org/resource/film/51653");
-      // Entita film1 = new Entita("film1");
-      // Entita film2 = new Entita("film2"); 
-      System.out.println("Inizio Dijkstra " + new Date() + "\n");
-      System.out.println("Sto per avviare DijkstraShortestPath");
-      /*UnweightedShortestPath<Entita,Predicato> unw = new UnweightedShortestPath<Entita, Predicato>(graph);
-       System.out.println(unw.getDistance(film1, film2));
-       */
-      DijkstraShortestPath<Entita, Predicato> sp = new DijkstraShortestPath<Entita, Predicato>(graph);
-      System.out.println("DijkstraShortestPath " + new Date() + "\n");
-      System.out.println("Sto per avviare getPath");
-      out.println(sp.getDistance(titanic, shutter));
-      //out.println(sp.getPath(film1, film2));
-      List<Predicato> path = sp.getPath(titanic, shutter);
-
-      for (int i = 0; i < path.size(); i++) {
-         out.println(path.get(i));
-      }
-      System.out.println("Fine " + new Date() + "\n");
+//      // film = new ArrayList<Entita>(85700);
+//      // actor = new ArrayList<Entita>(55000);
+//      // movieactor = new ArrayList<Entita, Entita>(60000);
+//
+//      convert_imdbtodbpedia(graph, model);
+//
+//      System.exit(0);
+//      
+//      graph.addVertex(new Entita(LIMDBMOVIE.filmRes.getURI()));
+//      graph.addVertex(new Entita(LIMDBMOVIE.actorRes.getURI()));
+//      ResIterator it;
+//
+//      it = model.listResourcesWithProperty(RDF.type, LIMDBMOVIE.filmRes);
+//      while (it.hasNext()) {
+//         Resource r = it.nextResource();
+//         graph.addVertex(new Entita(r.getURI()));
+//         //System.out.println("graph.addVertex film " + r.getURI() + " "+ LIMDBMOVIE.filmRes.getURI());
+//      }
+//      System.out.println("filmRes " + new Date() + "\n");
+//      it = model.listResourcesWithProperty(RDF.type, LIMDBMOVIE.actorRes);
+//      while (it.hasNext()) {
+//         Resource r = it.nextResource();
+//         graph.addVertex(new Entita(r.getURI()));
+//         //System.out.println("graph.addVertex actor " + r.getURI());
+//      }
+//      System.out.println("actorRes " + new Date() + "\n");
+//      StmtIterator iter = model.listStatements(new SimpleSelector(null, LIMDBMOVIE.actor, (Resource) null));
+//
+//      while (iter.hasNext()) {
+//         Statement s = iter.nextStatement();
+//         Entita e1 = new Entita(s.getSubject().getURI());
+//         Entita e2 = new Entita(((Resource) s.getObject()).getURI());
+//         Predicato p = new Predicato(LIMDBMOVIE.actor.getURI(), 0.5);
+//         graph.addEdge(p, e1, e2);
+//         //System.out.println("graph.addEdge " + p + " "+ e1 + " "+ e2);
+//      }
+//      System.out.println("addEdge " + new Date() + "\n");
+//      // debug.println(graph);
+//
+//      Entita titanic = new Entita("http://data.linkedmdb.org/resource/film/72");
+//      Entita shutter = new Entita("http://data.linkedmdb.org/resource/film/51653");
+//      // Entita film1 = new Entita("film1");
+//      // Entita film2 = new Entita("film2"); 
+//      System.out.println("Inizio Dijkstra " + new Date() + "\n");
+//      System.out.println("Sto per avviare DijkstraShortestPath");
+//      /*UnweightedShortestPath<Entita,Predicato> unw = new UnweightedShortestPath<Entita, Predicato>(graph);
+//       System.out.println(unw.getDistance(film1, film2));
+//       */
+//      DijkstraShortestPath<Entita, Predicato> sp = new DijkstraShortestPath<Entita, Predicato>(graph);
+//      System.out.println("DijkstraShortestPath " + new Date() + "\n");
+//      System.out.println("Sto per avviare getPath");
+//      out.println(sp.getDistance(titanic, shutter));
+//      //out.println(sp.getPath(film1, film2));
+//      List<Predicato> path = sp.getPath(titanic, shutter);
+//
+//      for (int i = 0; i < path.size(); i++) {
+//         out.println(path.get(i));
+//      }
+//      System.out.println("Fine " + new Date() + "\n");
       //out.println(distance(titanic, shutter));
 
       // for (int i = 0; i < film.size(); i++) {
@@ -200,21 +215,21 @@ public class Main {
       qexec.close();
    }
 
-   private static ArrayList<String> loadbyFile() throws FileNotFoundException, IOException {
-      BufferedReader inp = new BufferedReader(new FileReader("./title_movielens.txt"));
-      ArrayList<String> titlefilm = new ArrayList<String>();
+   private static ArrayList<String> loadbyFile(String nomeFile) throws FileNotFoundException, IOException {
+      BufferedReader inp = new BufferedReader(new FileReader(nomeFile));
+      ArrayList<String> readstring = new ArrayList<String>();
       String tmp;
       while ((tmp = inp.readLine()) != null) {
-         titlefilm.add(tmp);
+         readstring.add(tmp);
       }
-      return titlefilm;
+      return readstring;
    }
 
    private static void allbyFile() throws FileNotFoundException, IOException {
-      ArrayList<String> titlefilm = loadbyFile();
+      ArrayList<String> titlefilm = loadbyFile("./title_movielens.txt");
       FileOutputStream fresource = new FileOutputStream("./RESOURCES");
       PrintWriter out1 = new PrintWriter(fresource);
-      for (int i = 0; i < 3; i++) {
+      for (int i = 260; i < titlefilm.size(); i++) {
          loadMoviesByTitle(titlefilm.get(i), out1);
          System.out.println(i + " " + new Date());
       }
@@ -237,7 +252,7 @@ public class Main {
 
       QueryExecution qexec = QueryExecutionFactory.sparqlService(ENDPOINT, q);
       qexec.setTimeout(Long.MAX_VALUE);
-            System.out.println(qexec);
+      System.out.println(qexec);
       ResultSet rs = qexec.execSelect();
 
       out.print(title);
