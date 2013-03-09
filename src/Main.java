@@ -9,6 +9,7 @@ import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Resource;
 import edu.uci.ics.jung.graph.Graph;
+import edu.uci.ics.jung.graph.UndirectedGraph;
 import edu.uci.ics.jung.graph.UndirectedSparseGraph;
 import edu.uci.ics.jung.graph.UndirectedSparseMultigraph;
 import java.io.BufferedReader;
@@ -109,30 +110,31 @@ public class Main {
    }
 
    private static void creagrafo(ArrayList<FilmType> film, ArrayList<FilmProperties> filmProperties) throws FileNotFoundException {
-      graph = new UndirectedSparseMultigraph<Entita, Predicato>();
+      graph = new UndirectedSparseMultigraph<Entita, Predicato> ();
       for (int i = 0; i < film.size(); i++) {
          Entita entityFilmSrc = new Entita(film.get(i).get_uri());
          graph.addVertex(entityFilmSrc);
          out.println(film.get(i).get_title().replace(" ", "_") + "[shape=box];");
-
+         String fileDot = "";
          for (int j = 0; j < filmProperties.size(); j++) {
             Predicato predicate = new Predicato(filmProperties.get(j).get_uri());
             ArrayList<Resource> resourceDest = querySPARQL(film.get(i).get_uri(), filmProperties.get(j).get_uri());
             for (int t = 0; t < resourceDest.size(); t++) {
                Entita entityFilmDest = new Entita(resourceDest.get(t).getURI());
-               graph.addVertex(entityFilmDest);
-               graph.addEdge(predicate, entityFilmSrc, entityFilmDest);
-                 out.println(film.get(i).get_title().replace(" ", "_").replace(".", "_") + " -> " + resourceDest.get(t).getLocalName().replace(".", "_").replace("-", "_").replace(" ", "_") + " [label=\"" + filmProperties.get(j).get_title() + "\"];");
+
+               if (!resourceDest.get(t).getLocalName().replace(".", "_").replace("-", "_").replace(" ", "_").isEmpty()) {
+                  String fileDotTmp = film.get(i).get_title().replace(" ", "_").replace(".", "_") + " -> " + resourceDest.get(t).getLocalName().replace(".", "_").replace("-", "_").replace(" ", "_") + " [label=\"" + filmProperties.get(j).get_title() + "\"];";
+                  if (!fileDot.contains(fileDotTmp)) {
+
+                     graph.addVertex(entityFilmDest);
+                     //graph.addEdge(predicate, entityFilmSrc, entityFilmDest);
+
+                     fileDot = fileDot + fileDotTmp + "\n";
+                  }
+               }
             }
          }
+         out.println(fileDot);
       }
-      //Se la query ha dato risultati allora{
-      //l'arraylist film diventa nodo
-      //l'arraylist filmproperties diventa arco
-      //} e il risultato della query diventa nodo arrivo
-      //
-      //select ?object
-      //where {<http://dbpedia.org/resource/Star_Trek:_First_Contact> <http://dbpedia.org/property/producer> ?object .} 
-      //
    }
 }
