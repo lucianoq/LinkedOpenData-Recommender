@@ -23,6 +23,7 @@ import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
 public class Main {
+
    // public static final String ENDPOINT = "http://sparql.freebase.com";
 
    public static final String ENDPOINT = "http://dbpedia.org/sparql";
