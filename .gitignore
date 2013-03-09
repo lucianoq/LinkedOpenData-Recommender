@@ -11,3 +11,5 @@ OUT
 *.war
 *.ear
 /nbproject/private/
+/build/
+/dist/

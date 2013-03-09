@@ -110,7 +110,7 @@ public class Main {
    }
 
    private static void creagrafo(ArrayList<FilmType> film, ArrayList<FilmProperties> filmProperties) throws FileNotFoundException {
-      graph = new UndirectedSparseMultigraph<Entita, Predicato> ();
+      graph = new UndirectedSparseMultigraph<Entita, Predicato>();
       for (int i = 0; i < film.size(); i++) {
          Entita entityFilmSrc = new Entita(film.get(i).get_uri());
          graph.addVertex(entityFilmSrc);
@@ -127,6 +127,7 @@ public class Main {
                   if (!fileDot.contains(fileDotTmp)) {
 
                      graph.addVertex(entityFilmDest);
+                     System.out.println("graph.addEdge(" + predicate + ", " + entityFilmSrc + ", " + entityFilmDest + ");");
                      //graph.addEdge(predicate, entityFilmSrc, entityFilmDest);
 
                      fileDot = fileDot + fileDotTmp + "\n";
