@@ -7,31 +7,17 @@ import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.rdf.model.Property;
-import com.hp.hpl.jena.rdf.model.RDFNode;
-import com.hp.hpl.jena.rdf.model.ResIterator;
 import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.rdf.model.SimpleSelector;
-import com.hp.hpl.jena.rdf.model.Statement;
-import com.hp.hpl.jena.rdf.model.StmtIterator;
-import com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP;
-import com.hp.hpl.jena.util.FileManager;
-import com.hp.hpl.jena.vocabulary.OWL;
-import com.hp.hpl.jena.vocabulary.RDF;
-import edu.uci.ics.jung.algorithms.shortestpath.DijkstraDistance;
-import edu.uci.ics.jung.algorithms.shortestpath.DijkstraShortestPath;
 import edu.uci.ics.jung.graph.Graph;
 import edu.uci.ics.jung.graph.UndirectedSparseGraph;
+import edu.uci.ics.jung.graph.UndirectedSparseMultigraph;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
@@ -54,309 +40,99 @@ public class Main {
 
    public static void main(String[] args) throws IOException {
       BasicConfigurator.configure();
-      FileOutputStream fout = new FileOutputStream("./OUT");
-      FileOutputStream fdebug = new FileOutputStream("./DEBUG");
-
-      out = new PrintWriter(fout);
-      debug = new PrintWriter(fdebug);
-      InputStream in = FileManager.get().open("./temp.nt");
-      if (in == null) {
-         throw new IllegalArgumentException("File: linkedmdb not found");
-      }
-
-      graph = new UndirectedSparseGraph<Entita, Predicato>();
 
       Model model = ModelFactory.createDefaultModel();
-      System.out.println(" Inizio " + new Date() + "\n");
-      System.out.println("Sto per fare il read ");
-      // model.read(in, null, "RDF/XML");
-      model.read(in, null, "N-TRIPLE");
+      ArrayList<FilmType> films = leggifilmDaFile("./film_test.txt");
+      ArrayList<FilmProperties> filmProperties = leggiPropertiesDaFile("./film_properties_dbpedia.txt");
 
-      ArrayList<String> uriresources = loadbyFile("./mapping.txt");
-      int i = 0;
-      for (String s : uriresources) {
-         ResIterator it = model.listResourcesWithProperty(OWL.sameAs, model.createResource(s));
-         i++;
-         while (it.hasNext()) {
-            Resource r = it.nextResource();
-            out.print(r.getURI());
-         }
-         out.println();
-         System.out.println(i + " " + new Date());
-      }
-//      // film = new ArrayList<Entita>(85700);
-//      // actor = new ArrayList<Entita>(55000);
-//      // movieactor = new ArrayList<Entita, Entita>(60000);
-//
-//      convert_imdbtodbpedia(graph, model);
-//
-//      System.exit(0);
-//      
-//      graph.addVertex(new Entita(LIMDBMOVIE.filmRes.getURI()));
-//      graph.addVertex(new Entita(LIMDBMOVIE.actorRes.getURI()));
-//      ResIterator it;
-//
-//      it = model.listResourcesWithProperty(RDF.type, LIMDBMOVIE.filmRes);
-//      while (it.hasNext()) {
-//         Resource r = it.nextResource();
-//         graph.addVertex(new Entita(r.getURI()));
-//         //System.out.println("graph.addVertex film " + r.getURI() + " "+ LIMDBMOVIE.filmRes.getURI());
-//      }
-//      System.out.println("filmRes " + new Date() + "\n");
-//      it = model.listResourcesWithProperty(RDF.type, LIMDBMOVIE.actorRes);
-//      while (it.hasNext()) {
-//         Resource r = it.nextResource();
-//         graph.addVertex(new Entita(r.getURI()));
-//         //System.out.println("graph.addVertex actor " + r.getURI());
-//      }
-//      System.out.println("actorRes " + new Date() + "\n");
-//      StmtIterator iter = model.listStatements(new SimpleSelector(null, LIMDBMOVIE.actor, (Resource) null));
-//
-//      while (iter.hasNext()) {
-//         Statement s = iter.nextStatement();
-//         Entita e1 = new Entita(s.getSubject().getURI());
-//         Entita e2 = new Entita(((Resource) s.getObject()).getURI());
-//         Predicato p = new Predicato(LIMDBMOVIE.actor.getURI(), 0.5);
-//         graph.addEdge(p, e1, e2);
-//         //System.out.println("graph.addEdge " + p + " "+ e1 + " "+ e2);
-//      }
-//      System.out.println("addEdge " + new Date() + "\n");
-//      // debug.println(graph);
-//
-//      Entita titanic = new Entita("http://data.linkedmdb.org/resource/film/72");
-//      Entita shutter = new Entita("http://data.linkedmdb.org/resource/film/51653");
-//      // Entita film1 = new Entita("film1");
-//      // Entita film2 = new Entita("film2"); 
-//      System.out.println("Inizio Dijkstra " + new Date() + "\n");
-//      System.out.println("Sto per avviare DijkstraShortestPath");
-//      /*UnweightedShortestPath<Entita,Predicato> unw = new UnweightedShortestPath<Entita, Predicato>(graph);
-//       System.out.println(unw.getDistance(film1, film2));
-//       */
-//      DijkstraShortestPath<Entita, Predicato> sp = new DijkstraShortestPath<Entita, Predicato>(graph);
-//      System.out.println("DijkstraShortestPath " + new Date() + "\n");
-//      System.out.println("Sto per avviare getPath");
-//      out.println(sp.getDistance(titanic, shutter));
-//      //out.println(sp.getPath(film1, film2));
-//      List<Predicato> path = sp.getPath(titanic, shutter);
-//
-//      for (int i = 0; i < path.size(); i++) {
-//         out.println(path.get(i));
-//      }
-//      System.out.println("Fine " + new Date() + "\n");
-      //out.println(distance(titanic, shutter));
-
-      // for (int i = 0; i < film.size(); i++) {
-      // out.println(film.get(i));
-      // }
-      //
-      // for (int i = 0; i < actor.size(); i++) {
-      // out.println(actor.get(i));
-      // }
-
-      // model.write(out);
-
-      // Main.loadMovies();
-      // Main.loadActors();
-      // Main.loadMovieActor();
-      // Main.loadAll();
-
-      // int i = 1;
-      // StmtIterator it = model.listStatements();
-      // while (it.hasNext()) {
-      // Resource sub = it.next().getSubject();
-      // Property pre = it.next().getPredicate();
-      // RDFNode obj = it.next().getObject();
-      // out.print(i + " ");
-      // out.print("<" + sub + "> ");
-      // out.print("<" + pre + "> ");
-      // out.println("<" + obj + "> .");
-      // i++;
-      // }
-
-      in.close();
+      FileOutputStream fout = new FileOutputStream("./OutGraph.dot");
+      out = new PrintWriter(fout);
+      out.println("digraph dbpedia {");
+      creagrafo(films, filmProperties);
+      out.println("}");
       out.close();
-      debug.close();
+      //  g.printDOT();
    }
 
-   public static double distance(Entita e1, Entita e2) {
-      // double d = 0;
-      // LinkedHashMap<Entita, Number> map = new DijkstraDistance<Entita,
-      // Predicato>(graph).getDistanceMap(e1, 2);
-
-      System.out.println("Sto per creare Dijkstra");
-      DijkstraDistance<Entita, Predicato> dd = new DijkstraDistance<Entita, Predicato>(graph);
-
-      // out.println(map);
-      return dd.getDistance(e1, e2).doubleValue();
-   }
-
-   private static void loadMovies() {
-      String query = "";
-      query += "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ";
-      query += "PREFIX movie: <http://data.linkedmdb.org/resource/movie/> ";
-      query += "SELECT ?movie ";
-      query += "WHERE { ";
-      query += " ?movie rdf:type movie:film . ";
-      query += " }";
-
-      System.out.println(query);
-      Query q = QueryFactory.create(query);
-
-      QueryExecution qexec = QueryExecutionFactory.sparqlService(ENDPOINT, q);
-      ResultSet rs = qexec.execSelect();
-
-      while (rs.hasNext()) {
-         QuerySolution qs = rs.next();
-         Resource sub = qs.getResource("movie");
-         Property prop = RDF.type;
-         RDFNode obj = (Resource) LIMDBMOVIE.filmRes;
-         model.add(sub, prop, obj);
-      }
-      qexec.close();
-   }
-
-   private static ArrayList<String> loadbyFile(String nomeFile) throws FileNotFoundException, IOException {
-      BufferedReader inp = new BufferedReader(new FileReader(nomeFile));
-      ArrayList<String> readstring = new ArrayList<String>();
+   private static ArrayList<FilmType> leggifilmDaFile(String path) throws IOException {
+      BufferedReader inp = new BufferedReader(new FileReader(path));
+      ArrayList<FilmType> film = new ArrayList<FilmType>();
       String tmp;
+      String[] tmp1;
       while ((tmp = inp.readLine()) != null) {
-         readstring.add(tmp);
+         tmp1 = tmp.split("\t");
+         FilmType tempFilm = new FilmType(Integer.parseInt(tmp1[0]), tmp1[1], tmp1[2]);
+         film.add(tempFilm);
       }
-      return readstring;
+      inp.close();
+      return film;
    }
 
-   private static void allbyFile() throws FileNotFoundException, IOException {
-      ArrayList<String> titlefilm = loadbyFile("./title_movielens.txt");
-      FileOutputStream fresource = new FileOutputStream("./RESOURCES");
-      PrintWriter out1 = new PrintWriter(fresource);
-      for (int i = 260; i < titlefilm.size(); i++) {
-         loadMoviesByTitle(titlefilm.get(i), out1);
-         System.out.println(i + " " + new Date());
+   private static ArrayList<FilmProperties> leggiPropertiesDaFile(String path) throws IOException {
+      BufferedReader inp = new BufferedReader(new FileReader(path));
+      ArrayList<FilmProperties> filmProperties = new ArrayList<FilmProperties>();
+      String tmp;
+      String[] tmp1;
+      while ((tmp = inp.readLine()) != null) {
+         tmp1 = tmp.split("\t");
+         FilmProperties tempFilmProp = new FilmProperties(tmp1[0], tmp1[1]);
+         filmProperties.add(tempFilmProp);
       }
-      out1.close();
+      inp.close();
+      return filmProperties;
    }
 
-   private static void loadMoviesByTitle(String title, PrintWriter out) {
+   private static ArrayList<Resource> querySPARQL(String uri, String property) {
       String query = "";
-      query += "PREFIX foaf: <http://xmlns.com/foaf/0.1/> ";
-      query += "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ";
-      query += "SELECT ?film_resource ";
 
+      //select ?object 
+      //where {<http://dbpedia.org/resource/Star_Trek:_First_Contact> <http://dbpedia.org/property/producer> ?object .} 
+      //
+      query += "select ?object ";
       query += "WHERE { ";
-      query += " ?film_resource rdf:type <http://dbpedia.org/ontology/Film> .";
-      query += " ?film_resource foaf:name ?film_title .";
-      query += " FILTER contains(?film_title, \"" + title + "\")";
+      query += "<" + uri + ">  <" + property + "> ?object .";
       query += " }";
 
       Query q = QueryFactory.create(query);
-
-      QueryExecution qexec = QueryExecutionFactory.sparqlService(ENDPOINT, q);
-      qexec.setTimeout(Long.MAX_VALUE);
-      System.out.println(qexec);
-      ResultSet rs = qexec.execSelect();
-
-      out.print(title);
-      while (rs.hasNext()) {
-         QuerySolution qs = rs.next();
-         Resource sub = qs.getResource("film_resource");
-         out.print("\t" + sub.getURI());
-         //Property prop = RDF.type;
-         //RDFNode obj = (Resource) LIMDBMOVIE.filmRes;
-         //model.add(sub, prop, obj);
-      }
-      qexec.close();
-      out.println();
-   }
-
-   private static void loadActors() {
-      String query = "";
-      query += "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ";
-      query += "PREFIX foaf: <http://xmlns.com/foaf/0.1/> ";
-      query += "PREFIX db: <http://data.linkedmdb.org/resource/> ";
-      query += "PREFIX dbpedia: <http://dbpedia.org/property/> ";
-      query += "PREFIX skos: <http://www.w3.org/2004/02/skos/core#> ";
-      query += "PREFIX dc: <http://purl.org/dc/terms/> ";
-      query += "PREFIX movie: <http://data.linkedmdb.org/resource/movie/> ";
-
-      query += "SELECT ?actor ";
-      query += "WHERE { ";
-      query += " ?actor rdf:type movie:actor . ";
-      query += " } LIMIT 100";
-
-      System.out.println(query);
-      Query q = QueryFactory.create(query);
-
       QueryExecution qexec = QueryExecutionFactory.sparqlService(ENDPOINT, q);
       ResultSet rs = qexec.execSelect();
-
+      ArrayList<Resource> sub = new ArrayList<Resource>();
       while (rs.hasNext()) {
          QuerySolution qs = rs.next();
-         Resource sub = qs.getResource("actor");
-         Property prop = RDF.type;
-         RDFNode obj = (Resource) LIMDBMOVIE.actorRes;
-         model.add(sub, prop, obj);
-      }
-      qexec.close();
-   }
-
-   private static void loadMovieActor() {
-      String query = "";
-      query += "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ";
-      query += "PREFIX movie: <http://data.linkedmdb.org/resource/movie/> ";
-
-      query += "SELECT ?movie ?actor ";
-      query += "WHERE { ";
-      query += " ?movie rdf:type movie:film . ";
-      query += " ?actor rdf:type movie:actor . ";
-      query += " ?movie movie:actor ?actor . ";
-      query += " }";
-
-      System.out.println(query);
-      Query q = QueryFactory.create(query);
-
-      QueryExecution qexec = QueryExecutionFactory.sparqlService(ENDPOINT, q);
-      ResultSet rs = qexec.execSelect();
-
-      while (rs.hasNext()) {
-         QuerySolution qs = rs.next();
-         Resource sub = qs.getResource("movie");
-         Property prop = LIMDBMOVIE.actor;
-         Resource obj = qs.getResource("actor");
-         model.add(sub, prop, obj);
-      }
-      qexec.close();
-   }
-
-   private static void loadAll() {
-      String query = "";
-      query += "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ";
-      query += "PREFIX movie: <http://data.linkedmdb.org/resource/movie/> ";
-
-      query += "SELECT ?a ?b ?c ";
-      query += "WHERE { ";
-      query += " ?a ?b ?c .";
-      query += " ?a rdf:type movie:film .";
-      query += " } LIMIT 50000";
-
-      System.out.println(query);
-      Query q = QueryFactory.create(query);
-
-      QueryExecution qexec = QueryExecutionFactory.sparqlService(ENDPOINT, q);
-      ResultSet rs = qexec.execSelect();
-
-      while (rs.hasNext()) {
-         QuerySolution qs = rs.next();
-         String uri = qs.getResource("b").getURI();
-         Property prop = model.createProperty(uri);
-         Resource sub = qs.getResource("a");
-         RDFNode obj = qs.get("c");
-         debug.println("<" + sub + "> <" + uri + "> <" + obj + "> .");
-         // out.println(LIMDBMOVIE.actor.getURI());
-         if ((LIMDBMOVIE.actor.getURI().equals(uri)) || (LIMDBMOVIE.director.getURI().equals(uri)) || (LIMDBMOVIE.prequel.getURI().equals(uri)) || (LIMDBMOVIE.sequel.getURI().equals(uri))
-                 || (LIMDBMOVIE.film_subject.getURI().equals(uri))) {
-            model.add(sub, prop, obj);
+         try {
+            sub.add(qs.getResource("object"));
+         } catch (Exception e) {
          }
       }
       qexec.close();
+      return sub;
+   }
+
+   private static void creagrafo(ArrayList<FilmType> film, ArrayList<FilmProperties> filmProperties) throws FileNotFoundException {
+      graph = new UndirectedSparseMultigraph<Entita, Predicato>();
+      for (int i = 0; i < film.size(); i++) {
+         Entita entityFilmSrc = new Entita(film.get(i).get_uri());
+         graph.addVertex(entityFilmSrc);
+         out.println(film.get(i).get_title().replace(" ", "_") + "[shape=box];");
+
+         for (int j = 0; j < filmProperties.size(); j++) {
+            Predicato predicate = new Predicato(filmProperties.get(j).get_uri());
+            ArrayList<Resource> resourceDest = querySPARQL(film.get(i).get_uri(), filmProperties.get(j).get_uri());
+            for (int t = 0; t < resourceDest.size(); t++) {
+               Entita entityFilmDest = new Entita(resourceDest.get(t).getURI());
+               graph.addVertex(entityFilmDest);
+               graph.addEdge(predicate, entityFilmSrc, entityFilmDest);
+                 out.println(film.get(i).get_title().replace(" ", "_").replace(".", "_") + " -> " + resourceDest.get(t).getLocalName().replace(".", "_").replace("-", "_").replace(" ", "_") + " [label=\"" + filmProperties.get(j).get_title() + "\"];");
+            }
+         }
+      }
+      //Se la query ha dato risultati allora{
+      //l'arraylist film diventa nodo
+      //l'arraylist filmproperties diventa arco
+      //} e il risultato della query diventa nodo arrivo
+      //
+      //select ?object
+      //where {<http://dbpedia.org/resource/Star_Trek:_First_Contact> <http://dbpedia.org/property/producer> ?object .} 
+      //
    }
 }
