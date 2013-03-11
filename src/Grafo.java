@@ -69,11 +69,9 @@ public class Grafo {
             hs.add(p.getSubjectName());
             out.println("\""+p.getSubjectName() + "\" -- \"" + p.getObjectName() + "\" [label=\"" + p.getUriName() + "\"];");
         }
-        ArrayList<String> a =new ArrayList<String>();
         for (String s : hs) {
-            a.add(s);
+            out.println("\""+s + "\" [shape=box];");
         }
-        
         out.println("}");
         out.close();
     }
