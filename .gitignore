@@ -3,8 +3,8 @@ bin/*
 
 DEBUG
 OUT
-*.nt
-*.rdf
+#*.nt
+#*.rdf
 *.png
 
 
