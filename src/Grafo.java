@@ -76,7 +76,7 @@ public class Grafo {
         out.close();
     }
 
-    public static Graph<Entita, Predicato> crea() throws IOException {
+    public static Graph<Entita, Predicato> crea() throws IOException, InterruptedException {
 
         filmProperties = leggiPropertiesDaFile(FILEFILMPROP);
         films = leggifilmDaFile(FILEFILM);
@@ -87,6 +87,7 @@ public class Grafo {
             Entita entityFilmSrc = new Entita(films.get(i).getUri());
             graph.addVertex(entityFilmSrc);
             for (int j = 0; j < filmProperties.size(); j++) {
+                Thread.sleep(500);
                 ArrayList<Resource> resourceDest = querySPARQL(films.get(i).getUri(), filmProperties.get(j).getUri());
                 for (int t = 0; t < resourceDest.size(); t++) {
                     Entita entityFilmDest = new Entita(resourceDest.get(t).getURI());
