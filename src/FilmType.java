@@ -22,27 +22,27 @@ public class FilmType {
    public FilmType() {
    }
    
-   public int get_id() {
+   public int getId() {
       return this.id;
    }
 
-   public String get_uri() {
+   public String getUri() {
       return this.uri;
    }
 
-   public String get_title() {
+   public String getTitle() {
       return this.title;
    }
 
-   public void set_title(String title) {
+   public void setTitle(String title) {
       this.title = title;
    }
 
-   public void set_uri(String uri) {
+   public void setUri(String uri) {
       this.uri = uri;
    }
 
-   public void set_id(int id) {
+   public void setId(int id) {
       this.id = id;
    }
 }

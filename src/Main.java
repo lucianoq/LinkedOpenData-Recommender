@@ -112,22 +112,22 @@ public class Main {
     private static void creagrafo(ArrayList<FilmType> film, ArrayList<FilmProperties> filmProperties) throws FileNotFoundException {
         graph = new UndirectedSparseMultigraph<Entita, Predicato>();
         for (int i = 0; i < film.size(); i++) {
-            Entita entityFilmSrc = new Entita(film.get(i).get_uri());
+            Entita entityFilmSrc = new Entita(film.get(i).getUri());
             graph.addVertex(entityFilmSrc);
             
             // Scrittura file.dot
-            out.println(film.get(i).get_title().replace(" ", "_") + "[shape=box];");
+            out.println(film.get(i).getTitle().replace(" ", "_") + "[shape=box];");
             String fileDot = "";
             
             for (int j = 0; j < filmProperties.size(); j++) {
-                ArrayList<Resource> resourceDest = querySPARQL(film.get(i).get_uri(), filmProperties.get(j).get_uri());
+                ArrayList<Resource> resourceDest = querySPARQL(film.get(i).getUri(), filmProperties.get(j).get_uri());
                 for (int t = 0; t < resourceDest.size(); t++) {
                     Entita entityFilmDest = new Entita(resourceDest.get(t).getURI());
 
                     if (!resourceDest.get(t).getLocalName().replace(".", "_").replace("-", "_").replace(" ", "_").isEmpty()) {
 
                         // Scrittura file.dot
-                        String fileDotTmp = film.get(i).get_title().replace(" ", "_").replace(".", "_") + " -- " + resourceDest.get(t).getLocalName().replace(".", "_").replace("-", "_").replace(" ", "_") + " [label=\"" + filmProperties.get(j).get_title() + "\"];";
+                        String fileDotTmp = film.get(i).getTitle().replace(" ", "_").replace(".", "_") + " -- " + resourceDest.get(t).getLocalName().replace(".", "_").replace("-", "_").replace(" ", "_") + " [label=\"" + filmProperties.get(j).get_title() + "\"];";
                         
                         if (!fileDot.contains(fileDotTmp)) {
 
