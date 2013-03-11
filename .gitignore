@@ -5,6 +5,9 @@ DEBUG
 OUT
 *.nt
 *.rdf
+*.png
+
+
 
 # Package Files #
 #*.jar
