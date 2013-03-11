@@ -1,4 +1,7 @@
-public class Entita implements Comparable<Entita> {
+
+import java.io.Serializable;
+
+public class Entita implements Comparable<Entita>,Serializable {
 
 	private String	uri;
 

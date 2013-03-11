@@ -1,5 +1,8 @@
 
-public class Predicato implements Comparable<Predicato> {
+import java.io.Serializable;
+
+
+public class Predicato implements Comparable<Predicato>, Serializable {
 
     private String uri;
     private String subject;
