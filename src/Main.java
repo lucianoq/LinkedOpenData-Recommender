@@ -48,7 +48,7 @@ public class Main {
 
         FileOutputStream fout = new FileOutputStream("./OutGraph.dot");
         out = new PrintWriter(fout);
-        out.println("digraph dbpedia {");
+        out.println("graph dbpedia {");
         creagrafo(films, filmProperties);
         out.println("}");
         out.close();
@@ -114,22 +114,28 @@ public class Main {
         for (int i = 0; i < film.size(); i++) {
             Entita entityFilmSrc = new Entita(film.get(i).get_uri());
             graph.addVertex(entityFilmSrc);
+            
+            // Scrittura file.dot
             out.println(film.get(i).get_title().replace(" ", "_") + "[shape=box];");
             String fileDot = "";
+            
             for (int j = 0; j < filmProperties.size(); j++) {
                 ArrayList<Resource> resourceDest = querySPARQL(film.get(i).get_uri(), filmProperties.get(j).get_uri());
                 for (int t = 0; t < resourceDest.size(); t++) {
                     Entita entityFilmDest = new Entita(resourceDest.get(t).getURI());
 
                     if (!resourceDest.get(t).getLocalName().replace(".", "_").replace("-", "_").replace(" ", "_").isEmpty()) {
-                        String fileDotTmp = film.get(i).get_title().replace(" ", "_").replace(".", "_") + " -> " + resourceDest.get(t).getLocalName().replace(".", "_").replace("-", "_").replace(" ", "_") + " [label=\"" + filmProperties.get(j).get_title() + "\"];";
+
+                        // Scrittura file.dot
+                        String fileDotTmp = film.get(i).get_title().replace(" ", "_").replace(".", "_") + " -- " + resourceDest.get(t).getLocalName().replace(".", "_").replace("-", "_").replace(" ", "_") + " [label=\"" + filmProperties.get(j).get_title() + "\"];";
+                        
                         if (!fileDot.contains(fileDotTmp)) {
 
                             Predicato predicate = new Predicato(filmProperties.get(j).get_uri(), entityFilmSrc.toString(),entityFilmDest.toString());
                             graph.addVertex(entityFilmDest);
-                            //System.out.println("graph.addEdge(" + predicate + ", " + entityFilmSrc + ", " + entityFilmDest + ");");
                             graph.addEdge(predicate, entityFilmSrc, entityFilmDest);
 
+                            // Scrittura file.dot
                             fileDot = fileDot + fileDotTmp + "\n";
                         }
                     }
