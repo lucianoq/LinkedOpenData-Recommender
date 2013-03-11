@@ -4,3 +4,13 @@
 228	Star Trek The Wrath of Khan	http://dbpedia.org/resource/Star_Trek_II:_The_Wrath_of_Khan
 450	Star Trek V The Final Frontier	http://dbpedia.org/resource/Star_Trek_V:_The_Final_Frontier
 227	Star Trek VI The Undiscovered Country	http://dbpedia.org/resource/Star_Trek_VI:_The_Undiscovered_Country
+1196	Savage Nights	http://dbpedia.org/resource/Savage_Nights
+318	Schindler's List	http://dbpedia.org/resource/Schindler's_List
+285	Secrets & Lies	http://dbpedia.org/resource/Secrets_&_Lies_(film)
+275	Sense and Sensibility	http://dbpedia.org/resource/Sense_and_Sensibility_(film)
+690	Seven Years in Tibet	http://dbpedia.org/resource/Seven_Years_in_Tibet_(1997_film)
+737	Sirens	http://dbpedia.org/resource/Sirens_(1999_film)
+632	Sophie's Choice	http://dbpedia.org/resource/Sophie's_Choice_(film)
+1089	Speed 2 Cruise Control	http://dbpedia.org/resource/Speed_2:_Cruise_Control
+608	Spellbound	http://dbpedia.org/resource/Spellbound_(1945_film)
+352	Spice World	http://dbpedia.org/resource/Spice_World_(film)
