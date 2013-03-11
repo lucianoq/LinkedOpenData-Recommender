@@ -19,6 +19,7 @@ import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Iterator;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
@@ -61,14 +62,15 @@ public class Grafo {
         FileOutputStream fout = new FileOutputStream("./OutGraph.dot");
         PrintWriter out = new PrintWriter(fout);
         out.println("graph dbpedia {");
-
         Collection<Predicato> collPred = g.getEdges();
+        HashSet<String> hs = new HashSet<String>();
         for (Predicato p : collPred) {
-            System.out.println(p.getUri());
-            System.out.println(p.getUriName());
+            hs.add(p.getSubjectName());
+            out.println(p.getSubjectName() + " -- " + p.getObjectName() + " [label=\"" + p.getUriName() + "\"];");
         }
-
-
+        for (String s : hs) {
+            out.println(s + "[shape=box]");
+        }
         out.println("}");
         out.close();
     }
@@ -137,7 +139,6 @@ public class Grafo {
 //        }
 //        return graph;
 //    }
-
     private static ArrayList<Resource> querySPARQL(String uri, String property) {
         String query = "";
 
