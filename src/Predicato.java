@@ -14,7 +14,7 @@ public class Predicato implements Comparable<Predicato>, Serializable {
         return object;
     }
     public String getObjectName() {
-        return object.replace("http://dbpedia.org/resource/", "");
+        return object.replace("http://dbpedia.org/resource/", "").replace(".", "_").replace(":", "_").replace(",","_").replace("-", "_");
     }
     
     public String getUri() {
@@ -29,7 +29,7 @@ public class Predicato implements Comparable<Predicato>, Serializable {
     }
 
     public String getSubjectName() {
-        return subject.replace("http://dbpedia.org/resource/", "");
+        return subject.replace("http://dbpedia.org/resource/", "").replace(".", "_").replace(":", "_").replace(",","_").replace("-", "_");
     }
     
     public Predicato(String p, String s, String o) {
