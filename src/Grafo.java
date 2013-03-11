@@ -66,7 +66,7 @@ public class Grafo {
         HashSet<String> hs = new HashSet<String>();
         for (Predicato p : collPred) {
             hs.add(p.getSubjectName());
-            out.println(p.getSubjectName() + " -- " + p.getObjectName() + " [label=\"" + p.getUriName() + "\"];");
+            out.println("\""+p.getSubjectName() + "\" -- \"" + p.getObjectName() + "\" [label=\"" + p.getUriName() + "\"];");
         }
         for (String s : hs) {
             out.println(s + "[shape=box]");
