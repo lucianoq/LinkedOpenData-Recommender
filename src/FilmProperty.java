@@ -7,32 +7,32 @@
  *
  * @author Simone
  */
-public class FilmProperties {
+public class FilmProperty {
    
    private String title;
    private String uri;
 
-   public FilmProperties(String title,String uri) {
+   public FilmProperty(String title,String uri) {
       this.title=title;
       this.uri=uri;
    }
 
-   public FilmProperties() {
+   public FilmProperty() {
    }
    
-   public String get_uri() {
+   public String getUri() {
       return this.uri;
    }
 
-   public String get_title() {
+   public String getTitle() {
       return this.title;
    }
 
-   public void set_title(String title) {
+   public void setTitle(String title) {
       this.title = title;
    }
 
-   public void set_uri(String uri) {
+   public void setUri(String uri) {
       this.uri = uri;
    }
 

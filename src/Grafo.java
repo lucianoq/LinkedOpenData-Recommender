@@ -19,6 +19,7 @@ import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 import org.apache.log4j.BasicConfigurator;
@@ -39,7 +40,7 @@ public class Grafo {
     // public static final String DATASET = "en/wikipedia_links_en";
     public static Logger logger = Logger.getLogger(Main.class);
     public static ArrayList<FilmType> films;
-    public static ArrayList<FilmProperties> filmProperties;
+    public static ArrayList<FilmProperty> filmProperties;
 
     public static Graph<Entita, Predicato> leggi() throws FileNotFoundException, IOException, ClassNotFoundException {
         FileInputStream fis = new FileInputStream("./graph.tmp");
@@ -68,9 +69,11 @@ public class Grafo {
             hs.add(p.getSubjectName());
             out.println("\""+p.getSubjectName() + "\" -- \"" + p.getObjectName() + "\" [label=\"" + p.getUriName() + "\"];");
         }
+        ArrayList<String> a =new ArrayList<String>();
         for (String s : hs) {
-            out.println(s + "[shape=box]");
+            a.add(s);
         }
+        
         out.println("}");
         out.close();
     }
@@ -86,12 +89,12 @@ public class Grafo {
             Entita entityFilmSrc = new Entita(films.get(i).getUri());
             graph.addVertex(entityFilmSrc);
             for (int j = 0; j < filmProperties.size(); j++) {
-                ArrayList<Resource> resourceDest = querySPARQL(films.get(i).getUri(), filmProperties.get(j).get_uri());
+                ArrayList<Resource> resourceDest = querySPARQL(films.get(i).getUri(), filmProperties.get(j).getUri());
                 for (int t = 0; t < resourceDest.size(); t++) {
                     Entita entityFilmDest = new Entita(resourceDest.get(t).getURI());
 
                     if (!resourceDest.get(t).getLocalName().isEmpty()) {
-                        Predicato predicate = new Predicato(filmProperties.get(j).get_uri(), entityFilmSrc.toString(), entityFilmDest.toString());
+                        Predicato predicate = new Predicato(filmProperties.get(j).getTitle(), entityFilmSrc.toString(), entityFilmDest.toString());
                         graph.addVertex(entityFilmDest);
                         graph.addEdge(predicate, entityFilmSrc, entityFilmDest);
                     }
@@ -113,18 +116,18 @@ public class Grafo {
 //            String fileDot = "";
 //
 //            for (int j = 0; j < filmProperties.size(); j++) {
-//                ArrayList<Resource> resourceDest = querySPARQL(films.get(i).getUri(), filmProperties.get(j).get_uri());
+//                ArrayList<Resource> resourceDest = querySPARQL(films.get(i).getUri(), filmProperties.get(j).getUri());
 //                for (int t = 0; t < resourceDest.size(); t++) {
 //                    Entita entityFilmDest = new Entita(resourceDest.get(t).getURI());
 //
 //                    if (!resourceDest.get(t).getLocalName().replace(".", "_").replace("-", "_").replace(" ", "_").isEmpty()) {
 //
 //                        // Scrittura file.dot
-//                        String fileDotTmp = films.get(i).getTitle().replace(" ", "_").replace(".", "_") + " -- " + resourceDest.get(t).getLocalName().replace(".", "_").replace("-", "_").replace(" ", "_") + " [label=\"" + filmProperties.get(j).get_title() + "\"];";
+//                        String fileDotTmp = films.get(i).getTitle().replace(" ", "_").replace(".", "_") + " -- " + resourceDest.get(t).getLocalName().replace(".", "_").replace("-", "_").replace(" ", "_") + " [label=\"" + filmProperties.get(j).getTitle() + "\"];";
 //
 //                        if (!fileDot.contains(fileDotTmp)) {
 //
-//                            Predicato predicate = new Predicato(filmProperties.get(j).get_uri(), entityFilmSrc.toString(), entityFilmDest.toString());
+//                            Predicato predicate = new Predicato(filmProperties.get(j).getUri(), entityFilmSrc.toString(), entityFilmDest.toString());
 //                            graph.addVertex(entityFilmDest);
 //                            graph.addEdge(predicate, entityFilmSrc, entityFilmDest);
 //
@@ -179,14 +182,14 @@ public class Grafo {
         return film;
     }
 
-    private static ArrayList<FilmProperties> leggiPropertiesDaFile(String path) throws IOException {
+    private static ArrayList<FilmProperty> leggiPropertiesDaFile(String path) throws IOException {
         BufferedReader inp = new BufferedReader(new FileReader(path));
-        ArrayList<FilmProperties> filmProperties = new ArrayList<FilmProperties>();
+        ArrayList<FilmProperty> filmProperties = new ArrayList<FilmProperty>();
         String tmp;
         String[] tmp1;
         while ((tmp = inp.readLine()) != null) {
             tmp1 = tmp.split("\t");
-            FilmProperties tempFilmProp = new FilmProperties(tmp1[0], tmp1[1]);
+            FilmProperty tempFilmProp = new FilmProperty(tmp1[0], tmp1[1]);
             filmProperties.add(tempFilmProp);
         }
         inp.close();
