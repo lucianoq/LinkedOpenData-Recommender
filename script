@@ -1,0 +1,11 @@
+#!/bin/bash
+
+rm pippo
+
+while read line
+do
+	#echo "Sto per fare "
+	echo $line
+	grep -e "$line" sameastitle.nt >> pippo
+	#sleep 3
+done
