@@ -1,56 +1,71 @@
+
 public class Predicato implements Comparable<Predicato> {
-	private String	uri;
-	private double	weight;
-    private static int i=0;
-    private int id;
 
-	public Predicato(String s) {
-		uri = s;
-		weight = 1;
-        id=i;
-        i++;
-	}
+    private String uri;
+    private String subject;
+    private String object;
+    private double weight;
+    //private static int i = 0;
+    //private int id;
 
-	public Predicato(String s, double d) {
-		uri = s;
-		weight = d;
-        id=i;
-        i++;
-	}
+    public Predicato(String p, String s, String o) {
+        uri = p;
+        subject = s;
+        object = o;
+        weight = 1;
+//        id = i;
+        //  i++;
+    }
 
-	public String toString() {
-		return uri;
-	}
+    public Predicato(String p, String s, String o, double d) {
+        uri = p;
+        subject = s;
+        object = o;
+        weight = d;
+//        id = i;
+//        i++;
+    }
 
-	public double getWeight() {
-		return weight;
-	}
+    public String toString() {
+        return uri + " " + subject + " " + object;
+    }
 
-	public void setWeight(double weight) {
-		this.weight = weight;
-	}
+    public double getWeight() {
+        return weight;
+    }
 
-	@Override
-	public int compareTo(Predicato o) {
-		return this.uri.compareTo(o.uri);
-	}
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
 
-	@Override
-	public boolean equals(Object obj) {
-		// if (this == obj)
-		// return true;
-		// if ((obj == null) || (obj.getClass() != this.getClass()))
-		// return false;
-		return this.id==(((Predicato) obj).id);
-	}
+    @Override
+    public int compareTo(Predicato o) {
+        return this.uri.compareTo(o.uri);
+    }
 
-	@Override
-	public int hashCode() {
-		int hash = 7;
-		for (int i = 0; i < uri.length(); i++) {
-			hash = hash * 31 + uri.charAt(i);
-		}
-		return hash;
-	}
+    @Override
+    public boolean equals(Object obj) {
+        // if (this == obj)
+        // return true;
+        // if ((obj == null) || (obj.getClass() != this.getClass()))
+        // return false;
+        if (this.uri.equals(((Predicato) obj).uri)) {
+            if (this.subject.equals(((Predicato) obj).subject)) {
+                if (this.object.equals(((Predicato) obj).object)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
+    @Override
+    public int hashCode() {
+        String all = uri + subject + object;
+        int hash = 7;
+        for (int i = 0; i < all.length(); i++) {
+            hash = hash * 31 + all.charAt(i);
+        }
+        return hash;
+    }
 }
