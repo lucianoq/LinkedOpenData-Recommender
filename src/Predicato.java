@@ -1,7 +1,6 @@
 
 import java.io.Serializable;
 
-
 public class Predicato implements Comparable<Predicato>, Serializable {
 
     private String uri;
@@ -11,6 +10,28 @@ public class Predicato implements Comparable<Predicato>, Serializable {
     //private static int i = 0;
     //private int id;
 
+    public String getObject() {
+        return object;
+    }
+    public String getObjectName() {
+        return object.replace("http://dbpedia.org/resource/", "");
+    }
+    
+    public String getUri() {
+        return uri;
+    }
+     public String getUriName() {
+        return uri.replace("http://dbpedia.org/ontology/", "").replace("http://purl.org/dc/terms/", "").replace("http://dbpedia.org/property/", "");        
+    }
+     
+    public String getSubject() {
+        return subject;
+    }
+
+    public String getSubjectName() {
+        return subject.replace("http://dbpedia.org/resource/", "");
+    }
+    
     public Predicato(String p, String s, String o) {
         uri = p;
         subject = s;
