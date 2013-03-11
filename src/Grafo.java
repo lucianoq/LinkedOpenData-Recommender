@@ -59,19 +59,37 @@ public class Grafo {
         fos.close();
     }
 
-    public static void stampaDot(Graph<Entita, Predicato> g) throws FileNotFoundException {
+    public static void stampaDot(Graph<Entita, Predicato> g) throws FileNotFoundException, IOException {
         FileOutputStream fout = new FileOutputStream("./OutGraph.dot");
         PrintWriter out = new PrintWriter(fout);
         out.println("graph dbpedia {");
         Collection<Predicato> collPred = g.getEdges();
-        HashSet<String> hs = new HashSet<String>();
+
+        HashSet<String> hsname = new HashSet<String>();
+        HashSet<String> hsuri = new HashSet<String>();
         for (Predicato p : collPred) {
-            hs.add(p.getSubjectName());
-            out.println("\""+p.getSubjectName() + "\" -- \"" + p.getObjectName() + "\" [label=\"" + p.getUriName() + "\"];");
+            hsname.add(p.getSubjectName());
+            hsuri.add(p.getSubject());
         }
-        for (String s : hs) {
-            out.println("\""+s + "\" [shape=box];");
+
+        films = leggifilmDaFile(FILEFILM);
+        
+        for (String s : hsuri) {
+            for (FilmType fi : films) {
+                if (s.equals(fi.getUri())) {
+                    out.println("\"" + fi.getId() + "\" [shape=box];");
+                }
+            }
         }
+
+        for (Predicato p : collPred) {
+             for (FilmType fi : films) {
+                if (p.getSubject().equals(fi.getUri())) {
+                    out.println("\"" + fi.getId() + "\" -- \"" + p.getObjectName() + "\" [label=\"" + p.getUriName() + "\"];");
+                }
+            }
+        }
+
         out.println("}");
         out.close();
     }
@@ -103,44 +121,6 @@ public class Grafo {
         return graph;
     }
 
-//    public static Graph<Entita, Predicato> creall() {
-//        BasicConfigurator.configure();
-//        Graph<Entita, Predicato> graph = new UndirectedSparseMultigraph<Entita, Predicato>();
-//        for (int i = 0; i < films.size(); i++) {
-//            Entita entityFilmSrc = new Entita(films.get(i).getUri());
-//            graph.addVertex(entityFilmSrc);
-//
-//            // Scrittura file.dot
-//            out.println(films.get(i).getTitle().replace(" ", "_") + "[shape=box];");
-//            String fileDot = "";
-//
-//            for (int j = 0; j < filmProperties.size(); j++) {
-//                ArrayList<Resource> resourceDest = querySPARQL(films.get(i).getUri(), filmProperties.get(j).getUri());
-//                for (int t = 0; t < resourceDest.size(); t++) {
-//                    Entita entityFilmDest = new Entita(resourceDest.get(t).getURI());
-//
-//                    if (!resourceDest.get(t).getLocalName().replace(".", "_").replace("-", "_").replace(" ", "_").isEmpty()) {
-//
-//                        // Scrittura file.dot
-//                        String fileDotTmp = films.get(i).getTitle().replace(" ", "_").replace(".", "_") + " -- " + resourceDest.get(t).getLocalName().replace(".", "_").replace("-", "_").replace(" ", "_") + " [label=\"" + filmProperties.get(j).getTitle() + "\"];";
-//
-//                        if (!fileDot.contains(fileDotTmp)) {
-//
-//                            Predicato predicate = new Predicato(filmProperties.get(j).getUri(), entityFilmSrc.toString(), entityFilmDest.toString());
-//                            graph.addVertex(entityFilmDest);
-//                            graph.addEdge(predicate, entityFilmSrc, entityFilmDest);
-//
-//                            // Scrittura file.dot
-//                            fileDot = fileDot + fileDotTmp + "\n";
-//                        }
-//                    }
-//                }
-//            }
-//            out.println(fileDot);
-//
-//        }
-//        return graph;
-//    }
     private static ArrayList<Resource> querySPARQL(String uri, String property) {
         String query = "";
 
