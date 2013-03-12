@@ -7,7 +7,6 @@ import org.apache.log4j.Logger;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
 
 /**
  * @author Simone
@@ -20,11 +19,11 @@ public class Grafo {
     // public static final String ENDPOINT = "http://sparql.freebase.com";
     // public static final String ENDPOINT = "http://live.dbpedia.org/sparql";
     private static Logger logger = Logger.getLogger(Main.class);
-    private ArrayList<Film> films;
-    private ArrayList<Property> properties;
-    private UndirectedSparseMultigraph<Risorsa, Edge> graph;
+    private static ArrayList<Film> films;
+    private static ArrayList<Property> properties;
+    private static UndirectedSparseMultigraph<Risorsa, Edge> graph;
 
-    public Grafo() throws IOException {
+    public static void init() throws IOException {
         films = Film.readFromFile(FILEFILM);
         properties = Property.readFromFile(FILEFILMPROP);
     }
@@ -56,7 +55,7 @@ public class Grafo {
         return sub;
     }
 
-    public void load() throws IOException, ClassNotFoundException {
+    public static void load() throws IOException, ClassNotFoundException {
         FileInputStream fis = new FileInputStream("./graph.tmp");
         ObjectInputStream ois = new ObjectInputStream(fis);
         graph = (UndirectedSparseMultigraph<Risorsa, Edge>) ois.readObject();
@@ -64,16 +63,16 @@ public class Grafo {
         fis.close();
     }
 
-    public void save() throws IOException {
+    public static void save() throws IOException {
         FileOutputStream fos = new FileOutputStream("./graph.tmp");
         ObjectOutputStream o = new ObjectOutputStream(fos);
-        o.writeObject(this.graph);
+        o.writeObject(graph);
         o.close();
         fos.close();
     }
 
-    public void printDot() throws IOException {
-        FileOutputStream fout = new FileOutputStream("./OutGraph.dot");
+    public static void printDot() throws IOException {
+        FileOutputStream fout = new FileOutputStream("./allGraph.dot");
         PrintWriter out = new PrintWriter(fout);
         out.println("graph dbpedia {");
 
@@ -94,7 +93,7 @@ public class Grafo {
         fout.close();
     }
 
-    public void createFromQuery() throws IOException, InterruptedException {
+    public static void createFromQuery() throws IOException, InterruptedException {
         graph = new UndirectedSparseMultigraph<Risorsa, Edge>();
 
         BasicConfigurator.configure();
@@ -116,15 +115,15 @@ public class Grafo {
         }
     }
 
-    public ArrayList<Film> getFilms() {
+    public static ArrayList<Film> getFilms() {
         return films;
     }
 
-    public ArrayList<Property> getProperties() {
+    public static ArrayList<Property> getProperties() {
         return properties;
     }
 
-    public UndirectedSparseMultigraph<Risorsa, Edge> getGraph() {
+    public static UndirectedSparseMultigraph<Risorsa, Edge> getGraph() {
         return graph;
     }
 }
