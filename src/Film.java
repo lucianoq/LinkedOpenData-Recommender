@@ -1,0 +1,48 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Serializable;
+import java.util.ArrayList;
+
+/**
+ * Created with IntelliJ IDEA.
+ * User: lusio
+ * Date: 12/03/13
+ * Time: 0.40
+ */
+public class Film extends Risorsa implements Serializable {
+
+    private int idMovieLens;
+
+    public Film(String uri, int idMovieLens) {
+        super(uri);
+        this.idMovieLens = idMovieLens;
+    }
+
+    public static ArrayList<Film> readFromFile(String path) throws IOException {
+        BufferedReader inp = new BufferedReader(new FileReader(path));
+        ArrayList<Film> films = new ArrayList<Film>();
+        String tmp;
+        String[] tmp1;
+        while ((tmp = inp.readLine()) != null) {
+            tmp1 = tmp.split("\t");
+            Film tempFilm = new Film(tmp1[2], Integer.parseInt(tmp1[0]));
+            films.add(tempFilm);
+        }
+        inp.close();
+        return films;
+    }
+
+    public int getIdMovieLens() {
+        return idMovieLens;
+    }
+
+    @Override
+    public String toString() {
+        return "Film{" +
+                "idMovieLens=" + idMovieLens +
+                ", title='" + this.uri + "\'" +
+                ", uri='" + this.title + "\'" +
+                '}';
+    }
+}

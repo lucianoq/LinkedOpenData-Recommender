@@ -1,30 +1,25 @@
 
-import edu.uci.ics.jung.algorithms.shortestpath.DijkstraShortestPath;
-import edu.uci.ics.jung.graph.Graph;
-import java.util.Date;
-import java.util.List;
-
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
- *
  * @author Simone
  */
-public class Distance<V,E> {
+public class Distance<V, E> {
 
-    private Graph<V, E> graph;
+    private Grafo graph;
 
-    public Distance(Graph<V, E> graph) {
+    public Distance(Grafo graph) {
         this.graph = graph;
     }
 
-    public double ldsd(V v1,V v2) {
-        
-        return graph.getEdgeCount();
+    public double ldsd(Film f1, Film f2) {
+
+        return graph.getGraph().getEdgeCount();
     }
-    
+
 //    private static void distances() {
 //        DijkstraShortestPath<Entita, Predicato> sp = new DijkstraShortestPath<Entita, Predicato>(graph);
 //        System.out.println("DijkstraShortestPath " + new Date() + "\n");

@@ -1,17 +1,14 @@
-
-import edu.uci.ics.jung.graph.Graph;
 import java.io.IOException;
 
 public class Main {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
-        Graph<Entita, Predicato> graph;
-        //graph = Grafo.crea();        
-        //Grafo.scrivi(graph);
-        graph = Grafo.leggi();
-        Grafo.stampaDot(graph);
-        //Distance d = new Distance(graph);
+        Grafo g = new Grafo();
+        g.createFromQuery();
+        g.save();
+        //g.load();
+        g.printDot();
 
-        //  g.printDOT();
+        //Distance d = new Distance(g);
     }
 }
