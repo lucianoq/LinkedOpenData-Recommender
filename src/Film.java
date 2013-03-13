@@ -3,6 +3,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,7 +11,7 @@ import java.util.ArrayList;
  * Date: 12/03/13
  * Time: 0.40
  */
-public class Film extends Risorsa implements Serializable {
+public class Film extends Risorsa implements Serializable, Comparable<Film> {
 
     private int idMovieLens;
 
@@ -29,6 +30,7 @@ public class Film extends Risorsa implements Serializable {
             Film tempFilm = new Film(tmp1[2], Integer.parseInt(tmp1[0]));
             films.add(tempFilm);
         }
+        Collections.sort(films);
         inp.close();
         return films;
     }
@@ -64,5 +66,10 @@ public class Film extends Risorsa implements Serializable {
         int result = super.hashCode();
         result = 31 * result + idMovieLens;
         return result;
+    }
+
+    @Override
+    public int compareTo(Film o) {
+        return ( this.idMovieLens - o.getIdMovieLens() );
     }
 }

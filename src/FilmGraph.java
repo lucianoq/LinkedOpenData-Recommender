@@ -63,11 +63,4 @@ public class FilmGraph {
         return filmGraph;
     }
 
-    public static ArrayList<Film> getFilms() {
-        ArrayList<Film> films = new ArrayList<Film>();
-        for (Film film : filmGraph.getVertices()) {
-            films.add(film);
-        }
-        return films;
-    }
 }

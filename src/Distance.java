@@ -7,7 +7,9 @@
 
 import edu.uci.ics.jung.graph.UndirectedSparseMultigraph;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 /**
  * @author Simone
@@ -55,6 +57,32 @@ public class Distance {
         double ldsdWeighted = 1.0 / (1.0 + fattA + fattB);
         return ldsdWeighted;
     }
+
+    //Indirect distance
+    public double ldsdIndirect(Film f1, Film f2) {
+        double ldsdIndirect=1.0/(1.0+ciocii(f1,f2));
+
+        return ldsdIndirect;
+    }
+
+    // Numero di archi che partendo dalle risorse ra e rb arrivano ad una risorsa in comune
+    // Numero di archi che hanno come origine n e come arrivo ra ed rb
+    // in poche parole
+    // numero di archi tra du film con una risorsa in mezzo
+    private static int ciocii(Film f1, Film f2) {
+
+        Collection<EdgeFilm> edgef1 = filmGraph.getIncidentEdges(f1);
+        Collection<EdgeFilm> edgef2 = filmGraph.getIncidentEdges(f2);
+
+        int numArchi = 0;
+        for (EdgeFilm ef1 : edgef1)
+            for (EdgeFilm ef2 : edgef2)
+                    if (ef1.getLabel().equals(ef2.getLabel()))
+                        if ( ef1.consecutive(ef2) )
+                            numArchi++;
+        return numArchi;
+    }
+
 
 //    private static void distances() {
 //        DijkstraShortestPath<Entita, Predicato> sp = new DijkstraShortestPath<Entita, Predicato>(graph);

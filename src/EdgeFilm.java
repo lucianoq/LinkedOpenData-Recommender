@@ -23,6 +23,23 @@ public class EdgeFilm {
         this.weight = weight;
     }
 
+    public boolean consecutive(EdgeFilm edgeFilm){
+        if (this.getSubject().equals(edgeFilm.getSubject()))
+            if (! this.getObject().equals(edgeFilm.getObject()))
+                return true;
+        if (this.getSubject().equals(edgeFilm.getObject()))
+            if (! this.getObject().equals(edgeFilm.getSubject()))
+                return true;
+        if (this.getObject().equals(edgeFilm.getSubject()))
+            if (! this.getSubject().equals(edgeFilm.getObject()))
+                return true;
+        if (this.getObject().equals(edgeFilm.getObject()))
+            if (! this.getSubject().equals(edgeFilm.getSubject()))
+                return true;
+        return false;
+    }
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

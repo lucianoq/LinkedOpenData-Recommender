@@ -5,6 +5,7 @@ import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
 import java.io.*;
+import java.util.Date;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -100,7 +101,7 @@ public class Grafo {
         for (int i = 0; i < films.size(); i++) {
             graph.addVertex(films.get(i));
             for (int j = 0; j < properties.size(); j++) {
-                Thread.sleep(50);
+                Thread.sleep(150);
                 ArrayList<Resource> resourceDest = querySPARQL(films.get(i).getUri(), properties.get(j).getUri());
                 for (int t = 0; t < resourceDest.size(); t++) {
                     Risorsa risorsaFilmDest = new Risorsa(resourceDest.get(t).getURI());
@@ -112,6 +113,7 @@ public class Grafo {
                     }
                 }
             }
+            //System.out.println("film " + i + "  iniziato " + new Date() + " : " + films.get(i).getTitle());
         }
     }
 
