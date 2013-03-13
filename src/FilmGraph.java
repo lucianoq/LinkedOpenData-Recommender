@@ -3,6 +3,7 @@ import edu.uci.ics.jung.graph.UndirectedSparseMultigraph;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Collection;
 
 /**
@@ -56,5 +57,17 @@ public class FilmGraph {
         out.println("}");
         out.close();
         fout.close();
+    }
+
+    public static UndirectedSparseMultigraph<Film, EdgeFilm> getGraph() {
+        return filmGraph;
+    }
+
+    public static ArrayList<Film> getFilms() {
+        ArrayList<Film> films = new ArrayList<Film>();
+        for (Film film : filmGraph.getVertices()) {
+            films.add(film);
+        }
+        return films;
     }
 }

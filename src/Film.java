@@ -45,4 +45,24 @@ public class Film extends Risorsa implements Serializable {
                 ", uri='" + this.title + "\'" +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        Film film = (Film) o;
+
+        if (idMovieLens != film.idMovieLens) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + idMovieLens;
+        return result;
+    }
 }

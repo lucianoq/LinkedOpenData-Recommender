@@ -4,20 +4,56 @@
  * and open the template in the editor.
  */
 
+
+import edu.uci.ics.jung.graph.UndirectedSparseMultigraph;
+
+import java.util.Collection;
+
 /**
  * @author Simone
  */
-public class Distance<V, E> {
+public class Distance {
 
-    private Grafo graph;
+    private static UndirectedSparseMultigraph<Film, EdgeFilm> filmGraph;
 
-    public Distance(Grafo graph) {
-        this.graph = graph;
+    public Distance(UndirectedSparseMultigraph<Film, EdgeFilm> filmGraph) {
+        this.filmGraph = filmGraph;
     }
 
+    // Direct Distance
     public double ldsd(Film f1, Film f2) {
+        Collection<EdgeFilm> edgeSet = filmGraph.findEdgeSet(f1, f2);
+        return 1.0 / (1.0 + 2.0 * edgeSet.size());
+    }
 
-        return graph.getGraph().getEdgeCount();
+    public double ldsdWeighted(Film f1, Film f2) {
+        Collection<EdgeFilm> edgeSetDirect = filmGraph.findEdgeSet(f1, f2);
+        Collection<EdgeFilm> edgeSetGlobal = filmGraph.getEdges();
+        double fattA = 0.0;
+        double fattB = 0.0;
+        for (EdgeFilm edgeFilm : edgeSetDirect) {
+            int countSrc = 0;
+            int countDest = 0;
+            for (EdgeFilm edgeFilmGlobal : edgeSetGlobal) {
+
+                // Arco tra x e f2
+                if (edgeFilm.getObject().equals(edgeFilmGlobal.getObject()))
+                    if (!edgeFilm.getSubject().equals(edgeFilmGlobal.getSubject()))
+                        countSrc++;
+
+
+                // Arco tra f1 e x
+                if (edgeFilm.getSubject().equals(edgeFilmGlobal.getSubject()))
+                    if (!edgeFilm.getObject().equals(edgeFilmGlobal.getObject()))
+                        countDest++;
+
+            }
+            fattA += 1.0 / (1.0 + Math.log(countSrc));
+            fattB += 1.0 / (1.0 + Math.log(countDest));
+        }
+
+        double ldsdWeighted = 1.0 / (1.0 + fattA + fattB);
+        return ldsdWeighted;
     }
 
 //    private static void distances() {
