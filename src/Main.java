@@ -4,9 +4,9 @@ public class Main {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         Grafo.init();
-        Grafo.createFromQuery();
-        Grafo.save();
-        //Grafo.load();
+        //Grafo.createFromQuery();
+        //Grafo.save();
+        Grafo.load();
         Grafo.printDot();
 
         FilmGraph.init();

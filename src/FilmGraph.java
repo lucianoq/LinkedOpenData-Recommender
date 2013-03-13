@@ -1,6 +1,5 @@
 import edu.uci.ics.jung.graph.UndirectedSparseMultigraph;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -21,18 +20,17 @@ public class FilmGraph {
         filmGraph = new UndirectedSparseMultigraph<Film, EdgeFilm>();
         UndirectedSparseMultigraph<Risorsa, Edge> g = Grafo.getGraph();
 
-        Collection<Edge> edges1 = g.getEdges();
-        Collection<Edge> edges2 = g.getEdges();
+        Collection<Edge> edges = g.getEdges();
 
         Collection<Film> films = Grafo.getFilms();
         for (Film f : films)
             filmGraph.addVertex(f);
 
-        for (Edge e1 : edges1)
-            for (Edge e2 : edges2)
-                if (e1.getObject() == e2.getObject())
-                    if (e1.getSubject() != e2.getSubject()) {
-                        String label = e1.getTitle() + " " + e1.getObject() + " " + e2.getTitle();
+        for (Edge e1 : edges)
+            for (Edge e2 : edges)
+                if (e1.getObject().equals(e2.getObject()))
+                    if (!e1.getSubject().equals(e2.getSubject())) {
+                        String label = e1.getTitle() + " " + e1.getObject().title + " " + e2.getTitle();
                         EdgeFilm edgeFilm = new EdgeFilm(label, e1.getSubject(), e2.getSubject());
                         filmGraph.addEdge(edgeFilm, e1.getSubject(), e2.getSubject());
                     }
