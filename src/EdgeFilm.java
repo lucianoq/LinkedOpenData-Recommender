@@ -23,18 +23,18 @@ public class EdgeFilm {
         this.weight = weight;
     }
 
-    public boolean consecutive(EdgeFilm edgeFilm){
+    public boolean consecutive(EdgeFilm edgeFilm) {
         if (this.getSubject().equals(edgeFilm.getSubject()))
-            if (! this.getObject().equals(edgeFilm.getObject()))
+            if (!this.getObject().equals(edgeFilm.getObject()))
                 return true;
         if (this.getSubject().equals(edgeFilm.getObject()))
-            if (! this.getObject().equals(edgeFilm.getSubject()))
+            if (!this.getObject().equals(edgeFilm.getSubject()))
                 return true;
         if (this.getObject().equals(edgeFilm.getSubject()))
-            if (! this.getSubject().equals(edgeFilm.getObject()))
+            if (!this.getSubject().equals(edgeFilm.getObject()))
                 return true;
         if (this.getObject().equals(edgeFilm.getObject()))
-            if (! this.getSubject().equals(edgeFilm.getSubject()))
+            if (!this.getSubject().equals(edgeFilm.getSubject()))
                 return true;
         return false;
     }
@@ -48,7 +48,10 @@ public class EdgeFilm {
         EdgeFilm edgeFilm = (EdgeFilm) o;
 
         if (Double.compare(edgeFilm.weight, weight) != 0) return false;
-        if (label != null ? !label.equals(edgeFilm.label) : edgeFilm.label != null) return false;
+        String[] labelModified = label.split(" ");
+        String labelmodified = labelModified[0] + " " + labelModified[2];
+        if (labelmodified != null ? !labelmodified.equals(edgeFilm.getLabelModified()) : edgeFilm.getLabelModified() != null)
+            return false;
         if (object != null ? !object.equals(edgeFilm.object) : edgeFilm.object != null) return false;
         if (subject != null ? !subject.equals(edgeFilm.subject) : edgeFilm.subject != null) return false;
 
@@ -81,6 +84,11 @@ public class EdgeFilm {
 
     public double getWeight() {
         return weight;
+    }
+
+    public String getLabelModified() {
+        String[] labelModified = label.split(" ");
+        return labelModified[0] + " " + labelModified[2];
     }
 
     @Override

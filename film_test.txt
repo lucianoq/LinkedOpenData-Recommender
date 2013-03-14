@@ -1,13 +1,26 @@
+447	Carrie	http://dbpedia.org/resource/Carrie_(1976_film)
+444	The Blob	http://dbpedia.org/resource/The_Blob_(1988_film)
+47	Ed Wood	http://dbpedia.org/resource/Ed_Wood_(film)
+1203	Top Hat	http://dbpedia.org/resource/Top_Hat
+612	Lost Horizon	http://dbpedia.org/resource/Lost_Horizon_(1937_film)
+639	The Tin Drum	http://dbpedia.org/resource/The_Tin_Drum_(film)
+491	The Adventures of Robin Hood	http://dbpedia.org/resource/The_Adventures_of_Robin_Hood_(film)
+916	Lost in Space	http://dbpedia.org/resource/Lost_in_Space_(film)
+253	The Pillow Book	http://dbpedia.org/resource/The_Pillow_Book_(film)
+1172	The Women	http://dbpedia.org/resource/The_Women_(1939_film)
+4	Get Shorty	http://dbpedia.org/resource/Get_Shorty_(film)
+315	Apt Pupil	http://dbpedia.org/resource/Apt_Pupil_(film)
+145	The Lawnmower Man	http://dbpedia.org/resource/The_Lawnmower_Man_(film)
+732	Dave	http://dbpedia.org/resource/Dave_(film)
+768	Casper	http://dbpedia.org/resource/Casper_(film)
+549	Rob Roy	http://dbpedia.org/resource/Rob_Roy_(film)
+1013	Anaconda	http://dbpedia.org/resource/Anaconda_(film)
+628	Sleepers	http://dbpedia.org/resource/Sleepers_(film)
+54	Outbreak	http://dbpedia.org/resource/Outbreak_(film)
+576	Cliffhanger	http://dbpedia.org/resource/Cliffhanger_(film)
 222	Star Trek First Contact	http://dbpedia.org/resource/Star_Trek:_First_Contact
 229	Star Trek III The Search for Spock	http://dbpedia.org/resource/Star_Trek_III:_The_Search_for_Spock
 230	Star Trek IV The Voyage Home	http://dbpedia.org/resource/Star_Trek_IV:_The_Voyage_Home
 228	Star Trek The Wrath of Khan	http://dbpedia.org/resource/Star_Trek_II:_The_Wrath_of_Khan
 450	Star Trek V The Final Frontier	http://dbpedia.org/resource/Star_Trek_V:_The_Final_Frontier
 227	Star Trek VI The Undiscovered Country	http://dbpedia.org/resource/Star_Trek_VI:_The_Undiscovered_Country
-318	Schindler's List	http://dbpedia.org/resource/Schindler's_List
-285	Secrets & Lies	http://dbpedia.org/resource/Secrets_&_Lies_(film)
-275	Sense and Sensibility	http://dbpedia.org/resource/Sense_and_Sensibility_(film)
-690	Seven Years in Tibet	http://dbpedia.org/resource/Seven_Years_in_Tibet_(1997_film)
-737	Sirens	http://dbpedia.org/resource/Sirens_(1999_film)
-632	Sophie's Choice	http://dbpedia.org/resource/Sophie's_Choice_(film)
-1089	Speed 2 Cruise Control	http://dbpedia.org/resource/Speed_2:_Cruise_Control

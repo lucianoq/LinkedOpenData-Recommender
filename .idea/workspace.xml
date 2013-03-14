@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfbc18b6-a357-42af-aa62-c4378d203a9f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DistanceLuciano.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graph.tmp" afterPath="$PROJECT_DIR$/graph.tmp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Distance.java" afterPath="$PROJECT_DIR$/src/Distance.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EdgeFilm.java" afterPath="$PROJECT_DIR$/src/EdgeFilm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Film.java" afterPath="$PROJECT_DIR$/src/Film.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FilmGraph.java" afterPath="$PROJECT_DIR$/src/FilmGraph.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Grafo.java" afterPath="$PROJECT_DIR$/src/Grafo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/allGraph.dot" afterPath="$PROJECT_DIR$/allGraph.dot" />
@@ -16,20 +15,21 @@
     </list>
     <ignored path="lod-project.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363168044041" ignored="false" />
-    <file path="/Main.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363192898145" ignored="false" />
-    <file path="/Grafo.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363176570333" ignored="false" />
+    <file path="/Dummy.txt" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363270224811" ignored="false" />
+    <file path="/Main.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363277981897" ignored="false" />
+    <file path="/Grafo.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363253944720" ignored="false" />
     <file path="/Resource.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363070824494" ignored="false" />
     <file path="/Film.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363191919144" ignored="false" />
     <file path="/Property.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363083892333" ignored="false" />
     <file path="/Edge.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363083433161" ignored="false" />
     <file path="/Entity.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363071088762" ignored="false" />
     <file path="/Vertex.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363078205373" ignored="false" />
-    <file path="/Distance.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363190782258" ignored="false" />
+    <file path="/Distance.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363274325842" ignored="false" />
     <file path="/Risorsa.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363083309465" ignored="false" />
     <file path="/FilmGraph.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363192803525" ignored="false" />
-    <file path="/EdgeFilm.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363190155539" ignored="false" />
+    <file path="/EdgeFilm.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363272754681" ignored="false" />
     <file path="/fragment.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363100909887" ignored="false" />
+    <file path="/DistanceLuciano.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363278788155" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,10 +91,8 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="103" selection-start="892" selection-end="892" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="32" column="39" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -103,12 +101,7 @@
         <entry file="file://$PROJECT_DIR$/src/FilmGraph.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="64" column="0" selection-start="2133" selection-end="2133" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#init#0;class#FilmGraph#0" expanded="false" />
-                <element signature="method#printDot#0;class#FilmGraph#0" expanded="false" />
-                <element signature="method#getGraph#0;class#FilmGraph#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,27 +118,54 @@
       <file leaf-file-name="Grafo.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Grafo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="32" selection-start="3676" selection-end="3676" vertical-scroll-proportion="0.0">
+            <state line="115" column="18" selection-start="4317" selection-end="4323" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Distance.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Distance.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="12" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
               <folding>
+                <element signature="e#0#10416#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="method#querySPARQL#0;class#Grafo#0" expanded="false" />
-                <element signature="method#load#0;class#Grafo#0" expanded="false" />
-                <element signature="method#save#0;class#Grafo#0" expanded="false" />
-                <element signature="method#printDot#0;class#Grafo#0" expanded="false" />
+                <element signature="method#ldsd#0;class#Distance#0" expanded="false" />
+                <element signature="method#ldsdWeightedFatt#0;class#Distance#0" expanded="false" />
+                <element signature="e#3458#3545#0" expanded="false" />
+                <element signature="e#8995#9034#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Distance.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Distance.java">
+      <file leaf-file-name="DistanceLuciano.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DistanceLuciano.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="20" selection-start="2527" selection-end="2527" vertical-scroll-proportion="0.3642857">
+            <state line="35" column="44" selection-start="921" selection-end="921" vertical-scroll-proportion="0.27142859">
               <folding>
-                <element signature="e#0#4116#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="method#Distance#0;class#Distance#0" expanded="false" />
+                <element signature="e#2026#2032#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Property.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Property.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="64" selection-start="147" selection-end="178" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Risorsa.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Risorsa.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="92" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -153,7 +173,7 @@
       <file leaf-file-name="EdgeFilm.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EdgeFilm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="27" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
+            <state line="52" column="50" selection-start="1742" selection-end="1742" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -193,12 +213,13 @@
         <option value="$PROJECT_DIR$/src/Risorsa.java" />
         <option value="$PROJECT_DIR$/src/Property.java" />
         <option value="$PROJECT_DIR$/src/Edge.java" />
-        <option value="$PROJECT_DIR$/src/EdgeFilm.java" />
-        <option value="$PROJECT_DIR$/src/Grafo.java" />
         <option value="$PROJECT_DIR$/src/Film.java" />
         <option value="$PROJECT_DIR$/src/FilmGraph.java" />
+        <option value="$PROJECT_DIR$/src/Grafo.java" />
+        <option value="$PROJECT_DIR$/src/EdgeFilm.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Distance.java" />
+        <option value="$PROJECT_DIR$/src/DistanceLuciano.java" />
       </list>
     </option>
   </component>
@@ -241,6 +262,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -275,7 +297,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -481,22 +502,22 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.85153586" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18712121" sideWeight="0.44880545" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25542572" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3265306" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18712121" sideWeight="0.2764505" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18712121" sideWeight="0.52901024" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47098976" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18712121" sideWeight="0.7116041" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.278157" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -563,13 +584,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Edge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Film.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="43" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
@@ -581,9 +595,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="2" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#4116#0" expanded="true" />
+            <element signature="e#0#10416#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="method#Distance#0;class#Distance#0" expanded="false" />
+            <element signature="method#ldsd#0;class#Distance#0" expanded="false" />
+            <element signature="method#ldsdWeightedFatt#0;class#Distance#0" expanded="false" />
+            <element signature="e#3458#3545#0" expanded="false" />
+            <element signature="e#8995#9034#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -598,40 +615,41 @@
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="72" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="123" column="19" selection-start="5414" selection-end="5414" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="117" column="91" selection-start="5067" selection-end="5067" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Property.java">
+    <entry file="file://$PROJECT_DIR$/src/Film.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="10" selection-start="1466" selection-end="1466" vertical-scroll-proportion="0.05279503">
+        <state line="72" column="54" selection-start="1905" selection-end="1905" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Risorsa.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="92" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.05279503">
+        <state line="46" column="92" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="64" selection-start="147" selection-end="178" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -645,27 +663,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EdgeFilm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="27" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
+        <state line="52" column="50" selection-start="1742" selection-end="1742" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grafo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="32" selection-start="3676" selection-end="3676" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#querySPARQL#0;class#Grafo#0" expanded="false" />
-            <element signature="method#load#0;class#Grafo#0" expanded="false" />
-            <element signature="method#save#0;class#Grafo#0" expanded="false" />
-            <element signature="method#printDot#0;class#Grafo#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Film.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="54" selection-start="1905" selection-end="1905" vertical-scroll-proportion="0.0">
+        <state line="115" column="18" selection-start="4317" selection-end="4323" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -673,31 +678,37 @@
     <entry file="file://$PROJECT_DIR$/src/FilmGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="64" column="0" selection-start="2133" selection-end="2133" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#init#0;class#FilmGraph#0" expanded="false" />
-            <element signature="method#printDot#0;class#FilmGraph#0" expanded="false" />
-            <element signature="method#getGraph#0;class#FilmGraph#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="103" selection-start="892" selection-end="892" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="32" column="39" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Distance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="20" selection-start="2527" selection-end="2527" vertical-scroll-proportion="0.3642857">
+        <state line="17" column="12" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#4116#0" expanded="true" />
+            <element signature="e#0#10416#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="method#Distance#0;class#Distance#0" expanded="false" />
+            <element signature="method#ldsd#0;class#Distance#0" expanded="false" />
+            <element signature="method#ldsdWeightedFatt#0;class#Distance#0" expanded="false" />
+            <element signature="e#3458#3545#0" expanded="false" />
+            <element signature="e#8995#9034#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DistanceLuciano.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="44" selection-start="921" selection-end="921" vertical-scroll-proportion="0.27142859">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2026#2032#0" expanded="true" />
           </folding>
         </state>
       </provider>
