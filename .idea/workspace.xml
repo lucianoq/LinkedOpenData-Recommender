@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfbc18b6-a357-42af-aa62-c4378d203a9f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DistanceLuciano.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graph.tmp" afterPath="$PROJECT_DIR$/graph.tmp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Distance.java" afterPath="$PROJECT_DIR$/src/Distance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EdgeFilm.java" afterPath="$PROJECT_DIR$/src/EdgeFilm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Grafo.java" afterPath="$PROJECT_DIR$/src/Grafo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/allGraph.dot" afterPath="$PROJECT_DIR$/allGraph.dot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/filmGraph.dot" afterPath="$PROJECT_DIR$/filmGraph.dot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/film_test.txt" afterPath="$PROJECT_DIR$/film_test.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DistanceLuciano.java" afterPath="$PROJECT_DIR$/src/DistanceLuciano.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
     </list>
     <ignored path="lod-project.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363270224811" ignored="false" />
+    <file path="/Dummy.txt" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363281121170" ignored="false" />
     <file path="/Main.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363277981897" ignored="false" />
     <file path="/Grafo.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363253944720" ignored="false" />
     <file path="/Resource.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363070824494" ignored="false" />
@@ -29,7 +21,7 @@
     <file path="/FilmGraph.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363192803525" ignored="false" />
     <file path="/EdgeFilm.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363272754681" ignored="false" />
     <file path="/fragment.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363100909887" ignored="false" />
-    <file path="/DistanceLuciano.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363278788155" ignored="false" />
+    <file path="/DistanceLuciano.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363281899547" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +36,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -79,6 +70,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -91,7 +83,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="39" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.0">
+            <state line="41" column="0" selection-start="1626" selection-end="1626" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -109,7 +101,7 @@
       <file leaf-file-name="Film.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Film.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="54" selection-start="1905" selection-end="1905" vertical-scroll-proportion="0.0">
+            <state line="75" column="0" selection-start="1917" selection-end="1917" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -118,7 +110,7 @@
       <file leaf-file-name="Grafo.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Grafo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="18" selection-start="4317" selection-end="4323" vertical-scroll-proportion="0.0">
+            <state line="117" column="18" selection-start="4449" selection-end="4455" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -127,15 +119,8 @@
       <file leaf-file-name="Distance.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Distance.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="12" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#10416#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="method#ldsd#0;class#Distance#0" expanded="false" />
-                <element signature="method#ldsdWeightedFatt#0;class#Distance#0" expanded="false" />
-                <element signature="e#3458#3545#0" expanded="false" />
-                <element signature="e#8995#9034#0" expanded="false" />
-              </folding>
+            <state line="244" column="12" selection-start="8944" selection-end="8944" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -143,11 +128,8 @@
       <file leaf-file-name="DistanceLuciano.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DistanceLuciano.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="44" selection-start="921" selection-end="921" vertical-scroll-proportion="0.27142859">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2026#2032#0" expanded="true" />
-              </folding>
+            <state line="58" column="19" selection-start="1689" selection-end="1689" vertical-scroll-proportion="0.029668411">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -164,7 +146,7 @@
       <file leaf-file-name="Risorsa.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Risorsa.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="92" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.0">
+            <state line="59" column="0" selection-start="1513" selection-end="1513" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -173,7 +155,7 @@
       <file leaf-file-name="EdgeFilm.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EdgeFilm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="50" selection-start="1742" selection-end="1742" vertical-scroll-proportion="0.0">
+            <state line="103" column="0" selection-start="3191" selection-end="3191" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -224,10 +206,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="-1" />
+    <option name="y" value="24" />
+    <option name="width" value="1368" />
+    <option name="height" value="745" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -315,9 +297,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
@@ -357,6 +339,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -383,19 +378,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -495,31 +477,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1" y="24" width="1368" height="745" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.85153586" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18712121" sideWeight="0.44880545" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25542572" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3265306" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18712121" sideWeight="0.2764505" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18712121" sideWeight="0.7116041" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.278157" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3265306" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -594,14 +576,7 @@
     <entry file="file://$PROJECT_DIR$/src/Distance.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="2" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#10416#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="method#ldsd#0;class#Distance#0" expanded="false" />
-            <element signature="method#ldsdWeightedFatt#0;class#Distance#0" expanded="false" />
-            <element signature="e#3458#3545#0" expanded="false" />
-            <element signature="e#8995#9034#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -635,14 +610,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Film.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="54" selection-start="1905" selection-end="1905" vertical-scroll-proportion="0.0">
+        <state line="75" column="0" selection-start="1917" selection-end="1917" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Risorsa.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="92" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.0">
+        <state line="59" column="0" selection-start="1513" selection-end="1513" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -663,14 +638,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EdgeFilm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="50" selection-start="1742" selection-end="1742" vertical-scroll-proportion="0.0">
+        <state line="103" column="0" selection-start="3191" selection-end="3191" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grafo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="18" selection-start="4317" selection-end="4323" vertical-scroll-proportion="0.0">
+        <state line="117" column="18" selection-start="4449" selection-end="4455" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -684,32 +659,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="39" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.0">
+        <state line="41" column="0" selection-start="1626" selection-end="1626" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Distance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="12" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#10416#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="method#ldsd#0;class#Distance#0" expanded="false" />
-            <element signature="method#ldsdWeightedFatt#0;class#Distance#0" expanded="false" />
-            <element signature="e#3458#3545#0" expanded="false" />
-            <element signature="e#8995#9034#0" expanded="false" />
-          </folding>
+        <state line="244" column="12" selection-start="8944" selection-end="8944" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DistanceLuciano.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="44" selection-start="921" selection-end="921" vertical-scroll-proportion="0.27142859">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2026#2032#0" expanded="true" />
-          </folding>
+        <state line="58" column="19" selection-start="1689" selection-end="1689" vertical-scroll-proportion="0.029668411">
+          <folding />
         </state>
       </provider>
     </entry>

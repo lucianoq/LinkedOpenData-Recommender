@@ -13,8 +13,12 @@ public class DistanceLuciano {
 
     private UndirectedSparseMultigraph<Film, EdgeFilm> filmGraph;
 
+    public DistanceLuciano(UndirectedSparseMultigraph<Film, EdgeFilm> filmGraph) {
+        this.filmGraph = filmGraph;
+    }
+
     public double passantD(Film a, Film b) {
-        double d = 1 / (1 + cd_n_A_B(a, b) + cd_n_A_B(b, a));
+        double d = 1.0 / (1 + cd_n_A_B(a, b) + cd_n_A_B(b, a));
         return d;
     }
 
@@ -23,41 +27,55 @@ public class DistanceLuciano {
         double j = 0;
         Collection<EdgeFilm> coll = filmGraph.getEdges();
 
-        for (EdgeFilm ef : coll)
+        for (EdgeFilm ef : coll) {
             i += ((cd_L_A_B(ef, a, b)) ? 1 : 0) / (1 + Math.log(cd_L_A_n(ef, a)));
+            j += ((cd_L_A_B(ef, b, a)) ? 1 : 0) / (1 + Math.log(cd_L_A_n(ef, b)));
+        }
 
-        for (EdgeFilm ef : coll)
-            i += ((cd_L_A_B(ef, b, a)) ? 1 : 0) / (1 + Math.log(cd_L_A_n(ef, b)));
-
-        double d = 1 / (1 + i + j);
+        double d = 1.0 / (1 + i + j);
         return d;
     }
 
     public double passantI(Film a, Film b) {
-        return 1 / (1 + cio_n_A_B(a,b) + cii_n_A_B(a,b));
+        return 1.0 / (1 + cio_n_A_B(a, b) + cii_n_A_B(a, b));
     }
 
     public double passantIW(Film a, Film b) {
-        double d;
+        double i = 0;
+        double j = 0;
+        Collection<EdgeFilm> coll = filmGraph.getEdges();
 
+        for (EdgeFilm ef : coll) {
+            i += ((cii_L_A_B(ef, a, b)) ? 1 : 0) / (1 + Math.log(cii_L_A_n(ef, a)));
+            j += ((cio_L_A_B(ef, b, a)) ? 1 : 0) / (1 + Math.log(cio_L_A_n(ef, a)));
+        }
+
+        double d = 1.0 / (1 + i + j);
         return d;
     }
 
     public double passantC(Film a, Film b) {
-        double d;
-
+        double d = 1.0 / (1 + cd_n_A_B(a, b) + cd_n_A_B(b, a) + cio_n_A_B(a, b) + cii_n_A_B(a, b));
         return d;
     }
 
     public double passantCW(Film a, Film b) {
-        double d;
+        double d = 0;
+        double den1 = 0;
+        double den2 = 0;
+        double den3 = 0;
+        double den4 = 0;
+        Collection<EdgeFilm> coll = filmGraph.getEdges();
 
+        for (EdgeFilm ef : coll) {
+            den1 += ((cd_L_A_B(ef, a, b)) ? 1 : 0) / (1 + Math.log(cd_L_A_n(ef, a)));
+            den2 += ((cd_L_A_B(ef, b, a)) ? 1 : 0) / (1 + Math.log(cd_L_A_n(ef, b)));
+            den3 += ((cii_L_A_B(ef, a, b)) ? 1 : 0) / (1 + Math.log(cii_L_A_n(ef, a)));
+            den4 += ((cio_L_A_B(ef, b, a)) ? 1 : 0) / (1 + Math.log(cio_L_A_n(ef, a)));
+        }
+
+        d = 1.0 / (1 + den1 + den2 + den3 + den4);
         return d;
-    }
-
-
-    public DistanceLuciano(UndirectedSparseMultigraph<Film, EdgeFilm> filmGraph) {
-        this.filmGraph = filmGraph;
     }
 
     //vero se c'è arco L tra A e B
