@@ -1,5 +1,7 @@
 *.class
 bin/*
+.idea/*
+
 
 DEBUG
 OUT
