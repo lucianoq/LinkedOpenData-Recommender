@@ -18,7 +18,7 @@ public class DistanceLuciano {
     }
 
     public double passantD(Film a, Film b) {
-        double d = 1.0 / (1 + cd_n_A_B(a, b) + cd_n_A_B(b, a));
+        double d = 1.0d / (1 + cd_n_A_B(a, b) + cd_n_A_B(b, a));
         return d;
     }
 
@@ -32,12 +32,12 @@ public class DistanceLuciano {
             j += ((cd_L_A_B(ef, b, a)) ? 1.0d : 0.0d) / (1 + Math.log(cd_L_A_n(ef, b)));
         }
 
-        double d = 1.0 / (1 + i + j);
+        double d = 1.0d / (1 + i + j);
         return d;
     }
 
     public double passantI(Film a, Film b) {
-        return 1.0 / (1 + cio_n_A_B(a, b) + cii_n_A_B(a, b));
+        return 1.0d / (1 + cio_n_A_B(a, b) + cii_n_A_B(a, b));
     }
 
     public double passantIW(Film a, Film b) {
@@ -107,29 +107,27 @@ public class DistanceLuciano {
 
     //vero se esiste C tale che A->C e B->C con archi tutti L
     private boolean cio_L_A_B(EdgeFilm l, Film a, Film b) {
-        Collection<EdgeFilm> coll = filmGraph.getEdges();
-        for (EdgeFilm ef1 : coll)
-            for (EdgeFilm ef2 : coll)
-                if (ef1.getSubject().equals(a))
-                    if (ef2.getSubject().equals(b))
-                        if (ef1.getObject().equals(ef2.getObject()))
-                            if (ef1.getLabelModified().equals(ef2.getLabelModified()))
-                                if (ef1.getLabelModified().equals(l.getLabelModified()))
-                                    return true;
+        Collection<EdgeFilm> collA = filmGraph.getOutEdges(a);
+        Collection<EdgeFilm> collB = filmGraph.getOutEdges(b);
+        for (EdgeFilm efA : collA)
+            for (EdgeFilm efB : collB)
+                if (efA.getObject().equals(efB.getObject()))
+                    if (efA.getLabelModified().equals(efB.getLabelModified()))
+                        if (efA.getLabelModified().equals(l.getLabelModified()))
+                            return true;
         return false;
     }
 
     //vero se esiste C tale che C->A e C->B con archi tutti L
     private boolean cii_L_A_B(EdgeFilm l, Film a, Film b) {
-        Collection<EdgeFilm> coll = filmGraph.getEdges();
-        for (EdgeFilm ef1 : coll)
-            for (EdgeFilm ef2 : coll)
-                if (ef1.getObject().equals(a))
-                    if (ef2.getObject().equals(b))
-                        if (ef1.getSubject().equals(ef2.getSubject()))
-                            if (ef1.getLabelModified().equals(ef2.getLabelModified()))
-                                if (ef1.getLabelModified().equals(l.getLabelModified()))
-                                    return true;
+        Collection<EdgeFilm> collA = filmGraph.getInEdges(a);
+        Collection<EdgeFilm> collB = filmGraph.getInEdges(b);
+        for (EdgeFilm efA : collA)
+            for (EdgeFilm efB : collB)
+                if (efA.getSubject().equals(efB.getSubject()))
+                    if (efA.getLabelModified().equals(efB.getLabelModified()))
+                        if (efA.getLabelModified().equals(l.getLabelModified()))
+                            return true;
         return false;
     }
 
@@ -140,6 +138,7 @@ public class DistanceLuciano {
         for (EdgeFilm ef1 : coll)
             if (cio_L_A_B(ef1, a, b) == true)
                 i++;
+        System.out.println(a.title);
         return i;
     }
 
