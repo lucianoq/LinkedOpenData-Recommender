@@ -131,23 +131,31 @@ public class DistanceLuciano {
         return false;
     }
 
-    //Numero di archi L tale che Cio_L_A_B = true
+    //Numero di archi L tale che esiste C tale che A->C e B->C con archi tutti L
     private int cio_n_A_B(Film a, Film b) {
         int i = 0;
-        Collection<EdgeFilm> coll = filmGraph.getEdges();
-        for (EdgeFilm ef1 : coll)
-            if (cio_L_A_B(ef1, a, b))
-                i++;
+        Collection<EdgeFilm> collA = filmGraph.getOutEdges(a);
+        Collection<EdgeFilm> collB = filmGraph.getOutEdges(b);
+
+        for (EdgeFilm efA : collA)
+            for (EdgeFilm efB : collB)
+                if (efA.getObject().equals(efB.getObject()))
+                    if (efA.getLabelModified().equals(efB.getLabelModified()))
+                        i++;
         return i;
     }
 
-    //Numero di archi L tale che Cii_L_A_B = true
+    //Numero di archi L tale che esiste C tale che C->A e C->B con archi tutti L
     private int cii_n_A_B(Film a, Film b) {
         int i = 0;
-        Collection<EdgeFilm> coll = filmGraph.getEdges();
-        for (EdgeFilm ef1 : coll)
-            if (cii_L_A_B(ef1, a, b) == true)
-                i++;
+        Collection<EdgeFilm> collA = filmGraph.getInEdges(a);
+        Collection<EdgeFilm> collB = filmGraph.getInEdges(b);
+
+        for (EdgeFilm efA : collA)
+            for (EdgeFilm efB : collB)
+                if (efA.getSubject().equals(efB.getSubject()))
+                    if (efA.getLabelModified().equals(efB.getLabelModified()))
+                        i++;
         return i;
     }
 
