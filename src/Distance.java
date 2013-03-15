@@ -10,6 +10,7 @@ import edu.uci.ics.jung.graph.UndirectedSparseMultigraph;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 
 /**
  * @author Simone
@@ -36,7 +37,7 @@ public class Distance {
     private int cd_li_ra_rb(EdgeFilm edgeFilm, Film f1, Film f2) {
         Collection<EdgeFilm> edgeFilmCollection = filmGraph.findEdgeSet(f1, f2);
         for (EdgeFilm edgeFilm1 : edgeFilmCollection) {
-            if (edgeFilm1.equals(edgeFilm))
+            if (edgeFilm1.getLabelModified().equals(edgeFilm.getLabelModified()))
                 return 1;
         }
         return 0;
@@ -44,12 +45,13 @@ public class Distance {
 
     private int cd_li_ra_n(EdgeFilm edgeFilm, Film f1) {
         Collection<EdgeFilm> edgeFilmCollectionDirect = filmGraph.getOutEdges(f1);
-        int count = 0;
+
+        HashSet<Film> hashSet = new HashSet<Film>();
         for (EdgeFilm edgeFilm1 : edgeFilmCollectionDirect) {
-            if (edgeFilm1.equals(edgeFilm))
-                count++;
+            if (edgeFilm1.getLabelModified().equals(edgeFilm.getLabelModified()))
+                hashSet.add(edgeFilm1.getObject());
         }
-        return count;
+        return hashSet.size();
     }
 
     //     public double ldsdWeighted(Film f1, Film f2) {
@@ -82,6 +84,7 @@ public class Distance {
 //         return ldsdWeighted;
 //     }
 //
+
     private double ldsdWeightedFatt(Film f1, Film f2) {
         Collection<EdgeFilm> edgeSetGlobal = filmGraph.getEdges();
         double fatt = 0.0;
