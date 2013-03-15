@@ -28,8 +28,8 @@ public class DistanceLuciano {
         Collection<EdgeFilm> coll = filmGraph.getEdges();
 
         for (EdgeFilm ef : coll) {
-            i += ((cd_L_A_B(ef, a, b)) ? 1 : 0) / (1 + Math.log(cd_L_A_n(ef, a)));
-            j += ((cd_L_A_B(ef, b, a)) ? 1 : 0) / (1 + Math.log(cd_L_A_n(ef, b)));
+            i += ((cd_L_A_B(ef, a, b)) ? 1.0d : 0.0d) / (1 + Math.log(cd_L_A_n(ef, a)));
+            j += ((cd_L_A_B(ef, b, a)) ? 1.0d : 0.0d) / (1 + Math.log(cd_L_A_n(ef, b)));
         }
 
         double d = 1.0 / (1 + i + j);
@@ -46,8 +46,8 @@ public class DistanceLuciano {
         Collection<EdgeFilm> coll = filmGraph.getEdges();
 
         for (EdgeFilm ef : coll) {
-            i += ((cii_L_A_B(ef, a, b)) ? 1 : 0) / (1 + Math.log(cii_L_A_n(ef, a)));
-            j += ((cio_L_A_B(ef, b, a)) ? 1 : 0) / (1 + Math.log(cio_L_A_n(ef, a)));
+            i += ((cii_L_A_B(ef, a, b)) ? 1.0d : 0.0d) / (1 + Math.log(cii_L_A_n(ef, a)));
+            j += ((cio_L_A_B(ef, b, a)) ? 1.0d : 0.0d) / (1 + Math.log(cio_L_A_n(ef, a)));
         }
 
         double d = 1.0 / (1 + i + j);
@@ -92,14 +92,16 @@ public class DistanceLuciano {
         return filmGraph.findEdgeSet(a, b).size();
     }
 
-    //numero di risorse con arco L entrante proveniente da A
+    //numero di risorse con arco L entrante, proveniente da A
     private int cd_L_A_n(EdgeFilm l, Film a) {
         Collection<EdgeFilm> coll = filmGraph.getOutEdges(a);
         HashSet<Film> hs = new HashSet<Film>();
 
-        for (EdgeFilm ef : coll)
-            if (ef.getLabelModified().equals(l.getLabelModified()))
+        for (EdgeFilm ef : coll) {
+            if (ef.getLabelModified().equals(l.getLabelModified())) {
                 hs.add(ef.getObject());
+            }
+        }
         return hs.size();
     }
 
