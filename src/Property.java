@@ -62,7 +62,7 @@ public class Property extends Risorsa implements Serializable {
     public String toString() {
         return "Property{" +
                 "idProperty=" + idProperty +
-                ", uri='" + this.uri + "\'" +
+                ", uri='" + this.getUri() + "\'" +
                 '}';
     }
 }

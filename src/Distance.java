@@ -11,6 +11,11 @@ public class Distance {
         this.filmGraph = filmGraph;
     }
 
+    public double nostra(Film a, Film b) {
+        return 0.5;
+        //TODO
+    }
+
     public double passantD(Film a, Film b) {
         double d = 1.0d / (1 + cd_n_A_B(a, b) + cd_n_A_B(b, a));
         return d;

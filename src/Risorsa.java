@@ -1,8 +1,8 @@
 import java.io.Serializable;
 
 public class Risorsa implements Serializable {
-    protected String uri;
-    protected String title;
+    private String uri;
+    private String title;
 
     public Risorsa(String uri) {
         this.uri = uri;

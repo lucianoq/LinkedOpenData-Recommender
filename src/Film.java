@@ -37,8 +37,8 @@ public class Film extends Risorsa implements Serializable, Comparable<Film> {
     public String toString() {
         return "Film{" +
                 "idMovieLens=" + idMovieLens +
-                ", title='" + this.title + "\'" +
-                ", uri='" + this.uri + "\'" +
+                ", title='" + this.getTitle() + "\'" +
+                ", uri='" + this.getUri() + "\'" +
                 '}';
     }
 

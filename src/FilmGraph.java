@@ -24,11 +24,11 @@ public class FilmGraph {
             for (Edge e2 : edges)
                 if (e1.getObject().equals(e2.getObject()))
                     if (!e1.getSubject().equals(e2.getSubject())) {
-                        String label = e1.getTitle() + " " + e1.getObject().title + " " + e2.getTitle();
+                        String label = e1.getTitle() + " " + e1.getObject().getTitle() + " " + e2.getTitle();
                         double newWeight = e1.getWeight()*e2.getWeight();
                         EdgeFilm edgeFilm = new EdgeFilm(label, e1.getSubject(), e2.getSubject(), newWeight);
                         filmGraph.addEdge(edgeFilm, e1.getSubject(), e2.getSubject());
-                        label = e2.getTitle() + " " + e1.getObject().title + " " + e1.getTitle();
+                        label = e2.getTitle() + " " + e1.getObject().getTitle() + " " + e1.getTitle();
                         edgeFilm = new EdgeFilm(label, e2.getSubject(), e1.getSubject(), newWeight);
                         filmGraph.addEdge(edgeFilm, e2.getSubject(), e1.getSubject());
                     }
