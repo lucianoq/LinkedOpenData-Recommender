@@ -4,3 +4,4 @@ bin/
 !/.gitignore
 *.xml
 *.png
+*.iml
