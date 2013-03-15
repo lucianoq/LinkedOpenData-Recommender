@@ -1,18 +1,18 @@
-1	http://dbpedia.org/ontology/editing
-2	http://dbpedia.org/ontology/musicComposer
-2	http://dbpedia.org/property/music
-3	http://dbpedia.org/property/cinematography
-3	http://dbpedia.org/ontology/cinematography
-4	http://dbpedia.org/property/director
-4	http://dbpedia.org/ontology/director
-5	http://dbpedia.org/property/distributor
-5	http://dbpedia.org/ontology/distributor
-6	http://dbpedia.org/property/editing
-7	http://dbpedia.org/property/producer
-7	http://dbpedia.org/ontology/producer
-8	http://dbpedia.org/property/starring
-8	http://dbpedia.org/ontology/starring
-9	http://dbpedia.org/property/studio
-10	http://dbpedia.org/property/writer
-10	http://dbpedia.org/ontology/writer
-11	http://purl.org/dc/terms/subject
+1	http://dbpedia.org/ontology/editing	0.4
+1	http://dbpedia.org/property/editing	0.4
+2	http://dbpedia.org/ontology/musicComposer	0.3
+2	http://dbpedia.org/property/music	0.3
+3	http://dbpedia.org/property/cinematography	0.4
+3	http://dbpedia.org/ontology/cinematography	0.4
+4	http://dbpedia.org/property/director	0.8
+4	http://dbpedia.org/ontology/director	0.8
+5	http://dbpedia.org/property/distributor	0.2
+5	http://dbpedia.org/ontology/distributor	0.2
+6	http://dbpedia.org/property/producer	0.1
+6	http://dbpedia.org/ontology/producer	0.1
+7	http://dbpedia.org/property/starring	0.6
+7	http://dbpedia.org/ontology/starring	0.6
+8	http://dbpedia.org/property/studio	0.1
+9	http://dbpedia.org/property/writer	0.4
+9	http://dbpedia.org/ontology/writer	0.4
+10	http://purl.org/dc/terms/subject	0.7

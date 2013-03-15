@@ -25,11 +25,12 @@ public class Film extends Risorsa implements Serializable, Comparable<Film> {
         ArrayList<Film> films = new ArrayList<Film>();
         String tmp;
         String[] tmp1;
-        while ((tmp = inp.readLine()) != null) {
-            tmp1 = tmp.split("\t");
-            Film tempFilm = new Film(tmp1[2], Integer.parseInt(tmp1[0]));
-            films.add(tempFilm);
-        }
+        while ((tmp = inp.readLine()) != null)
+            if (!tmp.startsWith("#")) {
+                tmp1 = tmp.split("\t");
+                Film tempFilm = new Film(tmp1[2], Integer.parseInt(tmp1[0]));
+                films.add(tempFilm);
+            }
         Collections.sort(films);
         inp.close();
         return films;
@@ -70,6 +71,6 @@ public class Film extends Risorsa implements Serializable, Comparable<Film> {
 
     @Override
     public int compareTo(Film o) {
-        return ( this.idMovieLens - o.getIdMovieLens() );
+        return (this.idMovieLens - o.getIdMovieLens());
     }
 }

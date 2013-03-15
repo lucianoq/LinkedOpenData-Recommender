@@ -13,11 +13,13 @@ import java.util.ArrayList;
 public class Property extends Risorsa implements Serializable {
 
     private int idProperty;
+    private double weight;
 
 
-    public Property(String uri, int idProperty) {
+    public Property(String uri, int idProperty, double weight) {
         super(uri);
         this.idProperty = idProperty;
+        this.weight = weight;
     }
 
     public static ArrayList<Property> readFromFile(String path) throws IOException {
@@ -27,11 +29,15 @@ public class Property extends Risorsa implements Serializable {
         String[] tmp1;
         while ((tmp = inp.readLine()) != null) {
             tmp1 = tmp.split("\t");
-            Property tempFilmProp = new Property(tmp1[1], Integer.parseInt(tmp1[0]));
+            Property tempFilmProp = new Property(tmp1[1], Integer.parseInt(tmp1[0]), Double.parseDouble( tmp1[2] ));
             properties.add(tempFilmProp);
         }
         inp.close();
         return properties;
+    }
+
+    public double getWeight() {
+        return weight;
     }
 
     public int getIdProperty() {

@@ -5,9 +5,9 @@ import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
 import java.io.*;
-import java.util.Date;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 
 /**
  * @author Simone
@@ -87,7 +87,7 @@ public class Grafo {
         Collection<Edge> edges = graph.getEdges();
 
         for (Edge e : edges)
-            out.println("\"" + e.getSubject().getIdMovieLens() + "\" -- \"" + e.getObject().getTitle() + "\" [label=\"" + e.getProperty().getIdProperty() + "\"];");
+            out.println("\"" + e.getSubject().getIdMovieLens() + "\" -- \"" + e.getObject().getTitle() + "\" [weight="+e.getWeight()+"; label=\"" + e.getProperty().getIdProperty() + "\"];");
 
         out.println("}");
         out.close();
@@ -107,7 +107,7 @@ public class Grafo {
                     Risorsa risorsaFilmDest = new Risorsa(resourceDest.get(t).getURI());
 
                     if (!resourceDest.get(t).getLocalName().isEmpty()) {
-                        Edge prop = new Edge(properties.get(j), films.get(i), risorsaFilmDest);
+                        Edge prop = new Edge(properties.get(j), films.get(i), risorsaFilmDest, properties.get(j).getWeight());
                         graph.addVertex(risorsaFilmDest);
                         graph.addEdge(prop, films.get(i), risorsaFilmDest);
                     }

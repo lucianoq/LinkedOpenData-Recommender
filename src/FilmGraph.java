@@ -32,10 +32,11 @@ public class FilmGraph {
                 if (e1.getObject().equals(e2.getObject()))
                     if (!e1.getSubject().equals(e2.getSubject())) {
                         String label = e1.getTitle() + " " + e1.getObject().title + " " + e2.getTitle();
-                        EdgeFilm edgeFilm = new EdgeFilm(label, e1.getSubject(), e2.getSubject());
+                        double newWeight = e1.getWeight()*e2.getWeight();
+                        EdgeFilm edgeFilm = new EdgeFilm(label, e1.getSubject(), e2.getSubject(), newWeight);
                         filmGraph.addEdge(edgeFilm, e1.getSubject(), e2.getSubject());
                         label = e2.getTitle() + " " + e1.getObject().title + " " + e1.getTitle();
-                        edgeFilm = new EdgeFilm(label, e2.getSubject(), e1.getSubject());
+                        edgeFilm = new EdgeFilm(label, e2.getSubject(), e1.getSubject(), newWeight);
                         filmGraph.addEdge(edgeFilm, e2.getSubject(), e1.getSubject());
                     }
     }
@@ -54,8 +55,12 @@ public class FilmGraph {
 
         Collection<EdgeFilm> edges = filmGraph.getEdges();
 
-        for (EdgeFilm e : edges)
-            out.println("\"" + e.getSubject().getIdMovieLens() + "\" -> \"" + e.getObject().getIdMovieLens() + "\" [label=\"" + e.getLabel() + "\"];");
+        for (EdgeFilm e : edges) {
+            String s = "\"" + e.getSubject().getIdMovieLens() + "\" -> \"" + e.getObject().getIdMovieLens();
+            s += "\" [weight=" + e.getWeight() + "" +
+                    ";label=\"" + e.getLabel() + "\"];";
+            out.println(s);
+        }
 
         out.println("}");
         out.close();

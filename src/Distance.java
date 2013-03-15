@@ -6,9 +6,7 @@
 
 
 import edu.uci.ics.jung.graph.DirectedSparseMultigraph;
-import edu.uci.ics.jung.graph.UndirectedSparseMultigraph;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 
@@ -89,12 +87,8 @@ public class Distance {
         for (EdgeFilm ef1 : edgef1)
             for (EdgeFilm ef2 : edgef2)
                 if (ef1.getLabelModified().equals(ef2.getLabelModified()))
-                    if (ef1.getObject().equals(ef2.getObject()))  {
+                    if (ef1.getObject().equals(ef2.getObject()))
                         numArchi++;
-                        System.out.println(ef1);
-                        System.out.println(ef2);
-                        System.out.println();
-                    }
         return numArchi;
     }
 

@@ -30,7 +30,7 @@ public class Edge implements Serializable {
     }
 
     public Edge(Property property, Film subject, Risorsa object) {
-        this(property, subject, object, 1);
+        this(property, subject, object, 1.0);
     }
 
     public Property getProperty() {
