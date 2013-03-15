@@ -1,19 +1,5 @@
 *.class
 bin/*
 .idea/*
-
-DEBUG
-OUT
-#*.nt
-#*.rdf
+*.xml
 *.png
-
-
-
-# Package Files #
-#*.jar
-*.war
-*.ear
-/nbproject/private/
-/build/
-/dist/
