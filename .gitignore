@@ -1,5 +1,5 @@
 *.class
-bin/*
-.idea/*
+bin/
+.idea/
 *.xml
 *.png
