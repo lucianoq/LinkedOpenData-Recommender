@@ -80,38 +80,19 @@ public class Distance {
     }
 
     // Numero di archi che partendo dalle risorse ra e rb arrivano ad una risorsa in comune
-    // Numero di archi che hanno come origine n e come arrivo ra ed rb
-    // in poche parole
-    // numero di archi tra du film con una risorsa in mezzo
-//    private static int ciocii(Film f1, Film f2) {
-//
-//        Collection<EdgeFilm> edgef1 = filmGraph.getIncidentEdges(f1);
-//        Collection<EdgeFilm> edgef2 = filmGraph.getIncidentEdges(f2);
-//
-//        int numArchi = 0;
-//        for (EdgeFilm ef1 : edgef1)
-//            for (EdgeFilm ef2 : edgef2)
-//                if (ef1.getLabelModified().equals(ef2.getLabelModified()))
-//                    if (ef1.consecutive(ef2))
-//                        numArchi++;
-//        return numArchi;
-//    }
-
-    // Numero di archi che partendo dalle risorse ra e rb arrivano ad una risorsa in comune
     private int cio_n_ra_rb(Film f1, Film f2) {
         Collection<EdgeFilm> edgef1 = filmGraph.getOutEdges(f1);
         Collection<EdgeFilm> edgef2 = filmGraph.getOutEdges(f2);
 
         int numArchi = 0;
+
         for (EdgeFilm ef1 : edgef1)
             for (EdgeFilm ef2 : edgef2)
-                    if (ef1.getLabelModified().equals(ef2.getLabelModified()))
-                        if (ef1.getObject().equals(ef2.getObject()))
-                            numArchi++;
-        System.out.println(numArchi);
+                if (ef1.getLabelModified().equals(ef2.getLabelModified()))
+                    if (ef1.getObject().equals(ef2.getObject()))
+                        numArchi++;
         return numArchi;
     }
-
 
     //Cio(li; ra; rb) equals 1 if there is a resource n that satisfy both <li; ra; n> and <li; rb; n> , 0 if not.
     private int cio_li_ra_rb(EdgeFilm edgeFilm, Film f1, Film f2) {
@@ -120,10 +101,10 @@ public class Distance {
 
         for (EdgeFilm ef1 : edgef1)
             for (EdgeFilm ef2 : edgef2)
-                    if (ef1.getLabelModified().equals(edgeFilm.getLabelModified()))
-                        if (ef2.getLabelModified().equals(edgeFilm.getLabelModified()))
-                            if (ef1.getObject().equals(ef2.getObject()))
-                                return 1;
+                if (ef1.getLabelModified().equals(edgeFilm.getLabelModified()))
+                    if (ef2.getLabelModified().equals(edgeFilm.getLabelModified()))
+                        if (ef1.getObject().equals(ef2.getObject()))
+                            return 1;
         return 0;
     }
 
@@ -135,10 +116,9 @@ public class Distance {
         int numArchi = 0;
         for (EdgeFilm ef1 : edgef1)
             for (EdgeFilm ef2 : edgef2)
-                if (ef1.getObject().equals(f1) && ef2.getObject().equals(f2))
-                    if (ef1.getLabelModified().equals(ef2.getLabelModified()))
-                        if (ef1.getSubject().equals(ef2.getSubject()))
-                            numArchi++;
+                if (ef1.getLabelModified().equals(ef2.getLabelModified()))
+                    if (ef1.getSubject().equals(ef2.getSubject()))
+                        numArchi++;
         return numArchi;
     }
 
@@ -150,13 +130,12 @@ public class Distance {
 
         for (EdgeFilm ef1 : edgef1)
             for (EdgeFilm ef2 : edgef2)
-                    if (ef1.getLabelModified().equals(edgeFilm.getLabelModified()))
-                        if (ef2.getLabelModified().equals(edgeFilm.getLabelModified()))
-                            if (ef1.getSubject().equals(ef2.getSubject()))
-                                return 1;
+                if (ef1.getLabelModified().equals(edgeFilm.getLabelModified()))
+                    if (ef2.getLabelModified().equals(edgeFilm.getLabelModified()))
+                        if (ef1.getSubject().equals(ef2.getSubject()))
+                            return 1;
         return 0;
     }
-
 
     public double ldsdIndirectWeight(Film f1, Film f2) {
         double ldsdWeighted = 1.0 / (1.0 + ldsdIndirectWeightedFattCii(f1, f2) + ldsdIndirectWeightedFattCio(f1, f2));
@@ -177,11 +156,13 @@ public class Distance {
         return fatt;
     }
 
-
-    //TODO
     private double cii_li_ra_n(EdgeFilm edgeFilm, Film f1) {
-
-        return 0;
+        int i = 0;
+        Collection<Film> coll = filmGraph.getVertices();
+        for (Film f : coll)
+            if (!f.equals(f1))
+                i += cii_li_ra_rb(edgeFilm, f1, f);
+        return i;
     }
 
     private double ldsdIndirectWeightedFattCio(Film f1, Film f2) {
@@ -198,51 +179,51 @@ public class Distance {
         return fatt;
     }
 
-    //TODO
     private double cio_li_ra_n(EdgeFilm edgeFilm, Film f1) {
-        return 0;
+        int i = 0;
+        Collection<Film> coll = filmGraph.getVertices();
+        for (Film f : coll)
+            if (!f.equals(f1))
+                i += cio_li_ra_rb(edgeFilm, f1, f);
+        return i;
     }
 
-   /* private static ArrayList<EdgeFilm> ciociiDet(Film f1, Film f2) {
-
-        Collection<EdgeFilm> edgef1 = filmGraph.getIncidentEdges(f1);
-        Collection<EdgeFilm> edgef2 = filmGraph.getIncidentEdges(f2);
-        ArrayList<EdgeFilm> edgeciocii = new ArrayList<EdgeFilm>();
-        for (EdgeFilm ef1 : edgef1)
-            for (EdgeFilm ef2 : edgef2)
-                if (ef1.getLabelModified().equals(ef2.getLabelModified()))
-                    if (ef1.consecutive(ef2)) {
-                        edgeciocii.add(ef1);
-                        edgeciocii.add(ef2);
-                    }
-        return edgeciocii;
+    public double combinedWeighted(Film f1, Film f2) {
+        double combinedWeighted = 1.0 / (1.0 + ldsdWeightedFatt(f1, f2) + ldsdWeightedFatt(f2, f1) + ldsdIndirectWeightedFattCii(f1, f2) + ldsdIndirectWeightedFattCio(f1, f2));
+        return combinedWeighted;
     }
-    */
 
-//    private static void distances() {
-//        DijkstraShortestPath<Entita, Predicato> sp = new DijkstraShortestPath<Entita, Predicato>(graph);
-//        System.out.println("DijkstraShortestPath " + new Date() + "\n");
-//        System.out.println("Sto per avviare getPath");
-//        Entita star_Trek_First_Contact = new Entita("http://dbpedia.org/resource/Star_Trek:_First_Contact");
-//        Entita star_Trek_VI_The_Undiscovered_Country = new Entita("http://dbpedia.org/resource/Star_Trek_VI:_The_Undiscovered_Country");
-//
-//        System.out.println(sp.getDistance(star_Trek_First_Contact, star_Trek_VI_The_Undiscovered_Country));
-//        //out.println(sp.getPath(film1, film2));
-//        List<Predicato> path = sp.getPath(star_Trek_First_Contact, star_Trek_VI_The_Undiscovered_Country);
-//
-//        for (int i = 0; i < path.size(); i++) {
-//            System.out.println(path.get(i));
-//        }
-//
-//        Entita american_films = new Entita("http://dbpedia.org/resource/Category:American_films");
-//        Entita donald = new Entita("http://dbpedia.org/resource/Donald_Peterman");
-//
-//        System.out.println(sp.getDistance(american_films, donald));
-//        //out.println(sp.getPath(film1, film2));
-//        List<Predicato> path2 = sp.getPath(american_films, donald);
-//
-//        for (int i = 0; i < path2.size(); i++) {
-//            System.out.println(path2.get(i));
-//        }
-//    }
+    public double combined(Film f1, Film f2) {
+        double combined = 1.0 / (1 + cd_n_ra_rb(f1, f2) + cd_n_ra_rb(f2, f1) + cio_n_ra_rb(f1, f2) + cii_n_ra_rb(f1, f2));
+        return combined;
+    }
+
+/*
+private static void distances() {
+DijkstraShortestPath<Entita, Predicato> sp = new DijkstraShortestPath<Entita, Predicato>(graph);
+System.out.println("DijkstraShortestPath " + new Date() + "\n");
+System.out.println("Sto per avviare getPath");
+Entita star_Trek_First_Contact = new Entita("http://dbpedia.org/resource/Star_Trek:_First_Contact");
+Entita star_Trek_VI_The_Undiscovered_Country = new Entita("http://dbpedia.org/resource/Star_Trek_VI:_The_Undiscovered_Country");
+
+System.out.println(sp.getDistance(star_Trek_First_Contact, star_Trek_VI_The_Undiscovered_Country));
+//out.println(sp.getPath(film1, film2));
+List<Predicato> path = sp.getPath(star_Trek_First_Contact, star_Trek_VI_The_Undiscovered_Country);
+
+for (int i = 0; i < path.size(); i++) {
+System.out.println(path.get(i));
+}
+
+Entita american_films = new Entita("http://dbpedia.org/resource/Category:American_films");
+Entita donald = new Entita("http://dbpedia.org/resource/Donald_Peterman");
+
+System.out.println(sp.getDistance(american_films, donald));
+//out.println(sp.getPath(film1, film2));
+List<Predicato> path2 = sp.getPath(american_films, donald);
+
+for (int i = 0; i < path2.size(); i++) {
+System.out.println(path2.get(i));
+}
+}
+*/
 }

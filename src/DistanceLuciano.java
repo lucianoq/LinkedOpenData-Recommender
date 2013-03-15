@@ -136,9 +136,8 @@ public class DistanceLuciano {
         int i = 0;
         Collection<EdgeFilm> coll = filmGraph.getEdges();
         for (EdgeFilm ef1 : coll)
-            if (cio_L_A_B(ef1, a, b) == true)
+            if (cio_L_A_B(ef1, a, b))
                 i++;
-        System.out.println(a.title);
         return i;
     }
 
