@@ -5,6 +5,7 @@
  */
 
 
+import edu.uci.ics.jung.graph.DirectedSparseMultigraph;
 import edu.uci.ics.jung.graph.UndirectedSparseMultigraph;
 
 import java.util.ArrayList;
@@ -15,9 +16,9 @@ import java.util.Collection;
  */
 public class Distance {
 
-    private UndirectedSparseMultigraph<Film, EdgeFilm> filmGraph;
+    private DirectedSparseMultigraph<Film, EdgeFilm> filmGraph;
 
-    public Distance(UndirectedSparseMultigraph<Film, EdgeFilm> filmGraph) {
+    public Distance(DirectedSparseMultigraph<Film, EdgeFilm> filmGraph) {
         this.filmGraph = filmGraph;
     }
 
@@ -210,6 +211,7 @@ public class Distance {
     //TODO
     private double cii_li_ra_n(EdgeFilm edgeFilm, Film f1) {
 
+        return 0;
     }
 
     private double ldsdIndirectWeightedFattCio(Film f1, Film f2) {
@@ -228,7 +230,7 @@ public class Distance {
 
     //TODO
     private double cio_li_ra_n(EdgeFilm edgeFilm, Film f1) {
-
+        return 0;
     }
 
    /* private static ArrayList<EdgeFilm> ciociiDet(Film f1, Film f2) {

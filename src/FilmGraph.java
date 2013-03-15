@@ -1,9 +1,9 @@
+import edu.uci.ics.jung.graph.DirectedSparseMultigraph;
 import edu.uci.ics.jung.graph.UndirectedSparseMultigraph;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.Collection;
 
 /**
@@ -15,10 +15,10 @@ import java.util.Collection;
  */
 public class FilmGraph {
 
-    private static UndirectedSparseMultigraph<Film, EdgeFilm> filmGraph;
+    private static DirectedSparseMultigraph<Film, EdgeFilm> filmGraph;
 
     public static void init() {
-        filmGraph = new UndirectedSparseMultigraph<Film, EdgeFilm>();
+        filmGraph = new DirectedSparseMultigraph<Film, EdgeFilm>();
         UndirectedSparseMultigraph<Risorsa, Edge> g = Grafo.getGraph();
 
         Collection<Edge> edges = g.getEdges();
@@ -34,13 +34,16 @@ public class FilmGraph {
                         String label = e1.getTitle() + " " + e1.getObject().title + " " + e2.getTitle();
                         EdgeFilm edgeFilm = new EdgeFilm(label, e1.getSubject(), e2.getSubject());
                         filmGraph.addEdge(edgeFilm, e1.getSubject(), e2.getSubject());
+                        label = e2.getTitle() + " " + e1.getObject().title + " " + e1.getTitle();
+                        edgeFilm = new EdgeFilm(label, e2.getSubject(), e1.getSubject());
+                        filmGraph.addEdge(edgeFilm, e2.getSubject(), e1.getSubject());
                     }
     }
 
     public static void printDot() throws IOException {
         FileOutputStream fout = new FileOutputStream("./filmGraph.dot");
         PrintWriter out = new PrintWriter(fout);
-        out.println("graph dbpedia {");
+        out.println("digraph dbpedia {");
 
         Collection<Film> films = Grafo.getFilms();
 
@@ -52,14 +55,14 @@ public class FilmGraph {
         Collection<EdgeFilm> edges = filmGraph.getEdges();
 
         for (EdgeFilm e : edges)
-            out.println("\"" + e.getSubject().getIdMovieLens() + "\" -- \"" + e.getObject().getIdMovieLens() + "\" [label=\"" + e.getLabel() + "\"];");
+            out.println("\"" + e.getSubject().getIdMovieLens() + "\" -> \"" + e.getObject().getIdMovieLens() + "\" [label=\"" + e.getLabel() + "\"];");
 
         out.println("}");
         out.close();
         fout.close();
     }
 
-    public static UndirectedSparseMultigraph<Film, EdgeFilm> getGraph() {
+    public static DirectedSparseMultigraph<Film, EdgeFilm> getGraph() {
         return filmGraph;
     }
 

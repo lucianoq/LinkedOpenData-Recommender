@@ -1,4 +1,4 @@
-import edu.uci.ics.jung.graph.UndirectedSparseMultigraph;
+import edu.uci.ics.jung.graph.DirectedSparseMultigraph;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -11,9 +11,9 @@ import java.util.HashSet;
  */
 public class DistanceLuciano {
 
-    private UndirectedSparseMultigraph<Film, EdgeFilm> filmGraph;
+    private DirectedSparseMultigraph<Film, EdgeFilm> filmGraph;
 
-    public DistanceLuciano(UndirectedSparseMultigraph<Film, EdgeFilm> filmGraph) {
+    public DistanceLuciano(DirectedSparseMultigraph<Film, EdgeFilm> filmGraph) {
         this.filmGraph = filmGraph;
     }
 
@@ -82,7 +82,7 @@ public class DistanceLuciano {
     private boolean cd_L_A_B(EdgeFilm l, Film a, Film b) {
         Collection<EdgeFilm> coll = filmGraph.findEdgeSet(a, b);
         for (EdgeFilm ef : coll)
-            if (ef.getLabel().equals(l.getLabel()))
+            if (ef.getLabelModified().equals(l.getLabelModified()))
                 return true;
         return false;
     }
@@ -98,7 +98,7 @@ public class DistanceLuciano {
         HashSet<Film> hs = new HashSet<Film>();
 
         for (EdgeFilm ef : coll)
-            if (ef.getLabel().equals(l.getLabel()))
+            if (ef.getLabelModified().equals(l.getLabelModified()))
                 hs.add(ef.getObject());
         return hs.size();
     }
@@ -111,8 +111,8 @@ public class DistanceLuciano {
                 if (ef1.getSubject().equals(a))
                     if (ef2.getSubject().equals(b))
                         if (ef1.getObject().equals(ef2.getObject()))
-                            if (ef1.getLabel().equals(ef2.getLabel()))
-                                if (ef1.getLabel().equals(l.getLabel()))
+                            if (ef1.getLabelModified().equals(ef2.getLabelModified()))
+                                if (ef1.getLabelModified().equals(l.getLabelModified()))
                                     return true;
         return false;
     }
@@ -125,8 +125,8 @@ public class DistanceLuciano {
                 if (ef1.getObject().equals(a))
                     if (ef2.getObject().equals(b))
                         if (ef1.getSubject().equals(ef2.getSubject()))
-                            if (ef1.getLabel().equals(ef2.getLabel()))
-                                if (ef1.getLabel().equals(l.getLabel()))
+                            if (ef1.getLabelModified().equals(ef2.getLabelModified()))
+                                if (ef1.getLabelModified().equals(l.getLabelModified()))
                                     return true;
         return false;
     }
