@@ -54,37 +54,6 @@ public class Distance {
         return hashSet.size();
     }
 
-    //     public double ldsdWeighted(Film f1, Film f2) {
-//         Collection<EdgeFilm> edgeSetDirect = filmGraph.findEdgeSet(f1, f2);
-//         Collection<EdgeFilm> edgeSetGlobal = filmGraph.getEdges();
-//         double fattA = 0.0;
-//         double fattB = 0.0;
-//         for (EdgeFilm edgeFilm : edgeSetDirect) {
-//             int countSrc = 0;
-//             int countDest = 0;
-//             for (EdgeFilm edgeFilmGlobal : edgeSetGlobal) {
-//
-//                 // Arco tra x e f2
-//                 if (edgeFilm.getObject().equals(edgeFilmGlobal.getObject()))
-//                     if (!edgeFilm.getSubject().equals(edgeFilmGlobal.getSubject()))
-//                         countSrc++;
-//
-//
-//                 // Arco tra f1 e x
-//                 if (edgeFilm.getSubject().equals(edgeFilmGlobal.getSubject()))
-//                     if (!edgeFilm.getObject().equals(edgeFilmGlobal.getObject()))
-//                         countDest++;
-//
-//             }
-//             fattA += 1.0 / (1.0 + Math.log(countSrc));
-//             fattB += 1.0 / (1.0 + Math.log(countDest));
-//         }
-//
-//         double ldsdWeighted = 1.0 / (1.0 + fattA + fattB);
-//         return ldsdWeighted;
-//     }
-//
-
     private double ldsdWeightedFatt(Film f1, Film f2) {
         Collection<EdgeFilm> edgeSetGlobal = filmGraph.getEdges();
         double fatt = 0.0;
@@ -136,10 +105,10 @@ public class Distance {
         int numArchi = 0;
         for (EdgeFilm ef1 : edgef1)
             for (EdgeFilm ef2 : edgef2)
-                if (ef1.getSubject().equals(f1) && ef2.getSubject().equals(f2))
                     if (ef1.getLabelModified().equals(ef2.getLabelModified()))
                         if (ef1.getObject().equals(ef2.getObject()))
                             numArchi++;
+        System.out.println(numArchi);
         return numArchi;
     }
 
@@ -151,7 +120,6 @@ public class Distance {
 
         for (EdgeFilm ef1 : edgef1)
             for (EdgeFilm ef2 : edgef2)
-                if (ef1.getSubject().equals(f1) && ef2.getSubject().equals(f2))
                     if (ef1.getLabelModified().equals(edgeFilm.getLabelModified()))
                         if (ef2.getLabelModified().equals(edgeFilm.getLabelModified()))
                             if (ef1.getObject().equals(ef2.getObject()))
@@ -182,7 +150,6 @@ public class Distance {
 
         for (EdgeFilm ef1 : edgef1)
             for (EdgeFilm ef2 : edgef2)
-                if (ef1.getObject().equals(f1) && ef2.getObject().equals(f2))
                     if (ef1.getLabelModified().equals(edgeFilm.getLabelModified()))
                         if (ef2.getLabelModified().equals(edgeFilm.getLabelModified()))
                             if (ef1.getSubject().equals(ef2.getSubject()))
