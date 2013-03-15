@@ -1,11 +1,5 @@
 import java.io.Serializable;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 12/03/13
- * Time: 0.25
- */
 public class Risorsa implements Serializable {
     protected String uri;
     protected String title;

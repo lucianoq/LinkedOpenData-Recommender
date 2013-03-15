@@ -1,10 +1,3 @@
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 12/03/13
- * Time: 15.47
- * To change this template use File | Settings | File Templates.
- */
 public class EdgeFilm {
 
     private String label;

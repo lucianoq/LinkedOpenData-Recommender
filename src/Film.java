@@ -4,13 +4,6 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
-
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 12/03/13
- * Time: 0.40
- */
 public class Film extends Risorsa implements Serializable, Comparable<Film> {
 
     private int idMovieLens;

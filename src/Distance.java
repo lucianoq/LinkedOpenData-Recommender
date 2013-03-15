@@ -1,18 +1,8 @@
-
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
 import edu.uci.ics.jung.graph.DirectedSparseMultigraph;
 
 import java.util.Collection;
 import java.util.HashSet;
 
-/**
- * @author Simone
- */
 public class Distance {
 
     private DirectedSparseMultigraph<Film, EdgeFilm> filmGraph;
@@ -21,207 +11,166 @@ public class Distance {
         this.filmGraph = filmGraph;
     }
 
-    // Direct Distance
-    public double ldsd(Film f1, Film f2) {
-        int cd_n_ra_rb = cd_n_ra_rb(f1, f2);
-        int cd_n_rb_ra = cd_n_ra_rb(f2, f1);
-        return 1.0 / (1.0 + cd_n_ra_rb + cd_n_rb_ra);
+    public double passantD(Film a, Film b) {
+        double d = 1.0d / (1 + cd_n_A_B(a, b) + cd_n_A_B(b, a));
+        return d;
     }
 
-    private int cd_n_ra_rb(Film f1, Film f2) {
-        return filmGraph.findEdgeSet(f1, f2).size();
-    }
+    public double passantDW(Film a, Film b) {
+        double i = 0;
+        double j = 0;
+        Collection<EdgeFilm> coll = filmGraph.getEdges();
 
-    private int cd_li_ra_rb(EdgeFilm edgeFilm, Film f1, Film f2) {
-        Collection<EdgeFilm> edgeFilmCollection = filmGraph.findEdgeSet(f1, f2);
-        for (EdgeFilm edgeFilm1 : edgeFilmCollection) {
-            if (edgeFilm1.getLabelModified().equals(edgeFilm.getLabelModified()))
-                return 1;
+        for (EdgeFilm ef : coll) {
+            i += ((cd_L_A_B(ef, a, b)) ? 1.0d : 0.0d) / (1 + Math.log(cd_L_A_n(ef, a)));
+            j += ((cd_L_A_B(ef, b, a)) ? 1.0d : 0.0d) / (1 + Math.log(cd_L_A_n(ef, b)));
         }
-        return 0;
+
+        double d = 1.0d / (1 + i + j);
+        return d;
     }
 
-    private int cd_li_ra_n(EdgeFilm edgeFilm, Film f1) {
-        Collection<EdgeFilm> edgeFilmCollectionDirect = filmGraph.getOutEdges(f1);
+    public double passantI(Film a, Film b) {
+        return 1.0d / (1 + cio_n_A_B(a, b) + cii_n_A_B(a, b));
+    }
 
-        HashSet<Film> hashSet = new HashSet<Film>();
-        for (EdgeFilm edgeFilm1 : edgeFilmCollectionDirect) {
-            if (edgeFilm1.getLabelModified().equals(edgeFilm.getLabelModified()))
-                hashSet.add(edgeFilm1.getObject());
+    public double passantIW(Film a, Film b) {
+        double i = 0;
+        double j = 0;
+        Collection<EdgeFilm> coll = filmGraph.getEdges();
+
+        for (EdgeFilm ef : coll) {
+            i += ((cii_L_A_B(ef, a, b)) ? 1.0d : 0.0d) / (1 + Math.log(cii_L_A_n(ef, a)));
+            j += ((cio_L_A_B(ef, b, a)) ? 1.0d : 0.0d) / (1 + Math.log(cio_L_A_n(ef, a)));
         }
-        return hashSet.size();
+
+        double d = 1.0 / (1 + i + j);
+        return d;
     }
 
-    private double ldsdWeightedFatt(Film f1, Film f2) {
-        Collection<EdgeFilm> edgeSetGlobal = filmGraph.getEdges();
-        double fatt = 0.0;
-        for (EdgeFilm edgeFilm : edgeSetGlobal) {
+    public double passantC(Film a, Film b) {
+        double d = 1.0 / (1 + cd_n_A_B(a, b) + cd_n_A_B(b, a) + cio_n_A_B(a, b) + cii_n_A_B(a, b));
+        return d;
+    }
 
-            int num = cd_li_ra_rb(edgeFilm, f1, f2);
-            double den = 1.0 + Math.log(cd_li_ra_n(edgeFilm, f1));
+    public double passantCW(Film a, Film b) {
+        double den1 = 0;
+        double den2 = 0;
+        double den3 = 0;
+        double den4 = 0;
+        Collection<EdgeFilm> coll = filmGraph.getEdges();
 
-            double fattTmp = ((double) num) / den;
-            fatt += fattTmp;
+        for (EdgeFilm ef : coll) {
+            den1 += ((cd_L_A_B(ef, a, b)) ? 1 : 0) / (1 + Math.log(cd_L_A_n(ef, a)));
+            den2 += ((cd_L_A_B(ef, b, a)) ? 1 : 0) / (1 + Math.log(cd_L_A_n(ef, b)));
+            den3 += ((cii_L_A_B(ef, a, b)) ? 1 : 0) / (1 + Math.log(cii_L_A_n(ef, a)));
+            den4 += ((cio_L_A_B(ef, b, a)) ? 1 : 0) / (1 + Math.log(cio_L_A_n(ef, a)));
         }
-        return fatt;
+
+        double d = 1.0 / (1 + den1 + den2 + den3 + den4);
+        return d;
     }
 
-    public double ldsdWeighted(Film f1, Film f2) {
-        double ldsdWeighted = 1.0 / (1.0 + ldsdWeightedFatt(f1, f2) + ldsdWeightedFatt(f2, f1));
-        return ldsdWeighted;
+    //vero se c'è arco L tra A e B
+    private boolean cd_L_A_B(EdgeFilm l, Film a, Film b) {
+        Collection<EdgeFilm> coll = filmGraph.findEdgeSet(a, b);
+        for (EdgeFilm ef : coll)
+            if (ef.getLabelModified().equals(l.getLabelModified()))
+                return true;
+        return false;
     }
 
-    //Indirect distance
-    public double ldsdIndirect(Film f1, Film f2) {
-        double ldsdIndirect = 1.0 / (1.0 + cio_n_ra_rb(f1, f2) + cii_n_ra_rb(f1, f2));
-        return ldsdIndirect;
+    //numero di archi tra A e B
+    private int cd_n_A_B(Film a, Film b) {
+        return filmGraph.findEdgeSet(a, b).size();
     }
 
-    // Numero di archi che partendo dalle risorse ra e rb arrivano ad una risorsa in comune
-    private int cio_n_ra_rb(Film f1, Film f2) {
-        Collection<EdgeFilm> edgef1 = filmGraph.getOutEdges(f1);
-        Collection<EdgeFilm> edgef2 = filmGraph.getOutEdges(f2);
+    //numero di risorse con arco L entrante, proveniente da A
+    private int cd_L_A_n(EdgeFilm l, Film a) {
+        Collection<EdgeFilm> coll = filmGraph.getOutEdges(a);
+        HashSet<Film> hs = new HashSet<Film>();
 
-        int numArchi = 0;
-
-        for (EdgeFilm ef1 : edgef1)
-            for (EdgeFilm ef2 : edgef2)
-                if (ef1.getLabelModified().equals(ef2.getLabelModified()))
-                    if (ef1.getObject().equals(ef2.getObject()))
-                        numArchi++;
-        return numArchi;
-    }
-
-    //Cio(li; ra; rb) equals 1 if there is a resource n that satisfy both <li; ra; n> and <li; rb; n> , 0 if not.
-    private int cio_li_ra_rb(EdgeFilm edgeFilm, Film f1, Film f2) {
-        Collection<EdgeFilm> edgef1 = filmGraph.getOutEdges(f1);
-        Collection<EdgeFilm> edgef2 = filmGraph.getOutEdges(f2);
-
-        for (EdgeFilm ef1 : edgef1)
-            for (EdgeFilm ef2 : edgef2)
-                if (ef1.getLabelModified().equals(edgeFilm.getLabelModified()))
-                    if (ef2.getLabelModified().equals(edgeFilm.getLabelModified()))
-                        if (ef1.getObject().equals(ef2.getObject()))
-                            return 1;
-        return 0;
-    }
-
-    // Numero di archi che hanno come origine n e come arrivo ra ed rb
-    private int cii_n_ra_rb(Film f1, Film f2) {
-        Collection<EdgeFilm> edgef1 = filmGraph.getInEdges(f1);
-        Collection<EdgeFilm> edgef2 = filmGraph.getInEdges(f2);
-
-        int numArchi = 0;
-        for (EdgeFilm ef1 : edgef1)
-            for (EdgeFilm ef2 : edgef2)
-                if (ef1.getLabelModified().equals(ef2.getLabelModified()))
-                    if (ef1.getSubject().equals(ef2.getSubject()))
-                        numArchi++;
-        return numArchi;
-    }
-
-    // Cii(li; ra; rb) equals 1 if there is a resource n that satisfy both <li; n; ra> and <li; n; rb>
-    private int cii_li_ra_rb(EdgeFilm edgeFilm, Film f1, Film f2) {
-
-        Collection<EdgeFilm> edgef1 = filmGraph.getInEdges(f1);
-        Collection<EdgeFilm> edgef2 = filmGraph.getInEdges(f2);
-
-        for (EdgeFilm ef1 : edgef1)
-            for (EdgeFilm ef2 : edgef2)
-                if (ef1.getLabelModified().equals(edgeFilm.getLabelModified()))
-                    if (ef2.getLabelModified().equals(edgeFilm.getLabelModified()))
-                        if (ef1.getSubject().equals(ef2.getSubject()))
-                            return 1;
-        return 0;
-    }
-
-    public double ldsdIndirectWeight(Film f1, Film f2) {
-        double ldsdWeighted = 1.0 / (1.0 + ldsdIndirectWeightedFattCii(f1, f2) + ldsdIndirectWeightedFattCio(f1, f2));
-        return ldsdWeighted;
-    }
-
-    private double ldsdIndirectWeightedFattCii(Film f1, Film f2) {
-        Collection<EdgeFilm> edgeSetGlobal = filmGraph.getEdges();
-        double fatt = 0.0;
-        for (EdgeFilm edgeFilm : edgeSetGlobal) {
-
-            int num = cii_li_ra_rb(edgeFilm, f1, f2);
-            double den = 1.0 + Math.log(cii_li_ra_n(edgeFilm, f1));
-
-            double fattTmp = ((double) num) / den;
-            fatt += fattTmp;
+        for (EdgeFilm ef : coll) {
+            if (ef.getLabelModified().equals(l.getLabelModified())) {
+                hs.add(ef.getObject());
+            }
         }
-        return fatt;
+        return hs.size();
     }
 
-    private double cii_li_ra_n(EdgeFilm edgeFilm, Film f1) {
+    //vero se esiste C tale che A->C e B->C con archi tutti L
+    private boolean cio_L_A_B(EdgeFilm l, Film a, Film b) {
+        Collection<EdgeFilm> collA = filmGraph.getOutEdges(a);
+        Collection<EdgeFilm> collB = filmGraph.getOutEdges(b);
+        for (EdgeFilm efA : collA)
+            for (EdgeFilm efB : collB)
+                if (efA.getObject().equals(efB.getObject()))
+                    if (efA.getLabelModified().equals(efB.getLabelModified()))
+                        if (efA.getLabelModified().equals(l.getLabelModified()))
+                            return true;
+        return false;
+    }
+
+    //vero se esiste C tale che C->A e C->B con archi tutti L
+    private boolean cii_L_A_B(EdgeFilm l, Film a, Film b) {
+        Collection<EdgeFilm> collA = filmGraph.getInEdges(a);
+        Collection<EdgeFilm> collB = filmGraph.getInEdges(b);
+        for (EdgeFilm efA : collA)
+            for (EdgeFilm efB : collB)
+                if (efA.getSubject().equals(efB.getSubject()))
+                    if (efA.getLabelModified().equals(efB.getLabelModified()))
+                        if (efA.getLabelModified().equals(l.getLabelModified()))
+                            return true;
+        return false;
+    }
+
+    //Numero di archi L tale che esiste C tale che A->C e B->C con archi tutti L
+    private int cio_n_A_B(Film a, Film b) {
         int i = 0;
-        Collection<Film> coll = filmGraph.getVertices();
-        for (Film f : coll)
-            if (!f.equals(f1))
-                i += cii_li_ra_rb(edgeFilm, f1, f);
+        Collection<EdgeFilm> collA = filmGraph.getOutEdges(a);
+        Collection<EdgeFilm> collB = filmGraph.getOutEdges(b);
+
+        for (EdgeFilm efA : collA)
+            for (EdgeFilm efB : collB)
+                if (efA.getObject().equals(efB.getObject()))
+                    if (efA.getLabelModified().equals(efB.getLabelModified()))
+                        i++;
         return i;
     }
 
-    private double ldsdIndirectWeightedFattCio(Film f1, Film f2) {
-        Collection<EdgeFilm> edgeSetGlobal = filmGraph.getEdges();
-        double fatt = 0.0;
-        for (EdgeFilm edgeFilm : edgeSetGlobal) {
-
-            int num = cio_li_ra_rb(edgeFilm, f1, f2);
-            double den = 1.0 + Math.log(cio_li_ra_n(edgeFilm, f1));
-
-            double fattTmp = ((double) num) / den;
-            fatt += fattTmp;
-        }
-        return fatt;
-    }
-
-    private double cio_li_ra_n(EdgeFilm edgeFilm, Film f1) {
+    //Numero di archi L tale che esiste C tale che C->A e C->B con archi tutti L
+    private int cii_n_A_B(Film a, Film b) {
         int i = 0;
-        Collection<Film> coll = filmGraph.getVertices();
-        for (Film f : coll)
-            if (!f.equals(f1))
-                i += cio_li_ra_rb(edgeFilm, f1, f);
+        Collection<EdgeFilm> collA = filmGraph.getInEdges(a);
+        Collection<EdgeFilm> collB = filmGraph.getInEdges(b);
+
+        for (EdgeFilm efA : collA)
+            for (EdgeFilm efB : collB)
+                if (efA.getSubject().equals(efB.getSubject()))
+                    if (efA.getLabelModified().equals(efB.getLabelModified()))
+                        i++;
         return i;
     }
 
-    public double combinedWeighted(Film f1, Film f2) {
-        double combinedWeighted = 1.0 / (1.0 + ldsdWeightedFatt(f1, f2) + ldsdWeightedFatt(f2, f1) + ldsdIndirectWeightedFattCii(f1, f2) + ldsdIndirectWeightedFattCio(f1, f2));
-        return combinedWeighted;
+    //Numero di risorse n tale che Cio_L_A_n = true
+    private int cio_L_A_n(EdgeFilm l, Film a) {
+        int i = 0;
+        Collection<Film> coll = filmGraph.getVertices();
+        for (Film f : coll)
+            if (!f.equals(a))
+                if (cio_L_A_B(l, a, f) == true)
+                    i++;
+        return i;
     }
 
-    public double combined(Film f1, Film f2) {
-        double combined = 1.0 / (1 + cd_n_ra_rb(f1, f2) + cd_n_ra_rb(f2, f1) + cio_n_ra_rb(f1, f2) + cii_n_ra_rb(f1, f2));
-        return combined;
+    //Numero di risorse n tale che Cii_L_A_n = true
+    private int cii_L_A_n(EdgeFilm l, Film a) {
+        int i = 0;
+        Collection<Film> coll = filmGraph.getVertices();
+        for (Film f : coll)
+            if (!f.equals(a))
+                if (cii_L_A_B(l, a, f) == true)
+                    i++;
+        return i;
     }
-
-/*
-private static void distances() {
-DijkstraShortestPath<Entita, Predicato> sp = new DijkstraShortestPath<Entita, Predicato>(graph);
-System.out.println("DijkstraShortestPath " + new Date() + "\n");
-System.out.println("Sto per avviare getPath");
-Entita star_Trek_First_Contact = new Entita("http://dbpedia.org/resource/Star_Trek:_First_Contact");
-Entita star_Trek_VI_The_Undiscovered_Country = new Entita("http://dbpedia.org/resource/Star_Trek_VI:_The_Undiscovered_Country");
-
-System.out.println(sp.getDistance(star_Trek_First_Contact, star_Trek_VI_The_Undiscovered_Country));
-//out.println(sp.getPath(film1, film2));
-List<Predicato> path = sp.getPath(star_Trek_First_Contact, star_Trek_VI_The_Undiscovered_Country);
-
-for (int i = 0; i < path.size(); i++) {
-System.out.println(path.get(i));
-}
-
-Entita american_films = new Entita("http://dbpedia.org/resource/Category:American_films");
-Entita donald = new Entita("http://dbpedia.org/resource/Donald_Peterman");
-
-System.out.println(sp.getDistance(american_films, donald));
-//out.println(sp.getPath(film1, film2));
-List<Predicato> path2 = sp.getPath(american_films, donald);
-
-for (int i = 0; i < path2.size(); i++) {
-System.out.println(path2.get(i));
-}
-}
-*/
 }

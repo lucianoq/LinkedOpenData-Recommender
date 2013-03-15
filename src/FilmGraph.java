@@ -6,13 +6,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Collection;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 12/03/13
- * Time: 15.46
- * To change this template use File | Settings | File Templates.
- */
 public class FilmGraph {
 
     private static DirectedSparseMultigraph<Film, EdgeFilm> filmGraph;
