@@ -7,15 +7,19 @@ public class Main {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         Grafo.init();
-        Grafo.createFromQuery();
-        Grafo.save();
+        //Grafo.createFromQuery();
+        //Grafo.save();
         Grafo.load();
         Grafo.printDot();
+
+        System.out.println("Grafo generale creato o caricato");
 
         List<Film> films = Grafo.getFilms();
 
         FilmGraph.init();
         FilmGraph.printDot();
+
+        System.out.println("Grafo dei film creato");
 
         Recommender.init();
 

@@ -29,9 +29,6 @@ public class Grafo {
     private static ArrayList<Resource> querySPARQL(String uri, String property) {
         String query = "";
 
-        //select ?object
-        //where {<http://dbpedia.org/resource/Star_Trek:_First_Contact> <http://dbpedia.org/property/producer> ?object .}
-        //
         query += "select ?object ";
         query += "WHERE { ";
         query += "<" + uri + ">  <" + property + "> ?object .";
@@ -83,8 +80,11 @@ public class Grafo {
 
         Collection<Edge> edges = graph.getEdges();
 
-        for (Edge e : edges)
-            out.println("\"" + e.getSubject().getIdMovieLens() + "\" -- \"" + e.getObject().getTitle() + "\" [weight="+e.getWeight()+"; label=\"" + e.getProperty().getIdProperty() + "\"];");
+        for (Edge e : edges) {
+            String s = "\"" + e.getSubject().getIdMovieLens() + "\" -- \"" + e.getObject().getTitle();
+            s += "\" [weight=" + e.getWeight() + "; label=\"" + e.getProperty().getIdProperty() + "\"];";
+            out.println(s);
+        }
 
         out.println("}");
         out.close();
@@ -104,7 +104,8 @@ public class Grafo {
                     Risorsa risorsaFilmDest = new Risorsa(resourceDest.get(t).getURI());
 
                     if (!resourceDest.get(t).getLocalName().isEmpty()) {
-                        Edge prop = new Edge(properties.get(j), films.get(i), risorsaFilmDest, properties.get(j).getWeight());
+                        Property property = properties.get(j);
+                        Edge prop = new Edge(property, films.get(i), risorsaFilmDest, property.getWeight());
                         graph.addVertex(risorsaFilmDest);
                         graph.addEdge(prop, films.get(i), risorsaFilmDest);
                     }
