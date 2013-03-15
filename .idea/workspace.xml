@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="cfbc18b6-a357-42af-aa62-c4378d203a9f" name="Default" comment="" />
+=======
+    <list default="true" id="cfbc18b6-a357-42af-aa62-c4378d203a9f" name="Default" comment="">
+<<<<<<< HEAD
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DistanceLuciano.java" afterPath="$PROJECT_DIR$/src/DistanceLuciano.java" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Distance.java" afterPath="$PROJECT_DIR$/src/Distance.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+>>>>>>> f2543657929ac310041990292b3b2736bc8b4d05
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+>>>>>>> 725cccb6d244fcd18ad11b4f55d05b6c9b24b46c
     <ignored path="lod-project.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363341941839" ignored="false" />
@@ -18,7 +30,7 @@
     <file path="/FilmGraph.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363339418575" ignored="false" />
     <file path="/EdgeFilm.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363272754681" ignored="false" />
     <file path="/fragment.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363100909887" ignored="false" />
-    <file path="/DistanceLuciano.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363341301170" ignored="false" />
+    <file path="/DistanceLuciano.java" changelist="cfbc18b6-a357-42af-aa62-c4378d203a9f" time="1363344188832" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +145,18 @@
         <entry file="file://$PROJECT_DIR$/src/Property.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="6" column="3" selection-start="147" selection-end="178" vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Risorsa.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Risorsa.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="0" selection-start="1513" selection-end="1513" vertical-scroll-proportion="0.0">
+=======
+>>>>>>> f2543657929ac310041990292b3b2736bc8b4d05
               <folding />
             </state>
           </provider>
@@ -156,11 +180,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DistanceLuciano.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DistanceLuciano.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DistanceLuciano.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state line="104" column="33" selection-start="3277" selection-end="3277" vertical-scroll-proportion="2.876923">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3072#3078#0" expanded="true" />
+              </folding>
+=======
             <state line="153" column="51" selection-start="5227" selection-end="5227" vertical-scroll-proportion="0.0">
               <folding />
+>>>>>>> f2543657929ac310041990292b3b2736bc8b4d05
             </state>
           </provider>
         </entry>
@@ -194,9 +226,15 @@
         <option value="$PROJECT_DIR$/src/Grafo.java" />
         <option value="$PROJECT_DIR$/src/EdgeFilm.java" />
         <option value="$PROJECT_DIR$/src/FilmGraph.java" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/src/Distance.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/DistanceLuciano.java" />
+=======
         <option value="$PROJECT_DIR$/src/DistanceLuciano.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Distance.java" />
+>>>>>>> f2543657929ac310041990292b3b2736bc8b4d05
       </list>
     </option>
   </component>
@@ -208,7 +246,196 @@
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
-      <profile-state />
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+          <State>
+            <id>Android</id>
+          </State>
+          <State>
+            <id>Android Lint</id>
+          </State>
+          <State>
+            <id>Assignment issues</id>
+          </State>
+          <State>
+            <id>Assignment issuesGroovy</id>
+          </State>
+          <State>
+            <id>Class metrics</id>
+          </State>
+          <State>
+            <id>Class structure</id>
+          </State>
+          <State>
+            <id>Cloning issues</id>
+          </State>
+          <State>
+            <id>Code style issues</id>
+          </State>
+          <State>
+            <id>Concurrency annotation issues</id>
+          </State>
+          <State>
+            <id>Control FlowGroovy</id>
+          </State>
+          <State>
+            <id>Control flow issues</id>
+          </State>
+          <State>
+            <id>Data flow issues</id>
+          </State>
+          <State>
+            <id>Data flow issuesGroovy</id>
+          </State>
+          <State>
+            <id>Declaration redundancy</id>
+          </State>
+          <State>
+            <id>Declaration redundancyGroovy</id>
+          </State>
+          <State>
+            <id>Encapsulation issues</id>
+          </State>
+          <State>
+            <id>Error handling</id>
+          </State>
+          <State>
+            <id>Error handlingGroovy</id>
+          </State>
+          <State>
+            <id>Finalization issues</id>
+          </State>
+          <State>
+            <id>GPath inspectionsGroovy</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>Groovy</id>
+          </State>
+          <State>
+            <id>HTML</id>
+          </State>
+          <State>
+            <id>IDEA Platform Inspections</id>
+          </State>
+          <State>
+            <id>Imports</id>
+          </State>
+          <State>
+            <id>Inheritance issues</id>
+          </State>
+          <State>
+            <id>Initialization issues</id>
+          </State>
+          <State>
+            <id>Internationalization issues</id>
+          </State>
+          <State>
+            <id>J2ME issues</id>
+          </State>
+          <State>
+            <id>JUnit issues</id>
+          </State>
+          <State>
+            <id>Java language level issues</id>
+          </State>
+          <State>
+            <id>Java language level migration aids</id>
+          </State>
+          <State>
+            <id>Javadoc issues</id>
+          </State>
+          <State>
+            <id>Logging issues</id>
+          </State>
+          <State>
+            <id>Method MetricsGroovy</id>
+          </State>
+          <State>
+            <id>Method metrics</id>
+          </State>
+          <State>
+            <id>Modularization issues</id>
+          </State>
+          <State>
+            <id>Naming conventions</id>
+          </State>
+          <State>
+            <id>Numeric issues</id>
+          </State>
+          <State>
+            <id>Packaging issues</id>
+          </State>
+          <State>
+            <id>Pattern Validation</id>
+          </State>
+          <State>
+            <id>Performance issues</id>
+          </State>
+          <State>
+            <id>Plugin DevKit</id>
+          </State>
+          <State>
+            <id>Portability issues</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsGroovy</id>
+          </State>
+          <State>
+            <id>Probable bugs</id>
+          </State>
+          <State>
+            <id>Probable bugsGroovy</id>
+          </State>
+          <State>
+            <id>Properties Files</id>
+          </State>
+          <State>
+            <id>RELAX NG</id>
+          </State>
+          <State>
+            <id>Resource management issues</id>
+          </State>
+          <State>
+            <id>Serialization issues</id>
+          </State>
+          <State>
+            <id>TestNG</id>
+          </State>
+          <State>
+            <id>Threading issues</id>
+          </State>
+          <State>
+            <id>Threading issuesGroovy</id>
+          </State>
+          <State>
+            <id>Verbose or redundant code constructs</id>
+          </State>
+          <State>
+            <id>Visibility issues</id>
+          </State>
+          <State>
+            <id>XML</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+          <State>
+            <id>XSLT</id>
+          </State>
+          <State>
+            <id>toString() issues</id>
+          </State>
+        </expanded-state>
+      </profile-state>
     </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -279,7 +506,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -492,9 +719,14 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18712121" sideWeight="0.2764505" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18712121" sideWeight="0.7116041" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.8475712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+=======
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18712121" sideWeight="0.54266214" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="true" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4573379" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> f2543657929ac310041990292b3b2736bc8b4d05
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -624,6 +856,16 @@
     <entry file="file://$PROJECT_DIR$/src/Grafo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="117" column="5" selection-start="4449" selection-end="4455" vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Distance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="27" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0">
+=======
+>>>>>>> f2543657929ac310041990292b3b2736bc8b4d05
           <folding />
         </state>
       </provider>
@@ -656,17 +898,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DistanceLuciano.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state line="28" column="39" selection-start="979" selection-end="979" vertical-scroll-proportion="0.0">
+=======
         <state line="153" column="51" selection-start="5227" selection-end="5227" vertical-scroll-proportion="0.0">
+>>>>>>> f2543657929ac310041990292b3b2736bc8b4d05
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/DistanceLuciano.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state line="104" column="33" selection-start="3277" selection-end="3277" vertical-scroll-proportion="2.876923">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3072#3078#0" expanded="true" />
+          </folding>
+=======
         <state line="28" column="39" selection-start="979" selection-end="979" vertical-scroll-proportion="0.0">
           <folding />
+>>>>>>> f2543657929ac310041990292b3b2736bc8b4d05
         </state>
       </provider>
     </entry>
