@@ -28,9 +28,18 @@ public class Main {
         liked.add(films.get(3));
         liked.add(films.get(4));
 
-        Profile profile = new Profile(liked);
 
-        List<Recommendation> recommendations = Recommender.getRecommendations(profile, 10);
+        Profile profile = new Profile(liked);
+        System.out.println("\n\nPROFILE");
+        System.out.println(profile.toString());
+
+
+        List<Recommendation> recommendations = Recommender.getRecommendations(profile);
+
+        System.out.println("|Recommendations| = " + recommendations.size());
+
+
+        System.out.println("\n\nRECOMMENDATION");
 
         for (Recommendation r : recommendations) {
             System.out.println("Film: " + r.getFilm().getTitle() + "\t\tDistance: " + r.getDistance());

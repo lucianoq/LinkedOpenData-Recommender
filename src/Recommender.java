@@ -21,7 +21,12 @@ public class Recommender {
             List<Recommendation> temp = new ArrayList<Recommendation>();
             for (Film f2 : Grafo.getFilms())
                 if (!f1.equals(f2)) {
-                    temp.add(new Recommendation(f2, d.passantD(f1, f2)));
+//                    temp.add(new Recommendation(f2, d.passantD(f1, f2)));
+//                    temp.add(new Recommendation(f2, d.passantDW(f1, f2)));
+//                    temp.add(new Recommendation(f2, d.passantI(f1, f2)));
+//                    temp.add(new Recommendation(f2, d.passantIW(f1, f2)));
+//                    temp.add(new Recommendation(f2, d.passantC(f1, f2)));
+                    temp.add(new Recommendation(f2, d.passantCW(f1, f2)));
                     // temp.add(new Recommendation(f2, d.nostra(f1, f2)));
                 }
             Collections.sort(temp);
@@ -47,8 +52,7 @@ public class Recommender {
                 for (Film liked : profile.getLikedFilms()) {
                     distance += getDistance(film, liked);
                 }
-                if (distance < profile.getLikedFilms().size())
-                    temp.add(new Recommendation(film, distance));
+                temp.add(new Recommendation(film, distance));
             }
 
         Collections.sort(temp);
