@@ -9,9 +9,6 @@ import java.util.Date;
 import java.util.ArrayList;
 import java.util.Collection;
 
-/**
- * @author Simone
- */
 public class Grafo {
 
     private static final String FILEFILMPROP = "./film_properties_dbpedia.txt";

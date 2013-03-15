@@ -4,12 +4,6 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 12/03/13
- * Time: 0.42
- */
 public class Property extends Risorsa implements Serializable {
 
     private int idProperty;
