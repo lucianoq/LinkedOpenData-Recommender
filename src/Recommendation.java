@@ -1,9 +1,3 @@
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 15/03/13
- * Time: 21.58
- */
 public class Recommendation implements Comparable<Recommendation> {
     private Film film;
     private double distance;

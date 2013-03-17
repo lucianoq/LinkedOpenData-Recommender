@@ -1,11 +1,5 @@
 import java.util.*;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 15/03/13
- * Time: 19.16
- */
 public class Recommender {
 
     private static Map<Film, List<Recommendation>> map;
