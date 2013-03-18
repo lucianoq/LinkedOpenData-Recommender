@@ -1,7 +1,4 @@
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
+import java.util.*;
 
 public class Distance {
     //    public static final int NUM_COPPIE_FILM = 270000;
@@ -17,7 +14,7 @@ public class Distance {
     private static Map<Coppia, Integer> cii_n_A_B;
 
     public static void fill() {
-        System.out.println("[INFO] Inizio il calcolo di tutte le distanze.");
+        System.out.println("[INFO] [" + new Date() + "] Inizio il calcolo di tutte le distanze.");
         passantD = new HashMap<Coppia, Double>(NUM_COPPIE_FILM);
         passantDW = new HashMap<Coppia, Double>(NUM_COPPIE_FILM);
         passantI = new HashMap<Coppia, Double>(NUM_COPPIE_FILM);
@@ -28,7 +25,7 @@ public class Distance {
         cio_n_A_B = new HashMap<Coppia, Integer>(NUM_COPPIE_FILM);
         cii_n_A_B = new HashMap<Coppia, Integer>(NUM_COPPIE_FILM);
 
-        int i=1;
+        int i = 1;
         for (Film f1 : Grafo.getFilms()) {
             for (Film f2 : Grafo.getFilms())
                 if (!f1.equals(f2)) {
@@ -42,10 +39,10 @@ public class Distance {
                     passantCW.put(new Coppia(f1, f2), passantCW(f1, f2));
                     nostra.put(new Coppia(f1, f2), nostra(f1, f2));
                 }
-            System.out.println("[INFO] Finito il calcolo del film "+i+"/"+Grafo.getFilms().size());
+            System.out.println("[INFO] [" + new Date() + "] Finito il calcolo del film " + i + "/" + Grafo.getFilms().size());
             i++;
         }
-        System.out.println("[INFO] Fine del calcolo di tutte le distanze.");
+        System.out.println("[INFO] [" + new Date() + "] Fine del calcolo di tutte le distanze.");
     }
 
     public static double getDistancePassantD(Film f1, Film f2) {
