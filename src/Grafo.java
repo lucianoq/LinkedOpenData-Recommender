@@ -89,6 +89,7 @@ public class Grafo {
     }
 
     public static void save() throws IOException {
+        new File("./serialized").mkdirs();
         FileOutputStream fos = new FileOutputStream("./serialized/graphComplete.bin");
         ObjectOutputStream o = new ObjectOutputStream(fos);
         o.writeObject(graph);
@@ -97,6 +98,7 @@ public class Grafo {
     }
 
     public static void printDot() throws IOException {
+        new File("./dot").mkdirs();
         FileOutputStream fout = new FileOutputStream("./dot/graphComplete.dot");
         PrintWriter out = new PrintWriter(fout);
         out.println("graph dbpedia {");

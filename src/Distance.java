@@ -1,5 +1,3 @@
-import edu.uci.ics.jung.graph.UndirectedSparseMultigraph;
-
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -118,6 +116,7 @@ public class Distance implements Serializable {
     }
 
     public static void save() throws IOException {
+        new File("./serialized").mkdirs();
         FileOutputStream fos = new FileOutputStream("./serialized/passantD.bin");
         ObjectOutputStream o = new ObjectOutputStream(fos);
         o.writeObject(passantD);
@@ -131,43 +130,43 @@ public class Distance implements Serializable {
         fos.close();
 
         fos = new FileOutputStream("./serialized/passantI.bin");
-         o = new ObjectOutputStream(fos);
+        o = new ObjectOutputStream(fos);
         o.writeObject(passantI);
         o.close();
         fos.close();
 
-         fos = new FileOutputStream("./serialized/passantIW.bin");
-         o = new ObjectOutputStream(fos);
+        fos = new FileOutputStream("./serialized/passantIW.bin");
+        o = new ObjectOutputStream(fos);
         o.writeObject(passantIW);
         o.close();
         fos.close();
 
-         fos = new FileOutputStream("./serialized/passantC.bin");
-         o = new ObjectOutputStream(fos);
+        fos = new FileOutputStream("./serialized/passantC.bin");
+        o = new ObjectOutputStream(fos);
         o.writeObject(passantC);
         o.close();
         fos.close();
 
-         fos = new FileOutputStream("./serialized/passantCW.bin");
-         o = new ObjectOutputStream(fos);
+        fos = new FileOutputStream("./serialized/passantCW.bin");
+        o = new ObjectOutputStream(fos);
         o.writeObject(passantCW);
         o.close();
         fos.close();
 
-         fos = new FileOutputStream("./serialized/nostra.bin");
-         o = new ObjectOutputStream(fos);
+        fos = new FileOutputStream("./serialized/nostra.bin");
+        o = new ObjectOutputStream(fos);
         o.writeObject(nostra);
         o.close();
         fos.close();
 
-         fos = new FileOutputStream("./serialized/cionab.bin");
-         o = new ObjectOutputStream(fos);
+        fos = new FileOutputStream("./serialized/cionab.bin");
+        o = new ObjectOutputStream(fos);
         o.writeObject(cio_n_A_B);
         o.close();
         fos.close();
 
-         fos = new FileOutputStream("./serialized/ciinab.bin");
-         o = new ObjectOutputStream(fos);
+        fos = new FileOutputStream("./serialized/ciinab.bin");
+        o = new ObjectOutputStream(fos);
         o.writeObject(cii_n_A_B);
         o.close();
         fos.close();
