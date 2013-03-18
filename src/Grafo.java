@@ -11,8 +11,8 @@ import java.util.Date;
 
 public class Grafo {
 
-    private static final String FILEFILMPROP = "./film_properties_dbpedia.txt";
-    private static final String FILEFILM = "./film_test.txt";
+    private static final String FILEFILMPROP = "./config/film_properties_dbpedia.txt";
+    private static final String FILEFILM = "./config/ListFilms.txt";
     private static final String ENDPOINT = "http://dbpedia.org/sparql";
     // public static final String ENDPOINT = "http://sparql.freebase.com";
     // public static final String ENDPOINT = "http://live.dbpedia.org/sparql";

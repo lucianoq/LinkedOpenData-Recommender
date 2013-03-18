@@ -7,7 +7,7 @@ import java.util.Iterator;
 
 public class MovieLensVoting {
 
-    private static final String DBMOVIELENSVOTING = "./VotesMovielens.txt";
+    private static final String DBMOVIELENSVOTING = "./config/VotesMovielens.txt";
     public static ArrayList<MovieLensType> dbmovielens;
 
     public static void init() throws IOException {

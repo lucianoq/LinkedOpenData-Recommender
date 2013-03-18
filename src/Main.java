@@ -7,11 +7,10 @@ public class Main {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
 
-//        MovieLensVoting.init();
-//        System.exit(0);
+        MovieLensVoting.init();
 
         Grafo.load();
-        Grafo.updateWeight();
+       // Grafo.updateWeight();
         Grafo.save();
         Grafo.printDot();
 
