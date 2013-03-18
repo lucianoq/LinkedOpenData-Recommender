@@ -28,7 +28,8 @@ public class Distance {
         cio_n_A_B = new HashMap<Coppia, Integer>(NUM_COPPIE_FILM);
         cii_n_A_B = new HashMap<Coppia, Integer>(NUM_COPPIE_FILM);
 
-        for (Film f1 : Grafo.getFilms())
+        int i=1;
+        for (Film f1 : Grafo.getFilms()) {
             for (Film f2 : Grafo.getFilms())
                 if (!f1.equals(f2)) {
                     cio_n_A_B.put(new Coppia(f1, f2), cio_n_A_B(f1, f2));
@@ -41,6 +42,9 @@ public class Distance {
                     passantCW.put(new Coppia(f1, f2), passantCW(f1, f2));
                     nostra.put(new Coppia(f1, f2), nostra(f1, f2));
                 }
+            System.out.println("[INFO] Finito il calcolo del film "+i+"/"+Grafo.getFilms().size());
+            i++;
+        }
         System.out.println("[INFO] Fine del calcolo di tutte le distanze.");
     }
 
