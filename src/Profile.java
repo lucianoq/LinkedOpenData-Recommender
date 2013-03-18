@@ -16,4 +16,13 @@ public class Profile {
     public Set<Film> getLikedFilms() {
         return likedFilms;
     }
+
+    @Override
+    public String toString() {
+        String s = "Profile{ likedFilms: \n";
+        for (Film f : likedFilms)
+            s += f.getTitle() + "\n";
+        s += '}';
+        return s;
+    }
 }
