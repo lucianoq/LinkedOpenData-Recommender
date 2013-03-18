@@ -9,8 +9,8 @@ public class Main {
         Grafo.init();
         Grafo.load();
 
-        Grafo.createFromQuery();
-        Grafo.save();
+//        Grafo.createFromQuery();
+//        Grafo.save();
 //
 //      Grafo.updateWeight();
 //      Grafo.save();
@@ -19,7 +19,7 @@ public class Main {
 
         System.out.println("Grafo generale creato o caricato");
 
-        System.exit(0);
+
         List<Film> films = Grafo.getFilms();
 
         FilmGraph.init();
@@ -36,7 +36,7 @@ public class Main {
 
         Profile profile = new Profile(liked);
 
-        List<Recommendation> recommendations = Recommender.getRecommendations(profile, 10);
+        List<Recommendation> recommendations = Recommender.getRecommendations(profile, Recommender.ALL);
 
         for (Recommendation r : recommendations) {
             System.out.println("Film: " + r.getFilm().getTitle() + "\t\tDistance: " + r.getDistance());

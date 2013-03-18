@@ -3,6 +3,7 @@ import java.util.*;
 public class Recommender {
 
     private static Map<Film, List<Recommendation>> map;
+    public static final int ALL = 0;
 
     public static void init() {
         System.out.println("Inizio costruzione distanze");
@@ -41,13 +42,12 @@ public class Recommender {
                 for (Film liked : profile.getLikedFilms()) {
                     distance += getDistance(film, liked);
                 }
-                if (distance < profile.getLikedFilms().size())
                     temp.add(new Recommendation(film, distance));
             }
 
         Collections.sort(temp);
 
-        if (limit == 0)
+        if (limit == ALL)
             return temp;
 
         List<Recommendation> toRec = new ArrayList<Recommendation>(limit);
@@ -59,7 +59,7 @@ public class Recommender {
     }
 
     public static List<Recommendation> getRecommendations(Profile profile) {
-        return getRecommendations(profile, 0);
+        return getRecommendations(profile, ALL);
     }
 
 

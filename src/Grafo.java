@@ -59,8 +59,12 @@ public class Grafo {
             graph = (UndirectedSparseMultigraph<Risorsa, Edge>) ois.readObject();
             ois.close();
             fis.close();
+            System.out.println("Grafo Caricato.");
+            System.out.println("Vertici : " + graph.getVertices().size());
+            System.out.println("Archi : " + graph.getEdges().size());
         } catch (FileNotFoundException e) {
             graph = new UndirectedSparseMultigraph<Risorsa, Edge>();
+            System.out.println("Grafo inizializzato.");
         }
     }
 
