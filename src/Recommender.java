@@ -1,3 +1,5 @@
+import java.sql.*;
+import java.sql.Date;
 import java.util.*;
 
 public class Recommender {
@@ -16,7 +18,11 @@ public class Recommender {
             List<Recommendation> temp = new ArrayList<Recommendation>();
             for (Film f2 : Grafo.getFilms())
                 if (!f1.equals(f2)) {
-                    temp.add(new Recommendation(f2, d.passantD(f1, f2)));
+                    System.out.println(new java.util.Date() + " sto per fare " + f1.getTitle() + " con " + f2.getTitle());
+                    double tmp = d.passantCW(f1, f2);
+                    temp.add(new Recommendation(f2, tmp));
+                    System.out.println(new java.util.Date() + "Recommendation: " + tmp);
+
                     // temp.add(new Recommendation(f2, d.nostra(f1, f2)));
                 }
             Collections.sort(temp);
@@ -42,7 +48,7 @@ public class Recommender {
                 for (Film liked : profile.getLikedFilms()) {
                     distance += getDistance(film, liked);
                 }
-                    temp.add(new Recommendation(film, distance));
+                temp.add(new Recommendation(film, distance));
             }
 
         Collections.sort(temp);
