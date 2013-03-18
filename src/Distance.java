@@ -135,8 +135,7 @@ public class Distance {
             den4 += ((cio_L_A_B(ef, b, a)) ? 1 : 0) / (1 + Math.log(cio_L_A_n(ef, a)));
         }
 
-        double d = 1.0 / (1 + den1 + den2 + den3 + den4);
-        return d;
+        return 1.0 / (1 + den1 + den2 + den3 + den4);
     }
 
     //vero se c'è arco L tra A e B
@@ -172,7 +171,7 @@ public class Distance {
         Collection<EdgeFilm> collB = FilmGraph.getGraph().getOutEdges(b);
         for (EdgeFilm efA : collA)
             for (EdgeFilm efB : collB)
-                if (efA.getObject().equals(efB.getObject()))
+                if (efA.getSubject().equals(efB.getSubject()))
                     if (efA.getLabelModified().equals(efB.getLabelModified()))
                         if (efA.getLabelModified().equals(l.getLabelModified()))
                             return true;
@@ -185,7 +184,7 @@ public class Distance {
         Collection<EdgeFilm> collB = FilmGraph.getGraph().getInEdges(b);
         for (EdgeFilm efA : collA)
             for (EdgeFilm efB : collB)
-                if (efA.getSubject().equals(efB.getSubject()))
+                if (efA.getObject().equals(efB.getObject()))
                     if (efA.getLabelModified().equals(efB.getLabelModified()))
                         if (efA.getLabelModified().equals(l.getLabelModified()))
                             return true;
@@ -226,7 +225,7 @@ public class Distance {
         Collection<Film> coll = FilmGraph.getGraph().getVertices();
         for (Film f : coll)
             if (!f.equals(a))
-                if (cio_L_A_B(l, a, f) == true)
+                if (cio_L_A_B(l, a, f))
                     i++;
         return i;
     }
@@ -237,7 +236,7 @@ public class Distance {
         Collection<Film> coll = FilmGraph.getGraph().getVertices();
         for (Film f : coll)
             if (!f.equals(a))
-                if (cii_L_A_B(l, a, f) == true)
+                if (cii_L_A_B(l, a, f))
                     i++;
         return i;
     }
