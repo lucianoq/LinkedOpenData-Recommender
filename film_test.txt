@@ -4,6 +4,12 @@
 1203	Top Hat	http://dbpedia.org/resource/Top_Hat
 612	Lost Horizon	http://dbpedia.org/resource/Lost_Horizon_(1937_film)
 639	The Tin Drum	http://dbpedia.org/resource/The_Tin_Drum_(film)
+491	The Adventures of Robin Hood	http://dbpedia.org/resource/The_Adventures_of_Robin_Hood_(film)
+916	Lost in Space	http://dbpedia.org/resource/Lost_in_Space_(film)
+253	The Pillow Book	http://dbpedia.org/resource/The_Pillow_Book_(film)
+1172	The Women	http://dbpedia.org/resource/The_Women_(1939_film)
+4	Get Shorty	http://dbpedia.org/resource/Get_Shorty_(film)
+315	Apt Pupil	http://dbpedia.org/resource/Apt_Pupil_(film)
 145	The Lawnmower Man	http://dbpedia.org/resource/The_Lawnmower_Man_(film)
 732	Dave	http://dbpedia.org/resource/Dave_(film)
 768	Casper	http://dbpedia.org/resource/Casper_(film)

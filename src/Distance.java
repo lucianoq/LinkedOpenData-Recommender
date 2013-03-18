@@ -243,10 +243,6 @@ public class Distance implements Serializable {
     }
 
     public static double getDistanceNostra(Film f1, Film f2) {
-        System.out.println(f1.getTitle());
-        System.out.println(f2.getTitle());
-        System.out.println(nostra);
-        System.out.println(nostra.get(new Coppia(f1, f2)));
         return nostra.get(new Coppia(f1, f2));
     }
 
