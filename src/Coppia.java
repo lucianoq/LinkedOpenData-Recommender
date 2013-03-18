@@ -1,3 +1,5 @@
+import java.io.Serializable;
+
 /**
  * Created with IntelliJ IDEA.
  * User: lusio
@@ -5,7 +7,7 @@
  * Time: 12.44
  */
 
-public class Coppia {
+public class Coppia implements Serializable {
     Film a;
     Film b;
 

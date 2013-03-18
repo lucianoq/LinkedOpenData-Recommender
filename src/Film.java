@@ -30,6 +30,14 @@ public class Film extends Risorsa implements Serializable, Comparable<Film> {
         return films;
     }
 
+    public static Film getFilmByID(int id) {
+        assert Grafo.getFilms() != null;
+        for (Film f : Grafo.getFilms())
+            if (f.getIdMovieLens() == id)
+                return f;
+        return null;
+    }
+
     public int getIdMovieLens() {
         return idMovieLens;
     }

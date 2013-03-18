@@ -10,12 +10,9 @@ public class Main {
 //        MovieLensVoting.init();
 //        System.exit(0);
 
-        Grafo.init();
         Grafo.load();
-//        Grafo.createFromQuery();
-//        Grafo.save();
+        Grafo.save();
 //      Grafo.updateWeight();
-//      Grafo.save();
         Grafo.printDot();
 
         System.out.println("Grafo generale creato o caricato");
@@ -26,16 +23,13 @@ public class Main {
 
         System.out.println("Grafo dei film creato");
 
-
-        Distance.fill();
-
+        Distance.load();
+        Distance.save();
 
         Recommender.init();
 
-
-        List<Film> films = Grafo.getFilms();
         Set<Film> liked = new HashSet<Film>();
-        liked.add(films.get(2));
+        liked.add(Film.getFilmByID(229));
         Profile profile = new Profile(liked);
 
 

@@ -35,7 +35,7 @@ public class FilmGraph {
     }
 
     public static void printDot() throws IOException {
-        FileOutputStream fout = new FileOutputStream("./filmGraph.dot");
+        FileOutputStream fout = new FileOutputStream("./dot/filmGraph.dot");
         PrintWriter out = new PrintWriter(fout);
         out.println("digraph dbpedia {");
 

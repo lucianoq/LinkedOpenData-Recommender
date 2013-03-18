@@ -1,8 +1,6 @@
 import com.hp.hpl.jena.query.*;
 import com.hp.hpl.jena.rdf.model.Resource;
-
 import edu.uci.ics.jung.graph.UndirectedSparseMultigraph;
-
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
@@ -22,11 +20,6 @@ public class Grafo {
     private static ArrayList<Film> films;
     private static ArrayList<Property> properties;
     private static UndirectedSparseMultigraph<Risorsa, Edge> graph;
-
-    public static void init() throws IOException {
-        films = Film.readFromFile(FILEFILM);
-        properties = Property.readFromFile(FILEFILMPROP);
-    }
 
     private static ArrayList<Resource> querySPARQL(String uri, String property) {
         String query = "";
@@ -52,9 +45,11 @@ public class Grafo {
         return sub;
     }
 
-    public static void load() throws IOException, ClassNotFoundException {
+    public static void load() throws IOException, ClassNotFoundException, InterruptedException {
+        films = Film.readFromFile(FILEFILM);
+        properties = Property.readFromFile(FILEFILMPROP);
         try {
-            FileInputStream fis = new FileInputStream("./graph.tmp");
+            FileInputStream fis = new FileInputStream("./serialized/graphComplete.bin");
             ObjectInputStream ois = new ObjectInputStream(fis);
             graph = (UndirectedSparseMultigraph<Risorsa, Edge>) ois.readObject();
             ois.close();
@@ -64,6 +59,7 @@ public class Grafo {
             System.out.println("Archi : " + graph.getEdges().size());
         } catch (FileNotFoundException e) {
             graph = new UndirectedSparseMultigraph<Risorsa, Edge>();
+            createFromQuery();
             System.out.println("Grafo inizializzato.");
         }
     }
@@ -93,7 +89,7 @@ public class Grafo {
     }
 
     public static void save() throws IOException {
-        FileOutputStream fos = new FileOutputStream("./graph.tmp");
+        FileOutputStream fos = new FileOutputStream("./serialized/graphComplete.bin");
         ObjectOutputStream o = new ObjectOutputStream(fos);
         o.writeObject(graph);
         o.close();
@@ -101,7 +97,7 @@ public class Grafo {
     }
 
     public static void printDot() throws IOException {
-        FileOutputStream fout = new FileOutputStream("./allGraph.dot");
+        FileOutputStream fout = new FileOutputStream("./dot/graphComplete.dot");
         PrintWriter out = new PrintWriter(fout);
         out.println("graph dbpedia {");
 

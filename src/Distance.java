@@ -1,7 +1,10 @@
+import edu.uci.ics.jung.graph.UndirectedSparseMultigraph;
+
+import java.io.*;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class Distance {
+public class Distance implements Serializable {
     //    public static final int NUM_COPPIE_FILM = 270000;
     public static final int NUM_COPPIE_FILM = 2500;
     private static Map<Coppia, Double> passantD;
@@ -51,6 +54,123 @@ public class Distance {
         }
 
         System.out.println("[INFO] [" + new Date() + "] Fine del calcolo di tutte le distanze.");
+    }
+
+    public static void load() throws IOException, ClassNotFoundException {
+        try {
+            FileInputStream fis = new FileInputStream("./serialized/passantD.bin");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            passantD = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+
+            fis = new FileInputStream("./serialized/passantDW.bin");
+            ois = new ObjectInputStream(fis);
+            passantDW = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+
+            fis = new FileInputStream("./serialized/passantI.bin");
+            ois = new ObjectInputStream(fis);
+            passantI = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+
+            fis = new FileInputStream("./serialized/passantIW.bin");
+            ois = new ObjectInputStream(fis);
+            passantIW = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+
+            fis = new FileInputStream("./serialized/passantC.bin");
+            ois = new ObjectInputStream(fis);
+            passantC = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+
+            fis = new FileInputStream("./serialized/passantCW.bin");
+            ois = new ObjectInputStream(fis);
+            passantCW = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+
+            fis = new FileInputStream("./serialized/nostra.bin");
+            ois = new ObjectInputStream(fis);
+            nostra = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+
+            fis = new FileInputStream("./serialized/cionab.bin");
+            ois = new ObjectInputStream(fis);
+            cio_n_A_B = (ConcurrentHashMap<Coppia, Integer>) ois.readObject();
+            ois.close();
+            fis.close();
+
+
+            fis = new FileInputStream("./serialized/ciinab.bin");
+            ois = new ObjectInputStream(fis);
+            cii_n_A_B = (ConcurrentHashMap<Coppia, Integer>) ois.readObject();
+            ois.close();
+            fis.close();
+        } catch (FileNotFoundException e) {
+            fill();
+        }
+    }
+
+    public static void save() throws IOException {
+        FileOutputStream fos = new FileOutputStream("./serialized/passantD.bin");
+        ObjectOutputStream o = new ObjectOutputStream(fos);
+        o.writeObject(passantD);
+        o.close();
+        fos.close();
+
+        fos = new FileOutputStream("./serialized/passantDW.bin");
+        o = new ObjectOutputStream(fos);
+        o.writeObject(passantDW);
+        o.close();
+        fos.close();
+
+        fos = new FileOutputStream("./serialized/passantI.bin");
+         o = new ObjectOutputStream(fos);
+        o.writeObject(passantI);
+        o.close();
+        fos.close();
+
+         fos = new FileOutputStream("./serialized/passantIW.bin");
+         o = new ObjectOutputStream(fos);
+        o.writeObject(passantIW);
+        o.close();
+        fos.close();
+
+         fos = new FileOutputStream("./serialized/passantC.bin");
+         o = new ObjectOutputStream(fos);
+        o.writeObject(passantC);
+        o.close();
+        fos.close();
+
+         fos = new FileOutputStream("./serialized/passantCW.bin");
+         o = new ObjectOutputStream(fos);
+        o.writeObject(passantCW);
+        o.close();
+        fos.close();
+
+         fos = new FileOutputStream("./serialized/nostra.bin");
+         o = new ObjectOutputStream(fos);
+        o.writeObject(nostra);
+        o.close();
+        fos.close();
+
+         fos = new FileOutputStream("./serialized/cionab.bin");
+         o = new ObjectOutputStream(fos);
+        o.writeObject(cio_n_A_B);
+        o.close();
+        fos.close();
+
+         fos = new FileOutputStream("./serialized/ciinab.bin");
+         o = new ObjectOutputStream(fos);
+        o.writeObject(cii_n_A_B);
+        o.close();
+        fos.close();
     }
 
     public static double getDistancePassantD(Film f1, Film f2) {
