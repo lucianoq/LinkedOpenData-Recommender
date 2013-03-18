@@ -31,8 +31,8 @@ public class Main {
 
         Set<Film> liked = new HashSet<Film>();
         liked.add(films.get(2));
-        liked.add(films.get(3));
-        liked.add(films.get(4));
+
+        System.out.println(films.get(2));
 
 
         Profile profile = new Profile(liked);
@@ -46,6 +46,7 @@ public class Main {
 
         System.out.println("\n\nRECOMMENDATION");
 
+        System.out.println("Recommendations size: " + recommendations.size());
         for (Recommendation r : recommendations) {
             System.out.println("Film: " + r.getFilm().getTitle() + "\t\tDistance: " + r.getDistance());
 
