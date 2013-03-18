@@ -26,15 +26,15 @@ public class Distance {
         cio_n_A_B = new ConcurrentHashMap<Coppia, Integer>(NUM_COPPIE_FILM);
         cii_n_A_B = new ConcurrentHashMap<Coppia, Integer>(NUM_COPPIE_FILM);
 
-        ArrayList<Film> graph = Grafo.getFilms();
+        ArrayList<Film> films = Grafo.getFilms();
         ArrayList<ComputeDistance> threads = new ArrayList<ComputeDistance>();
 
         for (int i = 0; i < 8; i++) {
             threads.add(new ComputeDistance());
         }
 
-        for (int i = 0; i < graph.size(); i++) {
-            threads.get(i % 8).getSubset().add(graph.get(i));
+        for (int i = 0; i < films.size(); i++) {
+            threads.get(i % 8).getSubset().add(films.get(i));
         }
 
         for (int i = 0; i < 8; i++) {

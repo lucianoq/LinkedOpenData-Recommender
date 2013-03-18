@@ -22,7 +22,7 @@ public class ComputeDistance extends Thread {
 
     @Override
     public void run() {
-        for (Film f1 : Grafo.getFilms()) {
+        for (Film f1 : subset) {
             for (Film f2 : Grafo.getFilms())
                 if (!f1.equals(f2)) {
                     Distance.getCio_n_A_B().put(new Coppia(f1, f2), Distance.cio_n_A_B(f1, f2));
