@@ -6,33 +6,22 @@ public class Recommender {
     private static Map<Film, List<Recommendation>> map;
 
     public static void init() {
-        System.out.println("Inizio costruzione distanze");
-
+        System.out.println("[INFO] Inizio creazione tabelle di raccomandazione");
         map = new HashMap<Film, List<Recommendation>>();
-
-        Distance d = new Distance(FilmGraph.getGraph());
 
         for (Film f1 : Grafo.getFilms()) {
             List<Recommendation> temp = new ArrayList<Recommendation>();
             for (Film f2 : Grafo.getFilms())
                 if (!f1.equals(f2)) {
-                    //temp.add(new Recommendation(f2, d.passantD(f1, f2)));
-                    //temp.add(new Recommendation(f2, d.passantDW(f1, f2)));
-                    //temp.add(new Recommendation(f2, d.passantI(f1, f2)));
-                    //temp.add(new Recommendation(f2, d.passantIW(f1, f2)));
-                    //temp.add(new Recommendation(f2, d.passantC(f1, f2)));
-                    //temp.add(new Recommendation(f2, d.nostra(f1, f2)));
-                    temp.add(new Recommendation(f2, d.passantCW(f1, f2)));
-                    System.out.println(new java.util.Date() + " sto per fare " + f1.getTitle() + " con " + f2.getTitle());
-                    double tmp = d.passantCW(f1, f2);
+                    //System.out.println(new java.util.Date() + " sto per fare " + f1.getTitle() + " con " + f2.getTitle());
+                    double tmp = Distance.getDistancePassantDW(f1, f2);
                     temp.add(new Recommendation(f2, tmp));
-                    System.out.println(new java.util.Date() + "Recommendation: " + tmp);
+                    //System.out.println(new java.util.Date() + "Recommendation: " + tmp);
                 }
             Collections.sort(temp);
             map.put(f1, temp);
         }
-
-        System.out.println("Fine costruzione distanze");
+        System.out.println("[INFO] Fine creazione tabelle di raccomandazione");
     }
 
     public static double getDistance(Film a, Film b) {
