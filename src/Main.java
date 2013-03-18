@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
 
         MovieLensVoting.init();
-        System.out.println(MovieLensVoting.users());
+        System.out.println();
 
         System.exit(0);
         Grafo.init();

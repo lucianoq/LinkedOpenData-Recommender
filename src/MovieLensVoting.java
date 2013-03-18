@@ -3,6 +3,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class MovieLensVoting {
 
@@ -13,17 +14,22 @@ public class MovieLensVoting {
         dbmovielens = readFromFile(DBMOVIELENSVOTING);
     }
 
-    public static HashSet<Integer> users(){
-        HashSet set=new HashSet();
-        for(MovieLensType m :dbmovielens)
+    public static ArrayList<Integer> users() {
+        HashSet set = new HashSet();
+        for (MovieLensType m : dbmovielens)
             set.add(m.getIdUser());
-        return set;
+
+        ArrayList<Integer> users = new ArrayList<Integer>();
+        Iterator i = set.iterator();
+        while (i.hasNext())
+            users.add((Integer) i.next());
+        return users;
     }
 
-    public static ArrayList<MovieLensType> userVotes(int idUser){
-        ArrayList<MovieLensType> userVotes=new ArrayList<MovieLensType>();
-        for (MovieLensType m: dbmovielens)
-            if (idUser==m.getIdUser())
+    public static ArrayList<MovieLensType> userVotes(int idUser) {
+        ArrayList<MovieLensType> userVotes = new ArrayList<MovieLensType>();
+        for (MovieLensType m : dbmovielens)
+            if (idUser == m.getIdUser())
                 userVotes.add(m);
         return userVotes;
     }
