@@ -103,6 +103,20 @@ public class Distance {
         return hs.size();
     }
 
+
+        //vero se esiste C tale che C->A e C->B con archi tutti L
+    private boolean cii_L_A_B(EdgeFilm l, Film a, Film b) {
+        Collection<EdgeFilm> collA = filmGraph.getInEdges(a);
+        Collection<EdgeFilm> collB = filmGraph.getInEdges(b);
+        for (EdgeFilm efA : collA)
+            for (EdgeFilm efB : collB)
+                if (efA.getSubject().equals(efB.getSubject()))
+                    if (efA.getLabelModified().equals(efB.getLabelModified()))
+                        if (efA.getLabelModified().equals(l.getLabelModified()))
+                            return true;
+        return false;
+    }
+
     //vero se esiste C tale che A->C e B->C con archi tutti L
     private boolean cio_L_A_B(EdgeFilm l, Film a, Film b) {
         Collection<EdgeFilm> collA = filmGraph.getOutEdges(a);
@@ -110,19 +124,6 @@ public class Distance {
         for (EdgeFilm efA : collA)
             for (EdgeFilm efB : collB)
                 if (efA.getObject().equals(efB.getObject()))
-                    if (efA.getLabelModified().equals(efB.getLabelModified()))
-                        if (efA.getLabelModified().equals(l.getLabelModified()))
-                            return true;
-        return false;
-    }
-
-    //vero se esiste C tale che C->A e C->B con archi tutti L
-    private boolean cii_L_A_B(EdgeFilm l, Film a, Film b) {
-        Collection<EdgeFilm> collA = filmGraph.getInEdges(a);
-        Collection<EdgeFilm> collB = filmGraph.getInEdges(b);
-        for (EdgeFilm efA : collA)
-            for (EdgeFilm efB : collB)
-                if (efA.getSubject().equals(efB.getSubject()))
                     if (efA.getLabelModified().equals(efB.getLabelModified()))
                         if (efA.getLabelModified().equals(l.getLabelModified()))
                             return true;

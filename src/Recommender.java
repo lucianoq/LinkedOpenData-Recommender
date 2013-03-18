@@ -19,7 +19,7 @@ public class Recommender {
             for (Film f2 : Grafo.getFilms())
                 if (!f1.equals(f2)) {
                     System.out.println(new java.util.Date() + " sto per fare " + f1.getTitle() + " con " + f2.getTitle());
-                    double tmp = d.passantCW(f1, f2);
+                    double tmp = d.passantD(f1, f2);
                     temp.add(new Recommendation(f2, tmp));
                     System.out.println(new java.util.Date() + "Recommendation: " + tmp);
 
