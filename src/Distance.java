@@ -63,8 +63,39 @@ public class Distance implements Serializable {
 
     public static void load() throws IOException, ClassNotFoundException {
         try {
-            FileInputStream fis = new FileInputStream("./serialized/passantD.bin");
+            FileInputStream fis = new FileInputStream("./serialized/cionab.bin");
             ObjectInputStream ois = new ObjectInputStream(fis);
+            cio_n_A_B = (ConcurrentHashMap<Coppia, Integer>) ois.readObject();
+            ois.close();
+            fis.close();
+
+
+            fis = new FileInputStream("./serialized/ciinab.bin");
+            ois = new ObjectInputStream(fis);
+            cii_n_A_B = (ConcurrentHashMap<Coppia, Integer>) ois.readObject();
+            ois.close();
+            fis.close();
+
+            fis = new FileInputStream("./serialized/nostraDW.bin");
+            ois = new ObjectInputStream(fis);
+            nostraDW = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+
+            fis = new FileInputStream("./serialized/nostraIOW.bin");
+            ois = new ObjectInputStream(fis);
+            nostraIOW = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+
+            fis = new FileInputStream("./serialized/nostraIIW.bin");
+            ois = new ObjectInputStream(fis);
+            nostraIIW = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+
+            fis = new FileInputStream("./serialized/passantD.bin");
+            ois = new ObjectInputStream(fis);
             passantD = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
             ois.close();
             fis.close();
@@ -104,38 +135,6 @@ public class Distance implements Serializable {
             nostra = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
             ois.close();
             fis.close();
-
-            fis = new FileInputStream("./serialized/cionab.bin");
-            ois = new ObjectInputStream(fis);
-            cio_n_A_B = (ConcurrentHashMap<Coppia, Integer>) ois.readObject();
-            ois.close();
-            fis.close();
-
-
-            fis = new FileInputStream("./serialized/ciinab.bin");
-            ois = new ObjectInputStream(fis);
-            cii_n_A_B = (ConcurrentHashMap<Coppia, Integer>) ois.readObject();
-            ois.close();
-            fis.close();
-
-            fis = new FileInputStream("./serialized/nostraDW.bin");
-            ois = new ObjectInputStream(fis);
-            nostraDW = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
-            ois.close();
-            fis.close();
-
-            fis = new FileInputStream("./serialized/nostraIOW.bin");
-            ois = new ObjectInputStream(fis);
-            nostraIOW = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
-            ois.close();
-            fis.close();
-
-            fis = new FileInputStream("./serialized/nostraIIW.bin");
-            ois = new ObjectInputStream(fis);
-            nostraIIW = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
-            ois.close();
-            fis.close();
-
 
         } catch (FileNotFoundException e) {
             fill();
@@ -244,6 +243,10 @@ public class Distance implements Serializable {
     }
 
     public static double getDistanceNostra(Film f1, Film f2) {
+        System.out.println(f1.getTitle());
+        System.out.println(f2.getTitle());
+        System.out.println(nostra);
+        System.out.println(nostra.get(new Coppia(f1, f2)));
         return nostra.get(new Coppia(f1, f2));
     }
 
@@ -321,6 +324,7 @@ public class Distance implements Serializable {
     }
 
     protected static double nostra(Film a, Film b) {
+
         double denom = getDistanceNostraDW(a, b) + getDistanceNostraDW(b, a);
         denom += getDistanceNostraIOW(a, b) + getDistanceNostraIIW(a, b);
         double d = 1.0 / (1 + denom);
