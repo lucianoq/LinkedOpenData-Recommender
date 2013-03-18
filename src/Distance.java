@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Distance {
     //    public static final int NUM_COPPIE_FILM = 270000;
@@ -15,33 +16,40 @@ public class Distance {
 
     public static void fill() {
         System.out.println("[INFO] [" + new Date() + "] Inizio il calcolo di tutte le distanze.");
-        passantD = new HashMap<Coppia, Double>(NUM_COPPIE_FILM);
-        passantDW = new HashMap<Coppia, Double>(NUM_COPPIE_FILM);
-        passantI = new HashMap<Coppia, Double>(NUM_COPPIE_FILM);
-        passantC = new HashMap<Coppia, Double>(NUM_COPPIE_FILM);
-        passantIW = new HashMap<Coppia, Double>(NUM_COPPIE_FILM);
-        passantCW = new HashMap<Coppia, Double>(NUM_COPPIE_FILM);
-        nostra = new HashMap<Coppia, Double>(NUM_COPPIE_FILM);
-        cio_n_A_B = new HashMap<Coppia, Integer>(NUM_COPPIE_FILM);
-        cii_n_A_B = new HashMap<Coppia, Integer>(NUM_COPPIE_FILM);
+        passantD = new ConcurrentHashMap<Coppia, Double>(NUM_COPPIE_FILM);
+        passantDW = new ConcurrentHashMap<Coppia, Double>(NUM_COPPIE_FILM);
+        passantI = new ConcurrentHashMap<Coppia, Double>(NUM_COPPIE_FILM);
+        passantC = new ConcurrentHashMap<Coppia, Double>(NUM_COPPIE_FILM);
+        passantIW = new ConcurrentHashMap<Coppia, Double>(NUM_COPPIE_FILM);
+        passantCW = new ConcurrentHashMap<Coppia, Double>(NUM_COPPIE_FILM);
+        nostra = new ConcurrentHashMap<Coppia, Double>(NUM_COPPIE_FILM);
+        cio_n_A_B = new ConcurrentHashMap<Coppia, Integer>(NUM_COPPIE_FILM);
+        cii_n_A_B = new ConcurrentHashMap<Coppia, Integer>(NUM_COPPIE_FILM);
 
-        int i = 1;
-        for (Film f1 : Grafo.getFilms()) {
-            for (Film f2 : Grafo.getFilms())
-                if (!f1.equals(f2)) {
-                    cio_n_A_B.put(new Coppia(f1, f2), cio_n_A_B(f1, f2));
-                    cii_n_A_B.put(new Coppia(f1, f2), cii_n_A_B(f1, f2));
-                    passantD.put(new Coppia(f1, f2), passantD(f1, f2));
-                    passantDW.put(new Coppia(f1, f2), passantDW(f1, f2));
-                    passantI.put(new Coppia(f1, f2), passantI(f1, f2));
-                    passantIW.put(new Coppia(f1, f2), passantIW(f1, f2));
-                    passantC.put(new Coppia(f1, f2), passantC(f1, f2));
-                    passantCW.put(new Coppia(f1, f2), passantCW(f1, f2));
-                    nostra.put(new Coppia(f1, f2), nostra(f1, f2));
-                }
-            System.out.println("[INFO] [" + new Date() + "] Finito il calcolo del film " + i + "/" + Grafo.getFilms().size());
-            i++;
+        ArrayList<Film> graph = Grafo.getFilms();
+        ArrayList<ComputeDistance> threads = new ArrayList<ComputeDistance>();
+
+        for (int i = 0; i < 8; i++) {
+            threads.add(new ComputeDistance());
         }
+
+        for (int i = 0; i < graph.size(); i++) {
+            threads.get(i % 8).getSubset().add(graph.get(i));
+        }
+
+        for (int i = 0; i < 8; i++) {
+            threads.get(i).start();
+        }
+
+        for (int i = 0; i < 8; i++) {
+            try {
+                threads.get(i).join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("[INFO] Thread " + i + " finito.");
+        }
+
         System.out.println("[INFO] [" + new Date() + "] Fine del calcolo di tutte le distanze.");
     }
 
@@ -73,17 +81,17 @@ public class Distance {
         return nostra.get(new Coppia(f1, f2));
     }
 
-    private static double nostra(Film a, Film b) {
+    protected static double nostra(Film a, Film b) {
         return 0.5;
         //TODO
     }
 
-    private static double passantD(Film a, Film b) {
+    protected static double passantD(Film a, Film b) {
         double d = 1.0d / (1 + cd_n_A_B(a, b) + cd_n_A_B(b, a));
         return d;
     }
 
-    private static double passantDW(Film a, Film b) {
+    protected static double passantDW(Film a, Film b) {
         double i = 0;
         double j = 0;
         Collection<EdgeFilm> coll = FilmGraph.getGraph().getEdges();
@@ -97,11 +105,11 @@ public class Distance {
         return d;
     }
 
-    private static double passantI(Film a, Film b) {
+    protected static double passantI(Film a, Film b) {
         return 1.0d / (1 + cio_n_A_B.get(new Coppia(a, b)) + cii_n_A_B.get(new Coppia(a, b)));
     }
 
-    private static double passantIW(Film a, Film b) {
+    protected static double passantIW(Film a, Film b) {
         double i = 0;
         double j = 0;
         Collection<EdgeFilm> coll = FilmGraph.getGraph().getEdges();
@@ -115,14 +123,14 @@ public class Distance {
         return d;
     }
 
-    private static double passantC(Film a, Film b) {
+    protected static double passantC(Film a, Film b) {
         double denom = cd_n_A_B(a, b) + cd_n_A_B(b, a);
         denom += cio_n_A_B.get(new Coppia(a, b)) + cii_n_A_B.get(new Coppia(a, b));
         double d = 1.0 / (1 + denom);
         return d;
     }
 
-    private static double passantCW(Film a, Film b) {
+    protected static double passantCW(Film a, Film b) {
         double den1 = 0;
         double den2 = 0;
         double den3 = 0;
@@ -193,7 +201,7 @@ public class Distance {
     }
 
     //Numero di archi L tale che esiste C tale che A->C e B->C con archi tutti L
-    private static int cio_n_A_B(Film a, Film b) {
+    protected static int cio_n_A_B(Film a, Film b) {
         int i = 0;
         Collection<EdgeFilm> collA = FilmGraph.getGraph().getOutEdges(a);
         Collection<EdgeFilm> collB = FilmGraph.getGraph().getOutEdges(b);
@@ -207,7 +215,7 @@ public class Distance {
     }
 
     //Numero di archi L tale che esiste C tale che C->A e C->B con archi tutti L
-    private static int cii_n_A_B(Film a, Film b) {
+    protected static int cii_n_A_B(Film a, Film b) {
         int i = 0;
         Collection<EdgeFilm> collA = FilmGraph.getGraph().getInEdges(a);
         Collection<EdgeFilm> collB = FilmGraph.getGraph().getInEdges(b);
@@ -240,5 +248,41 @@ public class Distance {
                 if (cii_L_A_B(l, a, f))
                     i++;
         return i;
+    }
+
+    public static Map<Coppia, Integer> getCii_n_A_B() {
+        return cii_n_A_B;
+    }
+
+    public static Map<Coppia, Integer> getCio_n_A_B() {
+        return cio_n_A_B;
+    }
+
+    public static Map<Coppia, Double> getNostra() {
+        return nostra;
+    }
+
+    public static Map<Coppia, Double> getPassantCW() {
+        return passantCW;
+    }
+
+    public static Map<Coppia, Double> getPassantC() {
+        return passantC;
+    }
+
+    public static Map<Coppia, Double> getPassantIW() {
+        return passantIW;
+    }
+
+    public static Map<Coppia, Double> getPassantI() {
+        return passantI;
+    }
+
+    public static Map<Coppia, Double> getPassantDW() {
+        return passantDW;
+    }
+
+    public static Map<Coppia, Double> getPassantD() {
+        return passantD;
     }
 }
