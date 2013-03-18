@@ -12,6 +12,9 @@ public class Distance implements Serializable {
     private static Map<Coppia, Double> passantC;
     private static Map<Coppia, Double> passantCW;
     private static Map<Coppia, Double> nostra;
+    private static Map<Coppia, Double> nostraDW;
+    private static Map<Coppia, Double> nostraIOW;
+    private static Map<Coppia, Double> nostraIIW;
     private static Map<Coppia, Integer> cio_n_A_B;
     private static Map<Coppia, Integer> cii_n_A_B;
 
@@ -26,6 +29,10 @@ public class Distance implements Serializable {
         nostra = new ConcurrentHashMap<Coppia, Double>(NUM_COPPIE_FILM);
         cio_n_A_B = new ConcurrentHashMap<Coppia, Integer>(NUM_COPPIE_FILM);
         cii_n_A_B = new ConcurrentHashMap<Coppia, Integer>(NUM_COPPIE_FILM);
+        nostraDW = new ConcurrentHashMap<Coppia, Double>(NUM_COPPIE_FILM);
+        nostraIOW = new ConcurrentHashMap<Coppia, Double>(NUM_COPPIE_FILM);
+        nostraIIW = new ConcurrentHashMap<Coppia, Double>(NUM_COPPIE_FILM);
+
 
         ArrayList<Film> films = Grafo.getFilms();
         ArrayList<ComputeDistance> threads = new ArrayList<ComputeDistance>();
@@ -110,7 +117,29 @@ public class Distance implements Serializable {
             cii_n_A_B = (ConcurrentHashMap<Coppia, Integer>) ois.readObject();
             ois.close();
             fis.close();
+
+            fis = new FileInputStream("./serialized/nostraDW.bin");
+            ois = new ObjectInputStream(fis);
+            nostraDW = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+
+            fis = new FileInputStream("./serialized/nostraIOW.bin");
+            ois = new ObjectInputStream(fis);
+            nostraIOW = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+
+            fis = new FileInputStream("./serialized/nostraIIW.bin");
+            ois = new ObjectInputStream(fis);
+            nostraIIW = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+
+
         } catch (FileNotFoundException e) {
+            fill();
+        } catch (InvalidClassException e) {
             fill();
         }
     }
@@ -170,6 +199,24 @@ public class Distance implements Serializable {
         o.writeObject(cii_n_A_B);
         o.close();
         fos.close();
+
+        fos = new FileOutputStream("./serialized/nostraDW.bin");
+        o = new ObjectOutputStream(fos);
+        o.writeObject(nostraDW);
+        o.close();
+        fos.close();
+
+        fos = new FileOutputStream("./serialized/nostraIOW.bin");
+        o = new ObjectOutputStream(fos);
+        o.writeObject(nostraIOW);
+        o.close();
+        fos.close();
+
+        fos = new FileOutputStream("./serialized/nostraIIW.bin");
+        o = new ObjectOutputStream(fos);
+        o.writeObject(nostraIIW);
+        o.close();
+        fos.close();
     }
 
     public static double getDistancePassantD(Film f1, Film f2) {
@@ -200,9 +247,16 @@ public class Distance implements Serializable {
         return nostra.get(new Coppia(f1, f2));
     }
 
-    protected static double nostra(Film a, Film b) {
-        return 0.5;
-        //TODO
+    public static double getDistanceNostraDW(Film f1, Film f2) {
+        return nostraDW.get(new Coppia(f1, f2));
+    }
+
+    public static double getDistanceNostraIOW(Film f1, Film f2) {
+        return nostraIOW.get(new Coppia(f1, f2));
+    }
+
+    public static double getDistanceNostraIIW(Film f1, Film f2) {
+        return nostraIIW.get(new Coppia(f1, f2));
     }
 
     protected static double passantD(Film a, Film b) {
@@ -264,6 +318,50 @@ public class Distance implements Serializable {
         }
 
         return 1.0 / (1 + den1 + den2 + den3 + den4);
+    }
+
+    protected static double nostra(Film a, Film b) {
+        double denom = getDistanceNostraDW(a, b) + getDistanceNostraDW(b, a);
+        denom += getDistanceNostraIOW(a, b) + getDistanceNostraIIW(a, b);
+        double d = 1.0 / (1 + denom);
+        return d;
+    }
+
+    //sommatoria dei pesi degli archi Diretti Wpesati
+    protected static double nostraDW(Film a, Film b) {
+        Collection<EdgeFilm> set = FilmGraph.getGraph().findEdgeSet(a, b);
+        double ret = 0;
+        for (EdgeFilm ef : set)
+            ret += ef.getWeight();
+        return ret;
+    }
+
+    //sommatoria dei pesi degli archi Indiretti Ouscenti Wpesati
+    protected static double nostraIOW(Film a, Film b) {
+        double d = 0;
+        Collection<EdgeFilm> collA = FilmGraph.getGraph().getOutEdges(a);
+        Collection<EdgeFilm> collB = FilmGraph.getGraph().getOutEdges(b);
+
+        for (EdgeFilm efA : collA)
+            for (EdgeFilm efB : collB)
+                if (efA.getObject().equals(efB.getObject()))
+                    if (efA.getLabelModified().equals(efB.getLabelModified()))
+                        d += efA.getWeight() * efB.getWeight();
+        return d;
+    }
+
+    //sommatoria dei pesi degli archi Indiretti Ientranti Wpesati
+    protected static double nostraIIW(Film a, Film b) {
+        double d = 0;
+        Collection<EdgeFilm> collA = FilmGraph.getGraph().getInEdges(a);
+        Collection<EdgeFilm> collB = FilmGraph.getGraph().getInEdges(b);
+
+        for (EdgeFilm efA : collA)
+            for (EdgeFilm efB : collB)
+                if (efA.getSubject().equals(efB.getSubject()))
+                    if (efA.getLabelModified().equals(efB.getLabelModified()))
+                        d += efA.getWeight() * efB.getWeight();
+        return d;
     }
 
     //vero se c'è arco L tra A e B
@@ -377,6 +475,18 @@ public class Distance implements Serializable {
         return cio_n_A_B;
     }
 
+    public static Map<Coppia, Double> getNostraDW() {
+        return nostraDW;
+    }
+
+    public static Map<Coppia, Double> getNostraIOW() {
+        return nostraIOW;
+    }
+
+    public static Map<Coppia, Double> getNostraIIW() {
+        return nostraIIW;
+    }
+
     public static Map<Coppia, Double> getNostra() {
         return nostra;
     }
@@ -404,4 +514,6 @@ public class Distance implements Serializable {
     public static Map<Coppia, Double> getPassantD() {
         return passantD;
     }
+
+
 }

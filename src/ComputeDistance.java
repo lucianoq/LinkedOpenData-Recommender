@@ -27,6 +27,9 @@ public class ComputeDistance extends Thread {
                 if (!f1.equals(f2)) {
                     Distance.getCio_n_A_B().put(new Coppia(f1, f2), Distance.cio_n_A_B(f1, f2));
                     Distance.getCii_n_A_B().put(new Coppia(f1, f2), Distance.cii_n_A_B(f1, f2));
+                    Distance.getNostraDW().put(new Coppia(f1, f2), Distance.nostraDW(f1, f2));
+                    Distance.getNostraIOW().put(new Coppia(f1, f2), Distance.nostraIOW(f1, f2));
+                    Distance.getNostraIIW().put(new Coppia(f1, f2), Distance.nostraIIW(f1, f2));
                     Distance.getPassantD().put(new Coppia(f1, f2), Distance.passantD(f1, f2));
                     Distance.getPassantDW().put(new Coppia(f1, f2), Distance.passantDW(f1, f2));
                     Distance.getPassantI().put(new Coppia(f1, f2), Distance.passantI(f1, f2));
