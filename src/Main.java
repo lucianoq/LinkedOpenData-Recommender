@@ -8,10 +8,9 @@ public class Main {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
 
-        MovieLensVoting.init();
-        System.out.println();
+//        MovieLensVoting.init();
+//        System.exit(0);
 
-        System.exit(0);
         Grafo.init();
         Grafo.load();
 //        Grafo.createFromQuery();
