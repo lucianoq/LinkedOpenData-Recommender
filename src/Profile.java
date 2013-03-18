@@ -2,12 +2,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 15/03/13
- * Time: 22.16
- */
 public class Profile {
     private Set<Film> likedFilms;
 

@@ -1,6 +1,8 @@
 import com.hp.hpl.jena.query.*;
 import com.hp.hpl.jena.rdf.model.Resource;
+
 import edu.uci.ics.jung.graph.UndirectedSparseMultigraph;
+
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
@@ -51,11 +53,43 @@ public class Grafo {
     }
 
     public static void load() throws IOException, ClassNotFoundException {
-        FileInputStream fis = new FileInputStream("./graph.tmp");
-        ObjectInputStream ois = new ObjectInputStream(fis);
-        graph = (UndirectedSparseMultigraph<Risorsa, Edge>) ois.readObject();
-        ois.close();
-        fis.close();
+        try {
+            FileInputStream fis = new FileInputStream("./graph.tmp");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            graph = (UndirectedSparseMultigraph<Risorsa, Edge>) ois.readObject();
+            ois.close();
+            fis.close();
+            System.out.println("Grafo Caricato.");
+            System.out.println("Vertici : " + graph.getVertices().size());
+            System.out.println("Archi : " + graph.getEdges().size());
+        } catch (FileNotFoundException e) {
+            graph = new UndirectedSparseMultigraph<Risorsa, Edge>();
+            System.out.println("Grafo inizializzato.");
+        }
+    }
+
+    public static void updateWeight() {
+        Collection<Edge> edge = graph.getEdges();
+        Collection<Edge> edgeDel = new ArrayList<Edge>();
+        Collection<Edge> edgeNew = new ArrayList<Edge>();
+        for (Edge e1 : edge) {
+            for (int i = 0; i < properties.size(); i++)
+                if (e1.getProperty().getIdProperty() == properties.get(i).getIdProperty())
+                    if (e1.getWeight() != properties.get(i).getWeight()) {
+                        edgeDel.add(e1);
+                        e1.setWeight(properties.get(i).getWeight());
+                        edgeNew.add(e1);
+                    }
+        }
+
+        for (Edge e2 : edgeDel) {
+            graph.removeEdge(e2);
+        }
+
+
+        for (Edge e2 : edgeNew) {
+            graph.addEdge(e2, e2.getSubject(), e2.getObject());
+        }
     }
 
     public static void save() throws IOException {
@@ -92,8 +126,7 @@ public class Grafo {
     }
 
     public static void createFromQuery() throws IOException, InterruptedException {
-        graph = new UndirectedSparseMultigraph<Risorsa, Edge>();
-
+//        graph = new UndirectedSparseMultigraph<Risorsa, Edge>();
         BasicConfigurator.configure();
         for (int i = 0; i < films.size(); i++) {
             graph.addVertex(films.get(i));

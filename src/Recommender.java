@@ -1,14 +1,9 @@
 import java.util.*;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 15/03/13
- * Time: 19.16
- */
 public class Recommender {
 
     private static Map<Film, List<Recommendation>> map;
+    public static final int ALL = 0;
 
     public static void init() {
         System.out.println("Inizio costruzione distanze");
@@ -57,7 +52,7 @@ public class Recommender {
 
         Collections.sort(temp);
 
-        if (limit == 0)
+        if (limit == ALL)
             return temp;
 
         List<Recommendation> toRec = new ArrayList<Recommendation>(limit);
@@ -69,7 +64,7 @@ public class Recommender {
     }
 
     public static List<Recommendation> getRecommendations(Profile profile) {
-        return getRecommendations(profile, 0);
+        return getRecommendations(profile, ALL);
     }
 
 
