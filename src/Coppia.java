@@ -8,8 +8,8 @@ import java.io.Serializable;
  */
 
 public class Coppia implements Serializable {
-    Film a;
-    Film b;
+    private Film a;
+    private Film b;
 
     public Coppia(Film a, Film b) {
         this.a = a;

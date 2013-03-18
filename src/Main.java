@@ -11,8 +11,8 @@ public class Main {
 //        System.exit(0);
 
         Grafo.load();
+        Grafo.updateWeight();
         Grafo.save();
-//      Grafo.updateWeight();
         Grafo.printDot();
 
         System.out.println("Grafo generale creato o caricato");
