@@ -1,4 +1,6 @@
-public class EdgeFilm {
+import java.io.Serializable;
+
+public class EdgeFilm implements Serializable {
 
     private String label;
     private Film subject;

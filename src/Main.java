@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -7,28 +8,26 @@ public class Main {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
 
-        MovieLensVoting.init();
-
         Grafo.load();
-       // Grafo.updateWeight();
-        Grafo.save();
+        // Grafo.updateWeight();
         Grafo.printDot();
 
-        System.out.println("Grafo generale creato o caricato");
-
-
-        FilmGraph.init();
+        FilmGraph.load();
         FilmGraph.printDot();
 
-        System.out.println("Grafo dei film creato");
-
         Distance.load();
-        Distance.save();
 
         Recommender.init();
 
+        MovieLensVoting.init();
         Set<Film> liked = new HashSet<Film>();
-        liked.add(Film.getFilmByID(229));
+        ArrayList<Integer> user = MovieLensVoting.users();
+        ArrayList<MovieLensType> films = MovieLensVoting.userVotes(user.get(0));
+        for (MovieLensType m : films) {
+            System.out.println(m.getIdItem());
+           liked.add(Film.getFilmByID(m.getIdItem()));
+        }
+
         Profile profile = new Profile(liked);
 
 

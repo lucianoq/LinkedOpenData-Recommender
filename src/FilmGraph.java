@@ -1,12 +1,10 @@
 import edu.uci.ics.jung.graph.DirectedSparseMultigraph;
 import edu.uci.ics.jung.graph.UndirectedSparseMultigraph;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.Collection;
 
-public class FilmGraph {
+public class FilmGraph implements Serializable {
 
     private static DirectedSparseMultigraph<Film, EdgeFilm> filmGraph;
 
@@ -58,6 +56,36 @@ public class FilmGraph {
         out.println("}");
         out.close();
         fout.close();
+    }
+
+    public static void load()throws IOException,ClassNotFoundException{
+        try {
+            FileInputStream fis = new FileInputStream("./serialized/filmGraph.bin");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            filmGraph = (DirectedSparseMultigraph<Film, EdgeFilm>) ois.readObject();
+            ois.close();
+            fis.close();
+            System.out.println("[INFO] Film graph loaded.");
+            System.out.println("[INFO] Film graph Vertices : " + filmGraph.getVertices().size());
+            System.out.println("[INFO] Film graphEdges : " + filmGraph.getEdges().size());
+            System.out.println("----------------------------------------------------");
+        } catch (FileNotFoundException e) {
+            init();
+            save();
+            System.out.println("[INFO] Film graph builded.");
+            System.out.println("[INFO] Film graph Vertices : " + filmGraph.getVertices().size());
+            System.out.println("[INFO] Film graphEdges : " + filmGraph.getEdges().size());
+            System.out.println("----------------------------------------------------");
+        }
+    }
+
+    public static void save() throws IOException {
+        new File("./serialized").mkdirs();
+        FileOutputStream fos = new FileOutputStream("./serialized/filmGraph.bin");
+        ObjectOutputStream o = new ObjectOutputStream(fos);
+        o.writeObject(filmGraph);
+        o.close();
+        fos.close();
     }
 
     public static DirectedSparseMultigraph<Film, EdgeFilm> getGraph() {

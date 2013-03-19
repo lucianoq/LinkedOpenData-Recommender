@@ -138,8 +138,10 @@ public class Distance implements Serializable {
 
         } catch (FileNotFoundException e) {
             fill();
+            save();
         } catch (InvalidClassException e) {
             fill();
+            save();
         }
     }
 

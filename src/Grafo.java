@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
-public class Grafo {
+public class Grafo implements Serializable{
 
     private static final String FILEFILMPROP = "./config/film_properties_dbpedia.txt";
     private static final String FILEFILM = "./config/ListFilms.txt";
@@ -54,17 +54,22 @@ public class Grafo {
             graph = (UndirectedSparseMultigraph<Risorsa, Edge>) ois.readObject();
             ois.close();
             fis.close();
-            System.out.println("Grafo Caricato.");
-            System.out.println("Vertici : " + graph.getVertices().size());
-            System.out.println("Archi : " + graph.getEdges().size());
+            System.out.println("[INFO] Graph loaded.");
+            System.out.println("[INFO] Graph Vertices : " + graph.getVertices().size());
+            System.out.println("[INFO] Graph Edges : " + graph.getEdges().size());
+            System.out.println("----------------------------------------------------");
         } catch (FileNotFoundException e) {
             graph = new UndirectedSparseMultigraph<Risorsa, Edge>();
             createFromQuery();
-            System.out.println("Grafo inizializzato.");
+            save();
+            System.out.println("[INFO] Graph builded.");
+            System.out.println("[INFO] Graph Vertices : " + graph.getVertices().size());
+            System.out.println("[INFO] Graph Edges : " + graph.getEdges().size());
+            System.out.println("----------------------------------------------------");
         }
     }
 
-    public static void updateWeight() {
+    public static void updateWeight() throws IOException {
         Collection<Edge> edge = graph.getEdges();
         Collection<Edge> edgeDel = new ArrayList<Edge>();
         Collection<Edge> edgeNew = new ArrayList<Edge>();
@@ -86,6 +91,7 @@ public class Grafo {
         for (Edge e2 : edgeNew) {
             graph.addEdge(e2, e2.getSubject(), e2.getObject());
         }
+        save();
     }
 
     public static void save() throws IOException {
