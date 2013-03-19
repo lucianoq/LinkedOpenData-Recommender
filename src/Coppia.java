@@ -1,12 +1,5 @@
 import java.io.Serializable;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 18/03/13
- * Time: 12.44
- */
-
 public class Coppia implements Serializable {
     private Film a;
     private Film b;

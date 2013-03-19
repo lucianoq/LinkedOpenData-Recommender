@@ -1,13 +1,6 @@
 import java.util.ArrayList;
 import java.util.Date;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 18/03/13
- * Time: 14.34
- */
-
 public class ComputeDistance extends Thread {
 
     private ArrayList<Film> subset;

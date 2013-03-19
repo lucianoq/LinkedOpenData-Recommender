@@ -19,16 +19,18 @@ public class Main {
 
         Recommender.init();
 
-        MovieLensVoting.init();
-        Set<Film> liked = new HashSet<Film>();
-        ArrayList<Integer> user = MovieLensVoting.users();
-        ArrayList<MovieLensType> films = MovieLensVoting.userVotes(user.get(0));
-        for (MovieLensType m : films) {
-            //DA ERRORE PERCHE NON é STATO INSERITO TRA I FILM DA ESTRARRE
-            System.out.println(m.getIdItem());
-           liked.add(Film.getFilmByID(m.getIdItem()));
-        }
+//        MovieLensVoting.init();
+//        Set<Film> liked = new HashSet<Film>();
+//        ArrayList<Integer> user = MovieLensVoting.users();
+//        ArrayList<MovieLensType> films = MovieLensVoting.userVotes(user.get(0));
+//        for (MovieLensType m : films) {
+//            //DA' ERRORE PERCHE NON é STATO INSERITO TRA I FILM DA ESTRARRE
+//            System.out.println(m.getIdItem());
+//           liked.add(Film.getFilmByID(m.getIdItem()));
+//        }
 
+        Set<Film> liked = new HashSet<Film>();
+        liked.add(Film.getFilmByID(229));
         Profile profile = new Profile(liked);
 
 
