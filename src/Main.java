@@ -24,6 +24,7 @@ public class Main {
         ArrayList<Integer> user = MovieLensVoting.users();
         ArrayList<MovieLensType> films = MovieLensVoting.userVotes(user.get(0));
         for (MovieLensType m : films) {
+            //DA ERRORE PERCHE NON é STATO INSERITO TRA I FILM DA ESTRARRE
             System.out.println(m.getIdItem());
            liked.add(Film.getFilmByID(m.getIdItem()));
         }
