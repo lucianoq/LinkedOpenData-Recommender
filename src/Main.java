@@ -1,7 +1,5 @@
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
 
@@ -28,8 +26,9 @@ public class Main {
 //           liked.add(Film.getFilmByID(m.getIdItem()));
 //        }
 
-        Set<Film> liked = new HashSet<Film>();
-        liked.add(Film.getFilmByID(229));
+        Map<Film,Integer> liked = new HashMap<Film,Integer>();
+        liked.put(Film.getFilmByID(916),5);
+        liked.put(Film.getFilmByID(229),5);
         Profile profile = new Profile(liked);
 
 
