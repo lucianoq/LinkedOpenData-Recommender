@@ -14,15 +14,463 @@
 732	Dave	http://dbpedia.org/resource/Dave_(film)
 768	Casper	http://dbpedia.org/resource/Casper_(film)
 549	Rob Roy	http://dbpedia.org/resource/Rob_Roy_(film)
+1013	Anaconda	http://dbpedia.org/resource/Anaconda_(film)
+628	Sleepers	http://dbpedia.org/resource/Sleepers_(film)
+54	Outbreak	http://dbpedia.org/resource/Outbreak_(film)
+576	Cliffhanger	http://dbpedia.org/resource/Cliffhanger_(film)
+125	Phenomenon	http://dbpedia.org/resource/Phenomenon_(film)
 642	The Grifters	http://dbpedia.org/resource/The_Grifters_(film)
 26	The Brothers McMullen	http://dbpedia.org/resource/The_Brothers_McMullen
 1193	Before the Rain	http://dbpedia.org/resource/Before_the_Rain_(1994_film)
+911	Twilight	http://dbpedia.org/resource/Twilight_(1998_film)
+915	Primary Colors	http://dbpedia.org/resource/Primary_Colors_(film)
+827	Daylight	http://dbpedia.org/resource/Daylight_(film)
+662	Somewhere in Time	http://dbpedia.org/resource/Somewhere_in_Time_(film)
+1248	Blink	http://dbpedia.org/resource/Blink_(film)
+1101	Six Degrees of Separation	http://dbpedia.org/resource/Six_Degrees_of_Separation_(film)
+1487	Even Cowgirls Get the Blues	http://dbpedia.org/resource/Event_Horizon_(film)
+44	Dolores Claiborne	http://dbpedia.org/resource/Dolores_Claiborne_(film)
+541	Mortal Kombat	http://dbpedia.org/resource/Mortal_Kombat_(film)
+1194	Once Were Warriors	http://dbpedia.org/resource/Once_Were_Warriors_(film)
+1090	Sliver	http://dbpedia.org/resource/Sliver_(film)
+742	Ransom	http://dbpedia.org/resource/Ransom_(1996_film)
+704	The House of the Spirits	http://dbpedia.org/resource/The_House_of_the_Spirits_(film)
+696	City Hall	http://dbpedia.org/resource/City_Hall_(film)
+896	The Sweet Hereafter	http://dbpedia.org/resource/The_Sweet_Hereafter_(film)
+191	Amadeus	http://dbpedia.org/resource/Amadeus_(film)
+885	Phantoms	http://dbpedia.org/resource/Phantoms_(film)
+23	Taxi Driver	http://dbpedia.org/resource/Taxi_Driver_(1954_film)
+1252	Contempt	http://dbpedia.org/resource/Contempt_(film)
+332	Kiss the Girls	http://dbpedia.org/resource/Kiss_the_Girls_(film)
+264	Mimic	http://dbpedia.org/resource/Mimic_(film)
+200	The Shining	http://dbpedia.org/resource/The_Shining_(film)
+647	Ran	http://dbpedia.org/resource/Ran_(film)
+339	Mad City	http://dbpedia.org/resource/Mad_City_(film)
+400	The Little Rascals	http://dbpedia.org/resource/The_Little_Rascals_(film)
+528	The Killing Fields	http://dbpedia.org/resource/The_Killing_Fields_(film)
+239	Sneakers	http://dbpedia.org/resource/Sneakers_(film)
+616	Night of the Living Dead	http://dbpedia.org/resource/Night_of_the_Living_Dead_(1990_film)
+672	Candyman	http://dbpedia.org/resource/Candyman_(film)
+607	Rebecca	http://dbpedia.org/resource/Rebecca_(1940_film)
+1413	Street Fighter	http://dbpedia.org/resource/Street_Fighter_(film)
+355	Sphere	http://dbpedia.org/resource/Sphere_(film)
+31	Crimson Tide	http://dbpedia.org/resource/Crimson_Tide_(film)
+502	Bananas	http://dbpedia.org/resource/Bananas_(film)
+39	Strange Days	http://dbpedia.org/resource/Strange_Days_(film)
+882	Washington Square	http://dbpedia.org/resource/Washington_Square_(film)
+358	Spawn	http://dbpedia.org/resource/Spawn_(film)
+55	The Professional	http://dbpedia.org/resource/The_Professional_(film)
+930	Chain Reaction	http://dbpedia.org/resource/Chain_Reaction_(film)
+419	Mary Poppins	http://dbpedia.org/resource/Mary_Poppins_(film)
+1066	Balto	http://dbpedia.org/resource/Balto_(film)
+676	The Crucible	http://dbpedia.org/resource/The_Crucible_(1996_film)
+771	Johnny Mnemonic	http://dbpedia.org/resource/Johnny_Mnemonic_(film)
+1011	2 Days in the Valley	http://dbpedia.org/resource/2_Days_in_the_Valley
+940	Airheads	http://dbpedia.org/resource/Airheads
+1083	Albino Alligator	http://dbpedia.org/resource/Albino_Alligator
+606	All About Eve	http://dbpedia.org/resource/All_About_Eve
+86	The Remains of the Day	http://dbpedia.org/resource/The_Remains_of_the_Day_(film)
+514	Annie Hall	http://dbpedia.org/resource/Annie_Hall
+602	An American in Paris	http://dbpedia.org/resource/An_American_in_Paris_(film)
+966	An Affair to Remember	http://dbpedia.org/resource/An_Affair_to_Remember
+436	An American Werewolf in London	http://dbpedia.org/resource/An_American_Werewolf_in_London
+184	Army of Darkness	http://dbpedia.org/resource/Army_of_Darkness
+316	As Good As It Gets	http://dbpedia.org/resource/As_Good_as_It_Gets
+467	A Bronx Tale	http://dbpedia.org/resource/A_Bronx_Tale
+153	A Fish Called Wanda	http://dbpedia.org/resource/A_Fish_Called_Wanda
+189	A Grand Day Out	http://dbpedia.org/resource/A_Grand_Day_Out
+886	A Life Less Ordinary	http://dbpedia.org/resource/A_Life_Less_Ordinary
+686	A Perfect World	http://dbpedia.org/resource/A_Perfect_World
+553	A Walk in the Clouds	http://dbpedia.org/resource/A_Walk_in_the_Clouds
+857	Paris Was a Woman	http://dbpedia.org/resource/A_Woman_of_Paris
+83	Much Ado About Nothing	http://dbpedia.org/resource/Much_Ado_About_Nothing_(1993_film)
+928	The Craft	http://dbpedia.org/resource/The_Craft_(film)
+1246	Bushwhacked	http://dbpedia.org/resource/Bushwhacked_(film)
+655	Stand by Me	http://dbpedia.org/resource/Stand_by_Me_(film)
+1137	Beautiful Thing	http://dbpedia.org/resource/Beautiful_Thing_(film)
+955	Before Sunrise	http://dbpedia.org/resource/Before_Sunrise
+30	Belle de jour	http://dbpedia.org/resource/Belle_de_Jour_(film)
+388	Beverly Hills Cop III	http://dbpedia.org/resource/Beverly_Hills_Cop_III
+456	Beverly Hills Ninja	http://dbpedia.org/resource/Beverly_Hills_Ninja
+137	Big Night	http://dbpedia.org/resource/Big_Night
+41	Billy Madison	http://dbpedia.org/resource/Billy_Madison
+1268	Bitter Moon	http://dbpedia.org/resource/Bitter_Moon
+1145	Blue Chips	http://dbpedia.org/resource/Blue_Chips
+425	Bob Roberts	http://dbpedia.org/resource/Bob_Roberts
+574	Boxing Helena	http://dbpedia.org/resource/Boxing_Helena
+22	Braveheart	http://dbpedia.org/resource/Braveheart
+221	Breaking the Waves	http://dbpedia.org/resource/Breaking_the_Waves
+671	Bride of Frankenstein	http://dbpedia.org/resource/Bride_of_Frankenstein
+179	A Clockwork Orange	http://dbpedia.org/resource/A_Clockwork_Orange_(film)
+497	Bringing Up Baby	http://dbpedia.org/resource/Bringing_Up_Baby
+792	Bullets Over Broadway	http://dbpedia.org/resource/Bullets_Over_Broadway
+753	Burnt By the Sun	http://dbpedia.org/resource/Burnt_by_the_Sun
+719	Canadian Bacon	http://dbpedia.org/resource/Canadian_Bacon
+1403	Caro Diario	http://dbpedia.org/resource/Caro_diario
+1291	Celtic Pride	http://dbpedia.org/resource/Celtic_Pride
+268	Chasing Amy	http://dbpedia.org/resource/Chasing_Amy
+246	Chasing Amy	http://dbpedia.org/resource/Chasing_Amy
+1129	Chungking Express	http://dbpedia.org/resource/Chungking_Express
+367	Clueless	http://dbpedia.org/resource/Clueless_(film)
+637	The Howling	http://dbpedia.org/resource/The_Howling_(film)
+1016	Con Air	http://dbpedia.org/resource/Con_Air
+327	Cop Land	http://dbpedia.org/resource/Cop_Land
+471	Courage Under Fire	http://dbpedia.org/resource/Courage_Under_Fire
+196	Dead Poets Society	http://dbpedia.org/resource/Dead_Poets_Society
+1478	Dead Presidents	http://dbpedia.org/resource/Dead_Presidents
+345	Deconstructing Harry	http://dbpedia.org/resource/Deconstructing_Harry
+650	The Seventh Seal	http://dbpedia.org/resource/The_Seventh_Seal
+505	Dial M for Murder	http://dbpedia.org/resource/Dial_M_for_Murder
+226	Die Hard 2	http://dbpedia.org/resource/Die_Hard_2
+926	Down Periscope	http://dbpedia.org/resource/Down_Periscope
+201	Evil Dead II	http://dbpedia.org/resource/Evil_Dead_II
+921	Farewell My Concubine	http://dbpedia.org/resource/Farewell_My_Concubine_(film)
+215	Field of Dreams	http://dbpedia.org/resource/Field_of_Dreams
+720	First Knight	http://dbpedia.org/resource/First_Knight
+500	Fly Away Home	http://dbpedia.org/resource/Fly_Away_Home
+304	Fly Away Home	http://dbpedia.org/resource/Fly_Away_Home
+188	Full Metal Jacket	http://dbpedia.org/resource/Full_Metal_Jacket
+965	Funny Face	http://dbpedia.org/resource/Funny_Face
+270	Gattaca	http://dbpedia.org/resource/Gattaca
+1136	Ghosts of Mississippi	http://dbpedia.org/resource/Ghosts_of_Mississippi
+326	G.I. Jane	http://dbpedia.org/resource/G.I._Jane
+272	Good Will Hunting	http://dbpedia.org/resource/Good_Will_Hunting
+205	Patton	http://dbpedia.org/resource/Patton_(film)
+1037	Grease 2	http://dbpedia.org/resource/Grease_2
+248	Grosse Pointe Blank	http://dbpedia.org/resource/Grosse_Pointe_Blank
+1647	Hana bi	http://dbpedia.org/resource/Hana-bi
+763	Happy Gilmore	http://dbpedia.org/resource/Happy_Gilmore
+802	Hard Target	http://dbpedia.org/resource/Hard_Target
+433	Heathers	http://dbpedia.org/resource/Heathers
+558	Heavenly Creatures	http://dbpedia.org/resource/Heavenly_Creatures
+1480	Herbie Rides Again	http://dbpedia.org/resource/Herbie_Rides_Again
+998	Cabin Boy	http://dbpedia.org/resource/Cabin_Boy
+894	Home Alone 3	http://dbpedia.org/resource/Home_Alone_3
+410	Kingpin	http://dbpedia.org/resource/Kingpin_(film)
+1315	Inventing the Abbotts	http://dbpedia.org/resource/Inventing_the_Abbotts
+800	In the Mouth of Madness	http://dbpedia.org/resource/In_the_Mouth_of_Madness
+317	In the Name of the Father	http://dbpedia.org/resource/In_the_Name_of_the_Father_(film)
+604	It Happened One Night	http://dbpedia.org/resource/It_Happened_One_Night
+372	Jeffrey	http://dbpedia.org/resource/Jeffrey_(film)
+452	Jaws 2	http://dbpedia.org/resource/Jaws_2
+1530	Jefferson in Paris	http://dbpedia.org/resource/Jefferson_in_Paris
+237	Jerry Maguire	http://dbpedia.org/resource/Jerry_Maguire
+286	The English Patient	http://dbpedia.org/resource/The_English_Patient_(film)
+744	Michael Collins	http://dbpedia.org/resource/Michael_Collins_(film)
+581	Kalifornia	http://dbpedia.org/resource/Kalifornia
+761	Nick of Time	http://dbpedia.org/resource/Nick_of_Time_(film)
+943	Killing Zoe	http://dbpedia.org/resource/Killing_Zoe
+1628	Lamerica	http://dbpedia.org/resource/Lamerica
+1578	La Collectionneuse	http://dbpedia.org/resource/La_Collectionneuse
+302	L.A. Confidential	http://dbpedia.org/resource/L.A._Confidential_(film)
+276	Leaving Las Vegas	http://dbpedia.org/resource/Leaving_Las_Vegas
+738	Threesome	http://dbpedia.org/resource/Threesome_(film)
+51	Legends of the Fall	http://dbpedia.org/resource/Legends_of_the_Fall
+1168	Little Buddha	http://dbpedia.org/resource/Little_Buddha
+1411	Barbarella	http://dbpedia.org/resource/Barbarella_(film)
+475	Trainspotting	http://dbpedia.org/resource/Trainspotting_(film)
+62	Stargate	http://dbpedia.org/resource/Stargate_(film)
+1178	Major Payne	http://dbpedia.org/resource/Major_Payne
+721	Mallrats	http://dbpedia.org/resource/Mallrats
+1674	Mamma Roma	http://dbpedia.org/resource/Mamma_Roma
+805	Manhattan Murder Mystery	http://dbpedia.org/resource/Manhattan_Murder_Mystery
+1231	Marked for Death	http://dbpedia.org/resource/Marked_for_Death
+807	Poetic Justice	http://dbpedia.org/resource/Poetic_Justice_(film)
+971	Mediterraneo	http://dbpedia.org/resource/Mediterraneo
+837	Meet John Doe	http://dbpedia.org/resource/Meet_John_Doe
+917	Mercury Rising	http://dbpedia.org/resource/Mercury_Rising
+13	Mighty Aphrodite	http://dbpedia.org/resource/Mighty_Aphrodite
+306	Mrs. Brown	http://dbpedia.org/resource/Mrs._Brown
+136	Mr. Smith Goes to Washington	http://dbpedia.org/resource/Mr._Smith_Goes_to_Washington
+939	Murder in the First	http://dbpedia.org/resource/Murder_in_the_First
+529	My Life as a Dog	http://dbpedia.org/resource/My_Life_as_a_Dog
+537	My Own Private Idaho	http://dbpedia.org/resource/My_Own_Private_Idaho
+293	Donnie Brasco	http://dbpedia.org/resource/Donnie_Brasco_(film)
+1226	Night Falls on Manhattan	http://dbpedia.org/resource/Night_Falls_on_Manhattan
+722	Nine Months	http://dbpedia.org/resource/Nine_Months
+836	Ninotchka	http://dbpedia.org/resource/Ninotchka
+1283	Out to Sea	http://dbpedia.org/resource/Out_to_Sea
+641	Paths of Glory	http://dbpedia.org/resource/Paths_of_Glory
+873	Picture Perfect	http://dbpedia.org/resource/Picture_Perfect_(1997_film)
+214	Pink Floyd The Wall	http://dbpedia.org/resource/Pink_Floyd%E2%80%94The_Wall
+349	Hard Rain	http://dbpedia.org/resource/Hard_Rain_(film)
+167	Private Benjamin	http://dbpedia.org/resource/Private_Benjamin
+58	Quiz Show	http://dbpedia.org/resource/Quiz_Show
+394	Radioland Murders	http://dbpedia.org/resource/Radioland_Murders
+174	Raiders of the Lost Ark	http://dbpedia.org/resource/Raiders_of_the_Lost_Ark
+923	Raise the Red Lantern	http://dbpedia.org/resource/Raise_the_Red_Lantern
+506	Rebel Without a Cause	http://dbpedia.org/resource/Rebel_Without_a_Cause
+1274	Robocop 3	http://dbpedia.org/resource/RoboCop_3
+24	Rumble in the Bronx	http://dbpedia.org/resource/Rumble_in_the_Bronx
+370	Mary Reilly	http://dbpedia.org/resource/Mary_Reilly_(film)
+87	Searching for Bobby Fischer	http://dbpedia.org/resource/Searching_for_Bobby_Fischer
+1527	Senseless	http://dbpedia.org/resource/Senseless
+396	Serial Mom	http://dbpedia.org/resource/Serial_Mom
+1073	Shallow Grave	http://dbpedia.org/resource/Shallow_Grave
+6	Shanghai Triad	http://dbpedia.org/resource/Shanghai_Triad
+202	Groundhog Day	http://dbpedia.org/resource/Groundhog_Day_(film)
+88	Sleepless in Seattle	http://dbpedia.org/resource/Sleepless_in_Seattle
+1429	Sliding Doors	http://dbpedia.org/resource/Sliding_Doors
+1680	Sliding Doors	http://dbpedia.org/resource/Sliding_Doors
+28	Apollo 13	http://dbpedia.org/resource/Apollo_13_(film)
+8	Babe	http://dbpedia.org/resource/Babe_(film)
+407	Spy Hard	http://dbpedia.org/resource/Spy_Hard
+1009	Stealing Beauty	http://dbpedia.org/resource/Stealing_Beauty
+397	Striking Distance	http://dbpedia.org/resource/Striking_Distance
+100	Fargo	http://dbpedia.org/resource/Fargo_(film)
+1117	Surviving Picasso	http://dbpedia.org/resource/Surviving_Picasso
+801	The Air Up There	http://dbpedia.org/resource/The_Air_Up_There
+442	The Amityville Curse	http://dbpedia.org/resource/The_Amityville_Curse
+902	The Big Lebowski	http://dbpedia.org/resource/The_Big_Lebowski
+853	Braindead	http://dbpedia.org/resource/Braindead_(film)
+199	The Bridge on the River Kwai	http://dbpedia.org/resource/The_Bridge_on_the_River_Kwai
+460	The Crossing Guard	http://dbpedia.org/resource/The_Crossing_Guard
+1624	Hush	http://dbpedia.org/resource/Hush_(1998_film)
+521	The Deer Hunter	http://dbpedia.org/resource/The_Deer_Hunter
+1524	Kaspar Hauser	http://dbpedia.org/resource/The_Enigma_of_Kaspar_Hauser
+250	The Fifth Element	http://dbpedia.org/resource/The_Fifth_Element
+476	The First Wives Club	http://dbpedia.org/resource/The_First_Wives_Club
+123	The Frighteners	http://dbpedia.org/resource/The_Frighteners
+524	The Great Dictator	http://dbpedia.org/resource/The_Great_Dictator
+520	The Great Escape	http://dbpedia.org/resource/The_Great_Escape_(film)
+630	The Great Race	http://dbpedia.org/resource/The_Great_Race
+824	The Great White Hype	http://dbpedia.org/resource/The_Great_White_Hype
+1316	The Horse Whisperer	http://dbpedia.org/resource/The_Horse_Whisperer_(film)
+81	The Hudsucker Proxy	http://dbpedia.org/resource/The_Hudsucker_Proxy
+865	The Ice Storm	http://dbpedia.org/resource/The_Ice_Storm_(film)
+1154	Alphaville	http://dbpedia.org/resource/Alphaville_(film)
+328	Conspiracy Theory	http://dbpedia.org/resource/Conspiracy_Theory_(film)
+147	The Long Kiss Goodnight	http://dbpedia.org/resource/The_Long_Kiss_Goodnight
+342	The Man Who Knew Too Little	http://dbpedia.org/resource/The_Man_Who_Knew_Too_Little
+220	The Mirror Has Two Faces	http://dbpedia.org/resource/The_Mirror_Has_Two_Faces
+548	The NeverEnding Story III	http://dbpedia.org/resource/The_NeverEnding_Story_III
+1415	The Next Karate Kid	http://dbpedia.org/resource/The_Next_Karate_Kid
+1525	The Object of My Affection	http://dbpedia.org/resource/The_Object_of_My_Affection
+1076	The Pagemaster	http://dbpedia.org/resource/The_Pagemaster
+1057	The Pallbearer	http://dbpedia.org/resource/The_Pallbearer
+478	The Philadelphia Story	http://dbpedia.org/resource/The_Philadelphia_Story_(film)
+163	The Return of the Pink Panther	http://dbpedia.org/resource/The_Return_of_the_Pink_Panther
+281	The River Wild	http://dbpedia.org/resource/The_River_Wild
+1224	The Scout	http://dbpedia.org/resource/The_Scout_(film)
+98	The Silence of the Lambs	http://dbpedia.org/resource/The_Silence_of_the_Lambs_(film)
+624	The Three Caballeros	http://dbpedia.org/resource/The_Three_Caballeros
+12	The Usual Suspects	http://dbpedia.org/resource/The_Usual_Suspects
+49	I.Q.	http://dbpedia.org/resource/I.Q._(film)
+867	The Whole Wide World	http://dbpedia.org/resource/The_Whole_Wide_World
+899	The Winter Guest	http://dbpedia.org/resource/The_Winter_Guest
+284	Tin Cup	http://dbpedia.org/resource/Tin_Cup
+653	Touch of Evil	http://dbpedia.org/resource/Touch_of_Evil
+1017	Trees Lounge	http://dbpedia.org/resource/Trees_Lounge
+1157	The Relic	http://dbpedia.org/resource/The_Relic_(film)
+92	True Romance	http://dbpedia.org/resource/True_Romance
+1534	Twin Town	http://dbpedia.org/resource/Twin_Town
+334	U Turn	http://dbpedia.org/resource/U_Turn_(1997_film)
+347	Wag the Dog	http://dbpedia.org/resource/Wag_the_Dog
+93	Welcome to the Dollhouse	http://dbpedia.org/resource/Welcome_to_the_Dollhouse
+373	Judge Dredd	http://dbpedia.org/resource/Judge_Dredd_(film)
+66	While You Were Sleeping	http://dbpedia.org/resource/While_You_Were_Sleeping
+914	Wild Things	http://dbpedia.org/resource/Wild_Things
+512	Wings of Desire	http://dbpedia.org/resource/Wings_of_Desire
+941	With Honors	http://dbpedia.org/resource/With_Honors_(film)
+1188	Young Guns II	http://dbpedia.org/resource/Young_Guns_II
+101	Heavy Metal	http://dbpedia.org/resource/Heavy_Metal_(film)
+178	12 Angry Men	http://dbpedia.org/resource/12_Angry_Men_(1957_film)
+225	101 Dalmatians	http://dbpedia.org/resource/101_Dalmatians_(1996_film)
+254	Batman & Robin	http://dbpedia.org/resource/Batman_&_Robin_(film)
+289	Evita	http://dbpedia.org/resource/Evita_(film)
+1481	S.F.W.	http://dbpedia.org/resource/S.F.W.
+133	Gone with the Wind	http://dbpedia.org/resource/Gone_with_the_Wind_(film)
+1321	Open Season	http://dbpedia.org/resource/Open_Season_(film)
+1313	Palmetto	http://dbpedia.org/resource/Palmetto_(film)
+508	The People vs. Larry Flynt	http://dbpedia.org/resource/The_People_vs._Larry_Flynt
+840	Last Man Standing	http://dbpedia.org/resource/Last_Man_Standing_(film)
+1056	Cronos	http://dbpedia.org/resource/Cronos_(film)
+291	Absolute Power	http://dbpedia.org/resource/Absolute_Power_(film)
+445	The Body Snatcher	http://dbpedia.org/resource/The_Body_Snatcher_(film)
+507	A Streetcar Named Desire	http://dbpedia.org/resource/A_Streetcar_Named_Desire_(1951_film)
+522	Down by Law	http://dbpedia.org/resource/Down_by_Law_(film)
+1529	Underground	http://dbpedia.org/resource/Underground_(1995_film)
+679	Conan the Barbarian	http://dbpedia.org/resource/Conan_the_Barbarian_(1982_film)
+901	Mr. Magoo	http://dbpedia.org/resource/Mr._Magoo_(film)
+511	Lawrence of Arabia	http://dbpedia.org/resource/Lawrence_of_Arabia_(film)
+499	Cat on a Hot Tin Roof	http://dbpedia.org/resource/Cat_on_a_Hot_Tin_Roof_(film)
+544	Things to Do in Denver when You're Dead	http://dbpedia.org/resource/Things_to_Do_in_Denver_When_You%27re_Dead
+265	The Hunt for Red October	http://dbpedia.org/resource/The_Hunt_for_Red_October_(film)
+235	Mars Attacks	http://dbpedia.org/resource/Mars_Attacks!
+271	Starship Troopers	http://dbpedia.org/resource/Starship_Troopers_(film)
+530	The Man Who Would Be King	http://dbpedia.org/resource/The_Man_Who_Would_Be_King_(film)
+398	Super Mario Bros.	http://dbpedia.org/resource/Super_Mario_Bros._(film)
+213	A Room with a View	http://dbpedia.org/resource/A_Room_with_a_View_(film)
+755	Jumanji	http://dbpedia.org/resource/Jumanji
+446	Burnt Offerings	http://dbpedia.org/resource/Burnt_Offerings_(film)
+300	Air Force One	http://dbpedia.org/resource/Air_Force_One_(film)
+490	To Catch a Thief	http://dbpedia.org/resource/To_Catch_a_Thief
+825	The Arrival	http://dbpedia.org/resource/The_Arrival_(film)
+1267	Clockers	http://dbpedia.org/resource/Clockers_(film)
+186	The Blues Brothers	http://dbpedia.org/resource/The_Blues_Brothers_(film)
+692	The American President	http://dbpedia.org/resource/The_American_President
+427	To Kill a Mockingbird	http://dbpedia.org/resource/To_Kill_a_Mockingbird_(film)
+1139	Hackers	http://dbpedia.org/resource/Hackers_(film)
+603	Rear Window	http://dbpedia.org/resource/Rear_Window_(1998_film)
+781	French Kiss	http://dbpedia.org/resource/French_Kiss_(film)
+255	My Best Friend's Wedding	http://dbpedia.org/resource/My_Best_Friend%27s_Wedding
+143	The Sound of Music	http://dbpedia.org/resource/The_Sound_of_Music_(film)
+492	East of Eden	http://dbpedia.org/resource/East_of_Eden_(film)
+338	Bean	http://dbpedia.org/resource/Bean_(film)
+120	Striptease	http://dbpedia.org/resource/Striptease_(film)
+1038	Switchback	http://dbpedia.org/resource/Switchback_(film)
+118	Twister	http://dbpedia.org/resource/Twister_(1996_film)
+1049	House Arrest	http://dbpedia.org/resource/House_Arrest_(film)
+411	The Nutty Professor	http://dbpedia.org/resource/The_Nutty_Professor_(1996_film)
+535	Addicted to Love	http://dbpedia.org/resource/Addicted_to_Love_(film)
+371	The Bridges of Madison County	http://dbpedia.org/resource/The_Bridges_of_Madison_County_(film)
+451	Grease	http://dbpedia.org/resource/Grease_(film)
+56	Pulp Fiction	http://dbpedia.org/resource/Pulp_Fiction
+387	The Age of Innocence	http://dbpedia.org/resource/The_Age_of_Innocence_(film)
+483	Casablanca	http://dbpedia.org/resource/Casablanca_(film)
+73	Maverick	http://dbpedia.org/resource/Maverick_(film)
+346	Jackie Brown	http://dbpedia.org/resource/Jackie_Brown_(film)
+68	The Crow	http://dbpedia.org/resource/The_Crow_(film)
+775	Something to Talk About	http://dbpedia.org/resource/Something_to_Talk_About_(film)
+9	Dead Man Walking	http://dbpedia.org/resource/Dead_Man_Walking_(film)
+1276	Sunset Park	http://dbpedia.org/resource/Sunset_Park_(film)
+681	Wishmaster	http://dbpedia.org/resource/Wishmaster_(film)
+660	Fried Green Tomatoes	http://dbpedia.org/resource/Fried_Green_Tomatoes_(film)
+212	The Unbearable Lightness of Being	http://dbpedia.org/resource/The_Unbearable_Lightness_of_Being_(film)
+887	Eve's Bayou	http://dbpedia.org/resource/Even_Cowgirls_Get_the_Blues_(film)
+305	The Ice Storm	http://dbpedia.org/resource/The_Ice_Storm_(film)
+135	2001 A Space Odyssey	http://dbpedia.org/resource/2001:_A_Space_Odyssey
+1124	A Farewell to Arms	http://dbpedia.org/resource/A_Farewell_to_Arms_(1932_film)
+1063	A Little Princess	http://dbpedia.org/resource/A_Little_Princess_(1995_film)
+219	A Nightmare on Elm Street	http://dbpedia.org/resource/A_Nightmare_on_Elm_Street_(2010_film)
+1602	A Price Above Rubies	http://dbpedia.org/resource/A_Price_Above_Rubies
+364	Ace Ventura When Nature Calls	http://dbpedia.org/resource/Ace_Ventura:_When_Nature_Calls
+422	Aladdin and the King of Thieves	http://dbpedia.org/resource/Aladdin_and_the_King_of_Thieves
+1619	All Things Fair	http://dbpedia.org/resource/All_Things_Fair
+439	Amityville A New Generation	http://dbpedia.org/resource/Amityville:_A_New_Generation
+1227	An Awfully Big Adventure	http://dbpedia.org/resource/An_Awfully_Big_Adventure
+538	Anastasia	http://dbpedia.org/resource/Anastasia_(1997_film)
+1454	Angel and the Badman	http://dbpedia.org/resource/Angel_and_the_Badman
+1225	Angus	http://dbpedia.org/resource/Angus_(film)
+990	Anna Karenina	http://dbpedia.org/resource/Anna_Karenina_(1997_film)
+495	Around the World in 80 Days	http://dbpedia.org/resource/Around_the_World_in_80_Days_(1956_film)
+659	Arsenic and Old Lace	http://dbpedia.org/resource/Arsenic_and_Old_Lace_(film)
+249	Austin Powers International Man of Mystery	http://dbpedia.org/resource/Austin_Powers:_International_Man_of_Mystery
+27	Bad Boys	http://dbpedia.org/resource/Bad_Boys_(1995_film)
+798	Bad Company	http://dbpedia.org/resource/Bad_Company_(1995_film)
+403	Batman	http://dbpedia.org/resource/Batman_(1989_film)
+1456	Beat the Devil	http://dbpedia.org/resource/Beat_the_Devil_(film)
+588	Beauty and the Beast	http://dbpedia.org/resource/Beauty_and_the_Beast_(1991_film)
+240	Beavis and Butt head Do America	http://dbpedia.org/resource/Beavis_and_Butt-head_Do_America
+142	Bedknobs and Broomsticks	http://dbpedia.org/resource/Bedknobs_and_Broomsticks
+526	Ben Hur	http://dbpedia.org/resource/Ben-Hur_(1959_film)
+747	Benny & Joon	http://dbpedia.org/resource/Benny_&_Joon
+891	Bent	http://dbpedia.org/resource/Bent_(film)
+369	Black Sheep	http://dbpedia.org/resource/Black_Sheep_(1996_film)
+572	Blown Away	http://dbpedia.org/resource/Blown_Away_(1994_film)
+362	Blues Brothers 2000	http://dbpedia.org/resource/Blues_Brothers_2000
+670	Body Snatchers	http://dbpedia.org/resource/Body_Snatchers_(1993_film)
+573	Body Snatchers	http://dbpedia.org/resource/Body_Snatchers_(1993_film)
+723	Boys on the Side	http://dbpedia.org/resource/Boys_on_the_Side
+1266	Bread and Chocolate	http://dbpedia.org/resource/Bread_and_Chocolate
+833	Bulletproof	http://dbpedia.org/resource/Bulletproof_(1996_film)
+435	Butch Cassidy and the Sundance Kid	http://dbpedia.org/resource/Butch_Cassidy_and_the_Sundance_Kid
+777	Castle Freak	http://dbpedia.org/resource/Castle_Freak
+674	Cat People	http://dbpedia.org/resource/Cat_People_(1942_film)
+1199	Cemetery Man	http://dbpedia.org/resource/Cemetery_Man
+945	Charade	http://dbpedia.org/resource/Charade_(1963_film)
+418	Cinderella	http://dbpedia.org/resource/Cinderella_(1950_film)
+170	Cinema Paradiso	http://dbpedia.org/resource/Cinema_Paradiso
+575	City Slickers II The Legend of Curly's Gold	http://dbpedia.org/resource/City_Slickers_II%3A_The_Legend_of_Curly's_Gold
+577	Coneheads	http://dbpedia.org/resource/Coneheads_(film)
+1035	Cool Runnings	http://dbpedia.org/resource/Cool_Runnings
+731	Corrina Corrina	http://dbpedia.org/resource/Corrina,_Corrina_(film)
+325	Crash	http://dbpedia.org/resource/Crash_(1996_film)
+171	Delicatessen	http://dbpedia.org/resource/Delicatessen_(film)
+578	Demolition Man	http://dbpedia.org/resource/Demolition_Man_(film)
+33	Desperado	http://dbpedia.org/resource/Desperado_(film)
+550	Die Hard With a Vengeance	http://dbpedia.org/resource/Die_Hard_with_a_Vengeance
+1052	Dracula Dead and Loving It	http://dbpedia.org/resource/Dracula:_Dead_and_Loving_It
+1549	Dream Man	http://dbpedia.org/resource/Tucker:_The_Man_and_His_Dream
+430	Duck Soup	http://dbpedia.org/resource/Duck_Soup_(1933_film)
+831	Escape from L.A.	http://dbpedia.org/resource/Escape_from_L.A.
+260	Event Horizon	http://dbpedia.org/resource/Eve's_Bayou
+308	FairyTale A True Story	http://dbpedia.org/resource/FairyTale:_A_True_Story
+74	Faster Pussycat Kill Kill	http://dbpedia.org/resource/Faster,_Pussycat!_Kill!_Kill!
+1045	Fearless	http://dbpedia.org/resource/Fearless_(1993_film)
+1098	Flirting With Disaster	http://dbpedia.org/resource/Flirting_with_Disaster_(film)
+70	Four Weddings and a Funeral	http://dbpedia.org/resource/Four_Weddings_and_a_Funeral
+1263	Foxfire	http://dbpedia.org/resource/Foxfire_(1996_film)
+35	Free Willy 2 The Adventure Home	http://dbpedia.org/resource/Free_Willy_2:_The_Adventure_Home
+457	Free Willy 3 The Rescue	http://dbpedia.org/resource/Free_Willy_3:_The_Rescue
+1020	Gaslight	http://dbpedia.org/resource/Gaslight_(1944_film)
+1659	Getting Away With Murder	http://dbpedia.org/resource/Getting_Away_with_Murder_(film)
+733	Go Fish	http://dbpedia.org/resource/Go_Fish_(film)
+905	Great Expectations	http://dbpedia.org/resource/Great_Expectations_(1998_film)
+1028	Grumpier Old Men	http://dbpedia.org/resource/Grumpier_Old_Men
+995	Guido Kiss Me	http://dbpedia.org/resource/Kiss_Me,_Guido
+428	Harold and Maude	http://dbpedia.org/resource/Harold_and_Maude
+590	Hellraiser Bloodline	http://dbpedia.org/resource/Hellraiser:_Bloodline
+993	Hercules	http://dbpedia.org/resource/Hercules_(1997_film)
+1033	Homeward Bound II Lost in San Francisco	http://dbpedia.org/resource/Homeward_Bound_II:_Lost_in_San_Francisco
+80	Hot Shots Part Deux	http://dbpedia.org/resource/Hot_Shots!_Part_Deux
+1008	I Shot Andy Warhol	http://dbpedia.org/resource/I_Shot_Andy_Warhol
+1214	In the Realm of the Senses	http://dbpedia.org/resource/In_the_Realm_of_the_Senses
+210	Indiana Jones and the Last Crusade	http://dbpedia.org/resource/Indiana_Jones_and_the_Last_Crusade
+1544	It Takes Two	http://dbpedia.org/resource/It_Takes_Two_(1995_film)
+1289	Jack and Sarah	http://dbpedia.org/resource/Jack_and_Sarah
+473	James and the Giant Peach	http://dbpedia.org/resource/James_and_the_Giant_Peach_(film)
+740	Jane Eyre	http://dbpedia.org/resource/Jane_Eyre_(1996_film)
+532	Kama Sutra A Tale of Love	http://dbpedia.org/resource/Kama_Sutra:_A_Tale_of_Love
+1208	Kiss of Death	http://dbpedia.org/resource/Kiss_of_Death_(1995_film)
+1632	Land and Freedom	http://dbpedia.org/resource/Land_and_Freedom
+1031	Lassie	http://dbpedia.org/resource/Lassie_(1994_film)
+611	Laura	http://dbpedia.org/resource/Laura_(1944_film)
+699	Little Women	http://dbpedia.org/resource/Little_Women_(1994_film)
+1269	Love in the Afternoon	http://dbpedia.org/resource/Love_in_the_Afternoon_(1957_film)
+904	Ma vie en rose	http://dbpedia.org/resource/Ma_vie_en_rose
+36	Mad Love	http://dbpedia.org/resource/Mad_Love_(1995_film)
+1179	Man of the House	http://dbpedia.org/resource/Man_of_the_House_(1995_film)
+287	Marvin's Room	http://dbpedia.org/resource/Marvin's_Room_(film)
+866	Michael	http://dbpedia.org/resource/Michael_(1996_film)
+518	Miller's Crossing	http://dbpedia.org/page/Miller's_Crossing
+107	Moll Flanders	http://dbpedia.org/resource/Moll_Flanders_(1996_film)
+1441	Moonlight and Valentino	http://dbpedia.org/resource/Moonlight_and_Valentino
+381	Muriel's Wedding	http://dbpedia.org/resource/Muriel's_Wedding
+1477	Nightwatch	http://dbpedia.org/resource/Nightwatch_(1994_film)
+1625	Nightwatch	http://dbpedia.org/resource/Nightwatch_(1994_film)
+1078	Oliver & Company	http://dbpedia.org/resource/Oliver_&_Company
+357	One Flew Over the Cuckoo's Nest	http://dbpedia.org/resource/One_Flew_Over_the_Cuckoo's_Nest_(film)
+888	One Night Stand	http://dbpedia.org/resource/One_Night_Stand_(1997_film)
+1091	Pete's Dragon	http://dbpedia.org/resource/Pete's_Dragon
+1012	Private Parts	http://dbpedia.org/resource/Private_Parts_(1997_film)
+1476	Raw Deal	http://dbpedia.org/resource/Raw_Deal_(1948_film)
+795	Richie Rich	http://dbpedia.org/resource/Richie_Rich_(film)
+395	Robin Hood Men in Tights	http://dbpedia.org/resource/Robin_Hood:_Men_in_Tights
+652	Rosencrantz and Guildenstern Are Dead	http://dbpedia.org/resource/Rosencrantz_and_Guildenstern_Are_Dead
+486	Sabrina	http://dbpedia.org/resource/Sabrina_(1995_film)
+274	Sabrina	http://dbpedia.org/resource/Sabrina_(1954_film)
+1196	Savage Nights	http://dbpedia.org/resource/Savage_Nights
+318	Schindler's List	http://dbpedia.org/resource/Schindler's_List
+285	Secrets & Lies	http://dbpedia.org/resource/Secrets_&_Lies_(film)
+275	Sense and Sensibility	http://dbpedia.org/resource/Sense_and_Sensibility_(film)
+690	Seven Years in Tibet	http://dbpedia.org/resource/Seven_Years_in_Tibet_(1997_film)
+737	Sirens	http://dbpedia.org/resource/Sirens_(1999_film)
+632	Sophie's Choice	http://dbpedia.org/resource/Sophie's_Choice_(film)
+1089	Speed 2 Cruise Control	http://dbpedia.org/resource/Speed_2:_Cruise_Control
+608	Spellbound	http://dbpedia.org/resource/Spellbound_(1945_film)
+352	Spice World	http://dbpedia.org/resource/Spice_World_(film)
 222	Star Trek First Contact	http://dbpedia.org/resource/Star_Trek:_First_Contact
 229	Star Trek III The Search for Spock	http://dbpedia.org/resource/Star_Trek_III:_The_Search_for_Spock
 230	Star Trek IV The Voyage Home	http://dbpedia.org/resource/Star_Trek_IV:_The_Voyage_Home
 228	Star Trek The Wrath of Khan	http://dbpedia.org/resource/Star_Trek_II:_The_Wrath_of_Khan
 450	Star Trek V The Final Frontier	http://dbpedia.org/resource/Star_Trek_V:_The_Final_Frontier
 227	Star Trek VI The Undiscovered Country	http://dbpedia.org/resource/Star_Trek_VI:_The_Undiscovered_Country
+150	Swingers	http://dbpedia.org/resource/Swingers_(1996_film)
+1187	Switchblade Sisters	http://dbpedia.org/resource/Switchblade_Sisters
+1444	That Darn Cat	http://dbpedia.org/resource/That_Darn_Cat_(1997_film)
+878	That Darn Cat	http://dbpedia.org/resource/That_Darn_Cat!_(1965_film)
+1003	That Darn Cat	http://dbpedia.org/resource/That_Darn_Cat_(1997_film)
 791	The Baby Sitters Club	http://dbpedia.org/resource/The_Baby-sitters_Club
 988	The Beautician and the Beast	http://dbpedia.org/resource/The_Beautician_and_the_Beast
 947	The Big Blue	http://dbpedia.org/resource/The_Big_Blue
@@ -35,3 +483,36 @@
 595	The Fan	http://dbpedia.org/resource/The_Fan_(1996_film)
 1655	The Favor	http://dbpedia.org/resource/The_Favor_(2006_film)
 77	The Firm	http://dbpedia.org/resource/The_Firm_(1993_film)
+383	The Flintstones	http://dbpedia.org/resource/The_Flintstones_(film)
+79	The Fugitive	http://dbpedia.org/resource/The_Fugitive_(1993_film)
+933	The Funeral	http://dbpedia.org/resource/The_Funeral_(1996_film)
+1303	The Getaway	http://dbpedia.org/resource/The_Getaway_(1994_film)
+1050	The Ghost and Mrs. Muir	http://dbpedia.org/resource/The_Ghost_and_Mrs._Muir
+148	The Ghost and the Darkness	http://dbpedia.org/resource/The_Ghost_and_the_Darkness
+596	The Hunchback of Notre Dame	http://dbpedia.org/resource/The_Hunchback_of_Notre_Dame_(1996_film)
+931	The Island of Dr. Moreau	http://dbpedia.org/resource/The_Island_of_Dr._Moreau_(1996_film)
+241	The Last of the Mohicans	http://dbpedia.org/resource/The_Last_of_the_Mohicans_(1992_film)
+741	The Last Supper	http://dbpedia.org/resource/The_Last_Supper_(1995_film)
+484	The Maltese Falcon	http://dbpedia.org/resource/The_Maltese_Falcon_(1941_film)
+1483	The Man in the Iron Mask	http://dbpedia.org/resource/The_Man_in_the_Iron_Mask_(1998_film)
+657	The Manchurian Candidate	http://dbpedia.org/resource/The_Manchurian_Candidate_(1962_film)
+879	The Peacemaker	http://dbpedia.org/resource/The_Peacemaker_(1997_film)
+173	The Princess Bride	http://dbpedia.org/resource/The_Princess_Bride_(film)
+562	The Quick and the Dead	http://dbpedia.org/resource/The_Quick_and_the_Dead_(1995_film)
+1442	The Scarlet Letter	http://dbpedia.org/resource/The_Scarlet_Letter_(1995_film)
+463	The Secret of Roan Inish	http://dbpedia.org/resource/The_Secret_of_Roan_Inish
+1423	The Walking Dead	http://dbpedia.org/resource/The_Walking_Dead_(1995_film)
+311	The Wings of the Dove	http://dbpedia.org/resource/The_Wings_of_the_Dove_(1997_film)
+132	The Wizard of Oz	http://dbpedia.org/resource/The_Wizard_of_Oz_(1982_film)
+547	The Young Poisoner's Handbook	http://dbpedia.org/resource/The_Young_Poisoner's_Handbook
+313	Titanic	http://dbpedia.org/resource/Titanic_(1997_film)
+1469	Tom and Huck	http://dbpedia.org/resource/Tom_and_Huck
+920	Two Bits	http://dbpedia.org/resource/Two_Bits
+1102	Two Much	http://dbpedia.org/resource/Two_Much
+851	Two or Three Things I Know About Her	http://dbpedia.org/resource/Two_or_Three_Things_I_Know_About_Her
+1228	Under Siege 2 Dark Territory	http://dbpedia.org/resource/Under_Siege_2:_Dark_Territory
+1210	Virtuosity	http://dbpedia.org/resource/Virtuosity
+567	Wes Craven's New Nightmare	http://dbpedia.org/resource/Wes_Craven's_New_Nightmare
+65	What's Eating Gilbert Grape	http://dbpedia.org/resource/What%27s_Eating_Gilbert_Grape
+1404	Withnail and I	http://dbpedia.org/resource/Withnail_and_I
+1526	Witness	http://dbpedia.org/resource/Witness_(1985_film)
