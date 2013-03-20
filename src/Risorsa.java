@@ -13,6 +13,8 @@ public class Risorsa implements Serializable {
                 .replace("http://purl.org/dc/terms/", "")
                 .replace("http://dbpedia.org/property/", "")
                 .replace("http://dbpedia.org/resource/", "")
+                .replace("http://dbpedia.org/page/", "")
+                .replace("http://live.dbpedia.org/page/","")
                 .replace(".", "_").replace(":", "_").replace(",", "_").replace("-", "_");
     }
 

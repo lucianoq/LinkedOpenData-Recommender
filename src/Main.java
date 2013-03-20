@@ -11,7 +11,6 @@ public class Main {
         // Grafo.updateWeight();
         Grafo.printDot();
 
-
         FilmGraph.load();
         FilmGraph.printDot();
 
