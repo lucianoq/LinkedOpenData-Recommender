@@ -1,6 +1,7 @@
 package it.uniba.di.swap.lod_recommender;
 
 import it.uniba.di.swap.lod_recommender.graph.EdgeFilm;
+import it.uniba.di.swap.lod_recommender.graph.Film;
 import it.uniba.di.swap.lod_recommender.graph.FilmGraph;
 import it.uniba.di.swap.lod_recommender.graph.Graph;
 

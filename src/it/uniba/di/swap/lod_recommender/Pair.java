@@ -1,5 +1,7 @@
 package it.uniba.di.swap.lod_recommender;
 
+import it.uniba.di.swap.lod_recommender.graph.Film;
+
 import java.io.Serializable;
 
 public class Pair implements Serializable {

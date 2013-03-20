@@ -1,7 +1,5 @@
 package it.uniba.di.swap.lod_recommender.graph;
 
-import it.uniba.di.swap.lod_recommender.Film;
-
 import java.io.Serializable;
 
 public class EdgeFilm implements Serializable {

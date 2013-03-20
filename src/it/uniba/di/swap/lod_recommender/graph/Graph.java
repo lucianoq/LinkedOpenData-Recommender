@@ -3,10 +3,8 @@ package it.uniba.di.swap.lod_recommender.graph;
 import com.hp.hpl.jena.query.*;
 import com.hp.hpl.jena.rdf.model.Resource;
 import edu.uci.ics.jung.graph.UndirectedSparseMultigraph;
-import it.uniba.di.swap.lod_recommender.Film;
 import it.uniba.di.swap.lod_recommender.Main;
 import it.uniba.di.swap.lod_recommender.Property;
-import it.uniba.di.swap.lod_recommender.Risorsa;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
@@ -25,7 +23,7 @@ public class Graph implements Serializable{
     private static Logger logger = Logger.getLogger(Main.class);
     private static ArrayList<Film> films;
     private static ArrayList<Property> properties;
-    private static UndirectedSparseMultigraph<Risorsa, Edge> graph;
+    private static UndirectedSparseMultigraph<GraphResource, Edge> graph;
 
     private static ArrayList<Resource> querySPARQL(String uri, String property) {
         String query = "";
@@ -57,7 +55,7 @@ public class Graph implements Serializable{
         try {
             FileInputStream fis = new FileInputStream("./serialized/graphComplete.bin");
             ObjectInputStream ois = new ObjectInputStream(fis);
-            graph = (UndirectedSparseMultigraph<Risorsa, Edge>) ois.readObject();
+            graph = (UndirectedSparseMultigraph<GraphResource, Edge>) ois.readObject();
             ois.close();
             fis.close();
             System.out.println("[INFO] Graph loaded.");
@@ -65,7 +63,7 @@ public class Graph implements Serializable{
             System.out.println("[INFO] Graph Edges : " + graph.getEdges().size());
             System.out.println("----------------------------------------------------");
         } catch (FileNotFoundException e) {
-            graph = new UndirectedSparseMultigraph<Risorsa, Edge>();
+            graph = new UndirectedSparseMultigraph<GraphResource, Edge>();
             createFromQuery();
             save();
             System.out.println("[INFO] Graph builded.");
@@ -136,7 +134,7 @@ public class Graph implements Serializable{
     }
 
     public static void createFromQuery() throws IOException, InterruptedException {
-//        graph = new UndirectedSparseMultigraph<it.uniba.di.swap.lod_recommender.Risorsa, it.uniba.di.swap.lod_recommender.graph.Edge>();
+//        graph = new UndirectedSparseMultigraph<it.uniba.di.swap.lod_recommender.graph.GraphResource, it.uniba.di.swap.lod_recommender.graph.Edge>();
         BasicConfigurator.configure();
         for (int i = 0; i < films.size(); i++) {
             graph.addVertex(films.get(i));
@@ -144,13 +142,13 @@ public class Graph implements Serializable{
                 Thread.sleep(250);
                 ArrayList<Resource> resourceDest = querySPARQL(films.get(i).getUri(), properties.get(j).getUri());
                 for (int t = 0; t < resourceDest.size(); t++) {
-                    Risorsa risorsaFilmDest = new Risorsa(resourceDest.get(t).getURI());
+                    GraphResource graphResourceFilmDest = new GraphResource(resourceDest.get(t).getURI());
 
                     if (!resourceDest.get(t).getLocalName().isEmpty()) {
                         Property property = properties.get(j);
-                        Edge prop = new Edge(property, films.get(i), risorsaFilmDest, property.getWeight());
-                        graph.addVertex(risorsaFilmDest);
-                        graph.addEdge(prop, films.get(i), risorsaFilmDest);
+                        Edge prop = new Edge(property, films.get(i), graphResourceFilmDest, property.getWeight());
+                        graph.addVertex(graphResourceFilmDest);
+                        graph.addEdge(prop, films.get(i), graphResourceFilmDest);
                     }
                 }
             }
@@ -166,7 +164,7 @@ public class Graph implements Serializable{
         return properties;
     }
 
-    public static UndirectedSparseMultigraph<Risorsa, Edge> getGraph() {
+    public static UndirectedSparseMultigraph<GraphResource, Edge> getGraph() {
         return graph;
     }
 }

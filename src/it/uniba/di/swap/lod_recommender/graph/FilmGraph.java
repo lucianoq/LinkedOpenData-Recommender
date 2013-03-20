@@ -2,8 +2,6 @@ package it.uniba.di.swap.lod_recommender.graph;
 
 import edu.uci.ics.jung.graph.DirectedSparseMultigraph;
 import edu.uci.ics.jung.graph.UndirectedSparseMultigraph;
-import it.uniba.di.swap.lod_recommender.Film;
-import it.uniba.di.swap.lod_recommender.Risorsa;
 
 import java.io.*;
 import java.util.Collection;
@@ -14,7 +12,7 @@ public class FilmGraph implements Serializable {
 
     public static void init() {
         filmGraph = new DirectedSparseMultigraph<Film, EdgeFilm>();
-        UndirectedSparseMultigraph<Risorsa, Edge> g = Graph.getGraph();
+        UndirectedSparseMultigraph<GraphResource, Edge> g = Graph.getGraph();
 
         Collection<Edge> edges = g.getEdges();
 
@@ -69,16 +67,16 @@ public class FilmGraph implements Serializable {
             filmGraph = (DirectedSparseMultigraph<Film, EdgeFilm>) ois.readObject();
             ois.close();
             fis.close();
-            System.out.println("[INFO] it.uniba.di.swap.lod_recommender.Film graph loaded.");
-            System.out.println("[INFO] it.uniba.di.swap.lod_recommender.Film graph Vertices : " + filmGraph.getVertices().size());
-            System.out.println("[INFO] it.uniba.di.swap.lod_recommender.Film graphEdges : " + filmGraph.getEdges().size());
+            System.out.println("[INFO] it.uniba.di.swap.lod_recommender.graph.Film graph loaded.");
+            System.out.println("[INFO] it.uniba.di.swap.lod_recommender.graph.Film graph Vertices : " + filmGraph.getVertices().size());
+            System.out.println("[INFO] it.uniba.di.swap.lod_recommender.graph.Film graphEdges : " + filmGraph.getEdges().size());
             System.out.println("----------------------------------------------------");
         } catch (FileNotFoundException e) {
             init();
             save();
-            System.out.println("[INFO] it.uniba.di.swap.lod_recommender.Film graph builded.");
-            System.out.println("[INFO] it.uniba.di.swap.lod_recommender.Film graph Vertices : " + filmGraph.getVertices().size());
-            System.out.println("[INFO] it.uniba.di.swap.lod_recommender.Film graphEdges : " + filmGraph.getEdges().size());
+            System.out.println("[INFO] it.uniba.di.swap.lod_recommender.graph.Film graph builded.");
+            System.out.println("[INFO] it.uniba.di.swap.lod_recommender.graph.Film graph Vertices : " + filmGraph.getVertices().size());
+            System.out.println("[INFO] it.uniba.di.swap.lod_recommender.graph.Film graphEdges : " + filmGraph.getEdges().size());
             System.out.println("----------------------------------------------------");
         }
     }

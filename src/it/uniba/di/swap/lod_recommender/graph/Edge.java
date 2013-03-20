@@ -1,8 +1,6 @@
 package it.uniba.di.swap.lod_recommender.graph;
 
-import it.uniba.di.swap.lod_recommender.Film;
 import it.uniba.di.swap.lod_recommender.Property;
-import it.uniba.di.swap.lod_recommender.Risorsa;
 
 import java.io.Serializable;
 
@@ -11,11 +9,11 @@ public class Edge implements Serializable {
     private Property property;
     private String title;
     private Film subject;
-    private Risorsa object;
+    private GraphResource object;
     private double weight;
 
 
-    public Edge(Property property, Film subject, Risorsa object, double weight) {
+    public Edge(Property property, Film subject, GraphResource object, double weight) {
         this.property = property;
         this.title = property.getUri().
                 replace("http://dbpedia.org/resource/", "")
@@ -29,7 +27,7 @@ public class Edge implements Serializable {
         this.weight = weight;
     }
 
-    public Edge(Property property, Film subject, Risorsa object) {
+    public Edge(Property property, Film subject, GraphResource object) {
         this(property, subject, object, 1.0);
     }
 
@@ -45,7 +43,7 @@ public class Edge implements Serializable {
         return subject;
     }
 
-    public Risorsa getObject() {
+    public GraphResource getObject() {
         return object;
     }
 

@@ -1,12 +1,14 @@
 package it.uniba.di.swap.lod_recommender;
 
+import it.uniba.di.swap.lod_recommender.graph.GraphResource;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Property extends Risorsa implements Serializable {
+public class Property extends GraphResource implements Serializable {
 
     private int idProperty;
     private double weight;

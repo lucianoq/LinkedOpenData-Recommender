@@ -1,6 +1,6 @@
 package it.uniba.di.swap.lod_recommender.profile;
 
-import it.uniba.di.swap.lod_recommender.Film;
+import it.uniba.di.swap.lod_recommender.graph.Film;
 
 import java.util.Map;
 

@@ -1,12 +1,12 @@
-package it.uniba.di.swap.lod_recommender;
+package it.uniba.di.swap.lod_recommender.graph;
 
 import java.io.Serializable;
 
-public class Risorsa implements Serializable {
+public class GraphResource implements Serializable {
     private String uri;
     private String title;
 
-    public Risorsa(String uri) {
+    public GraphResource(String uri) {
         this.uri = uri;
 
         this.title = uri.
@@ -33,9 +33,9 @@ public class Risorsa implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Risorsa risorsa = (Risorsa) o;
+        GraphResource graphResource = (GraphResource) o;
 
-        if (uri != null ? !uri.equals(risorsa.uri) : risorsa.uri != null) return false;
+        if (uri != null ? !uri.equals(graphResource.uri) : graphResource.uri != null) return false;
 
         return true;
     }
@@ -49,7 +49,7 @@ public class Risorsa implements Serializable {
 
     @Override
     public String toString() {
-        return "it.uniba.di.swap.lod_recommender.Risorsa{" +
+        return "it.uniba.di.swap.lod_recommender.graph.GraphResource{" +
                 "uri='" + uri + '\'' +
                 ", title='" + title + '\'' +
                 '}';

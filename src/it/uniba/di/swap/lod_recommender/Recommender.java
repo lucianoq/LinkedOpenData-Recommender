@@ -1,5 +1,6 @@
 package it.uniba.di.swap.lod_recommender;
 
+import it.uniba.di.swap.lod_recommender.graph.Film;
 import it.uniba.di.swap.lod_recommender.graph.Graph;
 import it.uniba.di.swap.lod_recommender.profile.SimpleProfile;
 import it.uniba.di.swap.lod_recommender.profile.VotedProfile;

@@ -1,6 +1,4 @@
-package it.uniba.di.swap.lod_recommender;
-
-import it.uniba.di.swap.lod_recommender.graph.Graph;
+package it.uniba.di.swap.lod_recommender.graph;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -9,7 +7,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Film extends Risorsa implements Serializable, Comparable<Film> {
+public class Film extends GraphResource implements Serializable, Comparable<Film> {
 
     private int idMovieLens;
 
@@ -48,7 +46,7 @@ public class Film extends Risorsa implements Serializable, Comparable<Film> {
 
     @Override
     public String toString() {
-        return "it.uniba.di.swap.lod_recommender.Film{" +
+        return "it.uniba.di.swap.lod_recommender.graph.Film{" +
                 "idMovieLens=" + idMovieLens +
                 ", title='" + this.getTitle() + "\'" +
                 ", uri='" + this.getUri() + "\'" +
