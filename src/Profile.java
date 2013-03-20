@@ -1,24 +1,29 @@
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
 public class Profile {
-    private Map<Film, Integer> likedFilms;
+
+    protected Map<Film, Integer> profiledFilms;
+
+    protected Profile() {
+        this.profiledFilms = new HashMap<Film, Integer>();
+    }
 
     public Profile(Map<Film, Integer> liked) {
-        this.likedFilms = liked;
+        this.profiledFilms = liked;
     }
 
-    public Set<Film> getLikedFilms() {
-        return likedFilms.keySet();
+    public Set<Film> getProfiledFilms() {
+        return profiledFilms.keySet();
     }
-
 
     @Override
     public String toString() {
-        String s="";
-        for (Film f : likedFilms.keySet()) {
+        String s = "";
+        for (Film f : profiledFilms.keySet()) {
             s += f.getTitle() + "\t";
-            s += " Vote: " + likedFilms.get(f) + "\n";
+            s += " Vote: " + profiledFilms.get(f) + "\n";
         }
         return s;
     }

@@ -31,13 +31,13 @@ public class Recommender {
         return Double.MAX_VALUE;
     }
 
-    public static List<Recommendation> getRecommendations(Profile profile, int limit) {
+    public static List<Recommendation> getRecommendations(ProfileSimple profile, int limit) {
         List<Recommendation> temp = new ArrayList<Recommendation>();
 
         for (Film film : Grafo.getFilms())
-            if (!profile.getLikedFilms().contains(film)) {
+            if (!profile.getProfiledFilms().contains(film)) {
                 double distance = 0d;
-                for (Film liked : profile.getLikedFilms()) {
+                for (Film liked : profile.getProfiledFilms()) {
                     distance += getDistance(film, liked);
                 }
                 temp.add(new Recommendation(film, distance));
