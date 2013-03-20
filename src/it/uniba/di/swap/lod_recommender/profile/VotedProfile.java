@@ -37,8 +37,9 @@ public abstract class VotedProfile extends Profile {
     public String toString() {
         String s = "";
         for (Film f : votedFilms.keySet()) {
-            s += f.getTitle() + "\t";
-            s += " Vote: " + f.getTitle() + "\n";
+            System.out.println(f);
+            //s += f.getTitle() + "\t";
+            //s += " Vote: " + f.getTitle() + "\n";
         }
         return s;
     }

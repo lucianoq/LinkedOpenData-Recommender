@@ -36,14 +36,29 @@ public class Main {
 //        }
 
         Map<Film, Number> liked = new HashMap<Film, Number>();
-        liked.put(Film.getFilmByID(916), 5);
-        liked.put(Film.getFilmByID(229), 1);
+        liked.put(Film.getFilmByID(444), 5);
+        liked.put(Film.getFilmByID(447), 1);
         VotedProfile profile = new NostraVotedProfile(liked);
 
         System.out.println("\n\nPROFILE: ");
         System.out.println(profile.toString());
 
-        List<Recommendation> recommendations = Recommender.getRecommendationsVoted(profile);
+        List<Recommendation> recommendations = Recommender.getRecommendations(profile, 5);
+        System.out.println("|Recommendations| = " + recommendations.size());
+        System.out.println("\n\nRECOMMENDATION: ");
+
+        for (Recommendation r : recommendations)
+            System.out.println("it.uniba.di.swap.lod_recommender.graph.Film: " + r.getFilm().getTitle() + "\t\tit.uniba.di.swap.lod_recommender.Distance: " + r.getDistance());
+
+        Set<Film> likedSet = new HashSet<Film>();
+        likedSet.add(Film.getFilmByID(444));
+        likedSet.add(Film.getFilmByID(447));
+        SimpleProfile simpleProfile = new SimpleProfile(likedSet);
+
+        System.out.println("\n\nPROFILE: ");
+        System.out.println(profile.toString());
+
+        recommendations = Recommender.getRecommendations(simpleProfile, 5);
         System.out.println("|Recommendations| = " + recommendations.size());
         System.out.println("\n\nRECOMMENDATION: ");
 

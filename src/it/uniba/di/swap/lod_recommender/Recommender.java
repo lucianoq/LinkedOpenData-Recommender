@@ -38,7 +38,7 @@ public class Recommender {
         return Double.MAX_VALUE;
     }
 
-    public static List<Recommendation> getRecommendationsVoted(VotedProfile profile, int limit) {
+    public static List<Recommendation> getRecommendations(VotedProfile profile, int limit) {
         List<Recommendation> temp = new ArrayList<Recommendation>();
 
         for (Film film : Graph.getFilms())
@@ -57,13 +57,13 @@ public class Recommender {
 
         List<Recommendation> toRec = new ArrayList<Recommendation>(limit);
 
-        for (int i = 0; i < (limit <= toRec.size() ? limit : toRec.size()); i++)
+        for (int i = 0; i < (limit <= temp.size() ? limit : temp.size()); i++)
             toRec.add(temp.get(i));
 
         return toRec;
     }
 
-    public static List<Recommendation> getRecommendationsSimple(SimpleProfile profile, int limit) {
+    public static List<Recommendation> getRecommendations(SimpleProfile profile, int limit) {
         List<Recommendation> temp = new ArrayList<Recommendation>();
 
         for (Film film : Graph.getFilms())
@@ -82,18 +82,18 @@ public class Recommender {
 
         List<Recommendation> toRec = new ArrayList<Recommendation>(limit);
 
-        for (int i = 0; i < (limit <= toRec.size() ? limit : toRec.size()); i++)
+        for (int i = 0; i < (limit <= temp.size() ? limit : temp.size()); i++)
             toRec.add(temp.get(i));
 
         return toRec;
     }
 
-    public static List<Recommendation> getRecommendationsSimple(SimpleProfile profile) {
-        return getRecommendationsSimple(profile, ALL);
+    public static List<Recommendation> getRecommendations(SimpleProfile profile) {
+        return getRecommendations(profile, ALL);
     }
 
-    public static List<Recommendation> getRecommendationsVoted(VotedProfile profile) {
-        return getRecommendationsVoted(profile, ALL);
+    public static List<Recommendation> getRecommendations(VotedProfile profile) {
+        return getRecommendations(profile, ALL);
     }
 
 
