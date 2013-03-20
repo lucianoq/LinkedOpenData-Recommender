@@ -1,3 +1,5 @@
+package it.uniba.di.swap.lod_recommender;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -60,7 +62,7 @@ public class Property extends Risorsa implements Serializable {
 
     @Override
     public String toString() {
-        return "Property{" +
+        return "it.uniba.di.swap.lod_recommender.Property{" +
                 "idProperty=" + idProperty +
                 ", uri='" + this.getUri() + "\'" +
                 '}';

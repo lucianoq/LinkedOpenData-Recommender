@@ -1,3 +1,9 @@
+package it.uniba.di.swap.lod_recommender;
+
+import it.uniba.di.swap.lod_recommender.graph.EdgeFilm;
+import it.uniba.di.swap.lod_recommender.graph.FilmGraph;
+import it.uniba.di.swap.lod_recommender.graph.Graph;
+
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -5,36 +11,36 @@ import java.util.concurrent.ConcurrentHashMap;
 public class Distance implements Serializable {
     //    public static final int NUM_COPPIE_FILM = 270000;
     public static final int NUM_COPPIE_FILM = 2500;
-    private static Map<Coppia, Double> passantD;
-    private static Map<Coppia, Double> passantDW;
-    private static Map<Coppia, Double> passantI;
-    private static Map<Coppia, Double> passantIW;
-    private static Map<Coppia, Double> passantC;
-    private static Map<Coppia, Double> passantCW;
-    private static Map<Coppia, Double> nostra;
-    private static Map<Coppia, Double> nostraDW;
-    private static Map<Coppia, Double> nostraIOW;
-    private static Map<Coppia, Double> nostraIIW;
-    private static Map<Coppia, Integer> cio_n_A_B;
-    private static Map<Coppia, Integer> cii_n_A_B;
+    private static Map<Pair, Double> passantD;
+    private static Map<Pair, Double> passantDW;
+    private static Map<Pair, Double> passantI;
+    private static Map<Pair, Double> passantIW;
+    private static Map<Pair, Double> passantC;
+    private static Map<Pair, Double> passantCW;
+    private static Map<Pair, Double> nostra;
+    private static Map<Pair, Double> nostraDW;
+    private static Map<Pair, Double> nostraIOW;
+    private static Map<Pair, Double> nostraIIW;
+    private static Map<Pair, Integer> cio_n_A_B;
+    private static Map<Pair, Integer> cii_n_A_B;
 
     public static void fill() {
         System.out.println("[INFO] [" + new Date() + "] Inizio il calcolo di tutte le distanze.");
-        passantD = new ConcurrentHashMap<Coppia, Double>(NUM_COPPIE_FILM);
-        passantDW = new ConcurrentHashMap<Coppia, Double>(NUM_COPPIE_FILM);
-        passantI = new ConcurrentHashMap<Coppia, Double>(NUM_COPPIE_FILM);
-        passantC = new ConcurrentHashMap<Coppia, Double>(NUM_COPPIE_FILM);
-        passantIW = new ConcurrentHashMap<Coppia, Double>(NUM_COPPIE_FILM);
-        passantCW = new ConcurrentHashMap<Coppia, Double>(NUM_COPPIE_FILM);
-        nostra = new ConcurrentHashMap<Coppia, Double>(NUM_COPPIE_FILM);
-        cio_n_A_B = new ConcurrentHashMap<Coppia, Integer>(NUM_COPPIE_FILM);
-        cii_n_A_B = new ConcurrentHashMap<Coppia, Integer>(NUM_COPPIE_FILM);
-        nostraDW = new ConcurrentHashMap<Coppia, Double>(NUM_COPPIE_FILM);
-        nostraIOW = new ConcurrentHashMap<Coppia, Double>(NUM_COPPIE_FILM);
-        nostraIIW = new ConcurrentHashMap<Coppia, Double>(NUM_COPPIE_FILM);
+        passantD = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        passantDW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        passantI = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        passantC = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        passantIW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        passantCW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        nostra = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        cio_n_A_B = new ConcurrentHashMap<Pair, Integer>(NUM_COPPIE_FILM);
+        cii_n_A_B = new ConcurrentHashMap<Pair, Integer>(NUM_COPPIE_FILM);
+        nostraDW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        nostraIOW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        nostraIIW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
 
 
-        ArrayList<Film> films = Grafo.getFilms();
+        ArrayList<Film> films = Graph.getFilms();
         ArrayList<ComputeDistance> threads = new ArrayList<ComputeDistance>();
 
         for (int i = 0; i < 8; i++) {
@@ -65,74 +71,74 @@ public class Distance implements Serializable {
         try {
             FileInputStream fis = new FileInputStream("./serialized/cionab.bin");
             ObjectInputStream ois = new ObjectInputStream(fis);
-            cio_n_A_B = (ConcurrentHashMap<Coppia, Integer>) ois.readObject();
+            cio_n_A_B = (ConcurrentHashMap<Pair, Integer>) ois.readObject();
             ois.close();
             fis.close();
 
 
             fis = new FileInputStream("./serialized/ciinab.bin");
             ois = new ObjectInputStream(fis);
-            cii_n_A_B = (ConcurrentHashMap<Coppia, Integer>) ois.readObject();
+            cii_n_A_B = (ConcurrentHashMap<Pair, Integer>) ois.readObject();
             ois.close();
             fis.close();
 
             fis = new FileInputStream("./serialized/nostraDW.bin");
             ois = new ObjectInputStream(fis);
-            nostraDW = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            nostraDW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
             ois.close();
             fis.close();
 
             fis = new FileInputStream("./serialized/nostraIOW.bin");
             ois = new ObjectInputStream(fis);
-            nostraIOW = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            nostraIOW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
             ois.close();
             fis.close();
 
             fis = new FileInputStream("./serialized/nostraIIW.bin");
             ois = new ObjectInputStream(fis);
-            nostraIIW = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            nostraIIW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
             ois.close();
             fis.close();
 
             fis = new FileInputStream("./serialized/passantD.bin");
             ois = new ObjectInputStream(fis);
-            passantD = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            passantD = (ConcurrentHashMap<Pair, Double>) ois.readObject();
             ois.close();
             fis.close();
 
             fis = new FileInputStream("./serialized/passantDW.bin");
             ois = new ObjectInputStream(fis);
-            passantDW = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            passantDW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
             ois.close();
             fis.close();
 
             fis = new FileInputStream("./serialized/passantI.bin");
             ois = new ObjectInputStream(fis);
-            passantI = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            passantI = (ConcurrentHashMap<Pair, Double>) ois.readObject();
             ois.close();
             fis.close();
 
             fis = new FileInputStream("./serialized/passantIW.bin");
             ois = new ObjectInputStream(fis);
-            passantIW = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            passantIW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
             ois.close();
             fis.close();
 
             fis = new FileInputStream("./serialized/passantC.bin");
             ois = new ObjectInputStream(fis);
-            passantC = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            passantC = (ConcurrentHashMap<Pair, Double>) ois.readObject();
             ois.close();
             fis.close();
 
             fis = new FileInputStream("./serialized/passantCW.bin");
             ois = new ObjectInputStream(fis);
-            passantCW = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            passantCW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
             ois.close();
             fis.close();
 
             fis = new FileInputStream("./serialized/nostra.bin");
             ois = new ObjectInputStream(fis);
-            nostra = (ConcurrentHashMap<Coppia, Double>) ois.readObject();
+            nostra = (ConcurrentHashMap<Pair, Double>) ois.readObject();
             ois.close();
             fis.close();
 
@@ -221,43 +227,43 @@ public class Distance implements Serializable {
     }
 
     public static double getDistancePassantD(Film f1, Film f2) {
-        return passantD.get(new Coppia(f1, f2));
+        return passantD.get(new Pair(f1, f2));
     }
 
     public static double getDistancePassantDW(Film f1, Film f2) {
-        return passantDW.get(new Coppia(f1, f2));
+        return passantDW.get(new Pair(f1, f2));
     }
 
     public static double getDistancePassantI(Film f1, Film f2) {
-        return passantI.get(new Coppia(f1, f2));
+        return passantI.get(new Pair(f1, f2));
     }
 
     public static double getDistancePassantIW(Film f1, Film f2) {
-        return passantIW.get(new Coppia(f1, f2));
+        return passantIW.get(new Pair(f1, f2));
     }
 
     public static double getDistancePassantC(Film f1, Film f2) {
-        return passantC.get(new Coppia(f1, f2));
+        return passantC.get(new Pair(f1, f2));
     }
 
     public static double getDistancePassantCW(Film f1, Film f2) {
-        return passantCW.get(new Coppia(f1, f2));
+        return passantCW.get(new Pair(f1, f2));
     }
 
     public static double getDistanceNostra(Film f1, Film f2) {
-        return nostra.get(new Coppia(f1, f2));
+        return nostra.get(new Pair(f1, f2));
     }
 
     public static double getDistanceNostraDW(Film f1, Film f2) {
-        return nostraDW.get(new Coppia(f1, f2));
+        return nostraDW.get(new Pair(f1, f2));
     }
 
     public static double getDistanceNostraIOW(Film f1, Film f2) {
-        return nostraIOW.get(new Coppia(f1, f2));
+        return nostraIOW.get(new Pair(f1, f2));
     }
 
     public static double getDistanceNostraIIW(Film f1, Film f2) {
-        return nostraIIW.get(new Coppia(f1, f2));
+        return nostraIIW.get(new Pair(f1, f2));
     }
 
     protected static double passantD(Film a, Film b) {
@@ -280,7 +286,7 @@ public class Distance implements Serializable {
     }
 
     protected static double passantI(Film a, Film b) {
-        return 1.0d / (1 + cio_n_A_B.get(new Coppia(a, b)) + cii_n_A_B.get(new Coppia(a, b)));
+        return 1.0d / (1 + cio_n_A_B.get(new Pair(a, b)) + cii_n_A_B.get(new Pair(a, b)));
     }
 
     protected static double passantIW(Film a, Film b) {
@@ -299,7 +305,7 @@ public class Distance implements Serializable {
 
     protected static double passantC(Film a, Film b) {
         double denom = cd_n_A_B(a, b) + cd_n_A_B(b, a);
-        denom += cio_n_A_B.get(new Coppia(a, b)) + cii_n_A_B.get(new Coppia(a, b));
+        denom += cio_n_A_B.get(new Pair(a, b)) + cii_n_A_B.get(new Pair(a, b));
         double d = 1.0 / (1 + denom);
         return d;
     }
@@ -469,51 +475,51 @@ public class Distance implements Serializable {
         return i;
     }
 
-    public static Map<Coppia, Integer> getCii_n_A_B() {
+    public static Map<Pair, Integer> getCii_n_A_B() {
         return cii_n_A_B;
     }
 
-    public static Map<Coppia, Integer> getCio_n_A_B() {
+    public static Map<Pair, Integer> getCio_n_A_B() {
         return cio_n_A_B;
     }
 
-    public static Map<Coppia, Double> getNostraDW() {
+    public static Map<Pair, Double> getNostraDW() {
         return nostraDW;
     }
 
-    public static Map<Coppia, Double> getNostraIOW() {
+    public static Map<Pair, Double> getNostraIOW() {
         return nostraIOW;
     }
 
-    public static Map<Coppia, Double> getNostraIIW() {
+    public static Map<Pair, Double> getNostraIIW() {
         return nostraIIW;
     }
 
-    public static Map<Coppia, Double> getNostra() {
+    public static Map<Pair, Double> getNostra() {
         return nostra;
     }
 
-    public static Map<Coppia, Double> getPassantCW() {
+    public static Map<Pair, Double> getPassantCW() {
         return passantCW;
     }
 
-    public static Map<Coppia, Double> getPassantC() {
+    public static Map<Pair, Double> getPassantC() {
         return passantC;
     }
 
-    public static Map<Coppia, Double> getPassantIW() {
+    public static Map<Pair, Double> getPassantIW() {
         return passantIW;
     }
 
-    public static Map<Coppia, Double> getPassantI() {
+    public static Map<Pair, Double> getPassantI() {
         return passantI;
     }
 
-    public static Map<Coppia, Double> getPassantDW() {
+    public static Map<Pair, Double> getPassantDW() {
         return passantDW;
     }
 
-    public static Map<Coppia, Double> getPassantD() {
+    public static Map<Pair, Double> getPassantD() {
         return passantD;
     }
 

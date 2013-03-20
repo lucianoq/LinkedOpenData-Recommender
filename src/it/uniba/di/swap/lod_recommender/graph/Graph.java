@@ -1,6 +1,12 @@
+package it.uniba.di.swap.lod_recommender.graph;
+
 import com.hp.hpl.jena.query.*;
 import com.hp.hpl.jena.rdf.model.Resource;
 import edu.uci.ics.jung.graph.UndirectedSparseMultigraph;
+import it.uniba.di.swap.lod_recommender.Film;
+import it.uniba.di.swap.lod_recommender.Main;
+import it.uniba.di.swap.lod_recommender.Property;
+import it.uniba.di.swap.lod_recommender.Risorsa;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
@@ -9,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
-public class Grafo implements Serializable{
+public class Graph implements Serializable{
 
     private static final String FILEFILMPROP = "./config/film_properties_dbpedia.txt";
     private static final String FILEFILM = "./config/ListFilms.txt";
@@ -130,7 +136,7 @@ public class Grafo implements Serializable{
     }
 
     public static void createFromQuery() throws IOException, InterruptedException {
-//        graph = new UndirectedSparseMultigraph<Risorsa, Edge>();
+//        graph = new UndirectedSparseMultigraph<it.uniba.di.swap.lod_recommender.Risorsa, it.uniba.di.swap.lod_recommender.graph.Edge>();
         BasicConfigurator.configure();
         for (int i = 0; i < films.size(); i++) {
             graph.addVertex(films.get(i));

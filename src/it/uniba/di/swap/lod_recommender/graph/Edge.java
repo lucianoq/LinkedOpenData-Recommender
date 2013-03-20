@@ -1,3 +1,9 @@
+package it.uniba.di.swap.lod_recommender.graph;
+
+import it.uniba.di.swap.lod_recommender.Film;
+import it.uniba.di.swap.lod_recommender.Property;
+import it.uniba.di.swap.lod_recommender.Risorsa;
+
 import java.io.Serializable;
 
 public class Edge implements Serializable {

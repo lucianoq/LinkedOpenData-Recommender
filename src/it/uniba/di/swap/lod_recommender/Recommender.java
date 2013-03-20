@@ -1,3 +1,8 @@
+package it.uniba.di.swap.lod_recommender;
+
+import it.uniba.di.swap.lod_recommender.graph.Graph;
+import it.uniba.di.swap.lod_recommender.profile.SimpleProfile;
+
 import java.util.*;
 
 public class Recommender {
@@ -9,14 +14,14 @@ public class Recommender {
         System.out.println("[INFO] Inizio creazione tabelle di raccomandazione");
         map = new HashMap<Film, List<Recommendation>>();
 
-        for (Film f1 : Grafo.getFilms()) {
+        for (Film f1 : Graph.getFilms()) {
             List<Recommendation> temp = new ArrayList<Recommendation>();
-            for (Film f2 : Grafo.getFilms())
+            for (Film f2 : Graph.getFilms())
                 if (!f1.equals(f2)) {
                     //System.out.println(new java.util.Date() + " sto per fare " + f1.getTitle() + " con " + f2.getTitle());
                     double tmp = Distance.getDistanceNostra(f1, f2);
                     temp.add(new Recommendation(f2, tmp));
-                    //System.out.println(new java.util.Date() + "Recommendation: " + tmp);
+                    //System.out.println(new java.util.Date() + "it.uniba.di.swap.lod_recommender.Recommendation: " + tmp);
                 }
             Collections.sort(temp);
             map.put(f1, temp);
@@ -31,13 +36,13 @@ public class Recommender {
         return Double.MAX_VALUE;
     }
 
-    public static List<Recommendation> getRecommendations(ProfileSimple profile, int limit) {
+    public static List<Recommendation> getRecommendations(SimpleProfile profile, int limit) {
         List<Recommendation> temp = new ArrayList<Recommendation>();
 
-        for (Film film : Grafo.getFilms())
-            if (!profile.getProfiledFilms().contains(film)) {
+        for (Film film : Graph.getFilms())
+            if (!profile.getFilms().contains(film)) {
                 double distance = 0d;
-                for (Film liked : profile.getProfiledFilms()) {
+                for (Film liked : profile.getFilms()) {
                     distance += getDistance(film, liked);
                 }
                 temp.add(new Recommendation(film, distance));
@@ -56,7 +61,7 @@ public class Recommender {
         return toRec;
     }
 
-    public static List<Recommendation> getRecommendations(Profile profile) {
+    public static List<Recommendation> getRecommendations(SimpleProfile profile) {
         return getRecommendations(profile, ALL);
     }
 

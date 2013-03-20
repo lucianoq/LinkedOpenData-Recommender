@@ -1,3 +1,5 @@
+package it.uniba.di.swap.lod_recommender;
+
 public class MovieLensType {
     private int idUser;
     private int idItem;

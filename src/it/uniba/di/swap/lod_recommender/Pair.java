@@ -1,10 +1,12 @@
+package it.uniba.di.swap.lod_recommender;
+
 import java.io.Serializable;
 
-public class Coppia implements Serializable {
+public class Pair implements Serializable {
     private Film a;
     private Film b;
 
-    public Coppia(Film a, Film b) {
+    public Pair(Film a, Film b) {
         this.a = a;
         this.b = b;
     }
@@ -22,10 +24,10 @@ public class Coppia implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Coppia coppia = (Coppia) o;
+        Pair pair = (Pair) o;
 
-        if (a != null ? !a.equals(coppia.a) : coppia.a != null) return false;
-        if (b != null ? !b.equals(coppia.b) : coppia.b != null) return false;
+        if (a != null ? !a.equals(pair.a) : pair.a != null) return false;
+        if (b != null ? !b.equals(pair.b) : pair.b != null) return false;
 
         return true;
     }

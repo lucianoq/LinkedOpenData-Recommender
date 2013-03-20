@@ -1,3 +1,5 @@
+package it.uniba.di.swap.lod_recommender;
+
 public class Recommendation implements Comparable<Recommendation> {
     private Film film;
     private double distance;

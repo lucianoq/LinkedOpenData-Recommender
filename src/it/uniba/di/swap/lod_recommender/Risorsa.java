@@ -1,3 +1,5 @@
+package it.uniba.di.swap.lod_recommender;
+
 import java.io.Serializable;
 
 public class Risorsa implements Serializable {
@@ -47,7 +49,7 @@ public class Risorsa implements Serializable {
 
     @Override
     public String toString() {
-        return "Risorsa{" +
+        return "it.uniba.di.swap.lod_recommender.Risorsa{" +
                 "uri='" + uri + '\'' +
                 ", title='" + title + '\'' +
                 '}';

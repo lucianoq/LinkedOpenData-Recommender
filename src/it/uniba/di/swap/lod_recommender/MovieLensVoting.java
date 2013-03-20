@@ -1,3 +1,5 @@
+package it.uniba.di.swap.lod_recommender;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
