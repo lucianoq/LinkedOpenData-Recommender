@@ -10,9 +10,10 @@ import java.util.Map;
  * Date: 20/03/13
  * Time: 14.41
  */
-public class VotedProfile {
+public abstract class VotedProfile extends Profile {
 
     protected Map<Film, Number> votedFilms;
+    private boolean hasNegativeVote;
 
     public Map<Film, Number> getFilmVotes() {
         return votedFilms;
@@ -29,4 +30,18 @@ public class VotedProfile {
     public Number getVote(Film film) {
         return votedFilms.get(film);
     }
+
+    public abstract double weight(Film film);
+
+    @Override
+    public String toString() {
+        String s = "";
+        for (Film f : votedFilms.keySet()) {
+            s += f.getTitle() + "\t";
+            s += " Vote: " + f.getTitle() + "\n";
+        }
+        return s;
+    }
+
+
 }

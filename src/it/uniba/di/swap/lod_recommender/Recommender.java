@@ -2,6 +2,7 @@ package it.uniba.di.swap.lod_recommender;
 
 import it.uniba.di.swap.lod_recommender.graph.Graph;
 import it.uniba.di.swap.lod_recommender.profile.SimpleProfile;
+import it.uniba.di.swap.lod_recommender.profile.VotedProfile;
 
 import java.util.*;
 
@@ -36,7 +37,32 @@ public class Recommender {
         return Double.MAX_VALUE;
     }
 
-    public static List<Recommendation> getRecommendations(SimpleProfile profile, int limit) {
+    public static List<Recommendation> getRecommendationsVoted(VotedProfile profile, int limit) {
+        List<Recommendation> temp = new ArrayList<Recommendation>();
+
+        for (Film film : Graph.getFilms())
+            if (!profile.getFilmVotes().keySet().contains(film)) {
+                double distance = 0d;
+                for (Film liked : profile.getFilmVotes().keySet()) {
+                    distance += getDistance(film, liked) * profile.weight(liked);
+                }
+                temp.add(new Recommendation(film, distance));
+            }
+
+        Collections.sort(temp);
+
+        if (limit == ALL)
+            return temp;
+
+        List<Recommendation> toRec = new ArrayList<Recommendation>(limit);
+
+        for (int i = 0; i < (limit <= toRec.size() ? limit : toRec.size()); i++)
+            toRec.add(temp.get(i));
+
+        return toRec;
+    }
+
+    public static List<Recommendation> getRecommendationsSimple(SimpleProfile profile, int limit) {
         List<Recommendation> temp = new ArrayList<Recommendation>();
 
         for (Film film : Graph.getFilms())
@@ -61,8 +87,12 @@ public class Recommender {
         return toRec;
     }
 
-    public static List<Recommendation> getRecommendations(SimpleProfile profile) {
-        return getRecommendations(profile, ALL);
+    public static List<Recommendation> getRecommendationsSimple(SimpleProfile profile) {
+        return getRecommendationsSimple(profile, ALL);
+    }
+
+    public static List<Recommendation> getRecommendationsVoted(VotedProfile profile) {
+        return getRecommendationsVoted(profile, ALL);
     }
 
 

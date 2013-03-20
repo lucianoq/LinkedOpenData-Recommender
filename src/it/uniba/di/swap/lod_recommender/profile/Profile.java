@@ -1,9 +1,5 @@
 package it.uniba.di.swap.lod_recommender.profile;
 
-import it.uniba.di.swap.lod_recommender.Film;
-
-import java.util.Collection;
-
 /**
  * Created with IntelliJ IDEA.
  * User: lusio
@@ -11,12 +7,40 @@ import java.util.Collection;
  * Time: 14.41
  */
 public abstract class Profile {
+    private int maxVote = 5;
+    private int minVote = 1;
+    private int granularityVote = 1;
+    private int mediumVote = 3;
 
-    protected Collection<Film> profiledFilms;
+    public int getMaxVote() {
+        return maxVote;
+    }
 
-    public abstract Collection<Film> getFilms();
+    public void setMaxVote(int maxVote) {
+        this.maxVote = maxVote;
+    }
 
-    public abstract void addFilm(Film film);
+    public int getMinVote() {
+        return minVote;
+    }
 
-    public abstract void removeFilm(Film film);
+    public void setMinVote(int minVote) {
+        this.minVote = minVote;
+    }
+
+    public int getGranularityVote() {
+        return granularityVote;
+    }
+
+    public void setGranularityVote(int granularityVote) {
+        this.granularityVote = granularityVote;
+    }
+
+    public int getMediumVote() {
+        return mediumVote;
+    }
+
+    public void setMediumVote(int mediumVote) {
+        this.mediumVote = mediumVote;
+    }
 }

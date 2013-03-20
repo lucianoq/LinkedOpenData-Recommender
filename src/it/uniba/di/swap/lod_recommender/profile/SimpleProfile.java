@@ -12,9 +12,22 @@ import java.util.Collection;
  */
 public class SimpleProfile extends Profile {
 
+    protected Collection<Film> profiledFilms;
 
     public SimpleProfile(Collection<Film> profiled) {
         this.profiledFilms = profiled;
+    }
+
+    public Collection<Film> getFilms() {
+        return profiledFilms;
+    }
+
+    public void addFilm(Film film) {
+        profiledFilms.add(film);
+    }
+
+    public void removeFilm(Film film) {
+        profiledFilms.remove(film);
     }
 
     @Override
@@ -25,20 +38,5 @@ public class SimpleProfile extends Profile {
             s += " Vote: " + f.getTitle() + "\n";
         }
         return s;
-    }
-
-    @Override
-    public Collection<Film> getFilms() {
-        return profiledFilms;
-    }
-
-    @Override
-    public void addFilm(Film film) {
-        profiledFilms.add(film);
-    }
-
-    @Override
-    public void removeFilm(Film film) {
-        profiledFilms.remove(film);
     }
 }
