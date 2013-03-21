@@ -15,12 +15,14 @@ public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
 
         Graph.load();
-        // it.uniba.di.swap.lod_recommender.graph.Graph.updateWeight();
+        //Graph.updateWeight();
         Graph.printDot();
+
 
         FilmGraph.load();
         FilmGraph.printDot();
 
+        System.exit(1);
         Distance.load();
 
         Recommender.init();
