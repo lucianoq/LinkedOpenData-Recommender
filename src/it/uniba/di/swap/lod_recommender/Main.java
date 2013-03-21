@@ -22,8 +22,9 @@ public class Main {
         FilmGraph.load();
         FilmGraph.printDot();
 
-        System.exit(1);
+
         Distance.load();
+        System.exit(1);
 
         Recommender.init();
 
