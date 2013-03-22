@@ -11,7 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class Distance implements Serializable {
     //    public static final int NUM_COPPIE_FILM = 270000;
-    public static final int NUM_COPPIE_FILM = 2500;
+    public static final int NUM_COPPIE_FILM = 12330;
     private static Map<Pair, Double> passantD;
     private static Map<Pair, Double> passantDW;
     private static Map<Pair, Double> passantI;

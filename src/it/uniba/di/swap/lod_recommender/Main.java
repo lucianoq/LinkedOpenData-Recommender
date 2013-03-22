@@ -18,13 +18,11 @@ public class Main {
         //Graph.updateWeight();
         Graph.printDot();
 
-
         FilmGraph.load();
         FilmGraph.printDot();
 
-        System.exit(1);
         Distance.load();
-
+        System.exit(1);
         Recommender.init();
 
 //        it.uniba.di.swap.lod_recommender.MovieLensVoting.init();
