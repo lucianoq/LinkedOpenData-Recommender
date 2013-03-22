@@ -23,6 +23,7 @@ public class Main {
 
         Distance.load();
         System.exit(1);
+
         Recommender.init();
 
 //        it.uniba.di.swap.lod_recommender.MovieLensVoting.init();
