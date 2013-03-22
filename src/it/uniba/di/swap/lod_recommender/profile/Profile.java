@@ -1,11 +1,5 @@
 package it.uniba.di.swap.lod_recommender.profile;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 20/03/13
- * Time: 14.41
- */
 public abstract class Profile {
     private int maxVote = 5;
     private int minVote = 1;

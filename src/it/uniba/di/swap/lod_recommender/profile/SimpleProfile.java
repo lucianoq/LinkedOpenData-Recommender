@@ -4,12 +4,6 @@ import it.uniba.di.swap.lod_recommender.graph.Film;
 
 import java.util.Collection;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 20/03/13
- * Time: 12.40
- */
 public class SimpleProfile extends Profile {
 
     protected Collection<Film> profiledFilms;

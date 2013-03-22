@@ -4,12 +4,6 @@ import it.uniba.di.swap.lod_recommender.graph.Film;
 
 import java.util.Map;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 20/03/13
- * Time: 14.41
- */
 public abstract class VotedProfile extends Profile {
 
     protected Map<Film, Number> votedFilms;
