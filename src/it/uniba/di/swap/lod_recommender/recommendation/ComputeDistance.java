@@ -1,4 +1,4 @@
-package it.uniba.di.swap.lod_recommender;
+package it.uniba.di.swap.lod_recommender.recommendation;
 
 import it.uniba.di.swap.lod_recommender.graph.Film;
 import it.uniba.di.swap.lod_recommender.graph.Graph;

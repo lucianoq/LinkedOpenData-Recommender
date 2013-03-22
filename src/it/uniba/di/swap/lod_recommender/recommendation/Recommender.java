@@ -1,4 +1,4 @@
-package it.uniba.di.swap.lod_recommender;
+package it.uniba.di.swap.lod_recommender.recommendation;
 
 import it.uniba.di.swap.lod_recommender.graph.Film;
 import it.uniba.di.swap.lod_recommender.graph.Graph;
@@ -23,7 +23,7 @@ public class Recommender {
                     //System.out.println(new java.util.Date() + " sto per fare " + f1.getTitle() + " con " + f2.getTitle());
                     double tmp = Distance.getDistanceNostra(f1, f2);
                     temp.add(new Recommendation(f2, tmp));
-                    //System.out.println(new java.util.Date() + "it.uniba.di.swap.lod_recommender.Recommendation: " + tmp);
+                    //System.out.println(new java.util.Date() + "it.uniba.di.swap.lod_recommender.recommendation.Recommendation: " + tmp);
                 }
             Collections.sort(temp);
             map.put(f1, temp);

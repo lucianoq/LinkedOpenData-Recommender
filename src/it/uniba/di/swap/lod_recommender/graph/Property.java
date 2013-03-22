@@ -1,6 +1,4 @@
-package it.uniba.di.swap.lod_recommender;
-
-import it.uniba.di.swap.lod_recommender.graph.GraphResource;
+package it.uniba.di.swap.lod_recommender.graph;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -64,7 +62,7 @@ public class Property extends GraphResource implements Serializable {
 
     @Override
     public String toString() {
-        return "it.uniba.di.swap.lod_recommender.Property{" +
+        return "it.uniba.di.swap.lod_recommender.graph.Property{" +
                 "idProperty=" + idProperty +
                 ", uri='" + this.getUri() + "\'" +
                 '}';

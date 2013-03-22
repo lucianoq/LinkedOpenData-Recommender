@@ -4,14 +4,6 @@
 1203	Top Hat	http://dbpedia.org/resource/Top_Hat
 612	Lost Horizon	http://dbpedia.org/resource/Lost_Horizon_(1937_film)
 639	The Tin Drum	http://dbpedia.org/resource/The_Tin_Drum_(film)
-491	The Adventures of Robin Hood	http://dbpedia.org/resource/The_Adventures_of_Robin_Hood_(film)
-916	Lost in Space	http://dbpedia.org/resource/Lost_in_Space_(film)
-253	The Pillow Book	http://dbpedia.org/resource/The_Pillow_Book_(film)
-1172	The Women	http://dbpedia.org/resource/The_Women_(1939_film)
-4	Get Shorty	http://dbpedia.org/resource/Get_Shorty_(film)
-315	Apt Pupil	http://dbpedia.org/resource/Apt_Pupil_(film)
-145	The Lawnmower Man	http://dbpedia.org/resource/The_Lawnmower_Man_(film)
-732	Dave	http://dbpedia.org/resource/Dave_(film)
 768	Casper	http://dbpedia.org/resource/Casper_(film)
 549	Rob Roy	http://dbpedia.org/resource/Rob_Roy_(film)
 1013	Anaconda	http://dbpedia.org/resource/Anaconda_(film)
@@ -22,16 +14,6 @@
 642	The Grifters	http://dbpedia.org/resource/The_Grifters_(film)
 26	The Brothers McMullen	http://dbpedia.org/resource/The_Brothers_McMullen
 1193	Before the Rain	http://dbpedia.org/resource/Before_the_Rain_(1994_film)
-911	Twilight	http://dbpedia.org/resource/Twilight_(1998_film)
-915	Primary Colors	http://dbpedia.org/resource/Primary_Colors_(film)
-827	Daylight	http://dbpedia.org/resource/Daylight_(film)
-662	Somewhere in Time	http://dbpedia.org/resource/Somewhere_in_Time_(film)
-1248	Blink	http://dbpedia.org/resource/Blink_(film)
-1101	Six Degrees of Separation	http://dbpedia.org/resource/Six_Degrees_of_Separation_(film)
-1487	Even Cowgirls Get the Blues	http://dbpedia.org/resource/Event_Horizon_(film)
-44	Dolores Claiborne	http://dbpedia.org/resource/Dolores_Claiborne_(film)
-541	Mortal Kombat	http://dbpedia.org/resource/Mortal_Kombat_(film)
-1194	Once Were Warriors	http://dbpedia.org/resource/Once_Were_Warriors_(film)
 1090	Sliver	http://dbpedia.org/resource/Sliver_(film)
 742	Ransom	http://dbpedia.org/resource/Ransom_(1996_film)
 704	The House of the Spirits	http://dbpedia.org/resource/The_House_of_the_Spirits_(film)
@@ -45,58 +27,10 @@
 264	Mimic	http://dbpedia.org/resource/Mimic_(film)
 200	The Shining	http://dbpedia.org/resource/The_Shining_(film)
 647	Ran	http://dbpedia.org/resource/Ran_(film)
-339	Mad City	http://dbpedia.org/resource/Mad_City_(film)
-400	The Little Rascals	http://dbpedia.org/resource/The_Little_Rascals_(film)
-528	The Killing Fields	http://dbpedia.org/resource/The_Killing_Fields_(film)
-239	Sneakers	http://dbpedia.org/resource/Sneakers_(film)
-616	Night of the Living Dead	http://dbpedia.org/resource/Night_of_the_Living_Dead_(1990_film)
-672	Candyman	http://dbpedia.org/resource/Candyman_(film)
-607	Rebecca	http://dbpedia.org/resource/Rebecca_(1940_film)
-1413	Street Fighter	http://dbpedia.org/resource/Street_Fighter_(film)
-355	Sphere	http://dbpedia.org/resource/Sphere_(film)
-31	Crimson Tide	http://dbpedia.org/resource/Crimson_Tide_(film)
-502	Bananas	http://dbpedia.org/resource/Bananas_(film)
-39	Strange Days	http://dbpedia.org/resource/Strange_Days_(film)
-882	Washington Square	http://dbpedia.org/resource/Washington_Square_(film)
-358	Spawn	http://dbpedia.org/resource/Spawn_(film)
-55	The Professional	http://dbpedia.org/resource/The_Professional_(film)
-930	Chain Reaction	http://dbpedia.org/resource/Chain_Reaction_(film)
-419	Mary Poppins	http://dbpedia.org/resource/Mary_Poppins_(film)
-1066	Balto	http://dbpedia.org/resource/Balto_(film)
-676	The Crucible	http://dbpedia.org/resource/The_Crucible_(1996_film)
-771	Johnny Mnemonic	http://dbpedia.org/resource/Johnny_Mnemonic_(film)
-1011	2 Days in the Valley	http://dbpedia.org/resource/2_Days_in_the_Valley
-940	Airheads	http://dbpedia.org/resource/Airheads
-1083	Albino Alligator	http://dbpedia.org/resource/Albino_Alligator
-606	All About Eve	http://dbpedia.org/resource/All_About_Eve
-86	The Remains of the Day	http://dbpedia.org/resource/The_Remains_of_the_Day_(film)
-514	Annie Hall	http://dbpedia.org/resource/Annie_Hall
-602	An American in Paris	http://dbpedia.org/resource/An_American_in_Paris_(film)
-966	An Affair to Remember	http://dbpedia.org/resource/An_Affair_to_Remember
-436	An American Werewolf in London	http://dbpedia.org/resource/An_American_Werewolf_in_London
-184	Army of Darkness	http://dbpedia.org/resource/Army_of_Darkness
-316	As Good As It Gets	http://dbpedia.org/resource/As_Good_as_It_Gets
-467	A Bronx Tale	http://dbpedia.org/resource/A_Bronx_Tale
-153	A Fish Called Wanda	http://dbpedia.org/resource/A_Fish_Called_Wanda
-189	A Grand Day Out	http://dbpedia.org/resource/A_Grand_Day_Out
-886	A Life Less Ordinary	http://dbpedia.org/resource/A_Life_Less_Ordinary
-686	A Perfect World	http://dbpedia.org/resource/A_Perfect_World
-553	A Walk in the Clouds	http://dbpedia.org/resource/A_Walk_in_the_Clouds
-857	Paris Was a Woman	http://dbpedia.org/resource/A_Woman_of_Paris
-83	Much Ado About Nothing	http://dbpedia.org/resource/Much_Ado_About_Nothing_(1993_film)
-928	The Craft	http://dbpedia.org/resource/The_Craft_(film)
-1246	Bushwhacked	http://dbpedia.org/resource/Bushwhacked_(film)
-655	Stand by Me	http://dbpedia.org/resource/Stand_by_Me_(film)
-1137	Beautiful Thing	http://dbpedia.org/resource/Beautiful_Thing_(film)
 955	Before Sunrise	http://dbpedia.org/resource/Before_Sunrise
 30	Belle de jour	http://dbpedia.org/resource/Belle_de_Jour_(film)
 388	Beverly Hills Cop III	http://dbpedia.org/resource/Beverly_Hills_Cop_III
 456	Beverly Hills Ninja	http://dbpedia.org/resource/Beverly_Hills_Ninja
-137	Big Night	http://dbpedia.org/resource/Big_Night
-41	Billy Madison	http://dbpedia.org/resource/Billy_Madison
-1268	Bitter Moon	http://dbpedia.org/resource/Bitter_Moon
-1145	Blue Chips	http://dbpedia.org/resource/Blue_Chips
-425	Bob Roberts	http://dbpedia.org/resource/Bob_Roberts
 574	Boxing Helena	http://dbpedia.org/resource/Boxing_Helena
 188	Full Metal Jacket	http://dbpedia.org/resource/Full_Metal_Jacket
 222	Star Trek First Contact	http://dbpedia.org/resource/Star_Trek:_First_Contact

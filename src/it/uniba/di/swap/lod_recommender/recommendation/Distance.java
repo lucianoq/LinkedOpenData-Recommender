@@ -1,4 +1,4 @@
-package it.uniba.di.swap.lod_recommender;
+package it.uniba.di.swap.lod_recommender.recommendation;
 
 import it.uniba.di.swap.lod_recommender.graph.EdgeFilm;
 import it.uniba.di.swap.lod_recommender.graph.Film;
@@ -11,7 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class Distance implements Serializable {
     //    public static final int NUM_COPPIE_FILM = 270000;
-    public static final int NUM_COPPIE_FILM = 12330;
+    public static final int NUM_COPPIE_FILM = 2300;
 
     private static Map<Pair, Double> passantD;
     private static Map<Pair, Double> passantDW;

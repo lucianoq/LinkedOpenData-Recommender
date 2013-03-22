@@ -4,7 +4,6 @@ import com.hp.hpl.jena.query.*;
 import com.hp.hpl.jena.rdf.model.Resource;
 import edu.uci.ics.jung.graph.UndirectedSparseMultigraph;
 import it.uniba.di.swap.lod_recommender.Main;
-import it.uniba.di.swap.lod_recommender.Property;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
@@ -62,6 +61,7 @@ public class Graph implements Serializable{
             System.out.println("[INFO] Graph Vertices : " + graph.getVertices().size());
             System.out.println("[INFO] Graph Edges : " + graph.getEdges().size());
             System.out.println("----------------------------------------------------");
+
         } catch (FileNotFoundException e) {
             graph = new UndirectedSparseMultigraph<GraphResource, Edge>();
             createFromQuery();

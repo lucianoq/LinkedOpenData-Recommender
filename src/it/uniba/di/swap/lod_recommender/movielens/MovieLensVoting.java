@@ -1,4 +1,4 @@
-package it.uniba.di.swap.lod_recommender;
+package it.uniba.di.swap.lod_recommender.movielens;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
