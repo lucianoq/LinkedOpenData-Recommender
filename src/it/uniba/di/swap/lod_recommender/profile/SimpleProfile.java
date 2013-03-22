@@ -28,8 +28,7 @@ public class SimpleProfile extends Profile {
     public String toString() {
         String s = "";
         for (Film f : profiledFilms) {
-            s += f.getTitle() + "\t";
-            s += " Vote: " + f.getTitle() + "\n";
+            s += f.getTitle() + "\n";
         }
         return s;
     }

@@ -16,6 +16,6 @@ public class MustoVotedProfile extends VotedProfile {
     }
 
     public double weight(Film film) {
-        return (this.getMaxVote() + 1 - this.votedFilms.get(film).doubleValue());
+        return (this.getMaxVote() + 1.0 - this.votedFilms.get(film).doubleValue());
     }
 }

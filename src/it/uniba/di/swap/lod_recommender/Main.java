@@ -3,6 +3,8 @@ package it.uniba.di.swap.lod_recommender;
 import it.uniba.di.swap.lod_recommender.graph.Film;
 import it.uniba.di.swap.lod_recommender.graph.FilmGraph;
 import it.uniba.di.swap.lod_recommender.graph.Graph;
+import it.uniba.di.swap.lod_recommender.movielens.MovieLensType;
+import it.uniba.di.swap.lod_recommender.movielens.MovieLensVoting;
 import it.uniba.di.swap.lod_recommender.profile.NostraVotedProfile;
 import it.uniba.di.swap.lod_recommender.profile.SimpleProfile;
 import it.uniba.di.swap.lod_recommender.profile.VotedProfile;
@@ -25,47 +27,46 @@ public class Main {
         FilmGraph.printDot();
 
         Distance.load();
-        System.exit(1);
+
         Recommender.init();
 
-//        it.uniba.di.swap.lod_recommender.movielens.MovieLensVoting.init();
-//        Set<it.uniba.di.swap.lod_recommender.graph.Film> liked = new HashSet<it.uniba.di.swap.lod_recommender.graph.Film>();
-//        ArrayList<Integer> user = it.uniba.di.swap.lod_recommender.movielens.MovieLensVoting.users();
-//        ArrayList<it.uniba.di.swap.lod_recommender.movielens.MovieLensType> films = it.uniba.di.swap.lod_recommender.movielens.MovieLensVoting.userVotes(user.get(0));
-//        for (it.uniba.di.swap.lod_recommender.movielens.MovieLensType m : films) {
-//            //DA' ERRORE PERCHE NON é STATO INSERITO TRA I FILM DA ESTRARRE
-//            System.out.println(m.getIdItem());
-//           liked.add(it.uniba.di.swap.lod_recommender.graph.Film.getFilmByID(m.getIdItem()));
-//        }
+        it.uniba.di.swap.lod_recommender.movielens.MovieLensVoting.init();
+        Set<Film> likedSimple = new HashSet<Film>();
+        Map<Film, Number> likedWeight = new HashMap<Film, Number>();
+        ArrayList<Integer> user = MovieLensVoting.users();
+        ArrayList<MovieLensType> films = MovieLensVoting.userVotes(user.get(0));
+        for (it.uniba.di.swap.lod_recommender.movielens.MovieLensType m : films) {
+            likedSimple.add(Film.getFilmByID(m.getIdItem()));
+            likedWeight.put(Film.getFilmByID(m.getIdItem()), m.getRating());
+        }
+        likedSimple.remove(null);
+        likedWeight.remove(null);
+        SimpleProfile pr = new SimpleProfile(likedSimple);
 
-        Map<Film, Number> liked = new HashMap<Film, Number>();
-        liked.put(Film.getFilmByID(444), 5);
-        liked.put(Film.getFilmByID(447), 1);
-        VotedProfile profile = new NostraVotedProfile(liked);
+        System.out.println("\n\nPROFILE SIMPLE: ");
+        System.out.println(pr.toString());
 
-        System.out.println("\n\nPROFILE: ");
-        System.out.println(profile.toString());
-
-        List<Recommendation> recommendations = Recommender.getRecommendations(profile, 5);
+        List<Recommendation> recommendations = Recommender.getRecommendations(pr, 5);
         System.out.println("|Recommendations| = " + recommendations.size());
-        System.out.println("\n\nRECOMMENDATION: ");
+        System.out.println("\n\nRECOMMENDATION SIMPLE: ");
 
         for (Recommendation r : recommendations)
-            System.out.println("it.uniba.di.swap.lod_recommender.graph.Film: " + r.getFilm().getTitle() + "\t\tit.uniba.di.swap.lod_recommender.recommendation.Distance: " + r.getDistance());
+            System.out.println("Film: " + r.getFilm().getTitle() + "\t\tDistance: " + r.getDistance());
 
-        Set<Film> likedSet = new HashSet<Film>();
-        likedSet.add(Film.getFilmByID(444));
-        likedSet.add(Film.getFilmByID(447));
-        SimpleProfile simpleProfile = new SimpleProfile(likedSet);
+        System.out.println("--------------------------------------------");
+        VotedProfile profile = new NostraVotedProfile(likedWeight);
 
-        System.out.println("\n\nPROFILE: ");
+        System.out.println("\n\nPROFILE WEIGHT: ");
         System.out.println(profile.toString());
 
-        recommendations = Recommender.getRecommendations(simpleProfile, 5);
+
+        recommendations = Recommender.getRecommendations(profile, 5);
         System.out.println("|Recommendations| = " + recommendations.size());
-        System.out.println("\n\nRECOMMENDATION: ");
+        System.out.println("\n\nRECOMMENDATION WEIGHT: ");
 
         for (Recommendation r : recommendations)
-            System.out.println("it.uniba.di.swap.lod_recommender.graph.Film: " + r.getFilm().getTitle() + "\t\tit.uniba.di.swap.lod_recommender.recommendation.Distance: " + r.getDistance());
+            System.out.println("Film: " + r.getFilm().getTitle() + "\t\tDistance: " + r.getDistance());
+
+
     }
 }
