@@ -7,6 +7,7 @@ import it.uniba.di.swap.lod_recommender.movielens.MovieLensType;
 import it.uniba.di.swap.lod_recommender.movielens.MovieLensVoting;
 import it.uniba.di.swap.lod_recommender.profile.NostraVotedProfile;
 import it.uniba.di.swap.lod_recommender.profile.SimpleProfile;
+import it.uniba.di.swap.lod_recommender.profile.SimpleProfileNegative;
 import it.uniba.di.swap.lod_recommender.profile.VotedProfile;
 import it.uniba.di.swap.lod_recommender.recommendation.Distance;
 import it.uniba.di.swap.lod_recommender.recommendation.Recommendation;
@@ -31,16 +32,36 @@ public class Main {
         Recommender.init();
 
         it.uniba.di.swap.lod_recommender.movielens.MovieLensVoting.init();
+
         Set<Film> likedSimple = new HashSet<Film>();
+
+        Set<Film> likedSimpleOnlyPositive = new HashSet<Film>();
+        Set<Film> likedSimpleWithNegative = new HashSet<Film>();
+
         Map<Film, Number> likedWeight = new HashMap<Film, Number>();
+
         ArrayList<Integer> user = MovieLensVoting.users();
         ArrayList<MovieLensType> films = MovieLensVoting.userVotes(user.get(0));
+
         for (it.uniba.di.swap.lod_recommender.movielens.MovieLensType m : films) {
             likedSimple.add(Film.getFilmByID(m.getIdItem()));
+
+            if (m.getRating() > 3)
+                likedSimpleOnlyPositive.add(Film.getFilmByID(m.getIdItem()));
+            else
+                likedSimpleWithNegative.add(Film.getFilmByID(m.getIdItem()));
+
             likedWeight.put(Film.getFilmByID(m.getIdItem()), m.getRating());
         }
+
         likedSimple.remove(null);
+
+        likedSimpleOnlyPositive.remove(null);
+        likedSimpleWithNegative.remove(null);
+
         likedWeight.remove(null);
+
+        System.out.println("--------------------------------------------");
         SimpleProfile pr = new SimpleProfile(likedSimple);
 
         System.out.println("\n\nPROFILE SIMPLE: ");
@@ -54,6 +75,22 @@ public class Main {
             System.out.println("Film: " + r.getFilm().getTitle() + "\t\tDistance: " + r.getDistance());
 
         System.out.println("--------------------------------------------");
+        SimpleProfile spNeg = new SimpleProfileNegative(likedSimpleOnlyPositive,likedSimpleWithNegative);
+
+        System.out.println("\n\nPROFILE SIMPLE NEGATIVE: ");
+        System.out.println(spNeg.toString());
+
+        recommendations = Recommender.getRecommendations(spNeg, 5);
+        System.out.println("|Recommendations| = " + recommendations.size());
+        System.out.println("\n\nRECOMMENDATION SIMPLE NEGATIVE: ");
+
+        for (Recommendation r : recommendations)
+            System.out.println("Film: " + r.getFilm().getTitle() + "\t\tDistance: " + r.getDistance());
+
+
+
+        System.out.println("--------------------------------------------");
+
         VotedProfile profile = new NostraVotedProfile(likedWeight);
 
         System.out.println("\n\nPROFILE WEIGHT: ");
