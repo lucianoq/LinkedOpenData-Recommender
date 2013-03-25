@@ -31,37 +31,27 @@ public class Main {
 
         Recommender.init();
 
-        it.uniba.di.swap.lod_recommender.movielens.MovieLensVoting.init();
-
-        Set<Film> likedSimple = new HashSet<Film>();
-
-        Set<Film> likedSimpleOnlyPositive = new HashSet<Film>();
-        Set<Film> likedSimpleWithNegative = new HashSet<Film>();
-
-        Map<Film, Number> likedWeight = new HashMap<Film, Number>();
+        MovieLensVoting.init();
 
         ArrayList<Integer> user = MovieLensVoting.users();
         ArrayList<MovieLensType> films = MovieLensVoting.userVotes(user.get(0));
 
-        for (it.uniba.di.swap.lod_recommender.movielens.MovieLensType m : films) {
+        simple(films);
+        System.out.println("--------------------------------------------");
+
+        simpleNegative(films);
+        System.out.println("--------------------------------------------");
+
+        weight(films);
+
+    }
+
+    private static void simple(ArrayList<MovieLensType> films) {
+        Set<Film> likedSimple = new HashSet<Film>();
+        for (MovieLensType m : films)
             likedSimple.add(Film.getFilmByID(m.getIdItem()));
-
-            if (m.getRating() > 3)
-                likedSimpleOnlyPositive.add(Film.getFilmByID(m.getIdItem()));
-            else
-                likedSimpleWithNegative.add(Film.getFilmByID(m.getIdItem()));
-
-            likedWeight.put(Film.getFilmByID(m.getIdItem()), m.getRating());
-        }
-
         likedSimple.remove(null);
 
-        likedSimpleOnlyPositive.remove(null);
-        likedSimpleWithNegative.remove(null);
-
-        likedWeight.remove(null);
-
-        System.out.println("--------------------------------------------");
         SimpleProfile pr = new SimpleProfile(likedSimple);
 
         System.out.println("\n\nPROFILE SIMPLE: ");
@@ -73,37 +63,51 @@ public class Main {
 
         for (Recommendation r : recommendations)
             System.out.println("Film: " + r.getFilm().getTitle() + "\t\tDistance: " + r.getDistance());
+    }
 
-        System.out.println("--------------------------------------------");
-        SimpleProfile spNeg = new SimpleProfileNegative(likedSimpleOnlyPositive,likedSimpleWithNegative);
+    private static void simpleNegative(ArrayList<MovieLensType> films) {
+        Set<Film> likedSimpleOnlyPositive = new HashSet<Film>();
+        Set<Film> likedSimpleWithNegative = new HashSet<Film>();
+        for (it.uniba.di.swap.lod_recommender.movielens.MovieLensType m : films)
+            if (m.getRating() > 3)
+                likedSimpleOnlyPositive.add(Film.getFilmByID(m.getIdItem()));
+            else
+                likedSimpleWithNegative.add(Film.getFilmByID(m.getIdItem()));
+
+        likedSimpleOnlyPositive.remove(null);
+        likedSimpleWithNegative.remove(null);
+
+        SimpleProfile spNeg = new SimpleProfileNegative(likedSimpleOnlyPositive, likedSimpleWithNegative);
 
         System.out.println("\n\nPROFILE SIMPLE NEGATIVE: ");
         System.out.println(spNeg.toString());
 
-        recommendations = Recommender.getRecommendations(spNeg, 5);
+        List<Recommendation> recommendations = Recommender.getRecommendations(spNeg, 5);
         System.out.println("|Recommendations| = " + recommendations.size());
         System.out.println("\n\nRECOMMENDATION SIMPLE NEGATIVE: ");
 
         for (Recommendation r : recommendations)
             System.out.println("Film: " + r.getFilm().getTitle() + "\t\tDistance: " + r.getDistance());
 
+    }
 
-
-        System.out.println("--------------------------------------------");
-
+    private static void weight(ArrayList<MovieLensType> films) {
+        Map<Film, Number> likedWeight = new HashMap<Film, Number>();
+        for (it.uniba.di.swap.lod_recommender.movielens.MovieLensType m : films)
+            likedWeight.put(Film.getFilmByID(m.getIdItem()), m.getRating());
+        likedWeight.remove(null);
         VotedProfile profile = new NostraVotedProfile(likedWeight);
 
         System.out.println("\n\nPROFILE WEIGHT: ");
         System.out.println(profile.toString());
 
 
-        recommendations = Recommender.getRecommendations(profile, 5);
+        List<Recommendation> recommendations = Recommender.getRecommendations(profile, 5);
         System.out.println("|Recommendations| = " + recommendations.size());
         System.out.println("\n\nRECOMMENDATION WEIGHT: ");
 
         for (Recommendation r : recommendations)
             System.out.println("Film: " + r.getFilm().getTitle() + "\t\tDistance: " + r.getDistance());
-
 
     }
 }
