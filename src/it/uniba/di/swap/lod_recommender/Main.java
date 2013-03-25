@@ -33,11 +33,11 @@ public class Main {
         ArrayList<Integer> user = MovieLensVoting.users();
         ArrayList<MovieLensType> films = MovieLensVoting.userVotes(user.get(0));
 
-//        simple(films);
-//        System.out.println("--------------------------------------------");
-//
-//        simpleNegative(films);
-//        System.out.println("--------------------------------------------");
+        simple(films);
+        System.out.println("--------------------------------------------");
+
+        simpleNegative(films);
+        System.out.println("--------------------------------------------");
 
         nostraweight(films);
         System.out.println("--------------------------------------------");
