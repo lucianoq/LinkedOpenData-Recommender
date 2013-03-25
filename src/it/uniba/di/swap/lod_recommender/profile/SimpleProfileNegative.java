@@ -36,11 +36,11 @@ public class SimpleProfileNegative extends SimpleProfile {
 
     @Override
     public String toString() {
-        String s = "Film negative: ";
+        String s = "\n\tNEGATIVE: \n";
         for (Film f : profiledFilmsNegative) {
             s += f.getTitle() + "\n";
         }
-        s = "Film positive: ";
+        s += "\n\tPOSITIVE: \n";
         for (Film f : getFilms()) {
             s += f.getTitle() + "\n";
         }

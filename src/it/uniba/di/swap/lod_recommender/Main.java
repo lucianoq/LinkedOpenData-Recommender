@@ -5,10 +5,7 @@ import it.uniba.di.swap.lod_recommender.graph.FilmGraph;
 import it.uniba.di.swap.lod_recommender.graph.Graph;
 import it.uniba.di.swap.lod_recommender.movielens.MovieLensType;
 import it.uniba.di.swap.lod_recommender.movielens.MovieLensVoting;
-import it.uniba.di.swap.lod_recommender.profile.NostraVotedProfile;
-import it.uniba.di.swap.lod_recommender.profile.SimpleProfile;
-import it.uniba.di.swap.lod_recommender.profile.SimpleProfileNegative;
-import it.uniba.di.swap.lod_recommender.profile.VotedProfile;
+import it.uniba.di.swap.lod_recommender.profile.*;
 import it.uniba.di.swap.lod_recommender.recommendation.Distance;
 import it.uniba.di.swap.lod_recommender.recommendation.Recommendation;
 import it.uniba.di.swap.lod_recommender.recommendation.Recommender;
@@ -36,14 +33,16 @@ public class Main {
         ArrayList<Integer> user = MovieLensVoting.users();
         ArrayList<MovieLensType> films = MovieLensVoting.userVotes(user.get(0));
 
-        simple(films);
+//        simple(films);
+//        System.out.println("--------------------------------------------");
+//
+//        simpleNegative(films);
+//        System.out.println("--------------------------------------------");
+
+        nostraweight(films);
         System.out.println("--------------------------------------------");
 
-        simpleNegative(films);
-        System.out.println("--------------------------------------------");
-
-        weight(films);
-
+        mustoweight(films);
     }
 
     private static void simple(ArrayList<MovieLensType> films) {
@@ -91,20 +90,45 @@ public class Main {
 
     }
 
-    private static void weight(ArrayList<MovieLensType> films) {
+    private static void nostraweight(ArrayList<MovieLensType> films) {
         Map<Film, Number> likedWeight = new HashMap<Film, Number>();
+
         for (it.uniba.di.swap.lod_recommender.movielens.MovieLensType m : films)
             likedWeight.put(Film.getFilmByID(m.getIdItem()), m.getRating());
         likedWeight.remove(null);
+
+//        likedWeight.put(Film.getFilmByID(444), 5);
+//        likedWeight.put(Film.getFilmByID(447), 1);
+
         VotedProfile profile = new NostraVotedProfile(likedWeight);
 
-        System.out.println("\n\nPROFILE WEIGHT: ");
+        System.out.println("\n\nPROFILE OWN WEIGHT: ");
         System.out.println(profile.toString());
 
 
         List<Recommendation> recommendations = Recommender.getRecommendations(profile, 5);
         System.out.println("|Recommendations| = " + recommendations.size());
-        System.out.println("\n\nRECOMMENDATION WEIGHT: ");
+        System.out.println("\n\nRECOMMENDATION OWN WEIGHT: ");
+
+        for (Recommendation r : recommendations)
+            System.out.println("Film: " + r.getFilm().getTitle() + "\t\tDistance: " + r.getDistance());
+
+    }
+
+    private static void mustoweight(ArrayList<MovieLensType> films) {
+        Map<Film, Number> likedWeight = new HashMap<Film, Number>();
+        for (it.uniba.di.swap.lod_recommender.movielens.MovieLensType m : films)
+            likedWeight.put(Film.getFilmByID(m.getIdItem()), m.getRating());
+        likedWeight.remove(null);
+        VotedProfile profile = new MustoVotedProfile(likedWeight);
+
+        System.out.println("\n\nPROFILE MUSTO WEIGHT: ");
+        System.out.println(profile.toString());
+
+
+        List<Recommendation> recommendations = Recommender.getRecommendations(profile, 5);
+        System.out.println("|Recommendations| = " + recommendations.size());
+        System.out.println("\n\nRECOMMENDATION MUSTO WEIGHT: ");
 
         for (Recommendation r : recommendations)
             System.out.println("Film: " + r.getFilm().getTitle() + "\t\tDistance: " + r.getDistance());
