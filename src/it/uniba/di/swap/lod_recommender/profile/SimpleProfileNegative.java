@@ -16,7 +16,7 @@ public class SimpleProfileNegative extends SimpleProfile {
     @Override
     public Collection<Film> getFilms() {
         Collection<Film> tmp = profiledFilms;
-        for (Film f : profiledFilmsNegative)
+        for (Film f : getProfiledFilmsNegative())
             if (tmp.contains(f))
                 tmp.remove(f);
         return tmp;
