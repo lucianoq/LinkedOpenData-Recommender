@@ -8,7 +8,6 @@ import java.util.Map;
 public abstract class VotedProfile extends Profile {
 
     protected Map<Film, Number> votedFilms;
-    private boolean hasNegativeVote;
 
     public Map<Film, Number> getFilmVotes() {
         return votedFilms;
