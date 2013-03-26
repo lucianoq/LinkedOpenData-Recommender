@@ -333,7 +333,7 @@ public class Distance implements Serializable {
 
         double denom = getDistanceNostraDW(a, b) + getDistanceNostraDW(b, a);
         denom += getDistanceNostraIOW(a, b) + getDistanceNostraIIW(a, b);
-        double d = 1.0 / (1 + denom);
+        double d = 1.0 / (1.0 + denom);
         return d;
     }
 

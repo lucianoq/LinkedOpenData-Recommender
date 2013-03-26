@@ -26,12 +26,23 @@ public class Main {
 
         Distance.load();
 
-        Recommender.init();
+//        type :      Nostra
+//                    NostraDW
+//                    NostraIIW
+//                    NostraIOW
+//                    PassantCW
+//                    PassantDW
+//                    PassantIW
+//                    PassantD
+//                    PassantI
+//                    PassantC
+
+        Recommender.init("Nostra");
 
         MovieLensVoting.init();
 
         ArrayList<Integer> user = MovieLensVoting.users();
-        ArrayList<MovieLensType> films = MovieLensVoting.userVotes(user.get(2));
+        ArrayList<MovieLensType> films = MovieLensVoting.userVotes(user.get(0));
 
         simple(films);
         System.out.println("--------------------------------------------");
@@ -53,11 +64,11 @@ public class Main {
 
         SimpleProfile pr = new SimpleProfile(likedSimple);
 
-        System.out.println("\n\nPROFILE SIMPLE: ");
-        System.out.println(pr.toString());
+//        System.out.println("\n\nPROFILE SIMPLE: ");
+//        System.out.println(pr.toString());
 
         List<Recommendation> recommendations = Recommender.getRecommendations(pr, 5);
-        System.out.println("|Recommendations| = " + recommendations.size());
+        //System.out.println("|Recommendations| = " + recommendations.size());
         System.out.println("\n\nRECOMMENDATION SIMPLE: ");
 
         for (Recommendation r : recommendations)
@@ -78,11 +89,11 @@ public class Main {
 
         SimpleProfile spNeg = new SimpleProfileNegative(likedSimpleOnlyPositive, likedSimpleWithNegative);
 
-        System.out.println("\n\nPROFILE SIMPLE NEGATIVE: ");
-        System.out.println(spNeg.toString());
+//        System.out.println("\n\nPROFILE SIMPLE NEGATIVE: ");
+//        System.out.println(spNeg.toString());
 
         List<Recommendation> recommendations = Recommender.getRecommendations(spNeg, 5);
-        System.out.println("|Recommendations| = " + recommendations.size());
+        //System.out.println("|Recommendations| = " + recommendations.size());
         System.out.println("\n\nRECOMMENDATION SIMPLE NEGATIVE: ");
 
         for (Recommendation r : recommendations)
@@ -102,12 +113,12 @@ public class Main {
 
         VotedProfile profile = new NostraVotedProfile(likedWeight);
 
-        System.out.println("\n\nPROFILE OWN WEIGHT: ");
-        System.out.println(profile.toString());
+//        System.out.println("\n\nPROFILE OWN WEIGHT: ");
+//        System.out.println(profile.toString());
 
 
         List<Recommendation> recommendations = Recommender.getRecommendations(profile, 5);
-        System.out.println("|Recommendations| = " + recommendations.size());
+        //System.out.println("|Recommendations| = " + recommendations.size());
         System.out.println("\n\nRECOMMENDATION OWN WEIGHT: ");
 
         for (Recommendation r : recommendations)
@@ -122,12 +133,12 @@ public class Main {
         likedWeight.remove(null);
         VotedProfile profile = new MustoVotedProfile(likedWeight);
 
-        System.out.println("\n\nPROFILE MUSTO WEIGHT: ");
-        System.out.println(profile.toString());
+//        System.out.println("\n\nPROFILE MUSTO WEIGHT: ");
+//        System.out.println(profile.toString());
 
 
         List<Recommendation> recommendations = Recommender.getRecommendations(profile, 5);
-        System.out.println("|Recommendations| = " + recommendations.size());
+        //System.out.println("|Recommendations| = " + recommendations.size());
         System.out.println("\n\nRECOMMENDATION MUSTO WEIGHT: ");
 
         for (Recommendation r : recommendations)
