@@ -16,6 +16,11 @@ public class SimpleProfile extends Profile {
         return profiledFilms;
     }
 
+    public boolean isIn(Film f) {
+        return profiledFilms.contains(f);
+    }
+
+
     public void addFilm(Film film) {
         profiledFilms.add(film);
     }

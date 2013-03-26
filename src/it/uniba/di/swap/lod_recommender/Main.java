@@ -31,7 +31,7 @@ public class Main {
         MovieLensVoting.init();
 
         ArrayList<Integer> user = MovieLensVoting.users();
-        ArrayList<MovieLensType> films = MovieLensVoting.userVotes(user.get(0));
+        ArrayList<MovieLensType> films = MovieLensVoting.userVotes(user.get(2));
 
         simple(films);
         System.out.println("--------------------------------------------");
@@ -67,7 +67,7 @@ public class Main {
     private static void simpleNegative(ArrayList<MovieLensType> films) {
         Set<Film> likedSimpleOnlyPositive = new HashSet<Film>();
         Set<Film> likedSimpleWithNegative = new HashSet<Film>();
-        for (it.uniba.di.swap.lod_recommender.movielens.MovieLensType m : films)
+        for (MovieLensType m : films)
             if (m.getRating() > 3)
                 likedSimpleOnlyPositive.add(Film.getFilmByID(m.getIdItem()));
             else

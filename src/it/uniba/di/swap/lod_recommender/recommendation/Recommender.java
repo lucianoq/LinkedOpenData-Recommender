@@ -68,7 +68,7 @@ public class Recommender {
         List<Recommendation> temp = new ArrayList<Recommendation>();
 
         for (Film film : Graph.getFilms())
-            if (!profile.getFilms().contains(film)) {
+            if (!profile.isIn(film)) {
                 double distance = 0d;
                 for (Film liked : profile.getFilms()) {
                     distance += getDistance(film, liked);

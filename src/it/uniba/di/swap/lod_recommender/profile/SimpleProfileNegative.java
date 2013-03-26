@@ -3,41 +3,44 @@ package it.uniba.di.swap.lod_recommender.profile;
 import it.uniba.di.swap.lod_recommender.graph.Film;
 
 import java.util.Collection;
+import java.util.Collections;
 
 public class SimpleProfileNegative extends SimpleProfile {
 
-    protected Collection<Film> profiledFilmsNegative = null;
+    protected Collection<Film> profiledNegative = null;
 
-    public SimpleProfileNegative(Collection<Film> profiled, Collection<Film> profiledFilmsNegative) {
+    public SimpleProfileNegative(Collection<Film> profiled, Collection<Film> profiledNegative) {
         super(profiled);
-        this.profiledFilmsNegative = profiledFilmsNegative;
+        this.profiledNegative = profiledNegative;
+        if ( !Collections.disjoint(profiled, profiledNegative) )
+            try {
+                throw new Exception("Film duplicati");
+            } catch (Exception e) {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            }
     }
 
     @Override
     public Collection<Film> getFilms() {
-        Collection<Film> tmp = profiledFilms;
-        for (Film f : getProfiledFilmsNegative())
-            if (tmp.contains(f))
-                tmp.remove(f);
-        return tmp;
+        return profiledFilms;
     }
 
-    public Collection<Film> getProfiledFilmsNegative() {
-        return profiledFilmsNegative;
+    public Collection<Film> getFilmsNegative() {
+        return profiledNegative;
     }
 
     public void addFilmNegative(Film film) {
-        profiledFilmsNegative.add(film);
+        profiledNegative.add(film);
     }
 
     public void removeFilmNegative(Film film) {
-        profiledFilmsNegative.remove(film);
+        profiledNegative.remove(film);
     }
 
     @Override
     public String toString() {
         String s = "\n\tNEGATIVE: \n";
-        for (Film f : profiledFilmsNegative) {
+        for (Film f : profiledNegative) {
             s += f.getTitle() + "\n";
         }
         s += "\n\tPOSITIVE: \n";
@@ -45,5 +48,12 @@ public class SimpleProfileNegative extends SimpleProfile {
             s += f.getTitle() + "\n";
         }
         return s;
+    }
+
+
+    @Override
+    public boolean isIn(Film f) {
+        boolean b = profiledFilms.contains(f) || profiledNegative.contains(f);
+        return b;
     }
 }
