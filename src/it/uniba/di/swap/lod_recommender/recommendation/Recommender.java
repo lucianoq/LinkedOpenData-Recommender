@@ -3,7 +3,6 @@ package it.uniba.di.swap.lod_recommender.recommendation;
 import it.uniba.di.swap.lod_recommender.graph.Film;
 import it.uniba.di.swap.lod_recommender.graph.Graph;
 import it.uniba.di.swap.lod_recommender.profile.SimpleProfile;
-import it.uniba.di.swap.lod_recommender.profile.SimpleProfileNegative;
 import it.uniba.di.swap.lod_recommender.profile.VotedProfile;
 
 import java.util.*;
@@ -13,7 +12,17 @@ public class Recommender {
     public static final int ALL = 0;
     private static Map<Film, List<Recommendation>> map;
 
-    public static void init(String type) {
+    //        public static final int NOSTRA = 0;
+//        public static final int NOSTRADW = 1;
+//        public static final int NOSTRAIIW = 2;
+//        public static final int NOSTRAIOW = 3;
+//        public static final int PASSANTD = 4;
+//        public static final int PASSANTDW = 5;
+//        public static final int PASSANTI = 6;
+//        public static final int PASSANTIW = 7;
+//        public static final int PASSANTC = 8;
+//        public static final int PASSANTCW = 9;
+    public static void init(int type) {
         System.out.println("[INFO] Inizio creazione tabelle di raccomandazione");
         map = new HashMap<Film, List<Recommendation>>();
 
@@ -24,26 +33,29 @@ public class Recommender {
                     //System.out.println(new java.util.Date() + " sto per fare " + f1.getTitle() + " con " + f2.getTitle());
                     double tmp = 0.0;
 
-                    if (type.equals("Nostra"))
-                        tmp = Distance.getDistanceNostra(f1, f2);
-                    else if (type.equals("NostraDW"))
-                        tmp = Distance.getDistanceNostraDW(f1, f2);
-                    else if (type.equals("NostraIIW"))
-                        tmp = Distance.getDistanceNostraIIW(f1, f2);
-                    else if (type.equals("NostraIOW"))
-                        tmp = Distance.getDistanceNostraIOW(f1, f2);
-                    else if (type.equals("PassantCW"))
-                        tmp = Distance.getDistancePassantCW(f1, f2);
-                    else if (type.equals("PassantDW"))
-                        tmp = Distance.getDistancePassantDW(f1, f2);
-                    else if (type.equals("PassantIW"))
-                        tmp = Distance.getDistancePassantIW(f1, f2);
-                    else if (type.equals("PassantD"))
-                        tmp = Distance.getDistancePassantD(f1, f2);
-                    else if (type.equals("PassantI"))
-                        tmp = Distance.getDistancePassantI(f1, f2);
-                    else if (type.equals("PassantC"))
-                        tmp = Distance.getDistancePassantC(f1, f2);
+
+                    switch (type) {
+                        case Distance.NOSTRA:
+                            tmp = Distance.getDistanceNostra(f1, f2);
+                        case Distance.NOSTRADW:
+                            tmp = Distance.getDistanceNostraDW(f1, f2);
+                        case Distance.NOSTRAIIW:
+                            tmp = Distance.getDistanceNostraIIW(f1, f2);
+                        case Distance.NOSTRAIOW:
+                            tmp = Distance.getDistanceNostraIOW(f1, f2);
+                        case Distance.PASSANTCW:
+                            tmp = Distance.getDistancePassantCW(f1, f2);
+                        case Distance.PASSANTDW:
+                            tmp = Distance.getDistancePassantDW(f1, f2);
+                        case Distance.PASSANTIW:
+                            tmp = Distance.getDistancePassantIW(f1, f2);
+                        case Distance.PASSANTD:
+                            tmp = Distance.getDistancePassantD(f1, f2);
+                        case Distance.PASSANTI:
+                            tmp = Distance.getDistancePassantI(f1, f2);
+                        case Distance.PASSANTC:
+                            tmp = Distance.getDistancePassantC(f1, f2);
+                    }
 
                     temp.add(new Recommendation(f2, tmp));
                     //System.out.println(new java.util.Date() + "it.uniba.di.swap.lod_recommender.recommendation.Recommendation: " + tmp);

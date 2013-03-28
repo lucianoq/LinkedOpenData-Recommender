@@ -26,18 +26,7 @@ public class Main {
 
         Distance.load();
 
-//        type :      Nostra
-//                    NostraDW
-//                    NostraIIW
-//                    NostraIOW
-//                    PassantCW
-//                    PassantDW
-//                    PassantIW
-//                    PassantD
-//                    PassantI
-//                    PassantC
-
-        Recommender.init("Nostra");
+        Recommender.init(Distance.NOSTRA);
 
         MovieLensVoting.init();
 
