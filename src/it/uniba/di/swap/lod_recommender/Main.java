@@ -19,13 +19,13 @@ public class Main {
 
         Graph.load();
 //        Graph.updateWeight();
-//        Graph.printDot();
-//
-//        FilmGraph.load();
-//        FilmGraph.printDot();
+        Graph.printDot();
+
+        FilmGraph.load();
+        FilmGraph.printDot();
 //
 //        Distance.load();
-//
+////
 //        Recommender.init(Distance.NOSTRA);
 //
 //        MovieLensVoting.init();
