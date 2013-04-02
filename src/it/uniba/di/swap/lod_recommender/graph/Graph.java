@@ -61,7 +61,7 @@ public class Graph implements Serializable{
             System.out.println("[INFO] Graph Vertices : " + graph.getVertices().size());
             System.out.println("[INFO] Graph Edges : " + graph.getEdges().size());
             System.out.println("----------------------------------------------------");
-
+            createFromQuery();
         } catch (FileNotFoundException e) {
             graph = new UndirectedSparseMultigraph<GraphResource, Edge>();
             createFromQuery();

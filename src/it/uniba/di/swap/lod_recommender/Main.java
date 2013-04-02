@@ -18,31 +18,31 @@ public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
 
         Graph.load();
-        //Graph.updateWeight();
-        Graph.printDot();
-
-        FilmGraph.load();
-        FilmGraph.printDot();
-
-        Distance.load();
-
-        Recommender.init(Distance.NOSTRA);
-
-        MovieLensVoting.init();
-
-        ArrayList<Integer> user = MovieLensVoting.users();
-        ArrayList<MovieLensType> films = MovieLensVoting.userVotes(user.get(0));
-
-        simple(films);
-        System.out.println("--------------------------------------------");
-
-        simpleNegative(films);
-        System.out.println("--------------------------------------------");
-
-        nostraweight(films);
-        System.out.println("--------------------------------------------");
-
-        mustoweight(films);
+//        Graph.updateWeight();
+//        Graph.printDot();
+//
+//        FilmGraph.load();
+//        FilmGraph.printDot();
+//
+//        Distance.load();
+//
+//        Recommender.init(Distance.NOSTRA);
+//
+//        MovieLensVoting.init();
+//
+//        ArrayList<Integer> user = MovieLensVoting.users();
+//        ArrayList<MovieLensType> films = MovieLensVoting.userVotes(user.get(0));
+//
+//        simple(films);
+//        System.out.println("--------------------------------------------");
+//
+//        simpleNegative(films);
+//        System.out.println("--------------------------------------------");
+//
+//        nostraweight(films);
+//        System.out.println("--------------------------------------------");
+//
+//        mustoweight(films);
     }
 
     private static void simple(ArrayList<MovieLensType> films) {
