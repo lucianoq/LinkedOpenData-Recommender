@@ -22,7 +22,8 @@ public class Distance implements Serializable {
     public static final int PASSANTIW = 7;
     public static final int PASSANTC = 8;
     public static final int PASSANTCW = 9;
-
+    public static final int CIONAB = 10;
+    public static final int CIINAB = 11;
     private static Map<Pair, Double> passantD;
     private static Map<Pair, Double> passantDW;
     private static Map<Pair, Double> passantI;
@@ -36,27 +37,87 @@ public class Distance implements Serializable {
     private static Map<Pair, Integer> cio_n_A_B;
     private static Map<Pair, Integer> cii_n_A_B;
 
-    public static void fill() {
-        System.out.println("[INFO] [" + new Date() + "] Inizio il calcolo di tutte le distanze.");
-//        passantD = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
-//        passantDW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
-//        passantI = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
-//        passantC = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
-//        passantIW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
-//        passantCW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
-//        nostra = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
-//        cio_n_A_B = new ConcurrentHashMap<Pair, Integer>(NUM_COPPIE_FILM);
-//        cii_n_A_B = new ConcurrentHashMap<Pair, Integer>(NUM_COPPIE_FILM);
-//        nostraDW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
-//        nostraIOW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
-//        nostraIIW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+    public static void fillOne(Integer dis) {
+        Map<Integer, Boolean> toDo = new HashMap<Integer, Boolean>();
+        for (int j = 0; j < 12; j++)
+            toDo.put(j, false);
+        toDo.put(dis, true);
+
+        if (toDo.get(Distance.CIONAB))
+            cio_n_A_B = new ConcurrentHashMap<Pair, Integer>(NUM_COPPIE_FILM);
+        if (toDo.get(Distance.PASSANTD))
+            passantD = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        if (toDo.get(Distance.PASSANTDW))
+            passantDW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        if (toDo.get(Distance.PASSANTI))
+            passantI = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        if (toDo.get(Distance.PASSANTC))
+            passantC = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        if (toDo.get(Distance.PASSANTIW))
+            passantIW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        if (toDo.get(Distance.PASSANTCW))
+            passantCW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        if (toDo.get(Distance.NOSTRA))
+            nostra = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        if (toDo.get(Distance.CIINAB))
+            cii_n_A_B = new ConcurrentHashMap<Pair, Integer>(NUM_COPPIE_FILM);
+        if (toDo.get(Distance.NOSTRADW))
+            nostraDW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        if (toDo.get(Distance.NOSTRAIOW))
+            nostraIOW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        if (toDo.get(Distance.NOSTRAIIW))
+            nostraIIW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
 
 
         ArrayList<Film> films = Graph.getFilms();
         ArrayList<ComputeDistance> threads = new ArrayList<ComputeDistance>();
 
         for (int i = 0; i < 8; i++) {
-            threads.add(new ComputeDistance());
+            threads.add(new ComputeDistance(toDo));
+        }
+
+        for (int i = 0; i < films.size(); i++) {
+            threads.get(i % 8).getSubset().add(films.get(i));
+        }
+
+        for (int i = 0; i < 8; i++) {
+            threads.get(i).start();
+        }
+
+        for (int i = 0; i < 8; i++) {
+            try {
+                threads.get(i).join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("[INFO] Thread " + i + " finito.");
+        }
+    }
+
+    public static void fillAll() {
+        System.out.println("[INFO] [" + new Date() + "] Inizio il calcolo di tutte le distanze.");
+        passantD = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        passantDW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        passantI = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        passantC = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        passantIW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        passantCW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        nostra = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        cio_n_A_B = new ConcurrentHashMap<Pair, Integer>(NUM_COPPIE_FILM);
+        cii_n_A_B = new ConcurrentHashMap<Pair, Integer>(NUM_COPPIE_FILM);
+        nostraDW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        nostraIOW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        nostraIIW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+
+        ArrayList<Film> films = Graph.getFilms();
+        ArrayList<ComputeDistance> threads = new ArrayList<ComputeDistance>();
+        Map<Integer, Boolean> allTrue = new HashMap<Integer, Boolean>();
+        for (int i = 0; i < 12; i++)
+            allTrue.put(i, true);
+
+
+        for (int i = 0; i < 8; i++) {
+            threads.add(new ComputeDistance(allTrue));
         }
 
         for (int i = 0; i < films.size(); i++) {
@@ -79,87 +140,133 @@ public class Distance implements Serializable {
         System.out.println("[INFO] [" + new Date() + "] Fine del calcolo di tutte le distanze.");
     }
 
-    public static void load() throws IOException, ClassNotFoundException {
+    public static void load() {
+        FileInputStream fis;
+        ObjectInputStream ois;
         try {
-            FileInputStream fis = new FileInputStream("./serialized/cionab.bin");
-            ObjectInputStream ois = new ObjectInputStream(fis);
+            fis = new FileInputStream("./serialized/cionab.bin");
+            ois = new ObjectInputStream(fis);
             cio_n_A_B = (ConcurrentHashMap<Pair, Integer>) ois.readObject();
             ois.close();
             fis.close();
-//
-//
-//            fis = new FileInputStream("./serialized/ciinab.bin");
-//            ois = new ObjectInputStream(fis);
-//            cii_n_A_B = (ConcurrentHashMap<Pair, Integer>) ois.readObject();
-//            ois.close();
-//            fis.close();
-//
-//            fis = new FileInputStream("./serialized/nostraDW.bin");
-//            ois = new ObjectInputStream(fis);
-//            nostraDW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
-//            ois.close();
-//            fis.close();
-//
-//            fis = new FileInputStream("./serialized/nostraIOW.bin");
-//            ois = new ObjectInputStream(fis);
-//            nostraIOW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
-//            ois.close();
-//            fis.close();
-//
-//            fis = new FileInputStream("./serialized/nostraIIW.bin");
-//            ois = new ObjectInputStream(fis);
-//            nostraIIW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
-//            ois.close();
-//            fis.close();
-//
-//            fis = new FileInputStream("./serialized/passantD.bin");
-//            ois = new ObjectInputStream(fis);
-//            passantD = (ConcurrentHashMap<Pair, Double>) ois.readObject();
-//            ois.close();
-//            fis.close();
-//
-//            fis = new FileInputStream("./serialized/passantDW.bin");
-//            ois = new ObjectInputStream(fis);
-//            passantDW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
-//            ois.close();
-//            fis.close();
-//
-//            fis = new FileInputStream("./serialized/passantI.bin");
-//            ois = new ObjectInputStream(fis);
-//            passantI = (ConcurrentHashMap<Pair, Double>) ois.readObject();
-//            ois.close();
-//            fis.close();
-//
-//            fis = new FileInputStream("./serialized/passantIW.bin");
-//            ois = new ObjectInputStream(fis);
-//            passantIW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
-//            ois.close();
-//            fis.close();
-//
-//            fis = new FileInputStream("./serialized/passantC.bin");
-//            ois = new ObjectInputStream(fis);
-//            passantC = (ConcurrentHashMap<Pair, Double>) ois.readObject();
-//            ois.close();
-//            fis.close();
-//
-//            fis = new FileInputStream("./serialized/passantCW.bin");
-//            ois = new ObjectInputStream(fis);
-//            passantCW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
-//            ois.close();
-//            fis.close();
+        } catch (Exception e) {
+            fillOne(Distance.CIONAB);
+        }
 
-//            fis = new FileInputStream("./serialized/nostra.bin");
-//            ois = new ObjectInputStream(fis);
-//            nostra = (ConcurrentHashMap<Pair, Double>) ois.readObject();
-//            ois.close();
-//            fis.close();
+        try {
+            fis = new FileInputStream("./serialized/ciinab.bin");
+            ois = new ObjectInputStream(fis);
+            cii_n_A_B = (ConcurrentHashMap<Pair, Integer>) ois.readObject();
+            ois.close();
+            fis.close();
+        } catch (Exception e) {
+            fillOne(Distance.CIINAB);
+        }
 
-        } catch (FileNotFoundException e) {
-            fill();
+        try {
+            fis = new FileInputStream("./serialized/nostraDW.bin");
+            ois = new ObjectInputStream(fis);
+            nostraDW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+        } catch (Exception e) {
+            fillOne(Distance.NOSTRADW);
+        }
+
+        try {
+            fis = new FileInputStream("./serialized/nostraIOW.bin");
+            ois = new ObjectInputStream(fis);
+            nostraIOW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+        } catch (Exception e) {
+            fillOne(Distance.NOSTRAIOW);
+        }
+
+        try {
+            fis = new FileInputStream("./serialized/nostraIIW.bin");
+            ois = new ObjectInputStream(fis);
+            nostraIIW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+        } catch (Exception e) {
+            fillOne(Distance.NOSTRAIIW);
+        }
+
+        try {
+            fis = new FileInputStream("./serialized/passantD.bin");
+            ois = new ObjectInputStream(fis);
+            passantD = (ConcurrentHashMap<Pair, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+        } catch (Exception e) {
+            fillOne(Distance.PASSANTD);
+        }
+
+        try {
+            fis = new FileInputStream("./serialized/passantDW.bin");
+            ois = new ObjectInputStream(fis);
+            passantDW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+        } catch (Exception e) {
+            fillOne(Distance.PASSANTDW);
+        }
+
+        try {
+            fis = new FileInputStream("./serialized/passantI.bin");
+            ois = new ObjectInputStream(fis);
+            passantI = (ConcurrentHashMap<Pair, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+        } catch (Exception e) {
+            fillOne(Distance.PASSANTI);
+        }
+
+        try {
+            fis = new FileInputStream("./serialized/passantIW.bin");
+            ois = new ObjectInputStream(fis);
+            passantIW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+        } catch (Exception e) {
+            fillOne(Distance.PASSANTIW);
+        }
+
+        try {
+            fis = new FileInputStream("./serialized/passantC.bin");
+            ois = new ObjectInputStream(fis);
+            passantC = (ConcurrentHashMap<Pair, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+        } catch (Exception e) {
+            fillOne(Distance.PASSANTC);
+        }
+
+        try {
+            fis = new FileInputStream("./serialized/passantCW.bin");
+            ois = new ObjectInputStream(fis);
+            passantCW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+        } catch (Exception e) {
+            fillOne(Distance.PASSANTCW);
+        }
+
+        try {
+            fis = new FileInputStream("./serialized/nostra.bin");
+            ois = new ObjectInputStream(fis);
+            nostra = (ConcurrentHashMap<Pair, Double>) ois.readObject();
+            ois.close();
+            fis.close();
+        } catch (Exception e) {
+            fillOne(Distance.NOSTRA);
+        }
+
+        try {
             save();
-        } catch (InvalidClassException e) {
-            fill();
-            save();
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
     }
 
