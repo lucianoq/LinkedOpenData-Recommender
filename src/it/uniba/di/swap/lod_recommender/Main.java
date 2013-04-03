@@ -24,7 +24,7 @@ public class Main {
         FilmGraph.load();
         FilmGraph.printDot();
 //
-//        Distance.load();
+        Distance.load();
 ////
 //        Recommender.init(Distance.NOSTRA);
 //
