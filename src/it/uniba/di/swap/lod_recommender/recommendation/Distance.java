@@ -86,73 +86,73 @@ public class Distance implements Serializable {
             cio_n_A_B = (ConcurrentHashMap<Pair, Integer>) ois.readObject();
             ois.close();
             fis.close();
+//
+//
+//            fis = new FileInputStream("./serialized/ciinab.bin");
+//            ois = new ObjectInputStream(fis);
+//            cii_n_A_B = (ConcurrentHashMap<Pair, Integer>) ois.readObject();
+//            ois.close();
+//            fis.close();
+//
+//            fis = new FileInputStream("./serialized/nostraDW.bin");
+//            ois = new ObjectInputStream(fis);
+//            nostraDW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
+//            ois.close();
+//            fis.close();
+//
+//            fis = new FileInputStream("./serialized/nostraIOW.bin");
+//            ois = new ObjectInputStream(fis);
+//            nostraIOW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
+//            ois.close();
+//            fis.close();
+//
+//            fis = new FileInputStream("./serialized/nostraIIW.bin");
+//            ois = new ObjectInputStream(fis);
+//            nostraIIW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
+//            ois.close();
+//            fis.close();
+//
+//            fis = new FileInputStream("./serialized/passantD.bin");
+//            ois = new ObjectInputStream(fis);
+//            passantD = (ConcurrentHashMap<Pair, Double>) ois.readObject();
+//            ois.close();
+//            fis.close();
+//
+//            fis = new FileInputStream("./serialized/passantDW.bin");
+//            ois = new ObjectInputStream(fis);
+//            passantDW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
+//            ois.close();
+//            fis.close();
+//
+//            fis = new FileInputStream("./serialized/passantI.bin");
+//            ois = new ObjectInputStream(fis);
+//            passantI = (ConcurrentHashMap<Pair, Double>) ois.readObject();
+//            ois.close();
+//            fis.close();
+//
+//            fis = new FileInputStream("./serialized/passantIW.bin");
+//            ois = new ObjectInputStream(fis);
+//            passantIW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
+//            ois.close();
+//            fis.close();
+//
+//            fis = new FileInputStream("./serialized/passantC.bin");
+//            ois = new ObjectInputStream(fis);
+//            passantC = (ConcurrentHashMap<Pair, Double>) ois.readObject();
+//            ois.close();
+//            fis.close();
+//
+//            fis = new FileInputStream("./serialized/passantCW.bin");
+//            ois = new ObjectInputStream(fis);
+//            passantCW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
+//            ois.close();
+//            fis.close();
 
-
-            fis = new FileInputStream("./serialized/ciinab.bin");
-            ois = new ObjectInputStream(fis);
-            cii_n_A_B = (ConcurrentHashMap<Pair, Integer>) ois.readObject();
-            ois.close();
-            fis.close();
-
-            fis = new FileInputStream("./serialized/nostraDW.bin");
-            ois = new ObjectInputStream(fis);
-            nostraDW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
-            ois.close();
-            fis.close();
-
-            fis = new FileInputStream("./serialized/nostraIOW.bin");
-            ois = new ObjectInputStream(fis);
-            nostraIOW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
-            ois.close();
-            fis.close();
-
-            fis = new FileInputStream("./serialized/nostraIIW.bin");
-            ois = new ObjectInputStream(fis);
-            nostraIIW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
-            ois.close();
-            fis.close();
-
-            fis = new FileInputStream("./serialized/passantD.bin");
-            ois = new ObjectInputStream(fis);
-            passantD = (ConcurrentHashMap<Pair, Double>) ois.readObject();
-            ois.close();
-            fis.close();
-
-            fis = new FileInputStream("./serialized/passantDW.bin");
-            ois = new ObjectInputStream(fis);
-            passantDW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
-            ois.close();
-            fis.close();
-
-            fis = new FileInputStream("./serialized/passantI.bin");
-            ois = new ObjectInputStream(fis);
-            passantI = (ConcurrentHashMap<Pair, Double>) ois.readObject();
-            ois.close();
-            fis.close();
-
-            fis = new FileInputStream("./serialized/passantIW.bin");
-            ois = new ObjectInputStream(fis);
-            passantIW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
-            ois.close();
-            fis.close();
-
-            fis = new FileInputStream("./serialized/passantC.bin");
-            ois = new ObjectInputStream(fis);
-            passantC = (ConcurrentHashMap<Pair, Double>) ois.readObject();
-            ois.close();
-            fis.close();
-
-            fis = new FileInputStream("./serialized/passantCW.bin");
-            ois = new ObjectInputStream(fis);
-            passantCW = (ConcurrentHashMap<Pair, Double>) ois.readObject();
-            ois.close();
-            fis.close();
-
-            fis = new FileInputStream("./serialized/nostra.bin");
-            ois = new ObjectInputStream(fis);
-            nostra = (ConcurrentHashMap<Pair, Double>) ois.readObject();
-            ois.close();
-            fis.close();
+//            fis = new FileInputStream("./serialized/nostra.bin");
+//            ois = new ObjectInputStream(fis);
+//            nostra = (ConcurrentHashMap<Pair, Double>) ois.readObject();
+//            ois.close();
+//            fis.close();
 
         } catch (FileNotFoundException e) {
             fill();
