@@ -19,10 +19,10 @@ public class Main {
 
         Graph.load();
 //        Graph.updateWeight();
-        Graph.printDot();
+       // Graph.printDot();
 
         FilmGraph.load();
-        FilmGraph.printDot();
+       // FilmGraph.printDot();
 //
         Distance.load();
 ////

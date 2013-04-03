@@ -44,12 +44,12 @@ public class Distance implements Serializable {
 //        passantC = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
 //        passantIW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
 //        passantCW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
-        nostra = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+//        nostra = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
 //        cio_n_A_B = new ConcurrentHashMap<Pair, Integer>(NUM_COPPIE_FILM);
-//        cii_n_A_B = new ConcurrentHashMap<Pair, Integer>(NUM_COPPIE_FILM);
-        nostraDW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
-        nostraIOW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
-        nostraIIW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+        cii_n_A_B = new ConcurrentHashMap<Pair, Integer>(NUM_COPPIE_FILM);
+//        nostraDW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+//        nostraIOW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
+//        nostraIIW = new ConcurrentHashMap<Pair, Double>(NUM_COPPIE_FILM);
 
 
         ArrayList<Film> films = Graph.getFilms();
