@@ -1,12 +1,11 @@
 package it.uniba.di.swap.lod_recommender;
 
+import it.uniba.di.swap.lod_recommender.distance.Distances;
 import it.uniba.di.swap.lod_recommender.graph.Film;
 import it.uniba.di.swap.lod_recommender.graph.FilmGraph;
 import it.uniba.di.swap.lod_recommender.graph.Graph;
 import it.uniba.di.swap.lod_recommender.movielens.MovieLensType;
-import it.uniba.di.swap.lod_recommender.movielens.MovieLensVoting;
 import it.uniba.di.swap.lod_recommender.profile.*;
-import it.uniba.di.swap.lod_recommender.recommendation.Distance;
 import it.uniba.di.swap.lod_recommender.recommendation.Recommendation;
 import it.uniba.di.swap.lod_recommender.recommendation.Recommender;
 
@@ -24,9 +23,9 @@ public class Main {
         FilmGraph.load();
        // FilmGraph.printDot();
 //
-        Distance.load();
+        Distances.load();
 ////
-//        Recommender.init(Distance.NOSTRA);
+//        Recommender.init(Distances.NOSTRA);
 //
 //        MovieLensVoting.init();
 //
@@ -61,7 +60,7 @@ public class Main {
         System.out.println("\n\nRECOMMENDATION SIMPLE: ");
 
         for (Recommendation r : recommendations)
-            System.out.println("Film: " + r.getFilm().getTitle() + "\t\tDistance: " + r.getDistance());
+            System.out.println("Film: " + r.getFilm().getTitle() + "\t\tDistances: " + r.getDistance());
     }
 
     private static void simpleNegative(ArrayList<MovieLensType> films) {
@@ -86,7 +85,7 @@ public class Main {
         System.out.println("\n\nRECOMMENDATION SIMPLE NEGATIVE: ");
 
         for (Recommendation r : recommendations)
-            System.out.println("Film: " + r.getFilm().getTitle() + "\t\tDistance: " + r.getDistance());
+            System.out.println("Film: " + r.getFilm().getTitle() + "\t\tDistances: " + r.getDistance());
 
     }
 
@@ -111,7 +110,7 @@ public class Main {
         System.out.println("\n\nRECOMMENDATION OWN WEIGHT: ");
 
         for (Recommendation r : recommendations)
-            System.out.println("Film: " + r.getFilm().getTitle() + "\t\tDistance: " + r.getDistance());
+            System.out.println("Film: " + r.getFilm().getTitle() + "\t\tDistances: " + r.getDistance());
 
     }
 
@@ -131,7 +130,7 @@ public class Main {
         System.out.println("\n\nRECOMMENDATION MUSTO WEIGHT: ");
 
         for (Recommendation r : recommendations)
-            System.out.println("Film: " + r.getFilm().getTitle() + "\t\tDistance: " + r.getDistance());
+            System.out.println("Film: " + r.getFilm().getTitle() + "\t\tDistances: " + r.getDistance());
 
     }
 }

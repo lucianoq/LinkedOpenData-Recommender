@@ -1,5 +1,6 @@
 package it.uniba.di.swap.lod_recommender.recommendation;
 
+import it.uniba.di.swap.lod_recommender.distance.Distances;
 import it.uniba.di.swap.lod_recommender.graph.Film;
 import it.uniba.di.swap.lod_recommender.graph.Graph;
 import it.uniba.di.swap.lod_recommender.profile.SimpleProfile;
@@ -35,26 +36,26 @@ public class Recommender {
 
 
                     switch (type) {
-                        case Distance.NOSTRA:
-                            tmp = Distance.getDistanceNostra(f1, f2);
-                        case Distance.NOSTRADW:
-                            tmp = Distance.getDistanceNostraDW(f1, f2);
-                        case Distance.NOSTRAIIW:
-                            tmp = Distance.getDistanceNostraIIW(f1, f2);
-                        case Distance.NOSTRAIOW:
-                            tmp = Distance.getDistanceNostraIOW(f1, f2);
-                        case Distance.PASSANTCW:
-                            tmp = Distance.getDistancePassantCW(f1, f2);
-                        case Distance.PASSANTDW:
-                            tmp = Distance.getDistancePassantDW(f1, f2);
-                        case Distance.PASSANTIW:
-                            tmp = Distance.getDistancePassantIW(f1, f2);
-                        case Distance.PASSANTD:
-                            tmp = Distance.getDistancePassantD(f1, f2);
-                        case Distance.PASSANTI:
-                            tmp = Distance.getDistancePassantI(f1, f2);
-                        case Distance.PASSANTC:
-                            tmp = Distance.getDistancePassantC(f1, f2);
+                        case Distances.NOSTRA:
+                            tmp = Distances.getDistanceNostra(f1, f2);
+                        case Distances.NOSTRADW:
+                            tmp = Distances.getDistanceNostraDW(f1, f2);
+                        case Distances.NOSTRAIIW:
+                            tmp = Distances.getDistanceNostraIIW(f1, f2);
+                        case Distances.NOSTRAIOW:
+                            tmp = Distances.getDistanceNostraIOW(f1, f2);
+                        case Distances.PASSANTCW:
+                            tmp = Distances.getDistancePassantCW(f1, f2);
+                        case Distances.PASSANTDW:
+                            tmp = Distances.getDistancePassantDW(f1, f2);
+                        case Distances.PASSANTIW:
+                            tmp = Distances.getDistancePassantIW(f1, f2);
+                        case Distances.PASSANTD:
+                            tmp = Distances.getDistancePassantD(f1, f2);
+                        case Distances.PASSANTI:
+                            tmp = Distances.getDistancePassantI(f1, f2);
+                        case Distances.PASSANTC:
+                            tmp = Distances.getDistancePassantC(f1, f2);
                     }
 
                     temp.add(new Recommendation(f2, tmp));
