@@ -24,7 +24,7 @@ public class ComputeDistance extends Thread {
             for (Film f2 : Graph.getFilms())
                 if (!f1.equals(f2)) {
                    // Distance.getCio_n_A_B().put(new Pair(f1, f2), Distance.cio_n_A_B(f1, f2));
-                    Distance.getCii_n_A_B().put(new Pair(f1, f2), Distance.cii_n_A_B(f1, f2));
+//                    Distance.getCii_n_A_B().put(new Pair(f1, f2), Distance.cii_n_A_B(f1, f2));
 //                    Distance.getNostraDW().put(new Pair(f1, f2), Distance.nostraDW(f1, f2));
 //                    Distance.getNostraDW().put(new Pair(f2, f1), Distance.nostraDW(f2, f1));
 //                    Distance.getNostraIOW().put(new Pair(f1, f2), Distance.nostraIOW(f1, f2));
