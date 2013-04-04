@@ -16,19 +16,20 @@ public class DistancePassantI extends Distance {
 
     private DistancePassantI() {
         super("passantI");
+        d = this;
         cionab = DistanceCionab.getInstance();
         ciinab = DistanceCiinab.getInstance();
-        d = this;
+        this.init();
     }
 
     public static DistancePassantI getInstance() {
-        if (d == null)
-            return new DistancePassantI();
-        else
-            return d;
+        return d == null ? new DistancePassantI() : d;
     }
 
     public Double computeDistance(Film a, Film b) {
+
+        System.out.println("Dimensioni cionab " + cionab.getMap().size());
+        System.out.println("Dimensioni ciinab " + ciinab.getMap().size());
         return 1.0d / (1 + cionab.getDistance(a, b).intValue() + ciinab.getDistance(a, b).intValue());
     }
 

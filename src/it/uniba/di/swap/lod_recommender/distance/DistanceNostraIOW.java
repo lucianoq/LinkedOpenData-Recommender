@@ -19,13 +19,11 @@ public class DistanceNostraIOW extends Distance {
     private DistanceNostraIOW() {
         super("nostraIOW");
         d = this;
+        this.init();
     }
 
     public static DistanceNostraIOW getInstance() {
-        if (d == null)
-            return new DistanceNostraIOW();
-        else
-            return d;
+        return d == null ? new DistanceNostraIOW() : d;
     }
 
     public Double computeDistance(Film a, Film b) {

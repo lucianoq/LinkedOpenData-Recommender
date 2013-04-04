@@ -20,13 +20,11 @@ public class DistancePassantCW extends Distance {
     private DistancePassantCW() {
         super("passantCW");
         d = this;
+        this.init();
     }
 
     public static DistancePassantCW getInstance() {
-        if (d == null)
-            return new DistancePassantCW();
-        else
-            return d;
+        return d == null ? new DistancePassantCW() : d;
     }
 
     //vero se esiste C tale che A->C e B->C con archi tutti L

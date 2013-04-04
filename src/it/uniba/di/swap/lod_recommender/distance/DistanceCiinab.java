@@ -23,7 +23,11 @@ public class DistanceCiinab extends Distance {
 
     public static DistanceCiinab getInstance() {
         if (d == null)
-            return new DistanceCiinab();
+        {
+            DistanceCiinab tmp = new DistanceCiinab();
+            tmp.init();
+            return tmp;
+        }
         else
             return d;
     }

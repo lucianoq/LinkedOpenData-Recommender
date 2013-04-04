@@ -16,13 +16,11 @@ public class DistancePassantD extends Distance {
     private DistancePassantD() {
         super("passantD");
         d = this;
+        this.init();
     }
 
     public static DistancePassantD getInstance() {
-        if (d == null)
-            return new DistancePassantD();
-        else
-            return d;
+        return d == null ? new DistancePassantD() : d;
     }
 
     public Double computeDistance(Film a, Film b) {

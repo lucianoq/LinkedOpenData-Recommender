@@ -12,19 +12,19 @@ import it.uniba.di.swap.lod_recommender.graph.FilmGraph;
 public class DistancePassantC extends Distance {
 
     private static DistancePassantC d;
-    private DistanceCionab cionab = DistanceCionab.getInstance();
-    private DistanceCiinab ciinab = DistanceCiinab.getInstance();
+    private DistanceCionab cionab;
+    private DistanceCiinab ciinab;
 
     private DistancePassantC() {
         super("passantC");
         d = this;
+        cionab = DistanceCionab.getInstance();
+        ciinab = DistanceCiinab.getInstance();
+        this.init();
     }
 
     public static DistancePassantC getInstance() {
-        if (d == null)
-            return new DistancePassantC();
-        else
-            return d;
+        return d == null ? new DistancePassantC() : d;
     }
 
     public Double computeDistance(Film a, Film b) {

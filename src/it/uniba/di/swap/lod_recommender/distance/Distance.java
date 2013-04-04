@@ -19,19 +19,25 @@ public abstract class Distance {
 
     protected Map<Pair, Number> map;
     protected String name;
+    protected Distance d;
 
     protected Distance(String name) {
         this.name = name;
+    }
+
+    protected void init() {
         try {
             FileInputStream fis;
             ObjectInputStream ois;
             fis = new FileInputStream("./serialized/" + this.name + ".bin");
             ois = new ObjectInputStream(fis);
             map = (ConcurrentHashMap<Pair, Number>) ois.readObject();
+            System.out.println(name + ".bin Caricato con successo");
             ois.close();
             fis.close();
         } catch (Exception e) {
             this.map = new ConcurrentHashMap<Pair, Number>(Distances.NUM_COPPIE_FILM);
+            System.out.println(name + ".bin non presente. Procedo alla creazione.");
             this.fill();
             this.save();
         }
@@ -48,7 +54,6 @@ public abstract class Distance {
     }
 
     public final void fill() {
-
         ArrayList<Film> films = Graph.getFilms();
         ArrayList<ComputeDistance> threads = new ArrayList<ComputeDistance>();
 
@@ -70,8 +75,9 @@ public abstract class Distance {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("[INFO] Thread " + i + " finito.");
+//            System.out.println("[INFO] Thread " + i + " finito.");
         }
+
     }
 
     public final void save() {

@@ -17,17 +17,15 @@ public class DistanceNostra extends Distance {
 
     private DistanceNostra() {
         super("nostra");
+        d = this;
         dndw = DistanceNostraDW.getInstance();
         dniiw = DistanceNostraIIW.getInstance();
         dniow = DistanceNostraIOW.getInstance();
-        d = this;
+        this.init();
     }
 
     public static DistanceNostra getInstance() {
-        if (d == null)
-            return new DistanceNostra();
-        else
-            return d;
+        return d == null ? new DistanceNostra() : d;
     }
 
     public Double computeDistance(Film a, Film b) {

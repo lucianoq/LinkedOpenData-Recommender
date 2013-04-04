@@ -20,29 +20,12 @@ public class DistancePassantDW extends Distance {
     private DistancePassantDW() {
         super("passantDW");
         d = this;
+        this.init();
     }
 
     public static DistancePassantDW getInstance() {
-        if (d == null)
-            return new DistancePassantDW();
-        else
-            return d;
+        return d == null ? new DistancePassantDW() : d;
     }
-
-    public Double computeDistance(Film a, Film b) {
-        double i = 0;
-        double j = 0;
-        Collection<EdgeFilm> coll = FilmGraph.getGraph().getEdges();
-
-        for (EdgeFilm ef : coll) {
-            i += ((cd_L_A_B(ef, a, b)) ? 1.0d : 0.0d) / (1 + Math.log(cd_L_A_n(ef, a)));
-            j += ((cd_L_A_B(ef, b, a)) ? 1.0d : 0.0d) / (1 + Math.log(cd_L_A_n(ef, b)));
-        }
-
-        double d = 1.0d / (1 + i + j);
-        return d;
-    }
-
 
     //vero se c'è arco L tra A e B
     private static boolean cd_L_A_B(EdgeFilm l, Film a, Film b) {
@@ -64,5 +47,19 @@ public class DistancePassantDW extends Distance {
             }
         }
         return hs.size();
+    }
+
+    public Double computeDistance(Film a, Film b) {
+        double i = 0;
+        double j = 0;
+        Collection<EdgeFilm> coll = FilmGraph.getGraph().getEdges();
+
+        for (EdgeFilm ef : coll) {
+            i += ((cd_L_A_B(ef, a, b)) ? 1.0d : 0.0d) / (1 + Math.log(cd_L_A_n(ef, a)));
+            j += ((cd_L_A_B(ef, b, a)) ? 1.0d : 0.0d) / (1 + Math.log(cd_L_A_n(ef, b)));
+        }
+
+        double d = 1.0d / (1 + i + j);
+        return d;
     }
 }
