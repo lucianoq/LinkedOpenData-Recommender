@@ -36,11 +36,15 @@ public abstract class Distance {
             ois.close();
             fis.close();
         } catch (Exception e) {
-            this.map = new ConcurrentHashMap<Pair, Number>(Distances.NUM_COPPIE_FILM);
-            System.out.println(name + ".bin non presente. Procedo alla creazione.");
-            this.fill();
-            this.save();
+            this.compute();
         }
+    }
+
+    protected void compute() {
+        this.map = new ConcurrentHashMap<Pair, Number>(Distances.NUM_COPPIE_FILM);
+        System.out.println(name + ".bin non presente. Procedo alla creazione.");
+        this.fill();
+        this.save();
     }
 
     public final Number getDistance(Film f1, Film f2) {

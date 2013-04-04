@@ -1,6 +1,11 @@
 package it.uniba.di.swap.lod_recommender.distance;
 
 import it.uniba.di.swap.lod_recommender.graph.Film;
+import it.uniba.di.swap.lod_recommender.recommendation.Pair;
+
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,9 +23,6 @@ public class DistanceNostra extends Distance {
     private DistanceNostra() {
         super("nostra");
         d = this;
-        dndw = DistanceNostraDW.getInstance();
-        dniiw = DistanceNostraIIW.getInstance();
-        dniow = DistanceNostraIOW.getInstance();
         this.init();
     }
 
@@ -35,5 +37,12 @@ public class DistanceNostra extends Distance {
         return d;
     }
 
+    @Override
+    protected void compute() {
+        dndw = DistanceNostraDW.getInstance();
+        dniiw = DistanceNostraIIW.getInstance();
+        dniow = DistanceNostraIOW.getInstance();
+        super.compute();
+    }
 
 }

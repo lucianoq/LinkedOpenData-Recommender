@@ -3,9 +3,9 @@ package it.uniba.di.swap.lod_recommender.movielens;
 public class MovieLensType {
     private int idUser;
     private int idItem;
-    private int rating;
+    private Number rating;
 
-    public MovieLensType(int idUser, int idItem, int rating) {
+    public MovieLensType(int idUser, int idItem, Number rating) {
         this.idUser = idUser;
         this.idItem = idItem;
         this.rating = rating;
@@ -19,7 +19,7 @@ public class MovieLensType {
         return idItem;
     }
 
-    public int getRating() {
+    public Number getRating() {
         return rating;
     }
 }

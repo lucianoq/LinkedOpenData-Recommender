@@ -18,8 +18,6 @@ public class DistancePassantC extends Distance {
     private DistancePassantC() {
         super("passantC");
         d = this;
-        cionab = DistanceCionab.getInstance();
-        ciinab = DistanceCiinab.getInstance();
         this.init();
     }
 
@@ -37,5 +35,12 @@ public class DistancePassantC extends Distance {
     //numero di archi tra A e B
     private int cd_n_A_B(Film a, Film b) {
         return FilmGraph.getGraph().findEdgeSet(a, b).size();
+    }
+
+    @Override
+    protected void compute() {
+        cionab = DistanceCionab.getInstance();
+        ciinab = DistanceCiinab.getInstance();
+        super.compute();
     }
 }

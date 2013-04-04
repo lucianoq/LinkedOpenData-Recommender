@@ -1,11 +1,11 @@
 package it.uniba.di.swap.lod_recommender.movielens;
 
+import it.uniba.di.swap.lod_recommender.graph.Film;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
+import java.util.*;
 
 public class MovieLensVoting {
 
@@ -33,6 +33,14 @@ public class MovieLensVoting {
         for (MovieLensType m : dbmovielens)
             if (idUser == m.getIdUser())
                 userVotes.add(m);
+        return userVotes;
+    }
+
+    public static Map<Film, Number> getFilmsVotedByUser(int id) {
+        Map<Film, Number> userVotes = new HashMap<Film, Number>(55);
+        for (MovieLensType m : dbmovielens)
+            if (id == m.getIdUser())
+                userVotes.put(Film.getFilmByID( m.getIdItem() ), m.getRating());
         return userVotes;
     }
 

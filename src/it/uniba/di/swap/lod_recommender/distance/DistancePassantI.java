@@ -17,8 +17,6 @@ public class DistancePassantI extends Distance {
     private DistancePassantI() {
         super("passantI");
         d = this;
-        cionab = DistanceCionab.getInstance();
-        ciinab = DistanceCiinab.getInstance();
         this.init();
     }
 
@@ -33,5 +31,11 @@ public class DistancePassantI extends Distance {
         return 1.0d / (1 + cionab.getDistance(a, b).intValue() + ciinab.getDistance(a, b).intValue());
     }
 
+    @Override
+    protected void compute() {
+        cionab = DistanceCionab.getInstance();
+        ciinab = DistanceCiinab.getInstance();
+        super.compute();
+    }
 
 }
