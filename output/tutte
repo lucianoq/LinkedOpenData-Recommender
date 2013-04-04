@@ -1,0 +1,280 @@
+/usr/lib/jvm/java-7-openjdk-amd64/bin/java -Didea.launcher.port=7538 -Didea.launcher.bin.path=/opt/idea/bin -Dfile.encoding=UTF-8 -classpath /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/javazic.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/management-agent.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/compilefontconfig.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/zipfs.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunpkcs11.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunjce_provider.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/localedata.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/dnsns.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/pulse-java.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/java-atk-wrapper.jar:/home/lusio/dev/lod-project/out/production/lod-project:/home/lusio/dev/lod-project/lib/jena-arq-2.9.4.jar:/home/lusio/dev/lod-project/lib/jung-jai-samples-2.0.1.jar:/home/lusio/dev/lod-project/lib/jung-api-2.0.1.jar:/home/lusio/dev/lod-project/lib/jung-graph-impl-2.0.1.jar:/home/lusio/dev/lod-project/lib/wstx-asl-3.2.6.jar:/home/lusio/dev/lod-project/lib/jung-io-2.0.1.jar:/home/lusio/dev/lod-project/lib/xml-apis-1.4.01.jar:/home/lusio/dev/lod-project/lib/jcl-over-slf4j-1.6.4.jar:/home/lusio/dev/lod-project/lib/commons-codec-1.5.jar:/home/lusio/dev/lod-project/lib/jena-tdb-0.9.4.jar:/home/lusio/dev/lod-project/lib/vecmath-1.3.1.jar:/home/lusio/dev/lod-project/lib/jena-core-2.7.4.jar:/home/lusio/dev/lod-project/lib/colt-1.2.0.jar:/home/lusio/dev/lod-project/lib/log4j-1.2.16.jar:/home/lusio/dev/lod-project/lib/slf4j-log4j12-1.6.4.jar:/home/lusio/dev/lod-project/lib/jung-samples-2.0.1.jar:/home/lusio/dev/lod-project/lib/jung-visualization-2.0.1.jar:/home/lusio/dev/lod-project/lib/slf4j-api-1.6.4.jar:/home/lusio/dev/lod-project/lib/stax-api-1.0.1.jar:/home/lusio/dev/lod-project/lib/xercesImpl-2.10.0.jar:/home/lusio/dev/lod-project/lib/jung-3d-demos-2.0.1.jar:/home/lusio/dev/lod-project/lib/jung-algorithms-2.0.1.jar:/home/lusio/dev/lod-project/lib/jung-jai-2.0.1.jar:/home/lusio/dev/lod-project/lib/concurrent-1.3.4.jar:/home/lusio/dev/lod-project/lib/jena-iri-0.9.4.jar:/home/lusio/dev/lod-project/lib/jung-3d-2.0.1.jar:/home/lusio/dev/lod-project/lib/j3d-core-1.3.1.jar:/home/lusio/dev/lod-project/lib/collections-generic-4.01.jar:/opt/idea/lib/idea_rt.jar com.intellij.rt.execution.application.AppMain it.uniba.di.swap.lod_recommender.Main
+[INFO] Graph loaded.
+[INFO] Graph Vertices : 5977
+[INFO] Graph Edges : 13763
+----------------------------------------------------
+[INFO] it.uniba.di.swap.lod_recommender.graph.Film graph loaded.
+[INFO] it.uniba.di.swap.lod_recommender.graph.Film graph Vertices : 518
+[INFO] it.uniba.di.swap.lod_recommender.graph.Film graphEdges : 298478
+----------------------------------------------------
+passantD.bin Caricato con successo
+passantI.bin Caricato con successo
+passantC.bin Caricato con successo
+nostra.bin Caricato con successo
+Film: My_Best_Friend%27s_Wedding		Vote: 5
+Film: Rear_Window_(1998_film)		Vote: 4
+Film: Grease_(film)		Vote: 4
+Film: The_Princess_Bride_(film)		Vote: 3
+Film: Sleepless_in_Seattle		Vote: 3
+Film: Sense_and_Sensibility_(film)		Vote: 5
+Film: Dead_Man_Walking_(film)		Vote: 4
+Film: A_Walk_in_the_Clouds		Vote: 3
+Film: French_Kiss_(film)		Vote: 4
+Film: Sabrina_(1954_film)		Vote: 5
+Film: Benny_&_Joon		Vote: 4
+Film: Sleepers_(film)		Vote: 3
+Film: While_You_Were_Sleeping		Vote: 4
+Film: Addicted_to_Love_(film)		Vote: 3
+Film: Jerry_Maguire		Vote: 5
+Film: Air_Force_One_(film)		Vote: 4
+Film: Dave_(film)		Vote: 3
+Film: Evita_(film)		Vote: 5
+Film: Groundhog_Day_(film)		Vote: 2
+Film: Conspiracy_Theory_(film)		Vote: 2
+------------------------------
+-- INIZIO DISTANZA PASSANTD
+------------------------------
+[INFO] Inizio creazione tabelle di raccomandazione
+[INFO] Fine creazione tabelle di raccomandazione
+
+
+RECOMMENDATION SIMPLE: 
+Film: The_Brothers_McMullen		Distances: 3.4187590187590193
+Film: Chasing_Amy		Distances: 3.573448773448774
+Film: Chasing_Amy		Distances: 3.573448773448774
+Film: Grosse_Pointe_Blank		Distances: 3.7932289932289938
+Film: Private_Parts_(1997_film)		Distances: 3.8492174492174493
+Film: Marvin's_Room_(film)		Distances: 3.9075147075147085
+Film: Mallrats		Distances: 3.9417027417027426
+Film: Something_to_Talk_About_(film)		Distances: 4.086580086580087
+Film: I_Q__(film)		Distances: 4.110822510822511
+Film: Sliding_Doors		Distances: 4.122233322233323
+--------------------------------------------
+
+
+RECOMMENDATION SIMPLE NEGATIVE: 
+Film: The_Brothers_McMullen		Distances: 1.9088023088023085
+Film: I_Q__(film)		Distances: 1.9901875901875898
+Film: Mallrats		Distances: 2.1766233766233762
+Film: Chasing_Amy		Distances: 2.2083694083694083
+Film: Chasing_Amy		Distances: 2.2083694083694083
+Film: Sleepless_in_Seattle		Distances: 2.2173382173382175
+Film: Grosse_Pointe_Blank		Distances: 2.2186258186258185
+Film: Sabrina_(1995_film)		Distances: 2.4507936507936505
+Film: Marvin's_Room_(film)		Distances: 2.4634920634920636
+Film: Sliding_Doors		Distances: 2.534931734931735
+--------------------------------------------
+
+
+RECOMMENDATION VOTED NOSTRA: 
+Film: The_Brothers_McMullen		Distances: 2.1722943722943717
+Film: I_Q__(film)		Distances: 2.342568542568542
+Film: Mallrats		Distances: 2.554401154401154
+Film: Sliding_Doors		Distances: 2.766677766677766
+Film: Sliding_Doors		Distances: 2.766677766677766
+Film: Marvin's_Room_(film)		Distances: 2.7841269841269844
+Film: Grosse_Pointe_Blank		Distances: 2.811122211122211
+Film: Chasing_Amy		Distances: 2.832611832611832
+Film: Chasing_Amy		Distances: 2.832611832611832
+Film: Sabrina_(1995_film)		Distances: 2.9936507936507932
+--------------------------------------------
+
+
+RECOMMENDATION VOTED MUSTO: 
+Film: Chasing_Amy		Distances: 7.887734487734488
+Film: Chasing_Amy		Distances: 7.887734487734488
+Film: The_Brothers_McMullen		Distances: 8.083982683982684
+Film: The_Fugitive_(1993_film)		Distances: 8.196450608215315
+Film: Private_Parts_(1997_film)		Distances: 8.332933732933734
+Film: Die_Hard_with_a_Vengeance		Distances: 8.432833832833834
+Film: Grosse_Pointe_Blank		Distances: 8.56856476856477
+Film: True_Romance		Distances: 8.573626373626375
+Film: A_Little_Princess_(1995_film)		Distances: 8.61673881673882
+Film: Something_to_Talk_About_(film)		Distances: 8.816450216450217
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿?¿
+------------------------------
+-- INIZIO DISTANZA PASSANTI
+------------------------------
+[INFO] Inizio creazione tabelle di raccomandazione
+[INFO] Fine creazione tabelle di raccomandazione
+
+
+RECOMMENDATION SIMPLE: 
+Film: Die_Hard_with_a_Vengeance		Distances: 0.00854742772672495
+Film: The_English_Patient_(film)		Distances: 0.009119089302646677
+Film: Schindler's_List		Distances: 0.00915397120820632
+Film: Boxing_Helena		Distances: 0.00917288954019632
+Film: Sliding_Doors		Distances: 0.009258305475541306
+Film: Sliding_Doors		Distances: 0.009258305475541306
+Film: Private_Parts_(1997_film)		Distances: 0.009297686489034698
+Film: A_Little_Princess_(1995_film)		Distances: 0.009389974517732744
+Film: The_People_vs__Larry_Flynt		Distances: 0.009406172811853892
+Film: Chasing_Amy		Distances: 0.009441407671390884
+--------------------------------------------
+
+
+RECOMMENDATION SIMPLE NEGATIVE: 
+Film: Sleepers_(film)		Distances: 0.005171690118457944
+Film: Die_Hard_with_a_Vengeance		Distances: 0.005715900964833156
+Film: Boxing_Helena		Distances: 0.006104705524977941
+Film: Schindler's_List		Distances: 0.006228365390259124
+Film: Sliding_Doors		Distances: 0.006268478307350527
+Film: Sliding_Doors		Distances: 0.006268478307350527
+Film: The_English_Patient_(film)		Distances: 0.006283627292248569
+Film: Private_Parts_(1997_film)		Distances: 0.006317215217232761
+Film: The_People_vs__Larry_Flynt		Distances: 0.0063707003936546965
+Film: Chasing_Amy		Distances: 0.0064071746932048085
+--------------------------------------------
+
+
+RECOMMENDATION VOTED NOSTRA: 
+Film: Schindler's_List		Distances: 0.007319274198692597
+Film: Die_Hard_with_a_Vengeance		Distances: 0.0073567075364717
+Film: Sliding_Doors		Distances: 0.00745619511434269
+Film: Sliding_Doors		Distances: 0.00745619511434269
+Film: The_English_Patient_(film)		Distances: 0.007478184854560266
+Film: Boxing_Helena		Distances: 0.0076488219197238866
+Film: Private_Parts_(1997_film)		Distances: 0.007790190327094824
+Film: The_Brothers_McMullen		Distances: 0.007809439909558119
+Film: Chasing_Amy		Distances: 0.007814663314763298
+Film: Chasing_Amy		Distances: 0.007814663314763298
+--------------------------------------------
+
+
+RECOMMENDATION VOTED MUSTO: 
+Film: Die_Hard_with_a_Vengeance		Distances: 0.01828557564370315
+Film: Boxing_Helena		Distances: 0.01986984670086508
+Film: The_English_Patient_(film)		Distances: 0.019879083053379754
+Film: A_Little_Princess_(1995_film)		Distances: 0.020028462914002176
+Film: Private_Parts_(1997_film)		Distances: 0.020102869140009267
+Film: Schindler's_List		Distances: 0.020142639425926364
+Film: Sliding_Doors		Distances: 0.020318721312281227
+Film: Sliding_Doors		Distances: 0.020318721312281227
+Film: The_People_vs__Larry_Flynt		Distances: 0.02036356107684881
+Film: Chasing_Amy		Distances: 0.02050955969940936
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿?¿
+------------------------------
+-- INIZIO DISTANZA PASSANTC
+------------------------------
+[INFO] Inizio creazione tabelle di raccomandazione
+[INFO] Fine creazione tabelle di raccomandazione
+
+
+RECOMMENDATION SIMPLE: 
+Film: Die_Hard_with_a_Vengeance		Distances: 0.008526300554569453
+Film: The_English_Patient_(film)		Distances: 0.009111974859414937
+Film: Schindler's_List		Distances: 0.00914531522549323
+Film: Boxing_Helena		Distances: 0.009157945855254286
+Film: Sliding_Doors		Distances: 0.009241556441678631
+Film: Sliding_Doors		Distances: 0.009241556441678631
+Film: Private_Parts_(1997_film)		Distances: 0.009273613224751875
+Film: A_Little_Princess_(1995_film)		Distances: 0.00936687264187827
+Film: The_People_vs__Larry_Flynt		Distances: 0.00939619076194218
+Film: Chasing_Amy		Distances: 0.00941490362503971
+--------------------------------------------
+
+
+RECOMMENDATION SIMPLE NEGATIVE: 
+Film: Sleepers_(film)		Distances: 0.005154512821552115
+Film: Die_Hard_with_a_Vengeance		Distances: 0.005700035296106902
+Film: Boxing_Helena		Distances: 0.0060930786421259115
+Film: Schindler's_List		Distances: 0.0062229011026388665
+Film: Sliding_Doors		Distances: 0.006257896497974028
+Film: Sliding_Doors		Distances: 0.006257896497974028
+Film: The_English_Patient_(film)		Distances: 0.006280000899198705
+Film: Private_Parts_(1997_film)		Distances: 0.006300014716577891
+Film: The_People_vs__Larry_Flynt		Distances: 0.006365426584370064
+Film: Chasing_Amy		Distances: 0.006387789697118407
+--------------------------------------------
+
+
+RECOMMENDATION VOTED NOSTRA: 
+Film: Schindler's_List		Distances: 0.007310784667502639
+Film: Die_Hard_with_a_Vengeance		Distances: 0.007340120975305082
+Film: Sliding_Doors		Distances: 0.00744034377470987
+Film: Sliding_Doors		Distances: 0.00744034377470987
+Film: The_English_Patient_(film)		Distances: 0.007473106727602155
+Film: Boxing_Helena		Distances: 0.007636748533007914
+Film: Private_Parts_(1997_film)		Distances: 0.007768856718348496
+Film: The_Brothers_McMullen		Distances: 0.0077805103697332605
+Film: Chasing_Amy		Distances: 0.00779142307594001
+Film: Chasing_Amy		Distances: 0.00779142307594001
+--------------------------------------------
+
+
+RECOMMENDATION VOTED MUSTO: 
+Film: Die_Hard_with_a_Vengeance		Distances: 0.01823878068840328
+Film: Boxing_Helena		Distances: 0.01983708903275495
+Film: The_English_Patient_(film)		Distances: 0.019862817850642655
+Film: A_Little_Princess_(1995_film)		Distances: 0.019975995496590862
+Film: Private_Parts_(1997_film)		Distances: 0.020051982955907138
+Film: Schindler's_List		Distances: 0.020125161008977058
+Film: Sliding_Doors		Distances: 0.020284325550326016
+Film: Sliding_Doors		Distances: 0.020284325550326016
+Film: The_People_vs__Larry_Flynt		Distances: 0.020340383434590645
+Film: Chasing_Amy		Distances: 0.020453287799179116
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿?¿
+------------------------------
+-- INIZIO DISTANZA NOSTRA
+------------------------------
+[INFO] Inizio creazione tabelle di raccomandazione
+[INFO] Fine creazione tabelle di raccomandazione
+
+
+RECOMMENDATION SIMPLE: 
+Film: Die_Hard_with_a_Vengeance		Distances: 0.13400485020218367
+Film: Schindler's_List		Distances: 0.1435495835915773
+Film: Boxing_Helena		Distances: 0.14405470293809092
+Film: The_English_Patient_(film)		Distances: 0.14407784631129736
+Film: Sliding_Doors		Distances: 0.14617286412038802
+Film: Sliding_Doors		Distances: 0.14617286412038802
+Film: Private_Parts_(1997_film)		Distances: 0.1473598488018014
+Film: Chasing_Amy		Distances: 0.148074523568948
+Film: Chasing_Amy		Distances: 0.148074523568948
+Film: The_People_vs__Larry_Flynt		Distances: 0.14831574638456696
+--------------------------------------------
+
+
+RECOMMENDATION SIMPLE NEGATIVE: 
+Film: Sleepers_(film)		Distances: 0.08068114816872092
+Film: Die_Hard_with_a_Vengeance		Distances: 0.08924981784010376
+Film: Boxing_Helena		Distances: 0.09555382909474165
+Film: Schindler's_List		Distances: 0.09724035313248047
+Film: The_English_Patient_(film)		Distances: 0.09825150060649498
+Film: Sliding_Doors		Distances: 0.09896952361466399
+Film: Sliding_Doors		Distances: 0.098969523614664
+Film: Chasing_Amy		Distances: 0.09970891386898062
+Film: Chasing_Amy		Distances: 0.09970891386898062
+Film: The_Brothers_McMullen		Distances: 0.09981576491672073
+--------------------------------------------
+
+
+RECOMMENDATION VOTED NOSTRA: 
+Film: Schindler's_List		Distances: 0.11437464912961982
+Film: Die_Hard_with_a_Vengeance		Distances: 0.11516693869021892
+Film: The_English_Patient_(film)		Distances: 0.11708659871418313
+Film: Sliding_Doors		Distances: 0.11848394264906763
+Film: Sliding_Doors		Distances: 0.11848394264906763
+Film: Boxing_Helena		Distances: 0.11992594026308884
+Film: The_Brothers_McMullen		Distances: 0.12121273868173653
+Film: Chasing_Amy		Distances: 0.12176693411485565
+Film: Chasing_Amy		Distances: 0.12176693411485565
+Film: All_About_Eve		Distances: 0.12286875759660235
+--------------------------------------------
+
+
+RECOMMENDATION VOTED MUSTO: 
+Film: Die_Hard_with_a_Vengeance		Distances: 0.286847611916332
+Film: Boxing_Helena		Distances: 0.31223816855118386
+Film: The_English_Patient_(film)		Distances: 0.3151469402197092
+Film: Schindler's_List		Distances: 0.31627410164511194
+Film: Private_Parts_(1997_film)		Distances: 0.31688792945270067
+Film: A_Little_Princess_(1995_film)		Distances: 0.3190707690584496
+Film: Sliding_Doors		Distances: 0.32003464971209633
+Film: Sliding_Doors		Distances: 0.32003464971209633
+Film: The_People_vs__Larry_Flynt		Distances: 0.32148035846496037
+Film: Chasing_Amy		Distances: 0.3224566365919883
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿?¿
+
+Process finished with exit code 0
+

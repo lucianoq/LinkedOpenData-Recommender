@@ -14,6 +14,7 @@ import java.util.Map;
  */
 public class MovieLensUser {
 
+    Map<Film, Number> map;
     private int id;
     private ProfileSimple profileSimple;
     private ProfileSimple profileSimpleNegative;
@@ -22,7 +23,7 @@ public class MovieLensUser {
 
     public MovieLensUser(int id) {
         this.id = id;
-        Map<Film, Number> map = MovieLensVoting.getFilmsVotedByUser(id);
+        map = MovieLensVoting.getFilmsVotedByUser(id);
         Map<Film, Number> mapPos = new HashMap<Film, Number>();
         Map<Film, Number> mapNeg = new HashMap<Film, Number>();
         for (Film f : map.keySet()) {
@@ -55,5 +56,12 @@ public class MovieLensUser {
 
     public ProfileVoted getProfileVotedMusto() {
         return profileVotedMusto;
+    }
+
+    public void print() {
+        for (Film f : map.keySet()) {
+            //TODO sort map by values
+            System.out.println("Film: " + f.getTitle() + "\t\tVote: " + map.get(f).intValue());
+        }
     }
 }
