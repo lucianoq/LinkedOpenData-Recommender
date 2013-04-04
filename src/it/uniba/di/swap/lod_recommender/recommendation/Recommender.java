@@ -3,8 +3,8 @@ package it.uniba.di.swap.lod_recommender.recommendation;
 import it.uniba.di.swap.lod_recommender.distance.Distances;
 import it.uniba.di.swap.lod_recommender.graph.Film;
 import it.uniba.di.swap.lod_recommender.graph.Graph;
-import it.uniba.di.swap.lod_recommender.profile.SimpleProfile;
-import it.uniba.di.swap.lod_recommender.profile.VotedProfile;
+import it.uniba.di.swap.lod_recommender.profile.ProfileSimple;
+import it.uniba.di.swap.lod_recommender.profile.ProfileVoted;
 
 import java.util.*;
 
@@ -39,7 +39,7 @@ public class Recommender {
         return Double.MAX_VALUE;
     }
 
-    public static List<Recommendation> getRecommendations(VotedProfile profile, int limit) {
+    public static List<Recommendation> getRecommendations(ProfileVoted profile, int limit) {
         List<Recommendation> temp = new ArrayList<Recommendation>();
 
         for (Film film : Graph.getFilms())
@@ -64,7 +64,7 @@ public class Recommender {
         return toRec;
     }
 
-    public static List<Recommendation> getRecommendations(SimpleProfile profile, int limit) {
+    public static List<Recommendation> getRecommendations(ProfileSimple profile, int limit) {
         List<Recommendation> temp = new ArrayList<Recommendation>();
 
         for (Film film : Graph.getFilms())
@@ -89,11 +89,11 @@ public class Recommender {
         return toRec;
     }
 
-    public static List<Recommendation> getRecommendations(SimpleProfile profile) {
+    public static List<Recommendation> getRecommendations(ProfileSimple profile) {
         return getRecommendations(profile, ALL);
     }
 
-    public static List<Recommendation> getRecommendations(VotedProfile profile) {
+    public static List<Recommendation> getRecommendations(ProfileVoted profile) {
         return getRecommendations(profile, ALL);
     }
 

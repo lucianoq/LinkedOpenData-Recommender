@@ -5,11 +5,11 @@ import it.uniba.di.swap.lod_recommender.graph.Film;
 import java.util.Collection;
 import java.util.Collections;
 
-public class SimpleProfileNegative extends SimpleProfile {
+public class ProfileSimpleNegative extends ProfileSimple {
 
     protected Collection<Film> profiledNegative = null;
 
-    public SimpleProfileNegative(Collection<Film> profiled, Collection<Film> profiledNegative) {
+    public ProfileSimpleNegative(Collection<Film> profiled, Collection<Film> profiledNegative) {
         super(profiled);
         this.profiledNegative = profiledNegative;
         if ( !Collections.disjoint(profiled, profiledNegative) )

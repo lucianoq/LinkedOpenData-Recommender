@@ -5,13 +5,13 @@ import it.uniba.di.swap.lod_recommender.graph.Film;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MustoVotedProfile extends VotedProfile {
+public class ProfileVotedMusto extends ProfileVoted {
 
-    public MustoVotedProfile() {
+    public ProfileVotedMusto() {
         this.votedFilms = new HashMap<Film, Number>();
     }
 
-    public MustoVotedProfile(Map<Film, Number> map) {
+    public ProfileVotedMusto(Map<Film, Number> map) {
         this.votedFilms = map;
     }
 

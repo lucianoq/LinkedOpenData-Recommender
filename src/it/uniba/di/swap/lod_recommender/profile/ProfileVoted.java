@@ -5,7 +5,7 @@ import it.uniba.di.swap.lod_recommender.graph.Film;
 import java.util.Collections;
 import java.util.Map;
 
-public abstract class VotedProfile extends Profile {
+public abstract class ProfileVoted extends Profile {
 
     protected Map<Film, Number> votedFilms;
 

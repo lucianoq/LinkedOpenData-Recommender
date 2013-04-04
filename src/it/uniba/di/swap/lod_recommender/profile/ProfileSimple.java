@@ -4,11 +4,11 @@ import it.uniba.di.swap.lod_recommender.graph.Film;
 
 import java.util.Collection;
 
-public class SimpleProfile extends Profile {
+public class ProfileSimple extends Profile {
 
     protected Collection<Film> profiledFilms;
 
-    public SimpleProfile(Collection<Film> profiled) {
+    public ProfileSimple(Collection<Film> profiled) {
         this.profiledFilms = profiled;
     }
 

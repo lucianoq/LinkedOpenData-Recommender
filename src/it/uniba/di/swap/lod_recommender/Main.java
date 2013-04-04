@@ -19,9 +19,9 @@ public class Main {
 
         Graph.load();
 //        Graph.updateWeight();
-        // Graph.printDot();
+        Graph.printDot();
         FilmGraph.load();
-        // FilmGraph.printDot();
+        FilmGraph.printDot();
         Distances.init();
 
         Recommender.init(Distances.Type.NOSTRA);
@@ -48,7 +48,7 @@ public class Main {
             likedSimple.add(Film.getFilmByID(m.getIdItem()));
         likedSimple.remove(null);
 
-        SimpleProfile pr = new SimpleProfile(likedSimple);
+        ProfileSimple pr = new ProfileSimple(likedSimple);
 
 //        System.out.println("\n\nPROFILE SIMPLE: ");
 //        System.out.println(pr.toString());
@@ -73,7 +73,7 @@ public class Main {
         likedSimpleOnlyPositive.remove(null);
         likedSimpleWithNegative.remove(null);
 
-        SimpleProfile spNeg = new SimpleProfileNegative(likedSimpleOnlyPositive, likedSimpleWithNegative);
+        ProfileSimple spNeg = new ProfileSimpleNegative(likedSimpleOnlyPositive, likedSimpleWithNegative);
 
 //        System.out.println("\n\nPROFILE SIMPLE NEGATIVE: ");
 //        System.out.println(spNeg.toString());
@@ -97,7 +97,7 @@ public class Main {
 //        likedWeight.put(Film.getFilmByID(444), 5);
 //        likedWeight.put(Film.getFilmByID(447), 1);
 
-        VotedProfile profile = new NostraVotedProfile(likedWeight);
+        ProfileVoted profile = new ProfileVotedNostra(likedWeight);
 
         System.out.println("\n\nPROFILE OWN WEIGHT: ");
         System.out.println(profile.toString());
@@ -117,7 +117,7 @@ public class Main {
         for (it.uniba.di.swap.lod_recommender.movielens.MovieLensType m : films)
             likedWeight.put(Film.getFilmByID(m.getIdItem()), m.getRating());
         likedWeight.remove(null);
-        VotedProfile profile = new MustoVotedProfile(likedWeight);
+        ProfileVoted profile = new ProfileVotedMusto(likedWeight);
 
 //        System.out.println("\n\nPROFILE MUSTO WEIGHT: ");
 //        System.out.println(profile.toString());
