@@ -24,7 +24,7 @@ public class ComputeDistance extends Thread {
     public void run() {
         for (Film f1 : subset) {
             if ((d instanceof DistancePassantDW) || (d instanceof DistancePassantIW) || (d instanceof DistancePassantCW))
-                System.out.println("Distanza: Inizio il film " + f1.getTitle());
+                System.out.println("Distanza: "+d.getClass().getName()+" Inizio il film " + f1.getTitle());
             for (Film f2 : Graph.getFilms())
                 if (!f1.equals(f2))
                     d.getMap().put(new Pair(f1, f2), d.computeDistance(f1, f2));

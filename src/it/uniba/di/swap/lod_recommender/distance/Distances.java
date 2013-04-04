@@ -19,9 +19,9 @@ public class Distances implements Serializable {
         mapTC.put(Type.PASSANTD, DistancePassantD.class);
         mapTC.put(Type.PASSANTI, DistancePassantI.class);
         mapTC.put(Type.PASSANTC, DistancePassantC.class);
-        mapTC.put(Type.PASSANTDW, DistancePassantDW.class);
-        mapTC.put(Type.PASSANTIW, DistancePassantIW.class);
-        mapTC.put(Type.PASSANTCW, DistancePassantCW.class);
+//        mapTC.put(Type.PASSANTDW, DistancePassantDW.class);
+//        mapTC.put(Type.PASSANTIW, DistancePassantIW.class);
+//        mapTC.put(Type.PASSANTCW, DistancePassantCW.class);
         mapTC.put(Type.NOSTRA, DistanceNostra.class);
 
         for (Type t : Type.values())
@@ -39,6 +39,12 @@ public class Distances implements Serializable {
     }
 
     public static enum Type {
-        PASSANTD, PASSANTI, PASSANTC, PASSANTDW, PASSANTIW, PASSANTCW, NOSTRA
+        PASSANTD,
+        PASSANTI,
+        PASSANTC,
+//        PASSANTDW,
+//        PASSANTIW,
+//        PASSANTCW,
+        NOSTRA
     }
 }
