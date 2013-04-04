@@ -17,17 +17,7 @@ public class NostraVotedProfile extends VotedProfile {
 
     public double weight(Film film) {
         double vote = this.votedFilms.get(film).doubleValue();
-//        if (vote == 5.0)
-//            return -1.0 / vote;
-//        else if (vote == 4.0)
-//            return -1.0 / (2.0 * vote);
-//        else if (vote == 3.0)
-//            return 0;
-//        else if (vote == 2.0)
-//            return 1.0 / (2.0 * vote);
-//        else if (vote == 1.0)
-//            return 1.0 / vote;
-//        return 0;
+
         if (vote == 1.0)
             return -0.2;
         else if (vote == 2.0)
