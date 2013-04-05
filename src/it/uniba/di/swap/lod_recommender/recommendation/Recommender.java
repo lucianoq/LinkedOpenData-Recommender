@@ -3,6 +3,7 @@ package it.uniba.di.swap.lod_recommender.recommendation;
 import it.uniba.di.swap.lod_recommender.distance.Distances;
 import it.uniba.di.swap.lod_recommender.graph.Film;
 import it.uniba.di.swap.lod_recommender.graph.Graph;
+import it.uniba.di.swap.lod_recommender.profile.Profile;
 import it.uniba.di.swap.lod_recommender.profile.ProfileSimple;
 import it.uniba.di.swap.lod_recommender.profile.ProfileVoted;
 
@@ -14,22 +15,18 @@ public class Recommender {
     private static Map<Film, List<Recommendation>> map;
 
     public static void init(Distances.Type t) {
-        System.out.println("[INFO] Inizio creazione tabelle di raccomandazione");
         map = new HashMap<Film, List<Recommendation>>();
 
         for (Film f1 : Graph.getFilms()) {
             List<Recommendation> temp = new ArrayList<Recommendation>();
             for (Film f2 : Graph.getFilms())
                 if (!f1.equals(f2)) {
-                    //System.out.println(new java.util.Date() + " sto per fare " + f1.getTitle() + " con " + f2.getTitle());
                     double tmp = Distances.distances.get(t).getDistance(f1, f2).doubleValue();
                     temp.add(new Recommendation(f2, tmp));
-                    //System.out.println(new java.util.Date() + "it.uniba.di.swap.lod_recommender.recommendation.Recommendation: " + tmp);
                 }
             Collections.sort(temp);
             map.put(f1, temp);
         }
-        System.out.println("[INFO] Fine creazione tabelle di raccomandazione");
     }
 
     public static double getDistance(Film a, Film b) {
@@ -39,7 +36,20 @@ public class Recommender {
         return Double.MAX_VALUE;
     }
 
-    public static List<Recommendation> getRecommendations(ProfileVoted profile, int limit) {
+    public static List<Recommendation> getRecommendations(Profile profile, int limit) {
+        if (profile instanceof ProfileSimple)
+            return getRecommendations((ProfileSimple) profile, limit);
+        else if (profile instanceof ProfileVoted)
+            return getRecommendations((ProfileVoted) profile, limit);
+
+        return null;
+    }
+
+    public static List<Recommendation> getRecommendations(Profile profile) {
+        return getRecommendations(profile, ALL);
+    }
+
+    private static List<Recommendation> getRecommendations(ProfileVoted profile, int limit) {
         List<Recommendation> temp = new ArrayList<Recommendation>();
 
         for (Film film : Graph.getFilms())
@@ -64,7 +74,7 @@ public class Recommender {
         return toRec;
     }
 
-    public static List<Recommendation> getRecommendations(ProfileSimple profile, int limit) {
+    private static List<Recommendation> getRecommendations(ProfileSimple profile, int limit) {
         List<Recommendation> temp = new ArrayList<Recommendation>();
 
         for (Film film : Graph.getFilms())
@@ -88,14 +98,4 @@ public class Recommender {
 
         return toRec;
     }
-
-    public static List<Recommendation> getRecommendations(ProfileSimple profile) {
-        return getRecommendations(profile, ALL);
-    }
-
-    public static List<Recommendation> getRecommendations(ProfileVoted profile) {
-        return getRecommendations(profile, ALL);
-    }
-
-
 }

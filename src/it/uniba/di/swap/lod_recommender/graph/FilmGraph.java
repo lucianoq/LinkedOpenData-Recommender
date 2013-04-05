@@ -67,16 +67,16 @@ public class FilmGraph implements Serializable {
             filmGraph = (DirectedSparseMultigraph<Film, EdgeFilm>) ois.readObject();
             ois.close();
             fis.close();
-            System.out.println("[INFO] it.uniba.di.swap.lod_recommender.graph.Film graph loaded.");
-            System.out.println("[INFO] it.uniba.di.swap.lod_recommender.graph.Film graph Vertices : " + filmGraph.getVertices().size());
-            System.out.println("[INFO] it.uniba.di.swap.lod_recommender.graph.Film graphEdges : " + filmGraph.getEdges().size());
+            System.out.println("[INFO] Film graph loaded.");
+            System.out.println("[INFO] Film graph Vertices : " + filmGraph.getVertices().size());
+            System.out.println("[INFO] Film graphEdges : " + filmGraph.getEdges().size());
             System.out.println("----------------------------------------------------");
         } catch (FileNotFoundException e) {
             init();
             save();
-            System.out.println("[INFO] it.uniba.di.swap.lod_recommender.graph.Film graph builded.");
-            System.out.println("[INFO] it.uniba.di.swap.lod_recommender.graph.Film graph Vertices : " + filmGraph.getVertices().size());
-            System.out.println("[INFO] it.uniba.di.swap.lod_recommender.graph.Film graphEdges : " + filmGraph.getEdges().size());
+            System.out.println("[INFO] Film graph builded.");
+            System.out.println("[INFO] Film graph Vertices : " + filmGraph.getVertices().size());
+            System.out.println("[INFO] Film graphEdges : " + filmGraph.getEdges().size());
             System.out.println("----------------------------------------------------");
         }
     }

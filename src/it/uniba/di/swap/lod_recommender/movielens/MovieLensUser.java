@@ -16,7 +16,6 @@ import java.util.Map;
 public class MovieLensUser {
 
     Map<Film, Number> map;
-    List<Map.Entry<Film, Number>> list;
     private int id;
     private ProfileSimple profileSimple;
     private ProfileSimple profileSimpleNegative;
@@ -26,10 +25,9 @@ public class MovieLensUser {
     public MovieLensUser(int id) {
         this.id = id;
         map = MovieLensVoting.getFilmsVotedByUserMap(id);
-        list = MovieLensVoting.getFilmsVotedByUserSorted(id);
         Map<Film, Number> mapPos = new HashMap<Film, Number>();
         Map<Film, Number> mapNeg = new HashMap<Film, Number>();
-        for (Map.Entry<Film, Number> me : list) {
+        for (Map.Entry<Film, Number> me : map.entrySet()) {
             if (me.getValue().doubleValue() < Profile.MEDIUMVOTE)
                 mapNeg.put(me.getKey(), me.getValue());
             if (me.getValue().doubleValue() > Profile.MEDIUMVOTE)
@@ -45,23 +43,22 @@ public class MovieLensUser {
         return id;
     }
 
-    public ProfileSimple getProfileSimple() {
-        return profileSimple;
-    }
-
-    public ProfileSimple getProfileSimpleNegative() {
-        return profileSimpleNegative;
-    }
-
-    public ProfileVoted getProfileVotedNostra() {
-        return profileVotedNostra;
-    }
-
-    public ProfileVoted getProfileVotedMusto() {
-        return profileVotedMusto;
+    public Profile getProfile(Profile.Type type) {
+        switch (type) {
+            case SIMPLE:
+                return profileSimple;
+            case SIMPLE_NEGATIVE:
+                return profileSimpleNegative;
+            case VOTED_MUSTO:
+                return profileVotedMusto;
+            case VOTED_NOSTRA:
+                return profileVotedNostra;
+        }
+        return null;
     }
 
     public void print() {
+        List<Map.Entry<Film, Number>> list = MovieLensVoting.getFilmsVotedByUserSorted(id);
         for (Map.Entry<Film, Number> me : list) {
             System.out.println("Film: " + me.getKey().getTitle() + "\t\tVote: " + me.getValue().intValue());
         }

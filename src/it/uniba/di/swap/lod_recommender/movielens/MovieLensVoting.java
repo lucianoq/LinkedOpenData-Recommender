@@ -9,7 +9,8 @@ import java.util.*;
 
 public class MovieLensVoting {
 
-    private static final String DBMOVIELENSVOTING = "./config/VotesMovielens.txt";
+//    private static final String DBMOVIELENSVOTING = "./config/VotesMovielens.txt";
+    private static final String DBMOVIELENSVOTING = "./config/utente1_train";
     public static ArrayList<MovieLensType> dbmovielens;
 
     public static void init() throws IOException {
@@ -79,7 +80,11 @@ public class MovieLensVoting {
         public static final int DESC = -1;
         private int orderingType;
 
-        private ValueComparer(int orderingType) {
+        public ValueComparer() {
+            this.orderingType = ASC;
+        }
+
+        public ValueComparer(int orderingType) {
             this.orderingType = orderingType;
         }
 
