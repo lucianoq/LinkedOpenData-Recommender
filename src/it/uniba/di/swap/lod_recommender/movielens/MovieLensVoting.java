@@ -36,14 +36,25 @@ public class MovieLensVoting {
         return userVotes;
     }
 
-    public static Map<Film, Number> getFilmsVotedByUser(int id) {
+    public static List<Map.Entry<Film, Number>> getFilmsVotedByUserSorted(int id) {
         Map<Film, Number> userVotes = new HashMap<Film, Number>(55);
         for (MovieLensType m : dbmovielens)
             if (id == m.getIdUser())
-                userVotes.put(Film.getFilmByID( m.getIdItem() ), m.getRating());
-        return userVotes;
+                userVotes.put(Film.getFilmByID(m.getIdItem()), m.getRating());
+
+        List<Map.Entry<Film, Number>> sorted = new LinkedList<Map.Entry<Film, Number>>(userVotes.entrySet());
+        Collections.sort(sorted, new ValueComparer(ValueComparer.DESC));
+        return sorted;
     }
 
+    public static Map<Film, Number> getFilmsVotedByUserMap(int id) {
+        Map<Film, Number> userVotes = new HashMap<Film, Number>(55);
+        for (MovieLensType m : dbmovielens)
+            if (id == m.getIdUser())
+                userVotes.put(Film.getFilmByID(m.getIdItem()), m.getRating());
+
+        return userVotes;
+    }
 
     private static ArrayList<MovieLensType> readFromFile(String path) throws IOException {
         BufferedReader inp = new BufferedReader(new FileReader(path));
@@ -58,5 +69,23 @@ public class MovieLensVoting {
             }
         inp.close();
         return dbmovielens;
+    }
+
+    /**
+     * inner class to do soring of the map *
+     */
+    private static class ValueComparer implements Comparator<Map.Entry<Film, Number>> {
+        public static final int ASC = 1;
+        public static final int DESC = -1;
+        private int orderingType;
+
+        private ValueComparer(int orderingType) {
+            this.orderingType = orderingType;
+        }
+
+        @Override
+        public int compare(Map.Entry<Film, Number> filmNumberEntry, Map.Entry<Film, Number> filmNumberEntry2) {
+            return orderingType*Double.compare(filmNumberEntry.getValue().doubleValue(), filmNumberEntry2.getValue().doubleValue());
+        }
     }
 }

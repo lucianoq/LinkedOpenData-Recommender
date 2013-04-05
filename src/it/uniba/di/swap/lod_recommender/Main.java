@@ -18,14 +18,16 @@ public class Main {
         Graph.load();
 //        Graph.updateWeight();
         //Graph.printDot();
-        FilmGraph.load();
+//        FilmGraph.load();
         //FilmGraph.printDot();
-        Distances.init();
+//        Distances.init();
 
         MovieLensVoting.init();
 
         MovieLensUser user = new MovieLensUser(904);
         user.print();
+
+        System.exit(0);
 
         for (Distances.Type t : Distances.Type.values()) {
             System.out.println("------------------------------");

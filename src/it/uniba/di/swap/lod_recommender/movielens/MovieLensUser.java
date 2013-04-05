@@ -4,6 +4,7 @@ import it.uniba.di.swap.lod_recommender.graph.Film;
 import it.uniba.di.swap.lod_recommender.profile.*;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -15,6 +16,7 @@ import java.util.Map;
 public class MovieLensUser {
 
     Map<Film, Number> map;
+    List<Map.Entry<Film, Number>> list;
     private int id;
     private ProfileSimple profileSimple;
     private ProfileSimple profileSimpleNegative;
@@ -23,14 +25,15 @@ public class MovieLensUser {
 
     public MovieLensUser(int id) {
         this.id = id;
-        map = MovieLensVoting.getFilmsVotedByUser(id);
+        map = MovieLensVoting.getFilmsVotedByUserMap(id);
+        list = MovieLensVoting.getFilmsVotedByUserSorted(id);
         Map<Film, Number> mapPos = new HashMap<Film, Number>();
         Map<Film, Number> mapNeg = new HashMap<Film, Number>();
-        for (Film f : map.keySet()) {
-            if (map.get(f).intValue() < Profile.MEDIUMVOTE)
-                mapNeg.put(f, map.get(f));
-            if (map.get(f).intValue() > Profile.MEDIUMVOTE)
-                mapPos.put(f, map.get(f));
+        for (Map.Entry<Film, Number> me : list) {
+            if (me.getValue().doubleValue() < Profile.MEDIUMVOTE)
+                mapNeg.put(me.getKey(), me.getValue());
+            if (me.getValue().doubleValue() > Profile.MEDIUMVOTE)
+                mapPos.put(me.getKey(), me.getValue());
         }
         profileSimple = new ProfileSimple(map.keySet());
         profileSimpleNegative = new ProfileSimpleNegative(mapPos.keySet(), mapNeg.keySet());
@@ -59,9 +62,8 @@ public class MovieLensUser {
     }
 
     public void print() {
-        for (Film f : map.keySet()) {
-            //TODO sort map by values
-            System.out.println("Film: " + f.getTitle() + "\t\tVote: " + map.get(f).intValue());
+        for (Map.Entry<Film, Number> me : list) {
+            System.out.println("Film: " + me.getKey().getTitle() + "\t\tVote: " + me.getValue().intValue());
         }
     }
 }
