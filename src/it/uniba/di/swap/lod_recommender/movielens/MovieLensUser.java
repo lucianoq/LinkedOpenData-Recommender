@@ -58,9 +58,11 @@ public class MovieLensUser {
     }
 
     public void print() {
-        List<Map.Entry<Film, Number>> list = MovieLensVoting.getFilmsVotedByUserSorted(id);
-        for (Map.Entry<Film, Number> me : list) {
+        System.out.println("---- Profile User " + getId() + "--------");
+        List<Map.Entry<Film, Number>> list = MovieLensVoting.getFilmsVotedByUserSorted(getId());
+        for (Map.Entry<Film, Number> me : list)
             System.out.println("Film: " + me.getKey().getTitle() + "\t\tVote: " + me.getValue().intValue());
-        }
+
+        System.out.println("------- ------- --------");
     }
 }

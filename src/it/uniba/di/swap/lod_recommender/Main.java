@@ -3,6 +3,7 @@ package it.uniba.di.swap.lod_recommender;
 import it.uniba.di.swap.lod_recommender.distance.Distances;
 import it.uniba.di.swap.lod_recommender.graph.FilmGraph;
 import it.uniba.di.swap.lod_recommender.graph.Graph;
+import it.uniba.di.swap.lod_recommender.movielens.MovieLensTrainingSet;
 import it.uniba.di.swap.lod_recommender.movielens.MovieLensUser;
 import it.uniba.di.swap.lod_recommender.movielens.MovieLensVoting;
 import it.uniba.di.swap.lod_recommender.mysql.DBAccess;
@@ -22,14 +23,17 @@ public class Main {
         //Graph.printDot();
         FilmGraph.load();
         //FilmGraph.printDot();
-        Distances.init();
+        //Distances.init();
 
-        MovieLensVoting.init();
 
-        MovieLensUser user = new MovieLensUser(1);
+        MovieLensTrainingSet.init(MovieLensTrainingSet.SEVENTYPERCENT);
+
+        int i = 1;
+        // for (int i : MovieLensVoting.users()){
+        MovieLensVoting.init("./config/trainingSet/user" + i + ".txt");
+        MovieLensUser user = new MovieLensUser(i);
         user.print();
 
-//        Class.forName("it.uniba.di.swap.lod_recommender.mysql.DBAccess");
 
         for (Distances.Type t : Distances.Type.values()) {
             Recommender.init(t);
@@ -52,29 +56,6 @@ public class Main {
                             p.name());
                     System.out.println("ID: " + r.getFilm().getIdMovieLens() + "\t\tFilm: " + r.getFilm().getTitle() + "\t\t\tGap: " + (r.getDistance() - start));
                 }
-
-
-//            System.out.println("--------------------------------------------");
-//
-//            start = recSimpleNegative.get(0).getDistance();
-//            System.out.println("\n\nRECOMMENDATION SIMPLE NEGATIVE: ");
-//            for (Recommendation r : recSimpleNegative)
-//                System.out.println("ID: " + r.getFilm().getIdMovieLens() + "\t\tFilm: " + r.getFilm().getTitle() + "\t\tDistances: " + (r.getDistance() - start));
-//
-//            System.out.println("--------------------------------------------");
-//
-//            start = recVotedNostra.get(0).getDistance();
-//            System.out.println("\n\nRECOMMENDATION VOTED NOSTRA: ");
-//            for (Recommendation r : recVotedNostra)
-//                System.out.println("ID: " + r.getFilm().getIdMovieLens() + "\t\tFilm: " + r.getFilm().getTitle() + "\t\tDistances: " + (r.getDistance() - start));
-//
-//            System.out.println("--------------------------------------------");
-//
-//            start = recVotedMusto.get(0).getDistance();
-//            System.out.println("\n\nRECOMMENDATION VOTED MUSTO: ");
-//            for (Recommendation r : recVotedMusto)
-//                System.out.println("ID: " + r.getFilm().getIdMovieLens() + "\t\tFilm: " + r.getFilm().getTitle() + "\t\tDistances: " + (r.getDistance() - start));
-
             }
         }
     }

@@ -9,12 +9,17 @@ import java.util.*;
 
 public class MovieLensVoting {
 
-//    private static final String DBMOVIELENSVOTING = "./config/VotesMovielens.txt";
-    private static final String DBMOVIELENSVOTING = "./config/utente1_train";
+    private static final String DBMOVIELENSVOTING = "./config/VotesMovielens.txt";
+    // private static final String DBMOVIELENSVOTING = "./config/utente1_train";
+
     public static ArrayList<MovieLensType> dbmovielens;
 
     public static void init() throws IOException {
         dbmovielens = readFromFile(DBMOVIELENSVOTING);
+    }
+
+    public static void init(String fileName) throws IOException {
+        dbmovielens = readFromFile(fileName);
     }
 
     public static ArrayList<Integer> users() {
@@ -57,6 +62,27 @@ public class MovieLensVoting {
         return userVotes;
     }
 
+    public static int getNumbersFilmsVotedByUser(int id) {
+        Map<Film, Number> userVotes = new HashMap<Film, Number>(55);
+        for (MovieLensType m : dbmovielens)
+            if (id == m.getIdUser())
+                userVotes.put(Film.getFilmByID(m.getIdItem()), m.getRating());
+
+        return userVotes.size();
+    }
+
+    public static Map<Film, Number> getFilmsVotedByUserMap(int id, int limit) {
+        Map<Film, Number> userVotes = new HashMap<Film, Number>(55);
+        int i = 0;
+        for (MovieLensType m : dbmovielens)
+            if (id == m.getIdUser()) {
+                userVotes.put(Film.getFilmByID(m.getIdItem()), m.getRating());
+                i++;
+                if (i > limit) return userVotes;
+            }
+        return userVotes;
+    }
+
     private static ArrayList<MovieLensType> readFromFile(String path) throws IOException {
         BufferedReader inp = new BufferedReader(new FileReader(path));
         ArrayList<MovieLensType> dbmovielens = new ArrayList<MovieLensType>();
@@ -90,7 +116,7 @@ public class MovieLensVoting {
 
         @Override
         public int compare(Map.Entry<Film, Number> filmNumberEntry, Map.Entry<Film, Number> filmNumberEntry2) {
-            return orderingType*Double.compare(filmNumberEntry.getValue().doubleValue(), filmNumberEntry2.getValue().doubleValue());
+            return orderingType * Double.compare(filmNumberEntry.getValue().doubleValue(), filmNumberEntry2.getValue().doubleValue());
         }
     }
 }
