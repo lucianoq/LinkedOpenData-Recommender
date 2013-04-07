@@ -7,12 +7,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 04/04/13
- * Time: 15.47
- */
 public class MovieLensUser {
 
     Map<Film, Number> map;

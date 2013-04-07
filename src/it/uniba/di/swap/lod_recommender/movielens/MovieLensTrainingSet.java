@@ -9,13 +9,6 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Map;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Simone
- * Date: 07/04/13
- * Time: 1.24
- * To change this template use File | Settings | File Templates.
- */
 public class MovieLensTrainingSet {
 
     public static final double HALFPERCENT = 0.5;

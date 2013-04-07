@@ -10,7 +10,6 @@ import java.util.*;
 public class MovieLensVoting {
 
     private static final String DBMOVIELENSVOTING = "./config/VotesMovielens.txt";
-    // private static final String DBMOVIELENSVOTING = "./config/utente1_train";
 
     public static ArrayList<MovieLensType> dbmovielens;
 

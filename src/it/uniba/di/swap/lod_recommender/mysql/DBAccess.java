@@ -7,12 +7,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 05/04/13
- * Time: 16.33
- */
 public class DBAccess {
 
     private static Connection conn = null;
