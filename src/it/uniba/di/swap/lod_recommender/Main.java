@@ -25,7 +25,7 @@ public class Main {
         //FilmGraph.printDot();
         Distances.init();
 
-        MovieLensTrainingSet.init(MovieLensTrainingSet.SEVENTYPERCENT);
+        MovieLensTrainingSet.init(MovieLensTrainingSet.ALL);
 
         //int i = 1;
         for (int i : MovieLensVoting.users()) {
