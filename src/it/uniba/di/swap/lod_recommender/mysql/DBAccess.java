@@ -2,10 +2,7 @@ package it.uniba.di.swap.lod_recommender.mysql;
 
 import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class DBAccess {
 
@@ -16,6 +13,12 @@ public class DBAccess {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/loddb", "root", "root");
+            conn.setAutoCommit(false);
+
+            Statement s = conn.createStatement();
+            s.execute("DELETE FROM results;");
+            conn.commit();
+
             ps = conn.prepareStatement("INSERT INTO results VALUES (?,?,?,?,?,?,?,?);");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -27,7 +30,7 @@ public class DBAccess {
     private DBAccess() {
     }
 
-    public static boolean insert(int film, int user, int rank, int distance, int profile, String filmName, String distanceName, String profileName) {
+    public static void insert(int film, int user, int rank, int distance, int profile, String filmName, String distanceName, String profileName) {
         try {
             ps.setInt(1, film);
             ps.setInt(2, user);
@@ -37,13 +40,33 @@ public class DBAccess {
             ps.setString(6, filmName);
             ps.setString(7, distanceName);
             ps.setString(8, profileName);
-            return ps.execute();
+            ps.addBatch();
         } catch (MySQLIntegrityConstraintViolationException ex) {
-            //CIAOOOOOO
+            System.out.println("[WARNING] Chiave primaria duplicata.");
         } catch (SQLException e) {
             System.out.println(ps.toString());
             e.printStackTrace();
         }
-        return false;
+    }
+
+    public static void commit() {
+        try {
+            ps.executeBatch();
+            conn.commit();
+        } catch (MySQLIntegrityConstraintViolationException ex) {
+            System.out.println("[WARNING] Chiave primaria duplicata.");
+        } catch (BatchUpdateException bee) {
+            System.out.println("[WARNING] Chiave primaria duplicata.");
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
+
+    public static void close() {
+        try {
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
     }
 }
