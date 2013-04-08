@@ -36,12 +36,12 @@ public class Main {
             for (Distances.Type t : Distances.Type.values()) {
                 Recommender.init(t);
                 for (Profile.Type p : Profile.Type.values()) {
-                    System.out.println("\n\n-- DISTANZA " + t.name());
-                    System.out.println("-- RECOMMENDATION " + p.name());
+//                    System.out.println("\n\n-- DISTANZA " + t.name());
+//                    System.out.println("-- RECOMMENDATION " + p.name());
 
                     List<Recommendation> rec = Recommender.getRecommendations(user.getProfile(p), 100);
 
-                    double start = rec.get(0).getDistance();
+//                    double start = rec.get(0).getDistance();
                     for (Recommendation r : rec) {
                         DBAccess.insert(
                                 r.getFilm().getIdMovieLens(),
@@ -52,10 +52,12 @@ public class Main {
                                 r.getFilm().getTitle(),
                                 t.name(),
                                 p.name());
-                        System.out.println("ID: " + r.getFilm().getIdMovieLens() + "\t\tFilm: " + r.getFilm().getTitle() + "\t\t\tGap: " + (r.getDistance() - start));
+//                        System.out.println("ID: " + r.getFilm().getIdMovieLens() + "\t\tFilm: " + r.getFilm().getTitle() + "\t\t\tGap: " + (r.getDistance() - start));
                     }
                 }
             }
+            DBAccess.commit();
         }
+        DBAccess.close();
     }
 }
