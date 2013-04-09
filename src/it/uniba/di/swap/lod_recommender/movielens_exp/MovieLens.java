@@ -95,11 +95,32 @@ public class MovieLens {
     }
 
     public static void startExperiment() {
+//        fillDatabase();
+        computePrecision();
+    }
+
+    private static void computePrecision() {
+        for (User user : users) {
+            for (Distances.Type d : Distances.Type.values()) {
+                for (Profile.Type p : Profile.Type.values()) {
+                    for (int k : new ArrayList<Integer>() {{
+                        add(5);
+                        add(10);
+                        add(20);
+                    }}) {
+                        System.out.print("Utente: " + user.getId() + "; Distanza: " + d.name());
+                        System.out.print("; Profilo: " + p.name() + "; k: " + k + "; Precisione: ");
+                        System.out.println(Testing.precisionAtK(user, d, p, k));
+                    }
+                }
+            }
+        }
+    }
+
+    private static void fillDatabase() {
         for (User user : users) {
 //            user.print();
-
             for (Distances.Type t : Distances.Type.values()) {
-                Recommender.init(t);
                 for (Profile.Type p : Profile.Type.values()) {
                     List<Recommendation> rec = Recommender.getRecommendations(user.getProfile(p), Recommender.ALL);
                     for (Recommendation r : rec) {
@@ -129,6 +150,13 @@ public class MovieLens {
             int resize = (int) Math.round(numFilm * TRAIN_RATE);
             Collection<Map.Entry<Film, Number>> train = u.getFilms(0, resize);
             Collection<Map.Entry<Film, Number>> test = u.getFilms(resize, numFilm);
+
+            List<Rating> lr = new ArrayList<Rating>();
+            for (Map.Entry<Film, Number> m : test) {
+                Rating r = new Rating(u, m.getKey(), m.getValue());
+                lr.add(r);
+            }
+            Testing.getMapList().put(u, lr);
 
             for (Map.Entry<Film, Number> m : train) {
                 trainStr += u.getId() + "," + m.getKey().getIdMovieLens() + "," + m.getValue() + "\n";

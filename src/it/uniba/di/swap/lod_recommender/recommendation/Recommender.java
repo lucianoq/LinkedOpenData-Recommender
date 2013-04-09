@@ -14,18 +14,20 @@ public class Recommender {
     public static final int ALL = 0;
     private static Map<Film, List<Recommendation>> map;
 
-    public static void init(Distances.Type t) {
-        map = new HashMap<Film, List<Recommendation>>();
+    static {
+        for (Distances.Type t : Distances.Type.values()) {
+            map = new HashMap<Film, List<Recommendation>>();
 
-        for (Film f1 : Graph.getFilms()) {
-            List<Recommendation> temp = new ArrayList<Recommendation>();
-            for (Film f2 : Graph.getFilms())
-                if (!f1.equals(f2)) {
-                    double tmp = Distances.distances.get(t).getDistance(f1, f2).doubleValue();
-                    temp.add(new Recommendation(f2, tmp));
-                }
-            Collections.sort(temp);
-            map.put(f1, temp);
+            for (Film f1 : Graph.getFilms()) {
+                List<Recommendation> temp = new ArrayList<Recommendation>();
+                for (Film f2 : Graph.getFilms())
+                    if (!f1.equals(f2)) {
+                        double tmp = Distances.distances.get(t).getDistance(f1, f2).doubleValue();
+                        temp.add(new Recommendation(f2, tmp));
+                    }
+                Collections.sort(temp);
+                map.put(f1, temp);
+            }
         }
     }
 
