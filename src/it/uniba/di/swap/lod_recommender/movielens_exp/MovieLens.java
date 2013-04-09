@@ -96,7 +96,7 @@ public class MovieLens {
 
     public static void startExperiment() {
         for (User user : users) {
-            user.print();
+//            user.print();
 
             for (Distances.Type t : Distances.Type.values()) {
                 Recommender.init(t);

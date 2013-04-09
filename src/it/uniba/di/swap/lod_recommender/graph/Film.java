@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 public class Film extends GraphResource implements Serializable, Comparable<Film> {
 
@@ -40,7 +39,6 @@ public class Film extends GraphResource implements Serializable, Comparable<Film
                 return f;
         return null;
     }
-
 
     public int getIdMovieLens() {
         return idMovieLens;

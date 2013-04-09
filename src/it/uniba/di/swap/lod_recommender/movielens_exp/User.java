@@ -65,12 +65,6 @@ public class User {
             user.profileSimpleNegative = new ProfileSimpleNegative(mapPos.keySet(), mapNeg.keySet());
             user.profileVotedNostra = new ProfileVotedNostra(user.map);
             user.profileVotedMusto = new ProfileVotedMusto(user.map);
-
-            System.out.println("Profile simple di user " + user + " " + user.profileSimple.getSize());
-            System.out.println("Profile simple negative " + user.profileSimpleNegative.getSize());
-            System.out.println("Profile simple " + user.profileVotedMusto.getSize());
-            System.out.println("Profile simple " + user.profileVotedNostra.getSize());
-            System.out.println("Profile simple " + user.map.size());
         }
     }
 
