@@ -2,12 +2,15 @@ package it.uniba.di.swap.lod_recommender.profile;
 
 import it.uniba.di.swap.lod_recommender.graph.Film;
 
-import java.util.Collections;
 import java.util.Map;
 
 public abstract class ProfileVoted extends Profile {
 
     protected Map<Film, Number> votedFilms;
+
+    public int getSize() {
+        return votedFilms.size();
+    }
 
     public Map<Film, Number> getFilmVotes() {
         return votedFilms;

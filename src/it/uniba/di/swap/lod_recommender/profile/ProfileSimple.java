@@ -12,6 +12,11 @@ public class ProfileSimple extends Profile {
         this.profiledFilms = profiled;
     }
 
+    public int getSize() {
+        return profiledFilms.size();
+    }
+
+
     public Collection<Film> getFilms() {
         return profiledFilms;
     }
@@ -19,7 +24,6 @@ public class ProfileSimple extends Profile {
     public boolean isIn(Film f) {
         return profiledFilms.contains(f);
     }
-
 
     public void addFilm(Film film) {
         profiledFilms.add(film);
