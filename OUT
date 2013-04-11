@@ -1,0 +1,4521 @@
+Utente: 1; Distanza: PASSANTD; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.1
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.03474903474903475
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.1
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.03474903474903475
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.2
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.1
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.03474903474903475
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.03474903474903475
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.1
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.03474903474903475
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.1
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.03474903474903475
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.1
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.08
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.07
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.03474903474903475
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.03474903474903475
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.1
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.03474903474903475
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.1
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.03474903474903475
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.1
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.08
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.07
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.03474903474903475
+R Precisione: 0.1111111111111111
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.03474903474903475
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.03474903474903475
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.03474903474903475
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.1
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.08
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.07
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.03474903474903475
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 1; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.03474903474903475
+R Precisione: 0.05555555555555555
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.1
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.02
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.03
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.03
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.03
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.03
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.02
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.03
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 2; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.2
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.007722007722007722
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.007722007722007722
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.007722007722007722
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.007722007722007722
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.007722007722007722
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.007722007722007722
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.007722007722007722
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.007722007722007722
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.007722007722007722
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.007722007722007722
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.007722007722007722
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.007722007722007722
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.007722007722007722
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.007722007722007722
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.007722007722007722
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 3; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.007722007722007722
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.011583011583011582
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.011583011583011582
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.011583011583011582
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.011583011583011582
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.011583011583011582
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.011583011583011582
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.011583011583011582
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.011583011583011582
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.011583011583011582
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.011583011583011582
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.011583011583011582
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.011583011583011582
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.011583011583011582
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.011583011583011582
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.011583011583011582
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 5; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.011583011583011582
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.1875
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.1875
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.2
+R Precisione: 0.1875
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.08
+R Precisione: 0.1875
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.1875
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.03088803088803089
+R Precisione: 0.1875
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.125
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.125
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.1
+R Precisione: 0.125
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.08
+R Precisione: 0.125
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.125
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.03088803088803089
+R Precisione: 0.125
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.08
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.03088803088803089
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.1875
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.2
+R Precisione: 0.1875
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.2
+R Precisione: 0.1875
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.08
+R Precisione: 0.1875
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.1875
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.03088803088803089
+R Precisione: 0.1875
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.03088803088803089
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.03088803088803089
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.03088803088803089
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.08
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.03088803088803089
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.03088803088803089
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.03088803088803089
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.03088803088803089
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.08
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.03088803088803089
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.08
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.03088803088803089
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.08
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.03088803088803089
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.03088803088803089
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.08
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 6; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.03088803088803089
+R Precisione: 0.0625
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTD; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.4
+R Precisione: 0.24324324324324326
+MRR: 0.2
+
+Utente: 7; Distanza: PASSANTD; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.3
+R Precisione: 0.24324324324324326
+MRR: 0.1
+
+Utente: 7; Distanza: PASSANTD; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.25
+R Precisione: 0.24324324324324326
+MRR: 0.05
+
+Utente: 7; Distanza: PASSANTD; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.22
+R Precisione: 0.24324324324324326
+MRR: 0.02
+
+Utente: 7; Distanza: PASSANTD; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.2
+R Precisione: 0.24324324324324326
+MRR: 0.01
+
+Utente: 7; Distanza: PASSANTD; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.07142857142857142
+R Precisione: 0.24324324324324326
+MRR: 0.0019305019305019305
+
+Utente: 7; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.21621621621621623
+MRR: 0.2
+
+Utente: 7; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.21621621621621623
+MRR: 0.1
+
+Utente: 7; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.2
+R Precisione: 0.21621621621621623
+MRR: 0.05
+
+Utente: 7; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.2
+R Precisione: 0.21621621621621623
+MRR: 0.02
+
+Utente: 7; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.19
+R Precisione: 0.21621621621621623
+MRR: 0.01
+
+Utente: 7; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.07142857142857142
+R Precisione: 0.21621621621621623
+MRR: 0.0019305019305019305
+
+Utente: 7; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.1891891891891892
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.2
+R Precisione: 0.1891891891891892
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.2
+R Precisione: 0.1891891891891892
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.2
+R Precisione: 0.1891891891891892
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.2
+R Precisione: 0.1891891891891892
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.07142857142857142
+R Precisione: 0.1891891891891892
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.4
+R Precisione: 0.24324324324324326
+MRR: 0.2
+
+Utente: 7; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.3
+R Precisione: 0.24324324324324326
+MRR: 0.1
+
+Utente: 7; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.3
+R Precisione: 0.24324324324324326
+MRR: 0.05
+
+Utente: 7; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.22
+R Precisione: 0.24324324324324326
+MRR: 0.02
+
+Utente: 7; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.19
+R Precisione: 0.24324324324324326
+MRR: 0.01
+
+Utente: 7; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.07142857142857142
+R Precisione: 0.24324324324324326
+MRR: 0.0019305019305019305
+
+Utente: 7; Distanza: PASSANTI; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.2
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.1
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.08
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.09
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.07142857142857142
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.2
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.1
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.12
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.16
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.07142857142857142
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.2
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.2
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.16
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.18
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.07142857142857142
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.2
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.1
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.08
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.09
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.07142857142857142
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.2
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.1
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.08
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.09
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.07142857142857142
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.2
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.1
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.12
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.16
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.07142857142857142
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.2
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.2
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.16
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.18
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.07142857142857142
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.2
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.1
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.08
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.09
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.07142857142857142
+R Precisione: 0.05405405405405406
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.1891891891891892
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.2
+R Precisione: 0.1891891891891892
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.15
+R Precisione: 0.1891891891891892
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.18
+R Precisione: 0.1891891891891892
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.15
+R Precisione: 0.1891891891891892
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.07142857142857142
+R Precisione: 0.1891891891891892
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.2
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.1
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.1
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.16
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.07142857142857142
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.2
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.2
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.14
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.18
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.07142857142857142
+R Precisione: 0.13513513513513514
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.1891891891891892
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.1891891891891892
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.2
+R Precisione: 0.1891891891891892
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.2
+R Precisione: 0.1891891891891892
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.14
+R Precisione: 0.1891891891891892
+MRR: 0.0
+
+Utente: 7; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.07142857142857142
+R Precisione: 0.1891891891891892
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 8; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.009652509652509652
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.15
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.1
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.07
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.04054054054054054
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.15
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.08
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.06
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.04054054054054054
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.15
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.1
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.07
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.04054054054054054
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.1
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.08
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.04054054054054054
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.04054054054054054
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.04054054054054054
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.04054054054054054
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.04054054054054054
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.04054054054054054
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.04054054054054054
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.04054054054054054
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.04054054054054054
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.06
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.04054054054054054
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.06
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.04054054054054054
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.08
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.06
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.04054054054054054
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.06
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.05
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 10; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.04054054054054054
+R Precisione: 0.047619047619047616
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.02702702702702703
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.02702702702702703
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.07142857142857142
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.07142857142857142
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.07142857142857142
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.07142857142857142
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.06
+R Precisione: 0.07142857142857142
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.02702702702702703
+R Precisione: 0.07142857142857142
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.02702702702702703
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.02702702702702703
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.02702702702702703
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.02702702702702703
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTI; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.02702702702702703
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.02702702702702703
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.02702702702702703
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.02702702702702703
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: PASSANTC; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.02702702702702703
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.02702702702702703
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.03
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.02702702702702703
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.03
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.02702702702702703
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 11; Distanza: NOSTRA; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.02702702702702703
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.03
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.013513513513513514
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.03
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.013513513513513514
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 100; 
+Precisione a k: 0.01
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: VOTED_NOSTRA; k: 518; 
+Precisione a k: 0.013513513513513514
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 5; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 10; 
+Precisione a k: 0.0
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 50; 
+Precisione a k: 0.02
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 100; 
+Precisione a k: 0.03
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTD; Profilo: VOTED_MUSTO; k: 518; 
+Precisione a k: 0.013513513513513514
+R Precisione: 0.0
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTI; Profilo: SIMPLE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTI; Profilo: SIMPLE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTI; Profilo: SIMPLE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTI; Profilo: SIMPLE; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTI; Profilo: SIMPLE; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTI; Profilo: SIMPLE; k: 518; 
+Precisione a k: 0.013513513513513514
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 100; 
+Precisione a k: 0.04
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTI; Profilo: SIMPLE_NEGATIVE; k: 518; 
+Precisione a k: 0.013513513513513514
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 5; 
+Precisione a k: 0.2
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 10; 
+Precisione a k: 0.1
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 20; 
+Precisione a k: 0.05
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 12; Distanza: PASSANTI; Profilo: VOTED_NOSTRA; k: 50; 
+Precisione a k: 0.04
+R Precisione: 0.14285714285714285
+MRR: 0.0
+
+Utente: 12; Distanza: PASSAN

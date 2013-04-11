@@ -1,12 +1,8 @@
 package it.uniba.di.swap.lod_recommender.movielens_exp.mysql;
 
 import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
-import it.uniba.di.swap.lod_recommender.graph.Film;
-import it.uniba.di.swap.lod_recommender.movielens_exp.User;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class DBAccess {
 
@@ -27,8 +23,10 @@ public class DBAccess {
             ps = conn.prepareStatement("INSERT INTO results VALUES (?,?,?,?,?,?,?,?);");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
+            System.exit(-1);
         } catch (SQLException e) {
             e.printStackTrace();
+            System.exit(-1);
         }
     }
 
@@ -51,6 +49,7 @@ public class DBAccess {
         } catch (SQLException e) {
             System.out.println(ps.toString());
             e.printStackTrace();
+            System.exit(-1);
         }
     }
 

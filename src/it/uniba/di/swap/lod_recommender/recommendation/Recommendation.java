@@ -52,4 +52,12 @@ public class Recommendation implements Comparable<Recommendation> {
             return 0;
         return 0;
     }
+
+    @Override
+    public String toString() {
+        return "Recommendation{" +
+                "film=" + film +
+                ", distance=" + distance +
+                '}';
+    }
 }

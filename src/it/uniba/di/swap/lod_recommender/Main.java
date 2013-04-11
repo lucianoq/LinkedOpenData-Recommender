@@ -18,7 +18,6 @@ public class Main {
         //FilmGraph.printDot();
         Distances.init();
 
-//        Class.forName("it.uniba.di.swap.lod_recommender.movielens_exp.MovieLens");
-        MovieLens.startExperiment();
+        MovieLens.computePrecisions();
     }
 }
