@@ -117,9 +117,10 @@ public class MovieLens {
         try {
             PrintWriter out = new PrintWriter(new FileOutputStream(new File("./OUT")));
             System.out.println("Calcolo la precisione");
-            for (User user : User.getUsers())
-                for (Distances.Type d : Distances.Type.values())
-                    for (Profile.Type p : Profile.Type.values())
+
+            for (Distances.Type d : Distances.Type.values())
+                for (Profile.Type p : Profile.Type.values())
+                    for (User user : User.getUsers()) {
                         for (int k : new ArrayList<Integer>() {{
 //                            add(1);
                             add(5);
@@ -141,7 +142,10 @@ public class MovieLens {
                             out.println("R Precisione: " + prec3);
                             out.println("MRR: " + prec4);
                             out.println();
-                        }
+                        }         //for k
+                        double mrrComplessivo = MovieLens.doMRR(d, p);
+                        System.out.println("CONFIGURAZIONE " + d.name() + " " + p.name() + " " + mrrComplessivo);
+                    } //for User
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -233,18 +237,17 @@ public class MovieLens {
                 new Configuration(d, p),
                 user.getProfile(p),
                 Recommender.ALL);
-        System.err.println("RECS PRIMA DEL RETAIN: " + recs.size());
-        recs.retainAll(dbTest.get(user));
-        System.err.println("DOPO IL RETAIN: " + recs.size());
+        List<Rating> ratingList = new ArrayList<Rating>(recs.size());
+        for (Recommendation r : recs)
+            ratingList.add(new Rating(user, r.getFilm(), null));
+        ratingList.retainAll(dbTest.get(user));
         try {
-            if (k < recs.size())
-                recs = recs.subList(0, k);
+            if (k < ratingList.size())
+                ratingList = ratingList.subList(0, k);
         } catch (IndexOutOfBoundsException e) {
-            System.err.println("RECS SIZE: " + recs.size());
-            System.err.println("K: " + k);
         }
         double matched = 0;
-        for (Recommendation r : recs)
+        for (Rating r : ratingList)
             if (like(user, r.getFilm()))
                 matched++;
         return matched / k;
@@ -270,7 +273,22 @@ public class MovieLens {
         for (Recommendation r : recs)
             if (like(user, r.getFilm()))
                 sommatoria += 1 / (recs.indexOf(r) + 1);
-        return sommatoria / q;
+        return sommatoria;
+    }
+
+    public static double doMRR(Distances.Type d, Profile.Type p) {
+        Configuration c = new Configuration(d, p);
+        double sommatoria = 0;
+        for (User user : User.getUsers()) {
+            List<Recommendation> recs = Recommender.getRecommendations(c, user.getProfile(p), Recommender.ALL);
+
+            for (Recommendation r : recs)
+                if (like(user, r.getFilm())) {
+                    sommatoria += 1 / (recs.indexOf(r) + 1);
+                    break;
+                }
+        }
+        return sommatoria;
     }
 
     private static boolean like(User user, Film film) {
