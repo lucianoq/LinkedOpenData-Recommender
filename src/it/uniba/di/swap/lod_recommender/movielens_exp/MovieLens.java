@@ -121,22 +121,23 @@ public class MovieLens {
                 for (Distances.Type d : Distances.Type.values())
                     for (Profile.Type p : Profile.Type.values())
                         for (int k : new ArrayList<Integer>() {{
+//                            add(1);
                             add(5);
-                            add(10);
-                            add(20);
-                            add(50);
+//                            add(10);
+//                            add(20);
+//                            add(50);
                             add(100);
                             add(518);
                         }}) {
                             double prec1 = precisionAtK(user, d, p, k);
-//                        double prec2 = precisionAtKOnlyInTest(user, d, p, k);
+                            double prec2 = precisionAtKOnlyInTest(user, d, p, k);
                             double prec3 = rPrecision(user, d, p);
                             double prec4 = doMRR(user, d, p, k);
 
                             out.print("Utente: " + user.getId() + "; Distanza: " + d.name());
                             out.println("; Profilo: " + p.name() + "; k: " + k + "; ");
                             out.println("Precisione a k: " + prec1);
-//                        System.out.println("Precisione a k epurata: " + prec2);
+                            out.println("Precisione a k epurata: " + prec2);
                             out.println("R Precisione: " + prec3);
                             out.println("MRR: " + prec4);
                             out.println();
@@ -236,7 +237,7 @@ public class MovieLens {
         recs.retainAll(dbTest.get(user));
         System.err.println("DOPO IL RETAIN: " + recs.size());
         try {
-            if (k >= recs.size())
+            if (k < recs.size())
                 recs = recs.subList(0, k);
         } catch (IndexOutOfBoundsException e) {
             System.err.println("RECS SIZE: " + recs.size());
