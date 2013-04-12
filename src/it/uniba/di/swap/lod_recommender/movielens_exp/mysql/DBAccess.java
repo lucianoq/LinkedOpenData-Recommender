@@ -16,7 +16,8 @@ public class DBAccess {
             conn.setAutoCommit(false);
 
             Statement s = conn.createStatement();
-            s.execute("DELETE FROM results;");
+            s.execute("TRUNCATE TABLE results;");
+//            s.execute("DELETE FROM results;");
             conn.commit();
             s.close();
 

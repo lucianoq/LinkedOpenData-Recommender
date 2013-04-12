@@ -37,16 +37,17 @@ public class MovieLens {
         NUM_USER = User.getUsers().size();
         NUM_FILM = Graph.getFilms().size();
 
-        db = new HashMap<User, List<Rating>>();
-        dbTrain = new HashMap<User, List<Rating>>();
-        dbTest = new HashMap<User, List<Rating>>();
-        dbTestPositive = new HashMap<User, Set<Rating>>();
+        db = new HashMap<User, List<Rating>>(NUM_USER);
+        dbTrain = new HashMap<User, List<Rating>>(NUM_USER);
+        dbTest = new HashMap<User, List<Rating>>(NUM_USER);
+        dbTestPositive = new HashMap<User, Set<Rating>>(NUM_USER);
+
 
         for (User u : User.getUsers()) {
-            db.put(u, new ArrayList<Rating>());
-            dbTrain.put(u, new ArrayList<Rating>());
-            dbTest.put(u, new ArrayList<Rating>());
-            dbTestPositive.put(u, new HashSet<Rating>());
+            db.put(u, new ArrayList<Rating>(NUM_FILM * 4 * 4));
+            dbTrain.put(u, new ArrayList<Rating>(NUM_FILM * 4 * 4));
+            dbTest.put(u, new ArrayList<Rating>(NUM_FILM * 4 * 4));
+            dbTestPositive.put(u, new HashSet<Rating>(NUM_FILM * 4 * 4));
         }
 
         System.out.println("Leggo Database da File");
@@ -63,16 +64,10 @@ public class MovieLens {
 
         System.out.println("Creo i profili degli utenti");
         User.createProfiles();
+//        MovieLens.fillDatabase();
 
-        System.err.println("DB size " + db.size());
-        System.err.println("DB utente 1 size " + db.get(User.getUserByID(1)).size());
-        System.err.println("DBTRAIN size " + dbTrain.size());
-        System.err.println("DBTRAIN utente 1 size " + dbTrain.get(User.getUserByID(1)).size());
-        System.err.println("DBTEST size " + dbTest.size());
-        System.err.println("DBTEST utente 1 size " + dbTest.get(User.getUserByID(1)).size());
-        System.err.println("DBTESTPOSITIVE size " + dbTestPositive.size());
-        System.err.println("DBTESTPOSITIVE utente 1 size " + dbTestPositive.get(User.getUserByID(1)).size());
 
+        Metrics.computePrecisions();
     }
 
     private static void save(String dir, String content) {
@@ -113,42 +108,12 @@ public class MovieLens {
         return list;
     }
 
-    public static void computePrecisions() {
-        try {
-            PrintWriter out = new PrintWriter(new FileOutputStream(new File("./OUT")));
-            System.out.println("Calcolo la precisione");
+    public static Map<User, List<Rating>> getDbTest() {
+        return dbTest;
+    }
 
-            for (Distances.Type d : Distances.Type.values())
-                for (Profile.Type p : Profile.Type.values())
-                    for (User user : User.getUsers()) {
-                        for (int k : new ArrayList<Integer>() {{
-//                            add(1);
-                            add(5);
-//                            add(10);
-//                            add(20);
-//                            add(50);
-                            add(100);
-                            add(518);
-                        }}) {
-                            double prec1 = precisionAtK(user, d, p, k);
-                            double prec2 = precisionAtKOnlyInTest(user, d, p, k);
-                            double prec3 = rPrecision(user, d, p);
-                            double prec4 = doMRR(user, d, p, k);
-
-                            out.print("Utente: " + user.getId() + "; Distanza: " + d.name());
-                            out.println("; Profilo: " + p.name() + "; k: " + k + "; ");
-                            out.println("Precisione a k: " + prec1);
-                            out.println("Precisione a k epurata: " + prec2);
-                            out.println("R Precisione: " + prec3);
-                            out.println("MRR: " + prec4);
-                            out.println();
-                        }         //for k
-                        double mrrComplessivo = MovieLens.doMRR(d, p);
-                        System.out.println("CONFIGURAZIONE " + d.name() + " " + p.name() + " " + mrrComplessivo);
-                    } //for User
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public static Map<User, Set<Rating>> getDbTestPositive() {
+        return dbTestPositive;
     }
 
     public static void fillDatabase() {
@@ -156,7 +121,7 @@ public class MovieLens {
         for (User user : User.getUsers()) {
             for (Distances.Type t : Distances.Type.values()) {
                 for (Profile.Type p : Profile.Type.values()) {
-                    Configuration c = new Configuration(t, p);
+                    Configuration c = new Configuration(t, p, 0);
                     List<Recommendation> rec = Recommender.getRecommendations(c, user.getProfile(p), Recommender.ALL);
                     for (Recommendation r : rec) {
                         DBAccess.insert(
@@ -205,7 +170,6 @@ public class MovieLens {
         assert testStr != "";
         save(MOVIELENS_TRAINING_FILE, trainStr);
         save(MOVIELENS_TESTING_FILE, testStr);
-        MovieLens.fillDatabase();
     }
 
     private static void readSplit() {
@@ -220,85 +184,8 @@ public class MovieLens {
         }
     }
 
-    public static double precisionAtK(User user, Distances.Type d, Profile.Type p, int k) {
-        assert k > 0;
-        Configuration c = new Configuration(d, p);
-        List<Recommendation> recs = Recommender.getRecommendations(c, user.getProfile(p), k);
-        double matched = 0;
-        for (Recommendation r : recs)
-            if (like(user, r.getFilm()))
-                matched++;
-        return matched / k;
-    }
-
-    public static double precisionAtKOnlyInTest(User user, Distances.Type d, Profile.Type p, int k) {
-        assert k > 0;
-        List<Recommendation> recs = Recommender.getRecommendations(
-                new Configuration(d, p),
-                user.getProfile(p),
-                Recommender.ALL);
-        List<Rating> ratingList = new ArrayList<Rating>(recs.size());
-        for (Recommendation r : recs)
-            ratingList.add(new Rating(user, r.getFilm(), null));
-        ratingList.retainAll(dbTest.get(user));
-        try {
-            if (k < ratingList.size())
-                ratingList = ratingList.subList(0, k);
-        } catch (IndexOutOfBoundsException e) {
-        }
-        double matched = 0;
-        for (Rating r : ratingList)
-            if (like(user, r.getFilm()))
-                matched++;
-        return matched / k;
-    }
-
-    public static double rPrecision(User user, Distances.Type d, Profile.Type p) {
-        int r = dbTestPositive.get(user).size();
-        List<Recommendation> recs = Recommender.getRecommendations(
-                new Configuration(d, p),
-                user.getProfile(p),
-                r);
-        double matched = 0;
-        for (Recommendation rec : recs)
-            if (like(user, rec.getFilm()))
-                matched++;
-        return matched / r;
-    }
-
-    public static double doMRR(User user, Distances.Type d, Profile.Type p, int q) {
-        Configuration c = new Configuration(d, p);
-        List<Recommendation> recs = Recommender.getRecommendations(c, user.getProfile(p), q);
-        double sommatoria = 0;
-        for (Recommendation r : recs)
-            if (like(user, r.getFilm()))
-                sommatoria += 1 / (recs.indexOf(r) + 1);
-        return sommatoria;
-    }
-
-    public static double doMRR(Distances.Type d, Profile.Type p) {
-        Configuration c = new Configuration(d, p);
-        double sommatoria = 0;
-        for (User user : User.getUsers()) {
-            List<Recommendation> recs = Recommender.getRecommendations(c, user.getProfile(p), Recommender.ALL);
-
-            for (Recommendation r : recs)
-                if (like(user, r.getFilm())) {
-                    sommatoria += 1 / (recs.indexOf(r) + 1);
-                    break;
-                }
-        }
-        return sommatoria;
-    }
-
-    private static boolean like(User user, Film film) {
-        Rating rating = new Rating(user, film, null);
-        return dbTestPositive.get(user).contains(rating);
-    }
-
     public static Map<User, List<Rating>> getDbTrain() {
         return dbTrain;
     }
-
 
 }
