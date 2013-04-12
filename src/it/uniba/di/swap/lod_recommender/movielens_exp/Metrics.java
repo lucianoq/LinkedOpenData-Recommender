@@ -181,7 +181,7 @@ public class Metrics {
         for (User u : User.getUsers()) {
             sommatoria += results.get(c).get(u).getPrecisionAtK();
         }
-        return sommatoria / c.getK();
+        return sommatoria / User.getUsers().size();
     }
 
     public static double microMRR(Configuration c) {
@@ -224,6 +224,6 @@ public class Metrics {
         for (User u : User.getUsers()) {
             sommatoria += results.get(c).get(u).getPrecisionAtKInTest();
         }
-        return sommatoria / c.getK();
+        return sommatoria / User.getUsers().size();
     }
 }
