@@ -66,8 +66,7 @@ public class MovieLens {
         User.createProfiles();
 //        MovieLens.fillDatabase();
 
-
-        Metrics.computePrecisions();
+        Metrics.compute();
     }
 
     private static void save(String dir, String content) {

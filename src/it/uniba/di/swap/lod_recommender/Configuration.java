@@ -4,7 +4,7 @@ import it.uniba.di.swap.lod_recommender.distance.Distances;
 import it.uniba.di.swap.lod_recommender.profile.Profile;
 
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,9 +13,31 @@ import java.util.Collection;
  * Time: 9.45
  */
 public class Configuration {
+    private static List<Configuration> configurations;
     private Distances.Type distance;
     private Profile.Type profile;
     private int k;
+
+    static {
+        configurations = new ArrayList<Configuration>(64);
+//        for (Distances.Type d : Distances.Type.values())
+//            for (Profile.Type p : Profile.Type.values())
+//                for (int i : new ArrayList<Integer>() {{
+////                    add(1);
+//                    add(5);
+//                    add(10);
+//                    add(20);
+//                    add(50);
+//                    add(100);
+////                    add(518);
+//                }}) {
+//                    configurations.add(new Configuration(d, p, i));
+//                }
+        Distances.Type d = Distances.Type.NOSTRA;
+        Profile.Type p = Profile.Type.VOTED_NOSTRA;
+        int i = 10;
+        configurations.add(new Configuration(d, p, i));
+    }
 
     public Configuration(Distances.Type distance, Profile.Type profile, int k) {
         this.distance = distance;
@@ -23,22 +45,9 @@ public class Configuration {
         this.k = k;
     }
 
-    public static Collection<Configuration> getConfigurations() {
-        Collection<Configuration> list = new ArrayList<Configuration>(48);
-        for (Distances.Type d : Distances.Type.values())
-            for (Profile.Type p : Profile.Type.values())
-                for (int i : new ArrayList<Integer>() {{
-//                    add(1);
-                    add(5);
-//                    add(10);
-//                    add(20);
-                    add(50);
-                    add(100);
-//                    add(518);
-                }}) {
-                    list.add(new Configuration(d, p, i));
-                }
-        return list;
+    public static List<Configuration> getConfigurations() {
+        assert configurations != null;
+        return configurations;
     }
 
     public Distances.Type getDistance() {
@@ -73,5 +82,14 @@ public class Configuration {
         result = 31 * result + (profile != null ? profile.hashCode() : 0);
         result = 31 * result + k;
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Configuration{" +
+                "distance=" + distance +
+                ", profile=" + profile +
+                ", k=" + k +
+                '}';
     }
 }

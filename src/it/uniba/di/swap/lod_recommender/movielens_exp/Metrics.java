@@ -17,34 +17,28 @@ import java.util.*;
  */
 public class Metrics {
     private static Map<Configuration, Map<User, Result>> results;
-//    private static Map<Configuration,>
 
-    public static void computePrecisions() {
-        results = new HashMap<Configuration, Map<User, Result>>(Profile.Type.values().length * Distances.Type.values().length);
-        for (Configuration c : Configuration.getConfigurations())
+    static {
+        results = new HashMap<Configuration, Map<User, Result>>(Profile.Type.values().length * Distances.Type.values().length * 4);
+        for (Configuration c : Configuration.getConfigurations()) {
             results.put(c, new HashMap<User, Result>(MovieLens.NUM_USER));
+        }
+    }
 
+    public static void compute() {
         System.out.println("Calcolo la precisione");
 
         for (Configuration c : Configuration.getConfigurations()) {
+            System.out.println("Inizio calcolo computazione " + c.toString());
             for (User user : User.getUsers()) {
-                List<Recommendation> positive = Metrics.getRec(c, user);
-                List<Recommendation> negative = Metrics.getNotRec(c, user);
-                List<Recommendation> positiveInTest = Metrics.getRecInTest(c, user);
-                List<Recommendation> negativeInTest = Metrics.getNotRecInTest(c, user);
-
-                Map<String, Integer> tfpn = Metrics.computeTFPN(user, positive, negative);
-                Map<String, Integer> tfpnInTest = Metrics.computeTFPN(user, positiveInTest, negativeInTest);
-                double prec1 = Metrics.precision(tfpn);
-                double prec2 = Metrics.precision(tfpnInTest);
-                double prec3 = Metrics.rPrecision(c, user);
-                double prec4 = Metrics.doMRR(c, user);
-
+                System.out.print(user.getId() + "");
                 Result r = new Result(c, user);
-                r.setPrecisionAtK(prec1);
-                r.setPrecisionAtKEpurated(prec2);
-                r.setrPrecision(prec3);
-                r.setMrr(prec4);
+                r.setPositive(getRec(c, user));
+                r.setNegative(getNotRec(c, user));
+                r.setPositiveInTest(getRecInTest(c, user));
+                r.setNegativeInTest(getNotRecInTest(c, user));
+                Map<String, Integer> tfpn = computeTFPN(user, r.getPositive(), r.getNegative());
+                Map<String, Integer> tfpnInTest = computeTFPN(user, r.getPositiveInTest(), r.getNegativeInTest());
                 r.setTp(tfpn.get("TP"));
                 r.setTn(tfpn.get("TN"));
                 r.setFp(tfpn.get("FP"));
@@ -53,17 +47,15 @@ public class Metrics {
                 r.setTnInTest(tfpnInTest.get("TN"));
                 r.setFpInTest(tfpnInTest.get("FP"));
                 r.setFnInTest(tfpnInTest.get("FN"));
+                r.setPrecisionAtK(precision(tfpn));
+                r.setPrecisionAtKInTest(precision(tfpnInTest));
+                r.setrPrecision(rPrecision(c, user));
+                r.setMrr(doMRR(c, user));
 
                 results.get(c).put(user, r);
 
-                System.out.print("Utente: " + user.getId() + "; Distanza: " + c.getDistance().name());
-                System.out.println("; Profilo: " + c.getProfile().name() + "; k: " + c.getK() + "; ");
-                System.out.println("Precisione a k: " + prec1);
-                System.out.println("Precisione a k epurata: " + prec2);
-                System.out.println("R Precisione: " + prec3);
-                System.out.println("MRR: " + prec4);
-                System.out.println();
             } //for User
+            System.out.println();
         }
     }
 
@@ -114,28 +106,6 @@ public class Metrics {
                 sommatoria += 1.0d / (recs.indexOf(r) + 1);
             }
         return sommatoria;
-    }
-
-    private static double microMRR(Configuration c) {
-        double sommatoria = 0;
-        for (User user : User.getUsers()) {
-            List<Recommendation> recs = Recommender.getRecommendations(c, user.getProfile(c.getProfile()), Recommender.ALL);
-
-            for (Recommendation r : recs)
-                if (like(user, r.getFilm())) {
-                    sommatoria += 1.0d / (recs.indexOf(r) + 1);
-                    break;
-                }
-        }
-        return sommatoria / User.getUsers().size();
-    }
-
-    private static double macroMRR(Configuration c) {
-        double sommatoria = 0;
-        for (User user : User.getUsers()) {
-            sommatoria += doMRR(c, user);
-        }
-        return sommatoria / User.getUsers().size();
     }
 
     private static boolean like(User user, Film film) {
@@ -193,7 +163,7 @@ public class Metrics {
         return Recommender.getRecommendations(c, user.getProfile(c.getProfile()), c.getK());
     }
 
-    public static double microPrecision(Configuration c, int k) {
+    public static double microPrecision(Configuration c) {
         double tpAll = 0;
         double fpAll = 0;
         for (User u : User.getUsers()) {
@@ -206,11 +176,54 @@ public class Metrics {
         return tpAll / (tpAll + fpAll);
     }
 
-    public static double macroPrecision(Configuration c, int k) {
+    public static double macroPrecision(Configuration c) {
         double sommatoria = 0;
         for (User u : User.getUsers()) {
             sommatoria += results.get(c).get(u).getPrecisionAtK();
         }
-        return sommatoria / k;
+        return sommatoria / c.getK();
+    }
+
+    public static double microMRR(Configuration c) {
+        double sommatoria = 0;
+        for (User user : User.getUsers()) {
+            List<Recommendation> recs = Recommender.getRecommendations(c, user.getProfile(c.getProfile()), Recommender.ALL);
+
+            for (Recommendation r : recs)
+                if (like(user, r.getFilm())) {
+                    sommatoria += 1.0d / (recs.indexOf(r) + 1);
+                    break;
+                }
+        }
+        return sommatoria / User.getUsers().size();
+    }
+
+    public static double macroMRR(Configuration c) {
+        double sommatoria = 0;
+        for (User user : User.getUsers()) {
+            sommatoria += doMRR(c, user);
+        }
+        return sommatoria / User.getUsers().size();
+    }
+
+    public static double microPrecisionInTest(Configuration c) {
+        double tpAll = 0;
+        double fpAll = 0;
+        for (User u : User.getUsers()) {
+            List<Recommendation> positive = Metrics.getRecInTest(c, u);
+            List<Recommendation> negative = Metrics.getNotRecInTest(c, u);
+            Map<String, Integer> map = Metrics.computeTFPN(u, positive, negative);
+            tpAll += map.get("TP");
+            fpAll += map.get("FP");
+        }
+        return tpAll / (tpAll + fpAll);
+    }
+
+    public static double macroPrecisionInTest(Configuration c) {
+        double sommatoria = 0;
+        for (User u : User.getUsers()) {
+            sommatoria += results.get(c).get(u).getPrecisionAtKInTest();
+        }
+        return sommatoria / c.getK();
     }
 }
