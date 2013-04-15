@@ -287,9 +287,11 @@ public class Metrics {
     }
 
     private static void fillDatabaseResults() {
+
+        DBAccess.openConnection(DBAccess.RESULTS);
         System.out.println("Riempio la tabella dei Risultati");
 
-        for (Configuration c : Configuration.getConfigurations())
+        for (Configuration c : Configuration.getConfigurations()) {
             for (User user : User.getUsers())
                 DBAccess.insertRES(
                         c.getDistance().ordinal(),
@@ -308,11 +310,14 @@ public class Metrics {
                         results.get(c).get(user).getSumInverseRank_T(),
                         results.get(c).get(user).getIdealInverseRank(),
                         results.get(c).get(user).getIdealInverseRank_T());
-        DBAccess.commit(DBAccess.RESULTS);
+            DBAccess.commit(DBAccess.RESULTS);
+        }
         DBAccess.close(DBAccess.RESULTS);
     }
 
     private static void fillDatabaseResultsAgg() {
+
+        DBAccess.openConnection(DBAccess.RESULTS_AGG);
         System.out.println("Riempio la tabella dei Risultati Aggregati");
 
         for (Configuration c : Configuration.getConfigurations())

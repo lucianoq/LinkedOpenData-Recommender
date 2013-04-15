@@ -17,23 +17,18 @@ public class DBAccess {
     static {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/loddb", "root", "root");
-            conn.setAutoCommit(false);
+//            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/LODDB", "root", "root");
+//            conn.setAutoCommit(false);
 
-            Statement s = conn.createStatement();
-            s.execute("TRUNCATE TABLE RESULTS;");
-            s.execute("TRUNCATE TABLE RECOMMENDATIONS;");
-            s.execute("TRUNCATE TABLE RESULTS_AGG;");
-            conn.commit();
-            s.close();
+//            Statement s = conn.createStatement();
+//            s.execute("TRUNCATE TABLE RESULTS;");
+//            s.execute("TRUNCATE TABLE RECOMMENDATIONS;");
+//            s.execute("TRUNCATE TABLE RESULTS_AGG;");
+//            conn.commit();
+//            s.close();
+//            conn.close();
 
-            psRec = conn.prepareStatement("INSERT INTO RECOMMENDATIONS VALUES (?,?,?,?,?);");
-            psRes = conn.prepareStatement("INSERT INTO RESULTS VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?);");
-            psAgg = conn.prepareStatement("INSERT INTO RESULTS_AGG VALUES (?,?,?,?,?,?,?,?,?);");
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-            System.exit(-1);
-        } catch (SQLException e) {
             e.printStackTrace();
             System.exit(-1);
         }
@@ -42,8 +37,30 @@ public class DBAccess {
     private DBAccess() {
     }
 
+    public static void openConnection(int type) {
+        try {
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/LODDB", "root", "root");
+            conn.setAutoCommit(false);
+            switch (type) {
+                case RECOMMENDATION:
+                    psRec = conn.prepareStatement("INSERT INTO RECOMMENDATIONS VALUES (?,?,?,?,?);");
+                    break;
+                case RESULTS:
+                    psRes = conn.prepareStatement("INSERT INTO RESULTS VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?);");
+                    break;
+                case RESULTS_AGG:
+                    psAgg = conn.prepareStatement("INSERT INTO RESULTS_AGG VALUES (?,?,?,?,?,?,?,?,?);");
+                    break;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
+
     public static void insertREC(int distance, int profile, int user, int film, int rank) {
         try {
+            if (conn.isClosed())
+                DBAccess.openConnection(DBAccess.RECOMMENDATION);
             psRec.setInt(1, distance);
             psRec.setInt(2, profile);
             psRec.setInt(3, user);
@@ -75,8 +92,11 @@ public class DBAccess {
                                  double sumInverseRank_T,
                                  double idealInverseRank,
                                  double idealInverseRank_T
-                                 ) {
+    ) {
+
         try {
+            if (conn.isClosed())
+                openConnection(DBAccess.RESULTS);
             psRes.setInt(1, distance);
             psRes.setInt(2, profile);
             psRes.setInt(3, k);
@@ -93,10 +113,10 @@ public class DBAccess {
             psRes.setDouble(14, sumInverseRank_T);
             psRes.setDouble(15, idealInverseRank);
             psRes.setDouble(16, idealInverseRank_T);
-            psRes.setDouble(17, ( (double) tp ) / (tp+fp) );
-            psRes.setDouble(18, ( (double) tp_T ) / (tp_T+fp_T) );
-            psRes.setDouble(19, sumInverseRank / idealInverseRank );
-            psRes.setDouble(20, sumInverseRank_T / idealInverseRank_T );
+            psRes.setDouble(17, ((double) tp) / (tp + fp));
+            psRes.setDouble(18, ((double) tp_T) / (tp_T + fp_T));
+            psRes.setDouble(19, sumInverseRank / idealInverseRank);
+            psRes.setDouble(20, sumInverseRank_T / idealInverseRank_T);
             psRes.addBatch();
         } catch (MySQLIntegrityConstraintViolationException ex) {
             System.out.println("[WARNING] Chiave primaria duplicata.");
@@ -119,6 +139,8 @@ public class DBAccess {
                                  double microMRR_T,
                                  double macroMRR_T) {
         try {
+            if (conn.isClosed())
+                openConnection(DBAccess.RESULTS_AGG);
             psAgg.setInt(1, distance);
             psAgg.setInt(2, profile);
             psAgg.setInt(3, k);

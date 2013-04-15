@@ -116,6 +116,7 @@ public class MovieLens {
     }
 
     public static void fillDatabase() {
+        DBAccess.openConnection(DBAccess.RECOMMENDATION);
         System.out.println("Riempio la tabella delle raccomandazioni");
         for (User user : User.getUsers()) {
 //            for (Distances.Type d : Distances.Type.values())
