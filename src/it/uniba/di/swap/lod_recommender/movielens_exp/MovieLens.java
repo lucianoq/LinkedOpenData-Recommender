@@ -59,14 +59,14 @@ public class MovieLens {
 
         System.out.println("Creo lo split");
 
-//        createSplit();
+        createSplit();
         readSplit();
 
         System.out.println("Creo i profili degli utenti");
         User.createProfiles();
 
         System.out.println("[INFO] FILLO IL DATABASE CON LE RACCOMANDAZIONI");
-//        MovieLens.fillDatabase();
+        MovieLens.fillDatabase();
     }
 
     private static void save(String dir, String content) {
@@ -119,25 +119,23 @@ public class MovieLens {
         DBAccess.truncate(DBAccess.RECOMMENDATION);
         DBAccess.openConnection(DBAccess.RECOMMENDATION);
         System.out.println("Riempio la tabella delle raccomandazioni");
-        for (User user : User.getUsers()) {
-//            for (Distances.Type d : Distances.Type.values())
-//                for (Profile.Type p : Profile.Type.values())
-            Distances.Type d = Distances.Type.NOSTRA;
-            Profile.Type p = Profile.Type.VOTED_NOSTRA;
-            Configuration c = new Configuration(d, p, 0);
-            List<Recommendation> rec = Recommender.getRecommendations(c, user.getProfile(p), Recommender.ALL);
-            int i = 1;
-            for (Recommendation r : rec) {
-                DBAccess.insertREC(
-                        d.ordinal(),
-                        p.ordinal(),
-                        user.getId(),
-                        r.getFilm().getIdMovieLens(),
-                        i);
-                i++;
-            }
-            DBAccess.commit(DBAccess.RECOMMENDATION);
-        }
+        for (User user : User.getUsers())
+            for (Distances.Type d : Distances.Type.values())
+                for (Profile.Type p : Profile.Type.values()) {
+                    Configuration c = new Configuration(d, p, 0);
+                    List<Recommendation> rec = Recommender.getRecommendations(c, user.getProfile(p), Recommender.ALL);
+                    int i = 1;
+                    for (Recommendation r : rec) {
+                        DBAccess.insertREC(
+                                d.ordinal(),
+                                p.ordinal(),
+                                user.getId(),
+                                r.getFilm().getIdMovieLens(),
+                                i);
+                        i++;
+                    }
+                    DBAccess.commit(DBAccess.RECOMMENDATION);
+                }
         DBAccess.close(DBAccess.RECOMMENDATION);
     }
 

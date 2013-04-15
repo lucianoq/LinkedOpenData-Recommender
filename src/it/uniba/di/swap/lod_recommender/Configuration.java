@@ -20,23 +20,18 @@ public class Configuration {
 
     static {
         configurations = new ArrayList<Configuration>(64);
-//        for (Distances.Type d : Distances.Type.values())
-//            for (Profile.Type p : Profile.Type.values())
-//                for (int i : new ArrayList<Integer>() {{
-////                    add(1);
-//                    add(5);
-//                    add(10);
-//                    add(20);
-//                    add(50);
-//                    add(100);
-////                    add(518);
-//                }}) {
-//                    configurations.add(new Configuration(d, p, i));
-//                }
-        Distances.Type d = Distances.Type.NOSTRA;
-        Profile.Type p = Profile.Type.VOTED_NOSTRA;
-        int i = 10;
-        configurations.add(new Configuration(d, p, i));
+        for (Distances.Type d : Distances.Type.values())
+            for (Profile.Type p : Profile.Type.values())
+                for (int i : new ArrayList<Integer>() {{
+//                    add(1);
+                    add(5);
+                    add(10);
+                    add(20);
+                    add(50);
+                    add(100);
+                }}) {
+                    configurations.add(new Configuration(d, p, i));
+                }
     }
 
     public Configuration(Distances.Type distance, Profile.Type profile, int k) {
