@@ -6,12 +6,6 @@ import it.uniba.di.swap.lod_recommender.profile.Profile;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 10/04/13
- * Time: 9.45
- */
 public class Configuration {
     private static List<Configuration> configurations;
     private Distances.Type distance;
@@ -23,7 +17,6 @@ public class Configuration {
         for (Distances.Type d : Distances.Type.values())
             for (Profile.Type p : Profile.Type.values())
                 for (int i : new ArrayList<Integer>() {{
-//                    add(1);
                     add(5);
                     add(10);
                     add(20);
@@ -33,6 +26,7 @@ public class Configuration {
                     configurations.add(new Configuration(d, p, i));
                 }
     }
+
 
     public Configuration(Distances.Type distance, Profile.Type profile, int k) {
         this.distance = distance;

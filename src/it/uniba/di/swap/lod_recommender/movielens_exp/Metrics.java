@@ -10,12 +10,6 @@ import it.uniba.di.swap.lod_recommender.recommendation.Recommender;
 
 import java.util.*;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 12/04/13
- * Time: 14.27
- */
 public class Metrics {
     private static Map<Configuration, Map<User, Result>> results;
     private static Map<Configuration, ResultAgg> resultsAgg;
@@ -29,34 +23,31 @@ public class Metrics {
     }
 
     public static void init() {
-        System.out.println("[INFO] INIZIO COMPUTERESULTS()");
+
         computeResults();
-        System.out.println("[INFO] INIZIO COMPUTEAGG()");
+
         computeAgg();
-        System.out.println("[INFO] FILL DATABASE RESULTS()");
+
         fillDatabaseResults();
-        System.out.println("[INFO] FILL DATABASE RESULTS AGG()");
+
         fillDatabaseResultsAgg();
     }
 
     private static void computeResults() {
-        System.out.println("Calcolo la precisione");
-
+        System.out.println(new Date() + " [INFO] Start computeResults.");
         for (Configuration c : Configuration.getConfigurations()) {
-            System.out.println("Inizio calcolo computazione " + c.toString());
+            System.out.println(new Date() + "   [INFO] Configuration: " + c.toString());
             for (User user : User.getUsers()) {
-                System.out.print(user.getId() + "-");
                 Result r = new Result(c, user);
                 fillPrecision(r);
                 fillMrr(r);
                 results.get(c).put(user, r);
             } //for User
-
-            System.out.println();
         }
     }
 
     private static void computeAgg() {
+        System.out.println(new Date() + " [INFO] Start computeAggregate.");
         for (Configuration c : Configuration.getConfigurations()) {
             double microPrec = Metrics.microPrecision(c);
             double macroPrec = Metrics.macroPrecision(c);
@@ -290,7 +281,7 @@ public class Metrics {
         DBAccess.truncate(DBAccess.RESULTS);
 
         DBAccess.openConnection(DBAccess.RESULTS);
-        System.out.println("Riempio la tabella dei Risultati");
+        System.out.println(new Date() + " [INFO] Fill table of computeResults.");
 
         for (Configuration c : Configuration.getConfigurations()) {
             for (User user : User.getUsers())
@@ -320,8 +311,7 @@ public class Metrics {
         DBAccess.truncate(DBAccess.RESULTS_AGG);
 
         DBAccess.openConnection(DBAccess.RESULTS_AGG);
-        System.out.println("Riempio la tabella dei Risultati Aggregati");
-
+        System.out.println(new Date() + " [INFO] Fill table of computeAggregate.");
         for (Configuration c : Configuration.getConfigurations())
             DBAccess.insertAGG(
                     c.getDistance().ordinal(),

@@ -6,6 +6,7 @@ import it.uniba.di.swap.lod_recommender.graph.Graph;
 import it.uniba.di.swap.lod_recommender.movielens_exp.Metrics;
 
 import java.io.IOException;
+import java.util.Date;
 
 public class Main {
 
@@ -18,11 +19,11 @@ public class Main {
         //FilmGraph.printDot();
         Distances.init();
 
-        System.out.println("[INFO] STO PER AVVIARE MOVIELENS");
+        System.out.println(new Date()+" [INFO] Start movielens.");
         Class.forName("it.uniba.di.swap.lod_recommender.movielens_exp.MovieLens");
 
 
-        System.out.println("[INFO] STO PER AVVIARE METRICS");
+        System.out.println(new Date() +" [INFO] Creation metrics.");
         Metrics.init();
     }
 }
