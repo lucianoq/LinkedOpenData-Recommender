@@ -59,14 +59,14 @@ public class MovieLens {
 
         System.out.println("Creo lo split");
 
-//        createSplit();
+        createSplit();
         readSplit();
 
         System.out.println("Creo i profili degli utenti");
         User.createProfiles();
-//        MovieLens.fillDatabase();
 
-        Metrics.compute();
+        System.out.println("[INFO] FILLO IL DATABASE CON LE RACCOMANDAZIONI");
+        MovieLens.fillDatabase();
     }
 
     private static void save(String dir, String content) {
@@ -116,28 +116,27 @@ public class MovieLens {
     }
 
     public static void fillDatabase() {
-        System.out.println("Riempio il database");
+        System.out.println("Riempio la tabella delle raccomandazioni");
         for (User user : User.getUsers()) {
-            for (Distances.Type t : Distances.Type.values()) {
-                for (Profile.Type p : Profile.Type.values()) {
-                    Configuration c = new Configuration(t, p, 0);
-                    List<Recommendation> rec = Recommender.getRecommendations(c, user.getProfile(p), Recommender.ALL);
-                    for (Recommendation r : rec) {
-                        DBAccess.insert(
-                                r.getFilm().getIdMovieLens(),
-                                user.getId(),
-                                rec.indexOf(r),
-                                t.ordinal(),
-                                p.ordinal(),
-                                r.getFilm().getTitle(),
-                                t.name(),
-                                p.name());
-                    }
-                }
+//            for (Distances.Type d : Distances.Type.values())
+//                for (Profile.Type p : Profile.Type.values())
+            Distances.Type d = Distances.Type.NOSTRA;
+            Profile.Type p = Profile.Type.VOTED_NOSTRA;
+            Configuration c = new Configuration(d, p, 0);
+            List<Recommendation> rec = Recommender.getRecommendations(c, user.getProfile(p), Recommender.ALL);
+            int i = 1;
+            for (Recommendation r : rec) {
+                DBAccess.insertREC(
+                        d.ordinal(),
+                        p.ordinal(),
+                        user.getId(),
+                        r.getFilm().getIdMovieLens(),
+                        i);
+                i++;
             }
-            DBAccess.commit();
+            DBAccess.commit(DBAccess.RECOMMENDATION);
         }
-        DBAccess.close();
+        DBAccess.close(DBAccess.RECOMMENDATION);
     }
 
     private static void createSplit() {

@@ -14,42 +14,58 @@ import java.util.List;
 public class Result {
     private Configuration configuration;
     private User user;
-    private double precisionAtK;
-    private double precisionAtKInTest;
-    private double rPrecision;
-    private double mrr;
     private int tp;
     private int tn;
     private int fp;
     private int fn;
-    private int tpInTest;
-    private int tnInTest;
-    private int fpInTest;
-    private int fnInTest;
+    private int tp_T;
+    private int tn_T;
+    private int fp_T;
+    private int fn_T;
+
+    private double sumInverseRank;
+    private double sumInverseRank_T;
+
+    private double idealInverseRank;
+    private double idealInverseRank_T;
+
+
+    private double precision;
+    private double precision_T;
+    private double mrr;
+    private double mrr_T;
+
+
+    //    private double rPrecision;
+
     private List<Recommendation> positive;
     private List<Recommendation> negative;
-    private List<Recommendation> positiveInTest;
-    private List<Recommendation> negativeInTest;
+    private List<Recommendation> positive_T;
+    private List<Recommendation> negative_T;
 
     public Result(Configuration configuration, User user) {
         this.configuration = configuration;
         this.user = user;
     }
 
-    public double getPrecisionAtK() {
-        return precisionAtK;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Result result = (Result) o;
+
+        if (!configuration.equals(result.configuration)) return false;
+        if (!user.equals(result.user)) return false;
+
+        return true;
     }
 
-    public void setPrecisionAtK(double precisionAtK) {
-        this.precisionAtK = precisionAtK;
-    }
-
-    public double getPrecisionAtKInTest() {
-        return precisionAtKInTest;
-    }
-
-    public void setPrecisionAtKInTest(double precisionAtKInTest) {
-        this.precisionAtKInTest = precisionAtKInTest;
+    @Override
+    public int hashCode() {
+        int result = configuration.hashCode();
+        result = 31 * result + user.hashCode();
+        return result;
     }
 
     public Configuration getConfiguration() {
@@ -76,56 +92,20 @@ public class Result {
         this.negative = negative;
     }
 
-    public List<Recommendation> getPositiveInTest() {
-        return positiveInTest;
+    public List<Recommendation> getPositive_T() {
+        return positive_T;
     }
 
-    public void setPositiveInTest(List<Recommendation> positiveInTest) {
-        this.positiveInTest = positiveInTest;
+    public void setPositive_T(List<Recommendation> positive_T) {
+        this.positive_T = positive_T;
     }
 
-    public List<Recommendation> getNegativeInTest() {
-        return negativeInTest;
+    public List<Recommendation> getNegative_T() {
+        return negative_T;
     }
 
-    public void setNegativeInTest(List<Recommendation> negativeInTest) {
-        this.negativeInTest = negativeInTest;
-    }
-
-    public double getrPrecision() {
-        return rPrecision;
-    }
-
-    public void setrPrecision(double rPrecision) {
-        this.rPrecision = rPrecision;
-    }
-
-    public double getMrr() {
-        return mrr;
-    }
-
-    public void setMrr(double mrr) {
-        this.mrr = mrr;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Result result = (Result) o;
-
-        if (!configuration.equals(result.configuration)) return false;
-        if (!user.equals(result.user)) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = configuration.hashCode();
-        result = 31 * result + user.hashCode();
-        return result;
+    public void setNegative_T(List<Recommendation> negative_T) {
+        this.negative_T = negative_T;
     }
 
     public int getTp() {
@@ -160,47 +140,99 @@ public class Result {
         this.fn = fn;
     }
 
-    public int getTpInTest() {
-        return tpInTest;
+    public int getTp_T() {
+        return tp_T;
     }
 
-    public void setTpInTest(int tpInTest) {
-        this.tpInTest = tpInTest;
+    public void setTp_T(int tp_T) {
+        this.tp_T = tp_T;
     }
 
-    public int getTnInTest() {
-        return tnInTest;
+    public int getTn_T() {
+        return tn_T;
     }
 
-    public void setTnInTest(int tnInTest) {
-        this.tnInTest = tnInTest;
+    public void setTn_T(int tn_T) {
+        this.tn_T = tn_T;
     }
 
-    public int getFpInTest() {
-        return fpInTest;
+    public int getFp_T() {
+        return fp_T;
     }
 
-    public void setFpInTest(int fpInTest) {
-        this.fpInTest = fpInTest;
+    public void setFp_T(int fp_T) {
+        this.fp_T = fp_T;
     }
 
-    public int getFnInTest() {
-        return fnInTest;
+    public int getFn_T() {
+        return fn_T;
     }
 
-    public void setFnInTest(int fnInTest) {
-        this.fnInTest = fnInTest;
+    public void setFn_T(int fn_T) {
+        this.fn_T = fn_T;
     }
 
-    @Override
-    public String toString() {
-        return "Result{" +
-                "configuration=" + configuration +
-                ", user=" + user +
-                ", precisionAtK=" + precisionAtK +
-                ", precisionAtKInTest=" + precisionAtKInTest +
-                ", rPrecision=" + rPrecision +
-                ", mrr=" + mrr +
-                '}';
+    public double getSumInverseRank() {
+        return sumInverseRank;
+    }
+
+    public void setSumInverseRank(double sumInverseRank) {
+        this.sumInverseRank = sumInverseRank;
+    }
+
+    public double getSumInverseRank_T() {
+        return sumInverseRank_T;
+    }
+
+    public void setSumInverseRank_T(double sumInverseRank_T) {
+        this.sumInverseRank_T = sumInverseRank_T;
+    }
+
+    public double getIdealInverseRank() {
+        return idealInverseRank;
+    }
+
+    public void setIdealInverseRank(double idealInverseRank) {
+        this.idealInverseRank = idealInverseRank;
+    }
+
+    public double getIdealInverseRank_T() {
+        return idealInverseRank_T;
+    }
+
+    public void setIdealInverseRank_T(double idealInverseRank_T) {
+        this.idealInverseRank_T = idealInverseRank_T;
+    }
+
+    public double getPrecision() {
+        return precision;
+    }
+
+    public void setPrecision(double precision) {
+        this.precision = precision;
+    }
+
+    public double getPrecision_T() {
+        return precision_T;
+    }
+
+    public void setPrecision_T(double precision_T) {
+        this.precision_T = precision_T;
+    }
+
+    public double getMrr() {
+        return mrr;
+    }
+
+    public void setMrr(double mrr) {
+        this.mrr = mrr;
+    }
+
+    public double getMrr_T() {
+        return mrr_T;
+    }
+
+    public void setMrr_T(double mrr_T) {
+        this.mrr_T = mrr_T;
     }
 }
