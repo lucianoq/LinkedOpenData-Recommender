@@ -32,7 +32,7 @@ public abstract class Distance {
             fis = new FileInputStream("./serialized/" + this.name + ".bin");
             ois = new ObjectInputStream(fis);
             map = (ConcurrentHashMap<Pair, Number>) ois.readObject();
-            System.out.println(name + ".bin Caricato con successo");
+            System.out.println(name + ".bin Caricato con successo.");
             ois.close();
             fis.close();
         } catch (Exception e) {

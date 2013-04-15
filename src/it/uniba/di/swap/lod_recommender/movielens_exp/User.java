@@ -45,6 +45,7 @@ public class User {
     }
 
     public static void createProfiles() {
+        System.out.println(new Date() + " [INFO] Create user profiles.");
         for (User user : users.values()) {
             user.seenInTrain = new HashMap<Film, Number>(55);
             user.likedInTrain = new HashMap<Film, Number>(55);

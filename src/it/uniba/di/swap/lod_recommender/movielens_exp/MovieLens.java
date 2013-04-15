@@ -12,12 +12,6 @@ import it.uniba.di.swap.lod_recommender.recommendation.Recommender;
 import java.io.*;
 import java.util.*;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 08/04/13
- * Time: 12.55
- */
 public class MovieLens {
     public static final double TRAIN_RATE;
     public static final double TEST_RATE;
@@ -50,22 +44,17 @@ public class MovieLens {
             dbTestPositive.put(u, new HashSet<Rating>(NUM_FILM * 4 * 4));
         }
 
-        System.out.println("Leggo Database da File");
+        System.out.println(new Date() + " [INFO] Read complete dataset from file.");
 
         List<Rating> list = read(MOVIELENS_COMPLETE_FILE);
         for (Rating r : list) {
             db.get(r.getUser()).add(r);
         }
 
-        System.out.println("Creo lo split");
-
 //        createSplit();
         readSplit();
 
-        System.out.println("Creo i profili degli utenti");
         User.createProfiles();
-
-        System.out.println("[INFO] FILLO IL DATABASE CON LE RACCOMANDAZIONI");
 //        MovieLens.fillDatabase();
     }
 
@@ -118,30 +107,32 @@ public class MovieLens {
     public static void fillDatabase() {
         DBAccess.truncate(DBAccess.RECOMMENDATION);
         DBAccess.openConnection(DBAccess.RECOMMENDATION);
-        System.out.println("Riempio la tabella delle raccomandazioni");
+        System.out.println(new Date() + " [INFO] Fill table of recommendation.");
         for (User user : User.getUsers()) {
-//            for (Distances.Type d : Distances.Type.values())
-//                for (Profile.Type p : Profile.Type.values())
-            Distances.Type d = Distances.Type.NOSTRA;
-            Profile.Type p = Profile.Type.VOTED_NOSTRA;
-            Configuration c = new Configuration(d, p, 0);
-            List<Recommendation> rec = Recommender.getRecommendations(c, user.getProfile(p), Recommender.ALL);
-            int i = 1;
-            for (Recommendation r : rec) {
-                DBAccess.insertREC(
-                        d.ordinal(),
-                        p.ordinal(),
-                        user.getId(),
-                        r.getFilm().getIdMovieLens(),
-                        i);
-                i++;
-            }
-            DBAccess.commit(DBAccess.RECOMMENDATION);
+            for (Distances.Type d : Distances.Type.values())
+                for (Profile.Type p : Profile.Type.values()) {
+//            Distances.Type d = Distances.Type.NOSTRA;
+//            Profile.Type p = Profile.Type.VOTED_NOSTRA;
+                    Configuration c = new Configuration(d, p, 0);
+                    List<Recommendation> rec = Recommender.getRecommendations(c, user.getProfile(p), Recommender.ALL);
+                    int i = 1;
+                    for (Recommendation r : rec) {
+                        DBAccess.insertREC(
+                                d.ordinal(),
+                                p.ordinal(),
+                                user.getId(),
+                                r.getFilm().getIdMovieLens(),
+                                i);
+                        i++;
+                    }
+                    DBAccess.commit(DBAccess.RECOMMENDATION);
+                }
         }
         DBAccess.close(DBAccess.RECOMMENDATION);
     }
 
     private static void createSplit() {
+        System.out.println(new Date() + " [INFO] Split dataset in test and training set.");
         new File("./dataset").mkdirs();
         String trainStr = "";
         String testStr = "";
@@ -173,6 +164,7 @@ public class MovieLens {
     }
 
     private static void readSplit() {
+        System.out.println(new Date() + " [INFO] Read test and training set.");
         List<Rating> list = read(MOVIELENS_TRAINING_FILE);
         for (Rating r : list)
             dbTrain.get(r.getUser()).add(r);
