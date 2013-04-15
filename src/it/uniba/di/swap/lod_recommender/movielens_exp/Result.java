@@ -56,9 +56,8 @@ public class Result {
         Result result = (Result) o;
 
         if (!configuration.equals(result.configuration)) return false;
-        if (!user.equals(result.user)) return false;
+        return user.equals(result.user);
 
-        return true;
     }
 
     @Override

@@ -29,9 +29,8 @@ public class Pair implements Serializable {
         Pair pair = (Pair) o;
 
         if (a != null ? !a.equals(pair.a) : pair.a != null) return false;
-        if (b != null ? !b.equals(pair.b) : pair.b != null) return false;
+        return !(b != null ? !b.equals(pair.b) : pair.b != null);
 
-        return true;
     }
 
     @Override

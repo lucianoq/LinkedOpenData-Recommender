@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
-public class Graph implements Serializable{
+public class Graph implements Serializable {
 
     private static final String FILEFILMPROP = "./config/film_properties_dbpedia.txt";
     private static final String FILEFILM = "./config/ListFilms.txt";
@@ -36,12 +36,13 @@ public class Graph implements Serializable{
         Query q = QueryFactory.create(query);
         QueryExecution qexec = QueryExecutionFactory.sparqlService(ENDPOINT, q);
         ResultSet rs = qexec.execSelect();
-        ArrayList<Resource> sub = new ArrayList<Resource>();
+        ArrayList<Resource> sub = new ArrayList<Resource>(rs.getRowNumber());
         while (rs.hasNext()) {
             QuerySolution qs = rs.next();
             try {
                 sub.add(qs.getResource("object"));
             } catch (Exception e) {
+                System.err.println("Eccezione");
             }
         }
         qexec.close();
@@ -74,14 +75,14 @@ public class Graph implements Serializable{
 
     public static void updateWeight() throws IOException {
         Collection<Edge> edge = graph.getEdges();
-        Collection<Edge> edgeDel = new ArrayList<Edge>();
-        Collection<Edge> edgeNew = new ArrayList<Edge>();
+        Collection<Edge> edgeDel = new ArrayList<Edge>(edge.size() * properties.size() + 1);
+        Collection<Edge> edgeNew = new ArrayList<Edge>(edge.size() * properties.size() + 1);
         for (Edge e1 : edge) {
-            for (int i = 0; i < properties.size(); i++)
-                if (e1.getProperty().getIdProperty() == properties.get(i).getIdProperty())
-                    if (e1.getWeight() != properties.get(i).getWeight()) {
+            for (Property property : properties)
+                if (e1.getProperty().getIdProperty() == property.getIdProperty())
+                    if (e1.getWeight() != property.getWeight()) {
                         edgeDel.add(e1);
-                        e1.setWeight(properties.get(i).getWeight());
+                        e1.setWeight(property.getWeight());
                         edgeNew.add(e1);
                     }
         }
@@ -98,7 +99,14 @@ public class Graph implements Serializable{
     }
 
     public static void save() throws IOException {
-        new File("./serialized").mkdirs();
+        if (new File("./serialized").mkdirs()) {
+        } else {
+            try {
+                throw new Exception("Impossibile creare la directory.");
+            } catch (Exception e) {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            }
+        }
         FileOutputStream fos = new FileOutputStream("./serialized/graphComplete.bin");
         ObjectOutputStream o = new ObjectOutputStream(fos);
         o.writeObject(graph);
@@ -107,7 +115,14 @@ public class Graph implements Serializable{
     }
 
     public static void printDot() throws IOException {
-        new File("./dot").mkdirs();
+        if (new File("./dot").mkdirs()) {
+        } else {
+            try {
+                throw new Exception("Impossibile creare la directory.");
+            } catch (Exception e) {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            }
+        }
         FileOutputStream fout = new FileOutputStream("./dot/graphComplete.dot");
         PrintWriter out = new PrintWriter(fout);
         out.println("graph dbpedia {");
@@ -137,14 +152,14 @@ public class Graph implements Serializable{
         BasicConfigurator.configure();
         for (int i = 0; i < films.size(); i++) {
             graph.addVertex(films.get(i));
-            for (int j = 0; j < properties.size(); j++) {
+            for (Property property1 : properties) {
                 Thread.sleep(250);
-                ArrayList<Resource> resourceDest = querySPARQL(films.get(i).getUri(), properties.get(j).getUri());
+                ArrayList<Resource> resourceDest = querySPARQL(films.get(i).getUri(), property1.getUri());
                 for (int t = 0; t < resourceDest.size(); t++) {
                     GraphResource graphResourceFilmDest = new GraphResource(resourceDest.get(t).getURI());
 
                     if (!resourceDest.get(t).getLocalName().isEmpty()) {
-                        Property property = properties.get(j);
+                        Property property = property1;
                         Edge prop = new Edge(property, films.get(i), graphResourceFilmDest, property.getWeight());
                         graph.addVertex(graphResourceFilmDest);
                         graph.addEdge(prop, films.get(i), graphResourceFilmDest);

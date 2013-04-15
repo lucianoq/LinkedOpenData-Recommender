@@ -11,7 +11,7 @@ public class Film extends GraphResource implements Serializable, Comparable<Film
 
     private int idMovieLens;
 
-    public Film(String uri, int idMovieLens) {
+    private Film(String uri, int idMovieLens) {
         super(uri);
         this.idMovieLens = idMovieLens;
     }
@@ -61,9 +61,8 @@ public class Film extends GraphResource implements Serializable, Comparable<Film
 
         Film film = (Film) o;
 
-        if (idMovieLens != film.idMovieLens) return false;
+        return idMovieLens == film.idMovieLens;
 
-        return true;
     }
 
     @Override

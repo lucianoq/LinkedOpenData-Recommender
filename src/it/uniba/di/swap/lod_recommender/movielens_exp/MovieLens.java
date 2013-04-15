@@ -76,7 +76,7 @@ public class MovieLens {
 
     private static List<Rating> read(String path) {
         List<Rating> list = new ArrayList<Rating>();
-        BufferedReader inp = null;
+        BufferedReader inp;
         try {
             inp = new BufferedReader(new FileReader(path));
 
@@ -93,9 +93,9 @@ public class MovieLens {
                 }
             inp.close();
         } catch (FileNotFoundException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         }
         return list;
     }
@@ -135,7 +135,14 @@ public class MovieLens {
 
     private static void createSplit() {
         System.out.println(new Date() + " [INFO] Split dataset in test and training set.");
-        new File("./dataset").mkdirs();
+        if (new File("./dataset").mkdirs()) {
+        } else {
+            try {
+                throw new Exception("Impossibile creare la directory.");
+            } catch (Exception e) {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            }
+        }
         String trainStr = "";
         String testStr = "";
         for (User u : User.getUsers()) {
@@ -159,8 +166,8 @@ public class MovieLens {
                     dbTestPositive.get(u).add(r);
             }
         }
-        assert trainStr != "";
-        assert testStr != "";
+        assert !trainStr.equals("");
+        assert !testStr.equals("");
         save(MOVIELENS_TRAINING_FILE, trainStr);
         save(MOVIELENS_TESTING_FILE, testStr);
     }

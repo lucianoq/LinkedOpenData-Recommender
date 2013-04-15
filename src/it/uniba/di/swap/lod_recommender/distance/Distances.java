@@ -9,7 +9,7 @@ import java.util.Map;
 public class Distances implements Serializable {
 
     public static final int NUM_COPPIE_FILM = 270000;
-    public static Map<Type, Class> mapTC;
+    private static Map<Type, Class> mapTC;
     public static Map<Type, Distance> distances;
 
     public static void init() {
@@ -30,11 +30,11 @@ public class Distances implements Serializable {
                 Distance dist = (Distance) m.invoke(null);
                 distances.put(t, dist);
             } catch (IllegalAccessException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                e.printStackTrace();
             } catch (NoSuchMethodException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                e.printStackTrace();
             } catch (InvocationTargetException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                e.printStackTrace();
             }
     }
 

@@ -20,7 +20,7 @@ public class Property extends GraphResource implements Serializable {
 
     public static ArrayList<Property> readFromFile(String path) throws IOException {
         BufferedReader inp = new BufferedReader(new FileReader(path));
-        ArrayList<Property> properties = new ArrayList<Property>();
+        ArrayList<Property> properties = new ArrayList<Property>(15);
         String tmp;
         String[] tmp1;
         while ((tmp = inp.readLine()) != null) {
@@ -47,9 +47,8 @@ public class Property extends GraphResource implements Serializable {
 
         Property property = (Property) o;
 
-        if (this.idProperty != property.idProperty) return false;
+        return this.idProperty == property.idProperty;
 
-        return true;
     }
 
     @Override

@@ -43,7 +43,7 @@ public class DBAccess {
                     break;
             }
         } catch (SQLException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         }
     }
 
@@ -67,7 +67,7 @@ public class DBAccess {
             s.close();
             conn.close();
         } catch (SQLException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         }
     }
 
@@ -191,7 +191,7 @@ public class DBAccess {
         } catch (BatchUpdateException bee) {
             System.out.println("[WARNING] Chiave primaria duplicata.");
         } catch (SQLException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         }
     }
 
@@ -212,7 +212,7 @@ public class DBAccess {
                     break;
             }
         } catch (SQLException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         }
     }
 }

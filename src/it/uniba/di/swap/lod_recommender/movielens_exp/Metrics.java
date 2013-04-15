@@ -214,7 +214,7 @@ public class Metrics {
                 c,
                 user.getProfile(c.getProfile()),
                 Recommender.ALL);
-        List<Recommendation> only_T = new ArrayList<Recommendation>();
+        List<Recommendation> only_T = new ArrayList<Recommendation>(MovieLens.getDbTest().size()+1);
 
         Set<Film> testFilms = new HashSet<Film>();
         for (Rating r : MovieLens.getDbTest().get(user))
