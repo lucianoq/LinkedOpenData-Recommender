@@ -45,7 +45,7 @@ public class Metrics {
         for (Configuration c : Configuration.getConfigurations()) {
             System.out.println("Inizio calcolo computazione " + c.toString());
             for (User user : User.getUsers()) {
-                System.out.print(user.getId() + "");
+                System.out.print(user.getId() + "-");
                 Result r = new Result(c, user);
                 fillPrecision(r);
                 fillMrr(r);
@@ -287,6 +287,7 @@ public class Metrics {
     }
 
     private static void fillDatabaseResults() {
+        DBAccess.truncate(DBAccess.RESULTS);
 
         DBAccess.openConnection(DBAccess.RESULTS);
         System.out.println("Riempio la tabella dei Risultati");
@@ -316,6 +317,7 @@ public class Metrics {
     }
 
     private static void fillDatabaseResultsAgg() {
+        DBAccess.truncate(DBAccess.RESULTS_AGG);
 
         DBAccess.openConnection(DBAccess.RESULTS_AGG);
         System.out.println("Riempio la tabella dei Risultati Aggregati");
@@ -335,8 +337,8 @@ public class Metrics {
                     macroMRR_T(c)
             );
 
-        DBAccess.commit(DBAccess.RESULTS);
-        DBAccess.close(DBAccess.RESULTS);
+        DBAccess.commit(DBAccess.RESULTS_AGG);
+        DBAccess.close(DBAccess.RESULTS_AGG);
     }
 
 

@@ -59,14 +59,14 @@ public class MovieLens {
 
         System.out.println("Creo lo split");
 
-        createSplit();
+//        createSplit();
         readSplit();
 
         System.out.println("Creo i profili degli utenti");
         User.createProfiles();
 
         System.out.println("[INFO] FILLO IL DATABASE CON LE RACCOMANDAZIONI");
-        MovieLens.fillDatabase();
+//        MovieLens.fillDatabase();
     }
 
     private static void save(String dir, String content) {
@@ -116,6 +116,7 @@ public class MovieLens {
     }
 
     public static void fillDatabase() {
+        DBAccess.truncate(DBAccess.RECOMMENDATION);
         DBAccess.openConnection(DBAccess.RECOMMENDATION);
         System.out.println("Riempio la tabella delle raccomandazioni");
         for (User user : User.getUsers()) {

@@ -17,16 +17,6 @@ public class DBAccess {
     static {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-//            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/LODDB", "root", "root");
-//            conn.setAutoCommit(false);
-
-//            Statement s = conn.createStatement();
-//            s.execute("TRUNCATE TABLE RESULTS;");
-//            s.execute("TRUNCATE TABLE RECOMMENDATIONS;");
-//            s.execute("TRUNCATE TABLE RESULTS_AGG;");
-//            conn.commit();
-//            s.close();
-//            conn.close();
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -46,10 +36,10 @@ public class DBAccess {
                     psRec = conn.prepareStatement("INSERT INTO RECOMMENDATIONS VALUES (?,?,?,?,?);");
                     break;
                 case RESULTS:
-                    psRes = conn.prepareStatement("INSERT INTO RESULTS VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?);");
+                    psRes = conn.prepareStatement("INSERT INTO RESULTS VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);");
                     break;
                 case RESULTS_AGG:
-                    psAgg = conn.prepareStatement("INSERT INTO RESULTS_AGG VALUES (?,?,?,?,?,?,?,?,?);");
+                    psAgg = conn.prepareStatement("INSERT INTO RESULTS_AGG VALUES (?,?,?,?,?,?,?,?,?,?,?);");
                     break;
             }
         } catch (SQLException e) {
@@ -57,10 +47,32 @@ public class DBAccess {
         }
     }
 
+    public static void truncate(int type) {
+        try {
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/LODDB", "root", "root");
+            conn.setAutoCommit(false);
+            Statement s = conn.createStatement();
+            switch (type) {
+                case RECOMMENDATION:
+                    s.execute("TRUNCATE TABLE RECOMMENDATIONS;");
+                    break;
+                case RESULTS:
+                    s.execute("TRUNCATE TABLE RESULTS;");
+                    break;
+                case RESULTS_AGG:
+                    s.execute("TRUNCATE TABLE RESULTS_AGG;");
+                    break;
+            }
+            conn.commit();
+            s.close();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
+
     public static void insertREC(int distance, int profile, int user, int film, int rank) {
         try {
-            if (conn.isClosed())
-                DBAccess.openConnection(DBAccess.RECOMMENDATION);
             psRec.setInt(1, distance);
             psRec.setInt(2, profile);
             psRec.setInt(3, user);
@@ -95,8 +107,6 @@ public class DBAccess {
     ) {
 
         try {
-            if (conn.isClosed())
-                openConnection(DBAccess.RESULTS);
             psRes.setInt(1, distance);
             psRes.setInt(2, profile);
             psRes.setInt(3, k);
@@ -139,8 +149,6 @@ public class DBAccess {
                                  double microMRR_T,
                                  double macroMRR_T) {
         try {
-            if (conn.isClosed())
-                openConnection(DBAccess.RESULTS_AGG);
             psAgg.setInt(1, distance);
             psAgg.setInt(2, profile);
             psAgg.setInt(3, k);
