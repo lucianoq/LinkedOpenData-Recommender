@@ -51,14 +51,11 @@ public class MovieLens {
             db.get(r.getUser()).add(r);
         }
 
-        System.out.println("Creo lo split");
-
         createSplit();
         readSplit();
 
         User.createProfiles();
 
-        System.out.println("[INFO] FILLO IL DATABASE CON LE RACCOMANDAZIONI");
         MovieLens.fillDatabase();
     }
 

@@ -1,18 +1,7 @@
 package it.uniba.di.swap.lod_recommender.distance;
 
 import it.uniba.di.swap.lod_recommender.graph.Film;
-import it.uniba.di.swap.lod_recommender.recommendation.Pair;
 
-import java.io.FileInputStream;
-import java.io.ObjectInputStream;
-import java.util.concurrent.ConcurrentHashMap;
-
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 03/04/13
- * Time: 13.51
- */
 public class DistanceNostra extends Distance {
 
     private static DistanceNostra d;
