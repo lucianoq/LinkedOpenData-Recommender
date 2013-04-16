@@ -51,8 +51,8 @@ public class MovieLens {
             db.get(r.getUser()).add(r);
         }
 
-        createSplit();
-//        readSplit();
+//        createSplit();
+        readSplit();
 
         User.createProfiles();
 
