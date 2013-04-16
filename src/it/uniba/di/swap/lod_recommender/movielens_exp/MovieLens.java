@@ -12,7 +12,7 @@ import it.uniba.di.swap.lod_recommender.recommendation.Recommender;
 import java.io.*;
 import java.util.*;
 
-public class MovieLens {
+class MovieLens {
     public static final double TRAIN_RATE;
     public static final double TEST_RATE;
     public static final int NUM_USER;
@@ -51,15 +51,12 @@ public class MovieLens {
             db.get(r.getUser()).add(r);
         }
 
-        System.out.println("Creo lo split");
-
         createSplit();
-        readSplit();
+//        readSplit();
 
         User.createProfiles();
 
-        System.out.println("[INFO] FILLO IL DATABASE CON LE RACCOMANDAZIONI");
-        MovieLens.fillDatabase();
+//        MovieLens.fillDatabase();
     }
 
     private static void save(String dir, String content) {
@@ -108,7 +105,7 @@ public class MovieLens {
         return dbTestPositive;
     }
 
-    public static void fillDatabase() {
+    private static void fillDatabase() {
         DBAccess.truncate(DBAccess.RECOMMENDATION);
         DBAccess.openConnection(DBAccess.RECOMMENDATION);
         System.out.println(new Date() + " [INFO] Fill table of recommendation.");

@@ -5,13 +5,7 @@ import it.uniba.di.swap.lod_recommender.recommendation.Recommendation;
 
 import java.util.List;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 12/04/13
- * Time: 10.47
- */
-public class Result {
+class Result {
     private Configuration configuration;
     private User user;
     private int tp;
@@ -55,9 +49,7 @@ public class Result {
 
         Result result = (Result) o;
 
-        if (!configuration.equals(result.configuration)) return false;
-        return user.equals(result.user);
-
+        return configuration.equals(result.configuration) && user.equals(result.user);
     }
 
     @Override

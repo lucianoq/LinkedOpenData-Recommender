@@ -124,7 +124,7 @@ public class User {
         return this.seenInTrain;
     }
 
-    public List<Map.Entry<Film, Number>> getFilmsSorted() {
+    List<Map.Entry<Film, Number>> getFilmsSorted() {
         Map<Film, Number> userVotes = new HashMap<Film, Number>(55);
         for (Rating m : MovieLens.getDbTrain().get(this))
             userVotes.put(m.getFilm(), m.getRating());
