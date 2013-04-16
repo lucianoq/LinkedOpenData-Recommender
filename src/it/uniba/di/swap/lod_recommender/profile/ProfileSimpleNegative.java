@@ -16,7 +16,7 @@ public class ProfileSimpleNegative extends ProfileSimple {
             try {
                 throw new Exception("Film duplicati");
             } catch (Exception e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                e.printStackTrace();
             }
     }
 
@@ -53,7 +53,6 @@ public class ProfileSimpleNegative extends ProfileSimple {
 
     @Override
     public boolean isIn(Film f) {
-        boolean b = profiledFilms.contains(f) || profiledNegative.contains(f);
-        return b;
+        return profiledFilms.contains(f) || profiledNegative.contains(f);
     }
 }

@@ -33,9 +33,8 @@ public class Rating {
         Rating rating = (Rating) o;
 
         if (film != null ? !film.equals(rating.film) : rating.film != null) return false;
-        if (user != null ? !user.equals(rating.user) : rating.user != null) return false;
+        return !(user != null ? !user.equals(rating.user) : rating.user != null);
 
-        return true;
     }
 
     @Override

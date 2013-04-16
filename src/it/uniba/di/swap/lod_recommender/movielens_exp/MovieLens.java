@@ -132,7 +132,14 @@ public class MovieLens {
 
     private static void createSplit() {
         System.out.println(new Date() + " [INFO] Split dataset in test and training set.");
-        new File("./dataset").mkdirs();
+        if (new File("./dataset").mkdirs()) {
+        } else {
+            try {
+                throw new Exception("Impossibile creare la directory.");
+            } catch (Exception e) {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            }
+        }
         String trainStr = "";
         String testStr = "";
         for (User u : User.getUsers()) {

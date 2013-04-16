@@ -84,7 +84,6 @@ public class DistancePassantIW extends Distance {
             j += ((cio_L_A_B(ef, b, a)) ? 1.0d : 0.0d) / (1 + Math.log(cio_L_A_n(ef, a)));
         }
 
-        double d = 1.0 / (1 + i + j);
-        return d;
+        return 1.0 / (1 + i + j);
     }
 }
