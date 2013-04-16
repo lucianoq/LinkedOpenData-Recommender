@@ -80,37 +80,4 @@ class ResultAgg {
     public void setMacroMRR(double macroMRR) {
         this.macroMRR = macroMRR;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        ResultAgg resultAgg = (ResultAgg) o;
-
-        if (configuration != null ? !configuration.equals(resultAgg.configuration) : resultAgg.configuration != null)
-            return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        return configuration != null ? configuration.hashCode() : 0;
-    }
-
-    @Override
-    public String toString() {
-        return "ResultAgg{" +
-                "configuration=" + configuration +
-                ", microPrecision=" + microPrecision +
-                ", macroPrecision=" + macroPrecision +
-                ", microPrecision_T=" + microPrecision_T +
-                ", macroPrecision_T=" + macroPrecision_T +
-                ", microMRR=" + microMRR +
-                ", macroMRR=" + macroMRR +
-                ", microMRR_T=" + microMRR_T +
-                ", macroMRR_T=" + macroMRR_T +
-                '}';
-    }
 }

@@ -59,6 +59,7 @@ public class DistancePassantDW extends Distance {
             j += ((cd_L_A_B(ef, b, a)) ? 1.0d : 0.0d) / (1 + Math.log(cd_L_A_n(ef, b)));
         }
 
-        return 1.0d / (1 + i + j);
+        double d = 1.0d / (1 + i + j);
+        return d;
     }
 }

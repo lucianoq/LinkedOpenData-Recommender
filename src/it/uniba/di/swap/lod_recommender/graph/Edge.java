@@ -2,7 +2,7 @@ package it.uniba.di.swap.lod_recommender.graph;
 
 import java.io.Serializable;
 
-class Edge implements Serializable {
+public class Edge implements Serializable {
 
     private Property property;
     private String title;
@@ -64,8 +64,9 @@ class Edge implements Serializable {
         if (object != null ? !object.equals(edge.object) : edge.object != null) return false;
         if (property != null ? !property.equals(edge.property) : edge.property != null) return false;
         if (subject != null ? !subject.equals(edge.subject) : edge.subject != null) return false;
-        return !(title != null ? !title.equals(edge.title) : edge.title != null);
+        if (title != null ? !title.equals(edge.title) : edge.title != null) return false;
 
+        return true;
     }
 
     @Override

@@ -82,14 +82,7 @@ public class FilmGraph implements Serializable {
     }
 
     public static void save() throws IOException {
-        if (new File("./serialized").mkdirs()) {
-        } else {
-            try {
-                throw new Exception("Impossibile creare la directory.");
-            } catch (Exception e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-            }
-        }
+        new File("./serialized").mkdirs();
         FileOutputStream fos = new FileOutputStream("./serialized/filmGraph.bin");
         ObjectOutputStream o = new ObjectOutputStream(fos);
         o.writeObject(filmGraph);

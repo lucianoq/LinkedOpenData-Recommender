@@ -35,8 +35,9 @@ public class GraphResource implements Serializable {
 
         GraphResource graphResource = (GraphResource) o;
 
-        return !(uri != null ? !uri.equals(graphResource.uri) : graphResource.uri != null);
+        if (uri != null ? !uri.equals(graphResource.uri) : graphResource.uri != null) return false;
 
+        return true;
     }
 
     @Override

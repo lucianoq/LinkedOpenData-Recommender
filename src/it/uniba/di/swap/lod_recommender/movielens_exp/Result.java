@@ -50,6 +50,7 @@ class Result {
         Result result = (Result) o;
 
         return configuration.equals(result.configuration) && user.equals(result.user);
+
     }
 
     @Override

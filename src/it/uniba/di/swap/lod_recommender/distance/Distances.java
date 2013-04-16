@@ -9,7 +9,7 @@ import java.util.Map;
 public class Distances implements Serializable {
 
     public static final int NUM_COPPIE_FILM = 270000;
-    private static Map<Type, Class> mapTC;
+    public static Map<Type, Class> mapTC;
     public static Map<Type, Distance> distances;
 
     public static void init() {

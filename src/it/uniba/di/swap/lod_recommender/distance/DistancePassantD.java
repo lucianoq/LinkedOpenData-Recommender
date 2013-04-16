@@ -24,7 +24,8 @@ public class DistancePassantD extends Distance {
     }
 
     public Double computeDistance(Film a, Film b) {
-        return 1.0d / (1 + cd_n_A_B(a, b) + cd_n_A_B(b, a));
+        double d = 1.0d / (1 + cd_n_A_B(a, b) + cd_n_A_B(b, a));
+        return d;
     }
 
     //numero di archi tra A e B

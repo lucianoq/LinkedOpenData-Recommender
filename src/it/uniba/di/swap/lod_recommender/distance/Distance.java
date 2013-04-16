@@ -59,7 +59,7 @@ public abstract class Distance {
 
     public final void fill() {
         ArrayList<Film> films = Graph.getFilms();
-        ArrayList<ComputeDistance> threads = new ArrayList<ComputeDistance>(8);
+        ArrayList<ComputeDistance> threads = new ArrayList<ComputeDistance>();
 
         for (int i = 0; i < 8; i++) {
             threads.add(new ComputeDistance(this));
@@ -84,13 +84,10 @@ public abstract class Distance {
     }
 
     public final void save() {
-        FileOutputStream fos;
-        ObjectOutputStream o;
+        FileOutputStream fos = null;
+        ObjectOutputStream o = null;
         try {
-            if (new File("./serialized").mkdirs()) {
-            } else {
-                throw new Exception("Impossibile creare la directory.");
-            }
+            new File("./serialized").mkdirs();
             fos = new FileOutputStream("./serialized/" + this.name + ".bin");
             o = new ObjectOutputStream(fos);
             o.writeObject(map);

@@ -27,8 +27,9 @@ public class Recommendation implements Comparable<Recommendation> {
         Recommendation that = (Recommendation) o;
 
         if (Double.compare(that.distance, distance) != 0) return false;
-        return !(film != null ? !film.equals(that.film) : that.film != null);
+        if (film != null ? !film.equals(that.film) : that.film != null) return false;
 
+        return true;
     }
 
     @Override

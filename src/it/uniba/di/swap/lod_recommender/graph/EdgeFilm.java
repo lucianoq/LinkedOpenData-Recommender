@@ -50,8 +50,9 @@ public class EdgeFilm implements Serializable {
         if (labelmodified != null ? !labelmodified.equals(edgeFilm.getLabelModified()) : edgeFilm.getLabelModified() != null)
             return false;
         if (object != null ? !object.equals(edgeFilm.object) : edgeFilm.object != null) return false;
-        return !(subject != null ? !subject.equals(edgeFilm.subject) : edgeFilm.subject != null);
+        if (subject != null ? !subject.equals(edgeFilm.subject) : edgeFilm.subject != null) return false;
 
+        return true;
     }
 
     @Override

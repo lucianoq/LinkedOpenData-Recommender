@@ -22,7 +22,8 @@ public class DistanceNostra extends Distance {
     public Double computeDistance(Film a, Film b) {
         double denom = dndw.getDistance(a, b).doubleValue() + dndw.getDistance(b, a).doubleValue();
         denom += dniow.getDistance(a, b).doubleValue() + dniiw.getDistance(a, b).doubleValue();
-        return 1.0 / (1.0 + denom);
+        double d = 1.0 / (1.0 + denom);
+        return d;
     }
 
     @Override

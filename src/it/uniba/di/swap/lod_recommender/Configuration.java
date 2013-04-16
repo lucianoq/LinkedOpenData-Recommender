@@ -13,10 +13,10 @@ public class Configuration {
     private int k;
 
     static {
-        configurations = new ArrayList<Configuration>(80);
+        configurations = new ArrayList<Configuration>(64);
         for (Distances.Type d : Distances.Type.values())
             for (Profile.Type p : Profile.Type.values())
-                for (int i : new ArrayList<Integer>(5) {{
+                for (int i : new ArrayList<Integer>() {{
                     add(5);
                     add(10);
                     add(20);
@@ -59,8 +59,8 @@ public class Configuration {
         Configuration that = (Configuration) o;
 
         if (k != that.k) return false;
-
         return distance == that.distance && profile == that.profile;
+
     }
 
     @Override
