@@ -2,13 +2,7 @@ package it.uniba.di.swap.lod_recommender.movielens_exp;
 
 import it.uniba.di.swap.lod_recommender.Configuration;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 15/04/13
- * Time: 11.56
- */
-public class ResultAgg {
+class ResultAgg {
     private Configuration configuration;
     private double microPrecision;
     private double macroPrecision;

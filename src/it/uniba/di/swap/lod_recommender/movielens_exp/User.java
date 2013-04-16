@@ -13,7 +13,7 @@ public class User {
 
     static {
         users = new HashMap<Integer, User>();
-        BufferedReader inp = null;
+        BufferedReader inp;
         String path = "./config/users";
         try {
             inp = new BufferedReader(new FileReader(path));
@@ -111,9 +111,8 @@ public class User {
 
         User user = (User) o;
 
-        if (id != user.id) return false;
+        return id == user.id;
 
-        return true;
     }
 
     @Override
@@ -125,7 +124,7 @@ public class User {
         return this.seenInTrain;
     }
 
-    public List<Map.Entry<Film, Number>> getFilmsSorted() {
+    List<Map.Entry<Film, Number>> getFilmsSorted() {
         Map<Film, Number> userVotes = new HashMap<Film, Number>(55);
         for (Rating m : MovieLens.getDbTrain().get(this))
             userVotes.put(m.getFilm(), m.getRating());

@@ -317,14 +317,14 @@ public class Metrics {
                     c.getDistance().ordinal(),
                     c.getProfile().ordinal(),
                     c.getK(),
-                    microPrecision(c),
-                    macroPrecision(c),
-                    microPrecision_T(c),
-                    macroPrecision_T(c),
-                    microMRR(c),
-                    macroMRR(c),
-                    microMRR_T(c),
-                    macroMRR_T(c)
+                    resultsAgg.get(c).getMicroPrecision(),
+                    resultsAgg.get(c).getMacroPrecision(),
+                    resultsAgg.get(c).getMicroPrecision_T(),
+                    resultsAgg.get(c).getMacroPrecision_T(),
+                    resultsAgg.get(c).getMicroMRR(),
+                    resultsAgg.get(c).getMacroMRR(),
+                    resultsAgg.get(c).getMicroMRR_T(),
+                    resultsAgg.get(c).getMacroMRR_T()
             );
 
         DBAccess.commit(DBAccess.RESULTS_AGG);

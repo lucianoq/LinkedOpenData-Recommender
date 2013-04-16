@@ -12,7 +12,7 @@ import it.uniba.di.swap.lod_recommender.recommendation.Recommender;
 import java.io.*;
 import java.util.*;
 
-public class MovieLens {
+class MovieLens {
     public static final double TRAIN_RATE;
     public static final double TEST_RATE;
     public static final int NUM_USER;
@@ -52,11 +52,11 @@ public class MovieLens {
         }
 
         createSplit();
-        readSplit();
+//        readSplit();
 
         User.createProfiles();
 
-        MovieLens.fillDatabase();
+//        MovieLens.fillDatabase();
     }
 
     private static void save(String dir, String content) {
@@ -73,7 +73,7 @@ public class MovieLens {
 
     private static List<Rating> read(String path) {
         List<Rating> list = new ArrayList<Rating>();
-        BufferedReader inp = null;
+        BufferedReader inp;
         try {
             inp = new BufferedReader(new FileReader(path));
 
@@ -90,9 +90,9 @@ public class MovieLens {
                 }
             inp.close();
         } catch (FileNotFoundException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         }
         return list;
     }
@@ -105,7 +105,7 @@ public class MovieLens {
         return dbTestPositive;
     }
 
-    public static void fillDatabase() {
+    private static void fillDatabase() {
         DBAccess.truncate(DBAccess.RECOMMENDATION);
         DBAccess.openConnection(DBAccess.RECOMMENDATION);
         System.out.println(new Date() + " [INFO] Fill table of recommendation.");
@@ -156,8 +156,8 @@ public class MovieLens {
                     dbTestPositive.get(u).add(r);
             }
         }
-        assert trainStr != "";
-        assert testStr != "";
+        assert !trainStr.equals("");
+        assert !testStr.equals("");
         save(MOVIELENS_TRAINING_FILE, trainStr);
         save(MOVIELENS_TESTING_FILE, testStr);
     }

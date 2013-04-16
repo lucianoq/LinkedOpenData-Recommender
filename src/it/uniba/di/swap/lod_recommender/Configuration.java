@@ -59,10 +59,8 @@ public class Configuration {
         Configuration that = (Configuration) o;
 
         if (k != that.k) return false;
-        if (distance != that.distance) return false;
-        if (profile != that.profile) return false;
+        return distance == that.distance && profile == that.profile;
 
-        return true;
     }
 
     @Override
