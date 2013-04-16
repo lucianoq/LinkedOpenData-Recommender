@@ -12,7 +12,7 @@ import it.uniba.di.swap.lod_recommender.recommendation.Recommender;
 import java.io.*;
 import java.util.*;
 
-class MovieLens {
+public class MovieLens {
     public static final double TRAIN_RATE;
     public static final double TEST_RATE;
     public static final int NUM_USER;

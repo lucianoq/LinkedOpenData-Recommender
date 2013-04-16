@@ -4,6 +4,7 @@ import it.uniba.di.swap.lod_recommender.Configuration;
 import it.uniba.di.swap.lod_recommender.distance.Distances;
 import it.uniba.di.swap.lod_recommender.graph.Film;
 import it.uniba.di.swap.lod_recommender.graph.Graph;
+import it.uniba.di.swap.lod_recommender.movielens_exp.MovieLens;
 import it.uniba.di.swap.lod_recommender.profile.Profile;
 import it.uniba.di.swap.lod_recommender.profile.ProfileSimple;
 import it.uniba.di.swap.lod_recommender.profile.ProfileVoted;
@@ -16,10 +17,10 @@ public class Recommender {
     private static Map<Distances.Type, Map<Film, List<Recommendation>>> mapAll;
 
     static {
-        mapAll = new HashMap<Distances.Type, Map<Film, List<Recommendation>>>(4);
+        mapAll = new HashMap<Distances.Type, Map<Film, List<Recommendation>>>(Distances.Type.values().length);
         Map<Film, List<Recommendation>> map;
         for (Distances.Type t : Distances.Type.values()) {
-            map = new HashMap<Film, List<Recommendation>>(Graph.getFilms().size() + 1);
+            map = new HashMap<Film, List<Recommendation>>(MovieLens.NUM_FILM);
 
             for (Film f1 : Graph.getFilms()) {
                 List<Recommendation> temp = new ArrayList<Recommendation>(Graph.getFilms().size() + 1);
