@@ -12,7 +12,7 @@ public class User {
     private static Map<Integer, User> users;
 
     static {
-        users = new HashMap<Integer, User>();
+        users = new HashMap<Integer, User>(620);
         BufferedReader inp;
         String path = "./config/users";
         try {

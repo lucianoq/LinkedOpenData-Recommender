@@ -19,7 +19,7 @@ public class Metrics {
         for (Configuration c : Configuration.getConfigurations()) {
             results.put(c, new HashMap<User, Result>(MovieLens.NUM_USER));
         }
-        resultsAgg = new HashMap<Configuration, ResultAgg>(4 * 4 * 5);
+        resultsAgg = new HashMap<Configuration, ResultAgg>(Profile.Type.values().length * Distances.Type.values().length * 6);
     }
 
     public static void init() {
