@@ -1,4 +1,4 @@
-package it.uniba.di.swap.lod_recommender;
+package it.uniba.di.swap.lod_recommender.movielens_exp;
 
 import it.uniba.di.swap.lod_recommender.distance.Distances;
 import it.uniba.di.swap.lod_recommender.profile.Profile;

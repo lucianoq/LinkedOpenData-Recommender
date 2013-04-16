@@ -1,6 +1,5 @@
 package it.uniba.di.swap.lod_recommender.movielens_exp;
 
-import it.uniba.di.swap.lod_recommender.Configuration;
 import it.uniba.di.swap.lod_recommender.recommendation.Recommendation;
 
 import java.util.List;

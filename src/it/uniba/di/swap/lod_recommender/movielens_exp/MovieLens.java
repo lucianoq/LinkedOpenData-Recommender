@@ -1,6 +1,5 @@
 package it.uniba.di.swap.lod_recommender.movielens_exp;
 
-import it.uniba.di.swap.lod_recommender.Configuration;
 import it.uniba.di.swap.lod_recommender.distance.Distances;
 import it.uniba.di.swap.lod_recommender.graph.Film;
 import it.uniba.di.swap.lod_recommender.graph.Graph;

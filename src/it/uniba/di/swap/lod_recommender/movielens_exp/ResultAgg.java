@@ -1,7 +1,5 @@
 package it.uniba.di.swap.lod_recommender.movielens_exp;
 
-import it.uniba.di.swap.lod_recommender.Configuration;
-
 class ResultAgg {
     private Configuration configuration;
     private double microPrecision;
