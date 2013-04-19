@@ -4,9 +4,12 @@ import it.uniba.di.swap.lod_recommender.graph.Film;
 
 import java.util.Map;
 
-public abstract class ProfileVoted extends Profile {
-
+public class ProfileWeighted extends Profile {
     protected Map<Film, Number> votedFilms;
+
+    public ProfileWeighted(Map<Film, Number> map) {
+        this.votedFilms = map;
+    }
 
     public int getSize() {
         return votedFilms.size();
@@ -28,8 +31,6 @@ public abstract class ProfileVoted extends Profile {
         return votedFilms.get(film);
     }
 
-    public abstract double weight(Film film);
-
     @Override
     public String toString() {
         String s = "";
@@ -40,5 +41,7 @@ public abstract class ProfileVoted extends Profile {
         return s;
     }
 
-
+    public double weight(Film film) {
+        return this.votedFilms.get(film).intValue() - Profile.MEDIUMVOTE;
+    }
 }

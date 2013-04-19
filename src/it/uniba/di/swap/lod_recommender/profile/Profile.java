@@ -7,9 +7,9 @@ public abstract class Profile {
     public static final int GRANULARITYVOTE = 1;
 
     public static enum Type {
-        SIMPLE,
-        SIMPLE_NEGATIVE,
-        VOTED_NOSTRA,
-        VOTED_MUSTO
+//        SIMPLE,
+        NOT_WEIGHTED,
+        WEIGHTED,
+//        VOTED_MUSTO
     }
 }

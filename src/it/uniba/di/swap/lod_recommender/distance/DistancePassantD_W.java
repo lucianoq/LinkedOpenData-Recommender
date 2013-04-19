@@ -12,21 +12,25 @@ import java.util.Collection;
  * Date: 03/04/13
  * Time: 13.51
  */
-public class DistanceNostraDW extends Distance {
+public class DistancePassantD_W extends Distance {
 
-    private static DistanceNostraDW d;
+    private static DistancePassantD_W d;
 
-    private DistanceNostraDW() {
-        super("nostraDW");
+    private DistancePassantD_W() {
+        super("passantD_W");
         d = this;
         this.init();
     }
 
-    public static DistanceNostraDW getInstance() {
-        return d == null ? new DistanceNostraDW() : d;
+    public static DistancePassantD_W getInstance() {
+        return d == null ? new DistancePassantD_W() : d;
     }
 
     public Double computeDistance(Film a, Film b) {
+        return 1.0d / (sumWeightDirect(a, b) + sumWeightDirect(b, a));
+    }
+
+    private Double sumWeightDirect(Film a, Film b) {
         Collection<EdgeFilm> set = FilmGraph.getGraph().findEdgeSet(a, b);
         double ret = 0;
         for (EdgeFilm ef : set)
