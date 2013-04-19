@@ -22,7 +22,6 @@ public class Main {
         System.out.println(new Date()+" [INFO] Start movielens.");
         Class.forName("it.uniba.di.swap.lod_recommender.movielens_exp.MovieLens");
 
-
         System.out.println(new Date() +" [INFO] Creation metrics.");
         Metrics.init();
     }
