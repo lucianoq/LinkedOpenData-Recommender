@@ -26,20 +26,14 @@ public class Recommendation implements Comparable<Recommendation> {
 
         Recommendation that = (Recommendation) o;
 
-        if (Double.compare(that.distance, distance) != 0) return false;
-        if (film != null ? !film.equals(that.film) : that.film != null) return false;
+        if (!film.equals(that.film)) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result;
-        long temp;
-        result = film != null ? film.hashCode() : 0;
-        temp = distance != +0.0d ? Double.doubleToLongBits(distance) : 0L;
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        return result;
+        return film.hashCode();
     }
 
     @Override
@@ -50,6 +44,8 @@ public class Recommendation implements Comparable<Recommendation> {
             return 1;
         if (this.distance == recommendation.distance)
             return 0;
+
+        assert false;
         return 0;
     }
 
