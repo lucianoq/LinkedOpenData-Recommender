@@ -17,12 +17,13 @@ public class Distances implements Serializable {
         distances = new HashMap<Type, Distance>();
 
         mapTC.put(Type.PASSANTD, DistancePassantD.class);
-        mapTC.put(Type.PASSANTI, DistancePassantI.class);
+//        mapTC.put(Type.PASSANTI, DistancePassantI.class);
         mapTC.put(Type.PASSANTC, DistancePassantC.class);
 //        mapTC.put(Type.PASSANTDW, DistancePassantDW.class);
 //        mapTC.put(Type.PASSANTIW, DistancePassantIW.class);
 //        mapTC.put(Type.PASSANTCW, DistancePassantCW.class);
-        mapTC.put(Type.NOSTRA, DistanceNostra.class);
+        mapTC.put(Type.PASSANTD_W, DistancePassantD_W.class);
+        mapTC.put(Type.PASSANTC_W, DistancePassantC_W.class);
 
         for (Type t : Type.values())
             try {
@@ -40,11 +41,9 @@ public class Distances implements Serializable {
 
     public static enum Type {
         PASSANTD,
-        PASSANTI,
+        //        PASSANTI,
         PASSANTC,
-//        PASSANTDW,
-//        PASSANTIW,
-//        PASSANTCW,
-        NOSTRA
+        PASSANTD_W,
+        PASSANTC_W
     }
 }

@@ -1,13 +1,13 @@
 package it.uniba.di.swap.lod_recommender.recommendation;
 
-import it.uniba.di.swap.lod_recommender.movielens_exp.Configuration;
 import it.uniba.di.swap.lod_recommender.distance.Distances;
 import it.uniba.di.swap.lod_recommender.graph.Film;
 import it.uniba.di.swap.lod_recommender.graph.Graph;
+import it.uniba.di.swap.lod_recommender.movielens_exp.Configuration;
 import it.uniba.di.swap.lod_recommender.movielens_exp.MovieLens;
 import it.uniba.di.swap.lod_recommender.profile.Profile;
-import it.uniba.di.swap.lod_recommender.profile.ProfileSimple;
-import it.uniba.di.swap.lod_recommender.profile.ProfileVoted;
+import it.uniba.di.swap.lod_recommender.profile.ProfileNotWeighted;
+import it.uniba.di.swap.lod_recommender.profile.ProfileWeighted;
 
 import java.util.*;
 
@@ -44,10 +44,10 @@ public class Recommender {
     }
 
     public static List<Recommendation> getRecommendations(Configuration c, Profile profile, int limit) {
-        if (profile instanceof ProfileSimple)
-            return getRecommendations(c, (ProfileSimple) profile, limit);
-        else if (profile instanceof ProfileVoted)
-            return getRecommendations(c, (ProfileVoted) profile, limit);
+        if (profile instanceof ProfileNotWeighted)
+            return getRecommendations(c, (ProfileNotWeighted) profile, limit);
+        else if (profile instanceof ProfileWeighted)
+            return getRecommendations(c, (ProfileWeighted) profile, limit);
 
         return null;
     }
@@ -56,7 +56,7 @@ public class Recommender {
         return getRecommendations(c, profile, ALL);
     }
 
-    private static List<Recommendation> getRecommendations(Configuration c, ProfileVoted profile, int limit) {
+    private static List<Recommendation> getRecommendations(Configuration c, ProfileWeighted profile, int limit) {
         List<Recommendation> temp = new ArrayList<Recommendation>();
 
         for (Film film : Graph.getFilms())
@@ -81,7 +81,7 @@ public class Recommender {
         return toRec;
     }
 
-    private static List<Recommendation> getRecommendations(Configuration c, ProfileSimple profile, int limit) {
+    private static List<Recommendation> getRecommendations(Configuration c, ProfileNotWeighted profile, int limit) {
         List<Recommendation> temp = new ArrayList<Recommendation>();
 
         for (Film film : Graph.getFilms())

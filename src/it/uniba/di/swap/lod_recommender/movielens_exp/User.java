@@ -34,10 +34,8 @@ public class User {
     private Map<Film, Number> seenInTrain;
     private Map<Film, Number> likedInTrain;
     private List<Map.Entry<Film, Number>> list;
-    private ProfileSimple profileSimple;
-    private ProfileSimple profileSimpleNegative;
-    private ProfileVoted profileVotedNostra;
-    private ProfileVoted profileVotedMusto;
+    private ProfileNotWeighted profileNotWeighted;
+    private ProfileWeighted profileWeighted;
 
 
     private User(int id) {
@@ -64,10 +62,8 @@ public class User {
                     mapPos.put(me.getKey(), me.getValue());
             }
             user.likedInTrain = mapPos;
-            user.profileSimple = new ProfileSimple(user.seenInTrain.keySet());
-            user.profileSimpleNegative = new ProfileSimpleNegative(mapPos.keySet(), mapNeg.keySet());
-            user.profileVotedNostra = new ProfileVotedNostra(user.seenInTrain);
-            user.profileVotedMusto = new ProfileVotedMusto(user.seenInTrain);
+            user.profileNotWeighted = new ProfileNotWeighted(mapPos.keySet(), mapNeg.keySet());
+            user.profileWeighted = new ProfileWeighted(user.seenInTrain);
         }
     }
 
@@ -85,14 +81,10 @@ public class User {
 
     public Profile getProfile(Profile.Type type) {
         switch (type) {
-            case SIMPLE:
-                return profileSimple;
-            case SIMPLE_NEGATIVE:
-                return profileSimpleNegative;
-            case VOTED_MUSTO:
-                return profileVotedMusto;
-            case VOTED_NOSTRA:
-                return profileVotedNostra;
+            case NOT_WEIGHTED:
+                return profileNotWeighted;
+            case WEIGHTED:
+                return profileWeighted;
         }
         return null;
     }

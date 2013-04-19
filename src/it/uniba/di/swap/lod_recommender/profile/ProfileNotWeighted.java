@@ -5,14 +5,14 @@ import it.uniba.di.swap.lod_recommender.graph.Film;
 import java.util.Collection;
 import java.util.Collections;
 
-public class ProfileSimpleNegative extends ProfileSimple {
-
+public class ProfileNotWeighted extends Profile {
+    protected Collection<Film> profiledFilms;
     protected Collection<Film> profiledNegative = null;
 
-    public ProfileSimpleNegative(Collection<Film> profiled, Collection<Film> profiledNegative) {
-        super(profiled);
+    public ProfileNotWeighted(Collection<Film> profiled, Collection<Film> profiledNegative) {
+        profiledFilms = profiled;
         this.profiledNegative = profiledNegative;
-        if ( !Collections.disjoint(profiled, profiledNegative) )
+        if (!Collections.disjoint(profiled, profiledNegative))
             try {
                 throw new Exception("Film duplicati");
             } catch (Exception e) {
@@ -20,7 +20,18 @@ public class ProfileSimpleNegative extends ProfileSimple {
             }
     }
 
-    @Override
+    public int getSize() {
+        return profiledFilms.size();
+    }
+
+    public void addFilm(Film film) {
+        profiledFilms.add(film);
+    }
+
+    public void removeFilm(Film film) {
+        profiledFilms.remove(film);
+    }
+
     public Collection<Film> getFilms() {
         return profiledFilms;
     }
@@ -50,8 +61,6 @@ public class ProfileSimpleNegative extends ProfileSimple {
         return s;
     }
 
-
-    @Override
     public boolean isIn(Film f) {
         boolean b = profiledFilms.contains(f) || profiledNegative.contains(f);
         return b;
