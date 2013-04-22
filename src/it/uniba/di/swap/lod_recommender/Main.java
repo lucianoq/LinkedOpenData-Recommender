@@ -13,10 +13,10 @@ public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
 
         Graph.load();
-        //Graph.updateWeight();
-        //Graph.printDot();
+        Graph.updateWeight();
+        Graph.printDot();
         FilmGraph.load();
-        //FilmGraph.printDot();
+        FilmGraph.printDot();
         Distances.init();
 
         System.out.println(new Date()+" [INFO] Start movielens.");

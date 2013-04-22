@@ -14,8 +14,8 @@ public class Configuration {
 
     static {
         configurations = new ArrayList<Configuration>(64);
-        for (Distances.Type d : Distances.Type.values())
-            for (Profile.Type p : Profile.Type.values())
+       for (Distances.Type d : Distances.Type.values())
+           for (Profile.Type p : Profile.Type.values())
                 for (int i : new ArrayList<Integer>() {{
                     add(5);
                     add(10);

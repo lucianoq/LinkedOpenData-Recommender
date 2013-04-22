@@ -9,12 +9,6 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 03/04/13
- * Time: 13.50
- */
 public abstract class Distance {
 
     protected Map<Pair, Number> map;
