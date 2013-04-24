@@ -2,12 +2,6 @@ package it.uniba.di.swap.lod_recommender.distance;
 
 import it.uniba.di.swap.lod_recommender.graph.Film;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 03/04/13
- * Time: 13.51
- */
 public class DistancePassantI extends Distance {
 
     private static DistancePassantI d;

@@ -40,7 +40,7 @@ public class Distances implements Serializable {
     }
 
     public static enum Type {
-        PASSANTD,
+       PASSANTD,
         //        PASSANTI,
         PASSANTC,
         PASSANTD_W,

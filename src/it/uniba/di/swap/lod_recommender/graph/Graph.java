@@ -14,7 +14,7 @@ import java.util.Date;
 
 public class Graph implements Serializable{
 
-    private static final String FILEFILMPROP = "./config/film_properties_dbpedia_subject.txt";
+    private static final String FILEFILMPROP = "./config/film_properties_dbpedia.txt";
     private static final String FILEFILM = "./config/ListFilms.txt";
     private static final String ENDPOINT = "http://dbpedia.org/sparql";
     // public static final String ENDPOINT = "http://sparql.freebase.com";
