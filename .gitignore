@@ -5,3 +5,4 @@ bin/
 *.xml
 *.png
 *.iml
+serialized/
