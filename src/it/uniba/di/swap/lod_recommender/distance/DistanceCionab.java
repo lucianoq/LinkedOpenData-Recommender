@@ -6,12 +6,6 @@ import it.uniba.di.swap.lod_recommender.graph.FilmGraph;
 
 import java.util.Collection;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lusio
- * Date: 03/04/13
- * Time: 13.51
- */
 public class DistanceCionab extends Distance {
 
     private static DistanceCionab d;

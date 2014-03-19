@@ -55,7 +55,7 @@ public class MovieLens {
 
         User.createProfiles();
 
-//        MovieLens.fillDatabase();
+        MovieLens.fillDatabase();
     }
 
     private static void save(String dir, String content) {
