@@ -16,6 +16,8 @@ public class Configuration {
         configurations = new ArrayList<Configuration>(64);
         for (Distances.Type d : Distances.Type.values())
             for (Profile.Type p : Profile.Type.values())
+//        Distances.Type d = Distances.Type.PASSANTD_W;
+//        Profile.Type p = Profile.Type.WEIGHTED;
                 for (int i : new ArrayList<Integer>() {{
                     add(5);
                     add(10);

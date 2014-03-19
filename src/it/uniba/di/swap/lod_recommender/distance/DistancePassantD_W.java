@@ -27,7 +27,7 @@ public class DistancePassantD_W extends Distance {
     }
 
     public Double computeDistance(Film a, Film b) {
-        return 1.0d / (sumWeightDirect(a, b) + sumWeightDirect(b, a));
+        return 1.0d / (1.0d + sumWeightDirect(a, b) + sumWeightDirect(b, a));
     }
 
     private Double sumWeightDirect(Film a, Film b) {

@@ -23,7 +23,7 @@ public class Recommender {
             map = new HashMap<Film, List<Recommendation>>(MovieLens.NUM_FILM);
 
             for (Film f1 : Graph.getFilms()) {
-                List<Recommendation> temp = new ArrayList<Recommendation>();
+                List<Recommendation> temp = new ArrayList<Recommendation>(MovieLens.NUM_FILM);
                 for (Film f2 : Graph.getFilms())
                     if (!f1.equals(f2)) {
                         double tmp = Distances.distances.get(t).getDistance(f1, f2).doubleValue();
@@ -62,9 +62,8 @@ public class Recommender {
         for (Film film : Graph.getFilms())
             if (!profile.getFilmVotes().keySet().contains(film)) {
                 double distance = 0d;
-                for (Film liked : profile.getFilmVotes().keySet()) {
-                    distance += getDistance(c.getDistance(), film, liked) * profile.weight(liked);
-                }
+                for (Film liked : profile.getFilmVotes().keySet())
+                    distance += (getDistance(c.getDistance(), film, liked) * profile.weight(liked));
                 temp.add(new Recommendation(film, distance));
             }
 
